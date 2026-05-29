@@ -1,8 +1,8 @@
 # IMPORTANT: Once you set action to 'submit' or 'done', STOP immediately.
 # Do NOT sleep, poll, or wait for jobs. The system reads this file
 # only after your turn ends. Sleeping blocks the entire pipeline.
-action: done
-gpus: 0
+action: pending
+gpus: 1
 test: false
-milestone: core_claim
-notes: "Restored core_claim after audit. Fixed D&C fallback vector handling, removed wall-clock scored metrics, tightened validity scoring, and revalidated selected-suite results: Bolt solves 6/6 versus 2/6 for raw bounded VFB with all returned formulas valid."
+milestone: method_runs
+notes: ""
