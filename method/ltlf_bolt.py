@@ -248,12 +248,18 @@ def divconq(
     beam_width: int,
     max_weight: int,
     deadline: float | None = None,
+    seen_targets: set[tuple[bool, ...]] | None = None,
 ) -> BoolFormula | None:
     if deadline is not None and time.perf_counter() > deadline:
         return None
     direct = beam_search_bool(atoms, target, beam_width, max_weight, deadline)
     if direct and direct.vector == target:
         return direct
+    if seen_targets is None:
+        seen_targets = set()
+    if target in seen_targets:
+        return None
+    seen_targets.add(target)
 
     pos = [i for i, x in enumerate(target) if x]
     neg = [i for i, x in enumerate(target) if not x]
@@ -271,7 +277,7 @@ def divconq(
     if not right_idx:
         right_idx = left_idx
     left_target = tuple(target[i] for i in left_idx)
-    left = divconq(restrict_atoms(atoms, left_idx), left_target, beam_width, max_weight, deadline)
+    left = divconq(restrict_atoms(atoms, left_idx), left_target, beam_width, max_weight, deadline, seen_targets)
     if left is None:
         return None
 
@@ -288,7 +294,7 @@ def divconq(
         return BoolFormula(left.text, left.weight, full_left_vec)
 
     right_target = tuple(target[i] for i in unsat)
-    right = divconq(restrict_atoms(atoms, unsat), right_target, beam_width, max_weight, deadline)
+    right = divconq(restrict_atoms(atoms, unsat), right_target, beam_width, max_weight, deadline, seen_targets)
     if right is None:
         return None
     full_right_vec = right.full_vector

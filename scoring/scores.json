@@ -3,14 +3,11 @@
     "selected_benchmarks": {
       "results": {
         "bolt": {
-          "solved_count": 6,
-          "solve_rate": 1.0,
-          "median_formula_size": 11.0,
+          "solve_rate": 0.8,
           "all_returned_formulas_valid": 1.0,
-          "mean_collapse_ratio": 1.9531405829143893,
-          "solve_count_delta_vs_vfb": 4,
-          "median_size_ratio_vs_vfb_common": 1.0,
-          "max_size_ratio_vs_vfb_common": 1.0
+          "mean_collapse_ratio": 3.6585090599056116,
+          "formula_size_ratio": 1.0,
+          "solve_rate_delta_vs_baseline": 0.5
         }
       }
     }

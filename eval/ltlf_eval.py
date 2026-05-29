@@ -142,19 +142,24 @@ def validate_formula(instance_path: Path, formula: str | None) -> tuple[bool, in
     data = json.loads(instance_path.read_text())
     traces = data["positive_traces"] + data["negative_traces"]
     target = [True] * len(data["positive_traces"]) + [False] * len(data["negative_traces"])
-    node = parse_formula(formula)
-    return accepts(node, traces) == target, node.size()
+    try:
+        node = parse_formula(formula)
+        return accepts(node, traces) == target, node.size()
+    except (KeyError, ValueError, IndexError):
+        return False, None
 
 
 def summarize(method_rows: list[dict]) -> dict[str, float]:
     solved = [r for r in method_rows if r.get("eval_valid")]
     returned = [r for r in method_rows if r.get("formula")]
-    sizes = [r["eval_formula_size"] for r in solved if r.get("eval_formula_size") is not None]
-    collapses = [r.get("collapse_ratio", 0.0) for r in method_rows if r.get("collapse_ratio", 0.0) > 0]
+    collapses = []
+    for row in method_rows:
+        full_count = row.get("generated_ltl_formulas", 0)
+        collapsed_count = row.get("collapsed_bool_atoms", 0)
+        if full_count and collapsed_count:
+            collapses.append(full_count / collapsed_count)
     return {
-        "solved_count": len(solved),
         "solve_rate": len(solved) / len(method_rows) if method_rows else 0.0,
-        "median_formula_size": statistics.median(sizes) if sizes else 0.0,
         "all_returned_formulas_valid": 1.0 if len(solved) == len(returned) else 0.0,
         "mean_collapse_ratio": statistics.fmean(collapses) if collapses else 0.0,
     }
@@ -192,9 +197,8 @@ def main() -> None:
                 "results": {
                     "bolt": {
                         **bolt,
-                        "solve_count_delta_vs_vfb": bolt["solved_count"] - vfb["solved_count"],
-                        "median_size_ratio_vs_vfb_common": statistics.median(ratios) if ratios else 0.0,
-                        "max_size_ratio_vs_vfb_common": max(ratios) if ratios else 0.0,
+                        "formula_size_ratio": statistics.median(ratios) if ratios else 0.0,
+                        "solve_rate_delta_vs_baseline": bolt["solve_rate"] - vfb["solve_rate"],
                     },
                 }
             }

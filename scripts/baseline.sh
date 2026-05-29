@@ -17,12 +17,17 @@ set -euo pipefail
 
 cd /home/user
 
-python3 data/generate_selected_benchmarks.py
+MANIFEST="${BENCHMARK_MANIFEST:-data/paper_benchmark_subset/manifest.json}"
+if [ ! -e "$MANIFEST" ] && [ -e data/downloads/benchmarks.zip ]; then
+  python3 data/prepare_paper_subset.py
+fi
 
 mapfile -t INSTANCES < <(python3 - <<'PY'
 import json
+import os
 from pathlib import Path
-print("\n".join(json.loads(Path("data/selected_benchmarks/manifest.json").read_text())["instances"]))
+manifest = Path(os.environ.get("BENCHMARK_MANIFEST", "data/paper_benchmark_subset/manifest.json"))
+print("\n".join(json.loads(manifest.read_text())["instances"]))
 PY
 )
 

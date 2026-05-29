@@ -9,8 +9,9 @@
 #
 # Update the storage estimate below as you add downloads.
 #
-# Estimated total download size: 100 MB if the optional upstream benchmark zip is fetched.
-# Estimated disk usage after extraction: about 2 GB for the optional full benchmark suite.
+# Estimated total download size: about 100 MB for the upstream benchmark zip
+# plus two small GitHub clones.
+# Estimated disk usage: about 110 MB without extracting the full benchmark suite.
 #
 # This script writes to workspace-local paths so a fresh clone can be
 # prepared without relying on machine-local caches.
@@ -25,12 +26,14 @@ if [ ! -d data/downloads/LTLf_Learning_Benchmarks ]; then
   git clone --depth 1 https://github.com/SynthesisLab/LTLf_Learning_Benchmarks.git data/downloads/LTLf_Learning_Benchmarks
 fi
 
-if [ ! -d method/Bolt ]; then
-  git clone --depth 1 https://github.com/SynthesisLab/Bolt.git method/Bolt
+if [ ! -e data/downloads/benchmarks.zip ]; then
+  wget -O data/downloads/benchmarks.zip https://github.com/SynthesisLab/LTLf_Learning_Benchmarks/releases/download/benchmark/benchmarks.zip
 fi
 
-# Optional full benchmark release used by the paper. The reproduction scripts
-# use the small tracked subset generated in data/selected_benchmarks.
-if [ "${DOWNLOAD_FULL_BENCHMARKS:-0}" = "1" ] && [ ! -e data/downloads/benchmarks.zip ]; then
-  wget -O data/downloads/benchmarks.zip https://github.com/SynthesisLab/LTLf_Learning_Benchmarks/releases/download/benchmark/benchmarks.zip
+if [ ! -e data/paper_benchmark_subset/manifest.json ]; then
+  python3 data/prepare_paper_subset.py
+fi
+
+if [ ! -d method/Bolt ]; then
+  git clone --depth 1 https://github.com/SynthesisLab/Bolt.git method/Bolt
 fi

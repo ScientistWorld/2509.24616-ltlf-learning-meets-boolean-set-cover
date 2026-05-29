@@ -5,4 +5,4 @@ action: submit
 gpus: 0
 test: true
 milestone: core_claim
-notes: "CPU-only packaged verification: rerun scripts/reproduce.sh and validate.py --compare after aligning milestone documentation."
+notes: "CPU-only packaged verification of released benchmark subset: rerun scripts/reproduce.sh and validate.py --compare after scoring and divconq fixes."
