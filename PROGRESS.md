@@ -38,6 +38,12 @@ Packaged released-subset verification job `0b9e9790-461` on 2026-05-29:
 - `validate.py --compare` passed all scoring and structure checks in the container.
 - Reproduced scores matched the local artifacts: Bolt `solve_rate=0.80`, `formula_size_ratio=1.00`, `all_returned_formulas_valid=1.00`, `mean_collapse_ratio=3.66`, and `solve_rate_delta_vs_baseline=0.50`.
 
+Packaging audit on 2026-05-29:
+
+- `scripts/evaluate.sh` now writes the same complete metric set as the train/test evaluators, including `evaluation_coverage`, `baseline_miss_solve_rate`, and the raw VFB baseline row.
+- Local `python3 validate.py --compare` passes with Bolt `solve_rate=0.80`, `evaluation_coverage=1.00`, `baseline_miss_solve_rate=0.714`, and raw VFB `solve_rate=0.30`.
+- `scripts/run.sh` now reruns the full download/preparation, baseline, method, scoring, and validation path for the next CPU verification job.
+
 The selected released-subset run supports the core claim at reduced scale: switching from full LTLf enumeration to Boolean Set Cover over previously enumerated formulas solves harder tasks while preserving formula validity and keeping formula sizes close on common solved tasks.
 
 ## Deviations From Paper

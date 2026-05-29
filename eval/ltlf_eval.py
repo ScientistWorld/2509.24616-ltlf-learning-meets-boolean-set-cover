@@ -152,6 +152,7 @@ def validate_formula(instance_path: Path, formula: str | None) -> tuple[bool, in
 def summarize(method_rows: list[dict]) -> dict[str, float]:
     solved = [r for r in method_rows if r.get("eval_valid")]
     returned = [r for r in method_rows if r.get("formula")]
+    present = [r for r in method_rows if not r.get("_missing_output")]
     collapses = []
     for row in method_rows:
         full_count = row.get("generated_ltl_formulas", 0)
@@ -160,9 +161,23 @@ def summarize(method_rows: list[dict]) -> dict[str, float]:
             collapses.append(full_count / collapsed_count)
     return {
         "solve_rate": len(solved) / len(method_rows) if method_rows else 0.0,
+        "evaluation_coverage": len(present) / len(method_rows) if method_rows else 0.0,
         "all_returned_formulas_valid": 1.0 if len(solved) == len(returned) else 0.0,
         "mean_collapse_ratio": statistics.fmean(collapses) if collapses else 0.0,
     }
+
+
+def baseline_miss_solve_rate(rows: list[dict], baseline_rows: list[dict] | None) -> float:
+    if not baseline_rows:
+        return 0.0
+    rows_by_inst = {r["instance"]: r for r in rows}
+    baseline_misses = [r for r in baseline_rows if not r.get("eval_valid")]
+    if not baseline_misses:
+        return 0.0
+    solved_misses = [
+        r for r in baseline_misses if rows_by_inst.get(r["instance"], {}).get("eval_valid")
+    ]
+    return len(solved_misses) / len(baseline_misses)
 
 
 def main() -> None:
@@ -199,6 +214,15 @@ def main() -> None:
                         **bolt,
                         "formula_size_ratio": statistics.median(ratios) if ratios else 0.0,
                         "solve_rate_delta_vs_baseline": bolt["solve_rate"] - vfb["solve_rate"],
+                        "baseline_miss_solve_rate": baseline_miss_solve_rate(
+                            rows_by_method["bolt"], rows_by_method["raw_vfb"]
+                        ),
+                    },
+                    "raw_vfb": {
+                        **vfb,
+                        "formula_size_ratio": 1.0,
+                        "solve_rate_delta_vs_baseline": 0.0,
+                        "baseline_miss_solve_rate": 0.0,
                     },
                 }
             }

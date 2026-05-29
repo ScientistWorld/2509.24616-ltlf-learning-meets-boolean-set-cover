@@ -4,10 +4,21 @@
       "results": {
         "bolt": {
           "solve_rate": 0.8,
+          "evaluation_coverage": 1.0,
           "all_returned_formulas_valid": 1.0,
           "mean_collapse_ratio": 3.6585090599056116,
           "formula_size_ratio": 1.0,
-          "solve_rate_delta_vs_baseline": 0.5
+          "solve_rate_delta_vs_baseline": 0.5,
+          "baseline_miss_solve_rate": 0.7142857142857143
+        },
+        "raw_vfb": {
+          "solve_rate": 0.3,
+          "evaluation_coverage": 1.0,
+          "all_returned_formulas_valid": 1.0,
+          "mean_collapse_ratio": 3.6585090599056116,
+          "formula_size_ratio": 1.0,
+          "solve_rate_delta_vs_baseline": 0.0,
+          "baseline_miss_solve_rate": 0.0
         }
       }
     }

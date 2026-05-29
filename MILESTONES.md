@@ -19,5 +19,10 @@
 - Packaged CPU verification job `0b9e9790-461` exited 0 through `scripts/run.sh`.
 - Container run passed `python3 validate.py --compare` with Bolt solve rate 0.80, valid returned formulas, formula-size ratio 1.00, and a 0.50 solve-rate gain over the raw VFB ablation.
 
+### [2026-05-29 02:53] - core_claim
+- Completed scoring-contract audit.
+- Updated the primary evaluator to report coverage, baseline-miss solve rate, and raw VFB baseline metrics alongside Bolt.
+- Prepared a CPU test job to rerun download/preparation, baseline, Bolt, scoring, and validation end to end.
+
 ## Stop Justification
-- Completed at milestone `core_claim`.
+- Core claim has been reached; current work is packaging and verification for a reusable environment.
