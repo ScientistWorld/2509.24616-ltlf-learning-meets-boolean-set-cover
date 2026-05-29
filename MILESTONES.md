@@ -30,4 +30,4 @@
 - Confirmed `python3 validate.py --compare` passes and download URLs resolve.
 
 ## Stop Justification
-- Core claim has been reached; current work is packaging and verification for a reusable environment.
+- Completed at milestone `core_claim`.
