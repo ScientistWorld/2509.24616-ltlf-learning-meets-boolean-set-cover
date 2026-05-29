@@ -18,6 +18,7 @@ TEST_INSTANCES = {
     "data/paper_benchmark_subset/Subset__trace_length=16number_atomic_propositions=5number_positive_traces=5number_negative_traces=5subset_size=3seed=40.json",
     "data/paper_benchmark_subset/Subword__trace_length=16number_atomic_propositions=3number_positive_traces=5number_negative_traces=5subword_length=10seed=40.json",
 }
+EXPECTED_INSTANCE_COUNT = len(TEST_INSTANCES)
 
 
 @dataclass(frozen=True)
@@ -202,9 +203,18 @@ def load_result_files(patterns: list[str], methods: set[str] | None) -> dict[str
         method = canonical_method_name(path, rows)
         if methods is not None and method not in methods:
             continue
-        sliced = [dict(row) for row in rows if row.get("instance") in TEST_INSTANCES]
-        if sliced:
-            rows_by_method[method] = sliced
+        sliced_by_inst = {
+            row["instance"]: dict(row)
+            for row in rows
+            if row.get("instance") in TEST_INSTANCES
+        }
+        sliced = [
+            sliced_by_inst.get(
+                instance, {"instance": instance, "formula": None, "_missing_output": True}
+            )
+            for instance in sorted(TEST_INSTANCES)
+        ]
+        rows_by_method[method] = sliced
     if methods is not None:
         missing = sorted(methods - set(rows_by_method))
         if missing:
@@ -217,6 +227,7 @@ def load_result_files(patterns: list[str], methods: set[str] | None) -> dict[str
 def summarize(method_rows: list[dict]) -> dict[str, float]:
     solved = [r for r in method_rows if r.get("eval_valid")]
     returned = [r for r in method_rows if r.get("formula")]
+    present = [r for r in method_rows if not r.get("_missing_output")]
     collapses = []
     for row in method_rows:
         full_count = row.get("generated_ltl_formulas", 0)
@@ -225,6 +236,7 @@ def summarize(method_rows: list[dict]) -> dict[str, float]:
             collapses.append(full_count / collapsed_count)
     return {
         "solve_rate": len(solved) / len(method_rows) if method_rows else 0.0,
+        "evaluation_coverage": len(present) / len(method_rows) if method_rows else 0.0,
         "all_returned_formulas_valid": 1.0 if len(solved) == len(returned) else 0.0,
         "mean_collapse_ratio": statistics.fmean(collapses) if collapses else 0.0,
     }
@@ -251,6 +263,19 @@ def median_size_ratio(rows: list[dict], baseline_rows: list[dict]) -> float:
     return statistics.median(ratios) if ratios else 0.0
 
 
+def baseline_miss_solve_rate(rows: list[dict], baseline_rows: list[dict] | None) -> float:
+    if not baseline_rows:
+        return 0.0
+    rows_by_inst = {r["instance"]: r for r in rows}
+    baseline_misses = [r for r in baseline_rows if not r.get("eval_valid")]
+    if not baseline_misses:
+        return 0.0
+    solved_misses = [
+        r for r in baseline_misses if rows_by_inst.get(r["instance"], {}).get("eval_valid")
+    ]
+    return len(solved_misses) / len(baseline_misses)
+
+
 def score(rows_by_method: dict[str, list[dict]]) -> dict:
     add_validation(rows_by_method)
     baseline_rows = rows_by_method.get("scarlet")
@@ -271,8 +296,17 @@ def score(rows_by_method: dict[str, list[dict]]) -> dict:
             **summary,
             "formula_size_ratio": formula_size_ratio,
             "solve_rate_delta_vs_baseline": delta,
+            "baseline_miss_solve_rate": baseline_miss_solve_rate(rows, baseline_rows),
         }
-    return {"experiments": {"selected_benchmarks": {"results": results}}}
+    return {
+        "experiments": {
+            "selected_benchmarks": {
+                "_slice": "test",
+                "_expected_instances": EXPECTED_INSTANCE_COUNT,
+                "results": results,
+            }
+        }
+    }
 
 
 def main() -> None:

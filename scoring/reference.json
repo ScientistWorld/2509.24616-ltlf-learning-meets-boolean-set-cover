@@ -5,11 +5,41 @@
       "weight": 1.0,
       "primary_metric": "solve_rate",
       "metrics": {
-        "solve_rate": {"higher_is_better": true, "coefficient": 1.0},
-        "formula_size_ratio": {"higher_is_better": false, "coefficient": -0.5},
-        "all_returned_formulas_valid": {"higher_is_better": true, "coefficient": 2.0},
-        "mean_collapse_ratio": {"higher_is_better": true, "coefficient": 0.2},
-        "solve_rate_delta_vs_baseline": {"higher_is_better": true, "coefficient": 1.0}
+        "solve_rate": {
+          "higher_is_better": true,
+          "coefficient": 1.0,
+          "description": "Fraction of slice instances for which the returned formula independently separates positive from negative traces."
+        },
+        "evaluation_coverage": {
+          "higher_is_better": true,
+          "coefficient": 0.5,
+          "description": "Fraction of slice instances for which the method emitted an output row, preventing omission of hard cases from improving rates."
+        },
+        "formula_size_ratio": {
+          "higher_is_better": false,
+          "coefficient": -0.5,
+          "description": "Median returned-formula size ratio against the raw VFB ablation on instances both methods solve."
+        },
+        "all_returned_formulas_valid": {
+          "higher_is_better": true,
+          "coefficient": 2.0,
+          "description": "Whether every non-empty returned formula is syntactically parseable and semantically valid on its traces."
+        },
+        "mean_collapse_ratio": {
+          "higher_is_better": true,
+          "coefficient": 0.2,
+          "description": "Average reduction from generated LTLf characteristic tables to distinct first-position Boolean atoms."
+        },
+        "solve_rate_delta_vs_baseline": {
+          "higher_is_better": true,
+          "coefficient": 1.0,
+          "description": "Solve-rate improvement over the raw bounded VFB ablation on the same slice."
+        },
+        "baseline_miss_solve_rate": {
+          "higher_is_better": true,
+          "coefficient": 0.8,
+          "description": "Fraction of raw-VFB-unsolved slice instances that the method solves, targeting the Boolean-set-cover benefit."
+        }
       },
       "results": {
         "bolt": {
