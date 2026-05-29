@@ -212,7 +212,7 @@ def main() -> None:
                 "results": {
                     "bolt": {
                         **bolt,
-                        "formula_size_ratio": statistics.median(ratios) if ratios else 0.0,
+                        "formula_size_ratio": statistics.median(ratios) if ratios else 1.0,
                         "solve_rate_delta_vs_baseline": bolt["solve_rate"] - vfb["solve_rate"],
                         "baseline_miss_solve_rate": baseline_miss_solve_rate(
                             rows_by_method["bolt"], rows_by_method["raw_vfb"]

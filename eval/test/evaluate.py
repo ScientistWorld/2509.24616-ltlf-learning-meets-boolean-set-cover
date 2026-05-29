@@ -260,7 +260,7 @@ def median_size_ratio(rows: list[dict], baseline_rows: list[dict]) -> float:
         base_size = base.get("eval_formula_size")
         if base_size:
             ratios.append(row["eval_formula_size"] / base_size)
-    return statistics.median(ratios) if ratios else 0.0
+    return statistics.median(ratios) if ratios else 1.0
 
 
 def baseline_miss_solve_rate(rows: list[dict], baseline_rows: list[dict] | None) -> float:
@@ -290,7 +290,7 @@ def score(rows_by_method: dict[str, list[dict]]) -> dict:
             formula_size_ratio = median_size_ratio(rows, baseline_rows)
             delta = summary["solve_rate"] - baseline["solve_rate"]
         else:
-            formula_size_ratio = 0.0
+            formula_size_ratio = 1.0
             delta = 0.0
         results[method] = {
             **summary,

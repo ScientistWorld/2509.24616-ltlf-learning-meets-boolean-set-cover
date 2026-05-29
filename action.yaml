@@ -3,4 +3,4 @@ action: done
 gpus: 0
 test: false
 milestone: core_claim
-notes: "Core claim validated on the reduced released-benchmark subset; final audit clarified Python Bolt implementation provenance."
+notes: "Final verification passed; compact core-claim gym is ready with neutralized size-ratio fallback."

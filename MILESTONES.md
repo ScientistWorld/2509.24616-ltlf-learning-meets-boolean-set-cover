@@ -34,5 +34,10 @@
 - Confirmed the runnable method is the paper's symbolic VFB-to-Boolean-Set-Cover pipeline at reduced scale, not a learned surrogate.
 - Clarified that the packaged method runs the compact Python implementation while retaining the upstream Bolt fetch for provenance.
 
+### [2026-05-29 03:02] - core_claim
+- Completed final verification for gym readiness.
+- Fixed a neutral scoring fallback for formula-size comparisons when no common solved tasks exist.
+- Re-ran main, train, and test evaluators plus `python3 validate.py --compare`; all checks pass.
+
 ## Stop Justification
 - Completed at milestone `core_claim`.

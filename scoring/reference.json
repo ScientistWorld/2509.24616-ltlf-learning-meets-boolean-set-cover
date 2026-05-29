@@ -2,6 +2,7 @@
   "experiments": {
     "selected_benchmarks": {
       "description": "Paper-level CPU comparison target from Table 1, evaluated in this reproduction on a small subset extracted from the paper's released benchmark archive. Size ratio is the paper's average size ratio target; reproduced scores use the median common-task size ratio against the local reference baseline.",
+      "notes": "The reference values for Bolt and Scarlet are the full-suite paper numbers. Reproduced scores are computed on the tracked 10-instance subset, so solve_rate is directly comparable as a fraction but not as a full-suite solved count.",
       "weight": 1.0,
       "primary_metric": "solve_rate",
       "metrics": {
