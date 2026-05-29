@@ -1,0 +1,49 @@
+{
+  "experiments": {
+    "selected_benchmarks": {
+      "description": "Paper-level CPU comparison target from Table 1, evaluated in this reproduction on a small selected benchmark subset with raw VFB as the local ablation baseline.",
+      "weight": 1.0,
+      "primary_metric": "solved_count",
+      "metrics": {
+        "solved_count": {"higher_is_better": true, "coefficient": 1.0},
+        "solve_rate": {"higher_is_better": true, "coefficient": 1.0},
+        "median_runtime_s": {"higher_is_better": false, "coefficient": -0.2},
+        "median_formula_size": {"higher_is_better": false, "coefficient": -0.2},
+        "all_returned_formulas_valid": {"higher_is_better": true, "coefficient": 2.0},
+        "mean_collapse_ratio": {"higher_is_better": true, "coefficient": 0.2},
+        "solve_count_delta_vs_vfb": {"higher_is_better": true, "coefficient": 1.0},
+        "median_size_ratio_vs_vfb_common": {"higher_is_better": false, "coefficient": -0.5},
+        "max_size_ratio_vs_vfb_common": {"higher_is_better": false, "coefficient": -0.2},
+        "runtime_speedup_vs_vfb_common": {"higher_is_better": true, "coefficient": 0.2}
+      },
+      "results": {
+        "bolt": {
+          "type": "proposed",
+          "solved_count": 14374,
+          "solve_rate": 0.9217,
+          "median_runtime_s": 2.05,
+          "median_formula_size": 1.01,
+          "all_returned_formulas_valid": 1.0,
+          "mean_collapse_ratio": 3.54,
+          "solve_count_delta_vs_vfb": 2906,
+          "median_size_ratio_vs_vfb_common": 1.01,
+          "max_size_ratio_vs_vfb_common": 1.01,
+          "runtime_speedup_vs_vfb_common": 2.05
+        },
+        "raw_vfb": {
+          "type": "baseline",
+          "solved_count": 11468,
+          "solve_rate": 0.7353,
+          "median_runtime_s": 4.21,
+          "median_formula_size": 1.15,
+          "all_returned_formulas_valid": 1.0,
+          "mean_collapse_ratio": 1.0,
+          "solve_count_delta_vs_vfb": 0,
+          "median_size_ratio_vs_vfb_common": 1.0,
+          "max_size_ratio_vs_vfb_common": 1.0,
+          "runtime_speedup_vs_vfb_common": 1.0
+        }
+      }
+    }
+  }
+}

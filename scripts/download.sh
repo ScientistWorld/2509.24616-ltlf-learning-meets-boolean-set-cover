@@ -9,22 +9,28 @@
 #
 # Update the storage estimate below as you add downloads.
 #
-# Estimated total download size: TODO GB
-# Estimated disk usage after extraction: TODO GB
+# Estimated total download size: 100 MB if the optional upstream benchmark zip is fetched.
+# Estimated disk usage after extraction: about 2 GB for the optional full benchmark suite.
 #
-# During reproduction, prefer downloading to shared directories
-# (shared/datasets/, shared/models/) so other papers can reuse them.
-# You do not need to run this script during reproduction — it exists
-# for future portability. Write it to download to workspace-local
-# paths (data/, checkpoints/) instead of the shared directories
-# so a future user with just the workspace can run this script and get everything they need.
+# This script writes to workspace-local paths so a fresh clone can be
+# prepared without relying on machine-local caches.
 
-set -e
+set -euo pipefail
 
-cd "$(dirname "$0")"
+cd /home/user
 
-# TODO: implement downloads
-# Examples:
-#   wget -nc https://example.com/dataset.tar.gz -P data/
-#   python -c "from huggingface_hub import snapshot_download; snapshot_download('model/name', local_dir='checkpoints/')"
-#   huggingface-cli download Qwen/Qwen3-1.7B --local-dir /checkpoints/Qwen3-1.7B
+mkdir -p data/downloads
+
+if [ ! -d data/downloads/LTLf_Learning_Benchmarks ]; then
+  git clone --depth 1 https://github.com/SynthesisLab/LTLf_Learning_Benchmarks.git data/downloads/LTLf_Learning_Benchmarks
+fi
+
+if [ ! -d method/Bolt ]; then
+  git clone --depth 1 https://github.com/SynthesisLab/Bolt.git method/Bolt
+fi
+
+# Optional full benchmark release used by the paper. The reproduction scripts
+# use the small tracked subset generated in data/selected_benchmarks.
+if [ "${DOWNLOAD_FULL_BENCHMARKS:-0}" = "1" ] && [ ! -e data/downloads/benchmarks.zip ]; then
+  wget -O data/downloads/benchmarks.zip https://github.com/SynthesisLab/LTLf_Learning_Benchmarks/releases/download/benchmark/benchmarks.zip
+fi

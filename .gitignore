@@ -30,6 +30,9 @@ checkpoints/
 data/downloads/
 !data/downloads/.gitkeep
 
+# External upstream implementation fetched for inspection/optional use.
+method/Bolt/
+
 # Container artifacts (multi-GB)
 environment/container.sif
 environment/container.squashfs

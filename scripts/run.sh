@@ -1,5 +1,10 @@
 #!/bin/bash
-# Example job script submitted via the end-of-turn YAML block.
+set -euo pipefail
+
+cd /home/user
+
+bash scripts/reproduce.sh
+python3 validate.py --compare
 #
 # This runs inside the compute container with:
 #   - Your workspace mounted at /home/user

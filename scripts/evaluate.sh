@@ -20,11 +20,13 @@
 #
 # Called from run.sh after training, or independently.
 
-set -e
+set -euo pipefail
 
 cd /home/user
 
 mkdir -p scoring
 
-# TODO: implement evaluation using code in eval/
-# Must write scoring/scores.json at the end
+python3 eval/ltlf_eval.py \
+  --bolt "${BOLT_RESULTS:-outputs/bolt_results.json}" \
+  --vfb "${VFB_RESULTS:-outputs/raw_vfb_results.json}" \
+  --out scoring/scores.json
