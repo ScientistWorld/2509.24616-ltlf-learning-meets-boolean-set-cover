@@ -3,4 +3,4 @@ action: done
 gpus: 0
 test: false
 milestone: core_claim
-notes: "Held-out benchmark-family split; 14 train metrics and 14 test metrics across bolt/scarlet; bolt solve_rate 0.80 train and 0.80 test, baseline gap +0.40 train/+0.60 test; all outputs covered and valid."
+notes: "Held-out benchmark-family split; 14 train metrics and 14 test metrics across bolt/raw_vfb; bolt solve_rate 0.80 train and 0.80 test, baseline gap +0.40 train/+0.60 test; all outputs covered and valid."

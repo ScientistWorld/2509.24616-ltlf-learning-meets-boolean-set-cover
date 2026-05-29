@@ -54,6 +54,9 @@
           "type": "baseline",
           "solve_rate": 0.7353,
           "formula_size_ratio": 1.15
+        },
+        "raw_vfb": {
+          "type": "baseline"
         }
       }
     }

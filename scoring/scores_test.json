@@ -13,7 +13,7 @@
           "solve_rate_delta_vs_baseline": 0.6000000000000001,
           "baseline_miss_solve_rate": 0.75
         },
-        "scarlet": {
+        "raw_vfb": {
           "solve_rate": 0.2,
           "evaluation_coverage": 1.0,
           "all_returned_formulas_valid": 1.0,

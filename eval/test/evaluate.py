@@ -165,7 +165,7 @@ def canonical_method_name(path: Path, rows: list[dict]) -> str:
     if stem.endswith("_results"):
         stem = stem[: -len("_results")]
     if stem in {"raw_vfb", "vfb"}:
-        return "scarlet"
+        return "raw_vfb"
     if stem:
         return stem
     names = {row.get("method") for row in rows if row.get("method")}
@@ -278,12 +278,12 @@ def baseline_miss_solve_rate(rows: list[dict], baseline_rows: list[dict] | None)
 
 def score(rows_by_method: dict[str, list[dict]]) -> dict:
     add_validation(rows_by_method)
-    baseline_rows = rows_by_method.get("scarlet")
+    baseline_rows = rows_by_method.get("raw_vfb")
     baseline = summarize(baseline_rows) if baseline_rows else None
     results = {}
     for method, rows in sorted(rows_by_method.items()):
         summary = summarize(rows)
-        if method == "scarlet":
+        if method == "raw_vfb":
             formula_size_ratio = 1.0
             delta = 0.0
         elif baseline_rows and baseline:
