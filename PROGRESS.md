@@ -4,6 +4,7 @@
 
 - `method/ltlf_bolt.py` runs the paper's actual two-stage method at small scale:
   bounded VFB LTLf enumeration using characteristic tables, collapse to first-bit vectors, and Boolean Set Cover beam search.
+- The packaged reproduction is a compact Python implementation of the paper's computation, not a wrapper around the upstream Rust binary; `scripts/download.sh` still fetches the upstream Bolt repository for inspection.
 - `scripts/baseline.sh` runs raw bounded VFB without the Boolean Set Cover stage.
 - `data/prepare_paper_subset.py` extracts a tracked 10-instance subset from the paper's released benchmark zip.
 - `scripts/method.sh` runs Bolt on the selected released benchmark instances and then calls `scripts/evaluate.sh`.
@@ -44,12 +45,19 @@ Packaging audit on 2026-05-29:
 - Local `python3 validate.py --compare` passes with Bolt `solve_rate=0.80`, `evaluation_coverage=1.00`, `baseline_miss_solve_rate=0.714`, and raw VFB `solve_rate=0.30`.
 - `scripts/run.sh` now reruns the full download/preparation, baseline, method, scoring, and validation path for the next CPU verification job.
 
+Final audit on 2026-05-29:
+
+- Confirmed the implementation is symbolic VFB enumeration plus Boolean Set Cover, not a surrogate model.
+- Confirmed evaluation code independently parses and evaluates formulas and does not import `method/`.
+- Confirmed current `python3 validate.py --compare` passes after the final scoring-contract checks.
+
 The selected released-subset run supports the core claim at reduced scale: switching from full LTLf enumeration to Boolean Set Cover over previously enumerated formulas solves harder tasks while preserving formula validity and keeping formula sizes close on common solved tasks.
 
 ## Deviations From Paper
 
 - The full paper benchmark suite has 15,595 tasks. This workspace uses 10 tracked small instances extracted from the paper's released benchmark zip, spanning Fixed Formulas, counters, Nim, OrderedSequence, random Boolean factors, Subset, Subword, and Hamming. The subset keeps the reproduction quick enough for a CPU smoke job.
 - The paper implementation is Rust and uses `LTL2BS-switch = 8`, `beam-width = 100`, and `D&C-switch = 70`. This reproduction defaults to `LTL_SWITCH=3`, `BEAM_WIDTH=30`, and `MAX_BOOL_WEIGHT=25` to fit a small CPU smoke job.
+- The packaged method executes the Python reproduction in `method/ltlf_bolt.py`; it does not build or run the upstream Rust Bolt binary.
 - The baseline in this workspace is raw bounded VFB, matching the paper's ablation question. The exact Scarlet and GPU baselines are not reimplemented.
 - Wall-clock speed is reported only in raw run artifacts for diagnosis. It is excluded from `scoring/reference.json` and `scoring/scores.json` because hardware-dependent speed is not a stable scoring target.
 

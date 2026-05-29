@@ -29,5 +29,10 @@
 - Cleaned method-agnostic documentation and set method-internal diagnostic scoring weight to zero.
 - Confirmed `python3 validate.py --compare` passes and download URLs resolve.
 
+### [2026-05-29 03:00] - core_claim
+- Re-audited the packaged code and docs.
+- Confirmed the runnable method is the paper's symbolic VFB-to-Boolean-Set-Cover pipeline at reduced scale, not a learned surrogate.
+- Clarified that the packaged method runs the compact Python implementation while retaining the upstream Bolt fetch for provenance.
+
 ## Stop Justification
 - Completed at milestone `core_claim`.
