@@ -24,5 +24,10 @@
 - Updated the primary evaluator to report coverage, baseline-miss solve rate, and raw VFB baseline metrics alongside Bolt.
 - Prepared a CPU test job to rerun download/preparation, baseline, Bolt, scoring, and validation end to end.
 
+### [2026-05-29 02:56] - core_claim
+- Final verification passed.
+- Cleaned method-agnostic documentation and set method-internal diagnostic scoring weight to zero.
+- Confirmed `python3 validate.py --compare` passes and download URLs resolve.
+
 ## Stop Justification
 - Core claim has been reached; current work is packaging and verification for a reusable environment.

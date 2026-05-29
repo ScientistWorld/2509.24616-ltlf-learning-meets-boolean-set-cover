@@ -9,6 +9,7 @@ Primary target:
 Constraints:
 
 - Keep `all_returned_formulas_valid` at `1.0`.
-- Keep `formula_size_ratio` close to or below `1.0` on tasks solved by both the proposed method and the raw VFB ablation.
-- Preserve a positive `solve_rate_delta_vs_baseline`; gains should come from solving instances that raw bounded VFB misses at the same LTL switch.
+- Keep `evaluation_coverage` at `1.0`; every selected instance must receive an output row.
+- Keep `formula_size_ratio` close to or below `1.0` on tasks solved by both the submitted method and the provided reference baseline.
+- Preserve a positive `solve_rate_delta_vs_baseline`; gains should come from solving instances that the provided reference baseline misses under the same benchmark slice.
 - Do not improve solved count by changing the benchmark traces or labels.

@@ -1,7 +1,7 @@
 {
   "experiments": {
     "selected_benchmarks": {
-      "description": "Paper-level CPU comparison target from Table 1, evaluated in this reproduction on a small subset extracted from the paper's released benchmark archive with raw VFB as the local ablation baseline. Size ratio is the paper's average size ratio target; reproduced scores use the median common-task size ratio against the local ablation baseline.",
+      "description": "Paper-level CPU comparison target from Table 1, evaluated in this reproduction on a small subset extracted from the paper's released benchmark archive. Size ratio is the paper's average size ratio target; reproduced scores use the median common-task size ratio against the local reference baseline.",
       "weight": 1.0,
       "primary_metric": "solve_rate",
       "metrics": {
@@ -18,7 +18,7 @@
         "formula_size_ratio": {
           "higher_is_better": false,
           "coefficient": -0.5,
-          "description": "Median returned-formula size ratio against the raw VFB ablation on instances both methods solve."
+          "description": "Median returned-formula size ratio against the local reference baseline on instances both methods solve."
         },
         "all_returned_formulas_valid": {
           "higher_is_better": true,
@@ -27,18 +27,18 @@
         },
         "mean_collapse_ratio": {
           "higher_is_better": true,
-          "coefficient": 0.2,
-          "description": "Average reduction from generated LTLf characteristic tables to distinct first-position Boolean atoms."
+          "coefficient": 0.0,
+          "description": "Optional diagnostic ratio emitted by methods that report candidate-reduction metadata. It is not used for ranking."
         },
         "solve_rate_delta_vs_baseline": {
           "higher_is_better": true,
           "coefficient": 1.0,
-          "description": "Solve-rate improvement over the raw bounded VFB ablation on the same slice."
+          "description": "Solve-rate improvement over the local reference baseline on the same slice."
         },
         "baseline_miss_solve_rate": {
           "higher_is_better": true,
           "coefficient": 0.8,
-          "description": "Fraction of raw-VFB-unsolved slice instances that the method solves, targeting the Boolean-set-cover benefit."
+          "description": "Fraction of reference-baseline-unsolved slice instances that the method solves."
         }
       },
       "results": {
