@@ -35,3 +35,4 @@ The selected run supports the core claim at reduced scale: switching from full L
 - The first local smoke run showed that timeout checks needed to occur inside enumeration and Boolean Set Cover loops, not only between size layers. The implementation now checks deadlines during inner loops.
 - Job `e42a7275-194` completed reproduction and validation successfully, then exited with code 2 because the original template tail in `scripts/run.sh` still called missing `method/train.py`. That stale command has been removed.
 - Job `e68797d5-12f` reran the packaged environment cleanly with exit code 0.
+- Validation initially rejected `solved_count` as the primary metric because this reproduction uses a selected six-instance subset while the paper reports full-suite counts. The primary metric is now `solve_rate`, and the local raw VFB ablation is used only for Bolt constraint metrics rather than being labeled as the paper's Scarlet baseline.

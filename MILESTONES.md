@@ -21,3 +21,8 @@
 ### [2026-05-29 02:30] - core_claim
 - Clean container job `e68797d5-12f` completed with exit code 0.
 - `scripts/reproduce.sh` and `python3 validate.py --compare` passed inside the packaged CPU test environment.
+
+### [2026-05-29 02:36] - core_claim
+- Fixed scoring consistency validation by using `solve_rate` as the primary metric for the selected subset.
+- Kept Scarlet as the paper baseline in `reference.json` and raw VFB as a local ablation used for Bolt constraint metrics.
+- `python3 validate.py` and `python3 validate.py --compare` both pass.

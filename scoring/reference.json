@@ -3,7 +3,7 @@
     "selected_benchmarks": {
       "description": "Paper-level CPU comparison target from Table 1, evaluated in this reproduction on a small selected benchmark subset with raw VFB as the local ablation baseline.",
       "weight": 1.0,
-      "primary_metric": "solved_count",
+      "primary_metric": "solve_rate",
       "metrics": {
         "solved_count": {"higher_is_better": true, "coefficient": 1.0},
         "solve_rate": {"higher_is_better": true, "coefficient": 1.0},
@@ -30,7 +30,7 @@
           "max_size_ratio_vs_vfb_common": 1.01,
           "runtime_speedup_vs_vfb_common": 2.05
         },
-        "raw_vfb": {
+        "scarlet": {
           "type": "baseline",
           "solved_count": 11468,
           "solve_rate": 0.7353,

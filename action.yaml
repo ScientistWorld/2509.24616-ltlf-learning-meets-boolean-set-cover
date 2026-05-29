@@ -31,4 +31,4 @@ action: done
 gpus: 0
 test: false
 milestone: core_claim
-notes: "Core claim reproduced and packaged: clean CPU job e68797d5-12f ran scripts/reproduce.sh plus validation with Bolt 6/6 vs raw VFB 2/6 on selected benchmarks."
+notes: "Core claim reproduced and packaged. Validation passes after using solve_rate as the selected-subset primary metric; Bolt solves 6/6 selected tasks with raw VFB used for constraint metrics."

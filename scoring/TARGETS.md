@@ -4,7 +4,7 @@ Optimize `selected_benchmarks`.
 
 Primary target:
 
-- Increase `solved_count` for valid learned LTLf formulas on the selected benchmark suite.
+- Increase `solve_rate` for valid learned LTLf formulas on the selected benchmark suite. `solved_count` is also reported, but it is subset-size dependent and should not be compared directly to the paper's full-suite count.
 
 Constraints:
 

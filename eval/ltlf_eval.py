@@ -199,7 +199,6 @@ def main() -> None:
                         "max_size_ratio_vs_vfb_common": max(ratios) if ratios else 0.0,
                         "runtime_speedup_vs_vfb_common": statistics.median(speedups) if speedups else 0.0,
                     },
-                    "raw_vfb": vfb,
                 }
             }
         }

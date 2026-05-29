@@ -13,14 +13,6 @@
           "median_size_ratio_vs_vfb_common": 1.0,
           "max_size_ratio_vs_vfb_common": 1.0,
           "runtime_speedup_vs_vfb_common": 0.9657276470183326
-        },
-        "raw_vfb": {
-          "solved_count": 2,
-          "solve_rate": 0.3333333333333333,
-          "median_runtime_s": 0.0048999403370544314,
-          "median_formula_size": 2.5,
-          "all_returned_formulas_valid": 1.0,
-          "mean_collapse_ratio": 1.9531405829143893
         }
       }
     }
