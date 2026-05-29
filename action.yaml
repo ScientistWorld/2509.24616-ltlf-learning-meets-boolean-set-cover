@@ -1,8 +1,8 @@
 # IMPORTANT: Once you set action to 'submit' or 'done', STOP immediately.
 # Do NOT sleep, poll, or wait for jobs. The system reads this file
 # only after your turn ends. Sleeping blocks the entire pipeline.
-action: pending
-gpus: 1
+action: done
+gpus: 0
 test: false
-milestone: method_runs
-notes: ""
+milestone: core_claim
+notes: "Core claim reproduced on the selected CPU benchmark subset: Bolt's Boolean Set Cover stage solves 6/6 tasks versus 2/6 for raw bounded VFB, with all returned formulas independently validated."
