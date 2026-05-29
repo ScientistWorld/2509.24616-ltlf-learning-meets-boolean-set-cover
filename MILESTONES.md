@@ -20,4 +20,4 @@
 - Container run passed `python3 validate.py --compare` with Bolt solve rate 0.80, valid returned formulas, formula-size ratio 1.00, and a 0.50 solve-rate gain over the raw VFB ablation.
 
 ## Stop Justification
-- Stopping at `core_claim`: the actual Bolt computation is implemented, independently evaluated, and package-verified on a tracked subset of the paper's released benchmarks. Further progress would require expanding to a larger benchmark slice, not fixing a failing core reproduction.
+- Completed at milestone `core_claim`.

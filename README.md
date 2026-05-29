@@ -2,7 +2,7 @@
 
 `LTLf Learning Meets Boolean Set Cover` introduces Bolt, an LTLf learner that avoids exhaustive growth of temporal formulas by switching from bounded LTLf enumeration to Boolean Set Cover over already discovered formulas.
 
-This workspace reproduces the core claim at small CPU scale: the Boolean Set Cover stage solves selected tasks that raw bounded VFB cannot solve at the same LTL size bound, while all learned formulas are independently validated.
+This workspace reproduces the core claim at small CPU scale on a tracked subset of the paper's released benchmarks: the Boolean Set Cover stage solves selected tasks that raw bounded VFB cannot solve at the same LTL size bound, while all learned formulas are independently validated.
 
 ---
 
@@ -12,7 +12,7 @@ Given two disjoint finite sets of finite traces, positive traces `P` and negativ
 
 Each trace is a non-empty sequence of valuations over a fixed finite set of atomic propositions. The learned formula is judged by whether its LTLf semantics over finite traces separates the two trace sets. Smaller formulas are preferred when multiple valid separators exist.
 
-This workspace evaluates small benchmark instances in the same format as the paper's benchmark suite: JSON files containing positive traces, negative traces, atomic proposition names, and metadata.
+This workspace evaluates a small tracked subset extracted from the paper's released benchmark suite: JSON files containing positive traces, negative traces, atomic proposition names, and metadata.
 
 ---
 
@@ -34,7 +34,7 @@ Evaluation reads result artifacts from `outputs/` and does not import from `meth
 
 For each returned formula, the evaluator parses the LTLf expression and evaluates it on all positive and negative traces. A formula is valid only if it accepts every positive trace and rejects every negative trace.
 
-The main benefit metric is solve rate on the selected benchmark suite. Constraint metrics include returned-formula validity and formula size ratios on tasks solved by both Bolt and the baseline. Collapse ratio is recorded to show that the Boolean Set Cover stage is operating on first-bit vector representatives rather than full characteristic tables. Wall-clock runtimes may appear in raw run artifacts for diagnosis, but they are not scored because they are hardware-dependent.
+The main benefit metric is solve rate on the selected released benchmark subset. Constraint metrics include returned-formula validity, formula-size ratio on tasks solved by both Bolt and the raw VFB ablation, and solve-rate delta over that ablation. Collapse ratio is recorded to show that the Boolean Set Cover stage is operating on first-bit vector representatives rather than full characteristic tables. Wall-clock runtimes may appear in raw run artifacts for diagnosis, but they are not scored because they are hardware-dependent.
 
 Run:
 
@@ -97,12 +97,37 @@ python3 validate.py --compare
 
 </details>
 
+### Iteration 3: gpt-5.5
+- **Milestone**: `core_claim` | **Status**: done
+- **Working time**: 12m | **GPU**: 0.0h
+- **Jobs**: 3 total (2 completed, 1 failed)
+
+<details>
+<summary>Progress Log</summary>
+
+### [2026-05-29 02:21] - core_claim
+- Implemented Bolt's bounded VFB enumeration, characteristic-table observational equivalence, collapse to first-bit vectors, and Boolean Set Cover beam search/divide-and-conquer path.
+- Packaged a selected finite-trace benchmark suite and raw bounded VFB ablation baseline.
+- Validated reproduced results: Bolt solves 6/6 selected tasks, raw bounded VFB solves 2/6 at the same LTL size bound, and all returned formulas independently separate positive from negative traces.
+
+### [2026-05-29 02:29] - core_claim
+- Audited the previous `core_claim` after reset to `method_runs`.
+- Replaced the default generated suite with 10 tracked instances extracted from the paper's released benchmark zip.
+- Fixed the formula-size scoring mismatch and a divide-and-conquer recursion bug exposed by released benchmark instances.
+- Local validation passes: Bolt solves 8/10 released-subset tasks, raw bounded VFB solves 3/10, and all returned formulas independently separate positive from negative traces.
+
+### [2026-05-29 02:34] - core_claim
+- Packaged CPU verification job `0b9e9790-461` exited 0 through `scripts/run.sh`.
+- Container run passed `python3 validate.py --compare` with Bolt solve rate 0.80, valid returned formulas, formula-size ratio 1.00, and a 0.50 solve-rate gain over the raw VFB ablation.
+
+</details>
+
 
 ---
 
 # Reproduction Milestones
 
-**Current: method_runs**
+**Current: core_claim**
 
 ## Stop Justification
-- Completed at milestone `method_runs`.
+- Completed at milestone `core_claim`.
