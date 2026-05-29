@@ -3,21 +3,21 @@
     "selected_benchmarks": {
       "results": {
         "bolt": {
-          "solved_count": 4,
-          "solve_rate": 0.6666666666666666,
-          "median_runtime_s": 0.533951607067138,
-          "median_formula_size": 5.5,
+          "solved_count": 6,
+          "solve_rate": 1.0,
+          "median_runtime_s": 0.3872647329699248,
+          "median_formula_size": 11.0,
           "all_returned_formulas_valid": 1.0,
           "mean_collapse_ratio": 1.9531405829143893,
-          "solve_count_delta_vs_vfb": 2,
+          "solve_count_delta_vs_vfb": 4,
           "median_size_ratio_vs_vfb_common": 1.0,
           "max_size_ratio_vs_vfb_common": 1.0,
-          "runtime_speedup_vs_vfb_common": 0.9862066980979586
+          "runtime_speedup_vs_vfb_common": 1.0060358276312589
         },
         "raw_vfb": {
           "solved_count": 2,
           "solve_rate": 0.3333333333333333,
-          "median_runtime_s": 0.006261127418838441,
+          "median_runtime_s": 0.0047017610631883144,
           "median_formula_size": 2.5,
           "all_returned_formulas_valid": 1.0,
           "mean_collapse_ratio": 1.9531405829143893
