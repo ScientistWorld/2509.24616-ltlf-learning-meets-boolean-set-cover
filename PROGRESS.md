@@ -10,7 +10,7 @@
 
 ## Results Achieved
 
-Container smoke job `e42a7275-194` on 2026-05-29:
+Clean container smoke job `e68797d5-12f` on 2026-05-29:
 
 - Bolt: solved 6/6 selected tasks.
 - Raw bounded VFB: solved 2/6 selected tasks.
@@ -28,10 +28,10 @@ The selected run supports the core claim at reduced scale: switching from full L
 
 ## What Remains
 
-- Rerun the packaged CPU job after removing stale template commands from `scripts/run.sh` so the job exits cleanly.
 - To go beyond `core_claim`, scale the selected suite or use the optional upstream benchmark release from `scripts/download.sh`.
 
 ## Issues Encountered
 
 - The first local smoke run showed that timeout checks needed to occur inside enumeration and Boolean Set Cover loops, not only between size layers. The implementation now checks deadlines during inner loops.
 - Job `e42a7275-194` completed reproduction and validation successfully, then exited with code 2 because the original template tail in `scripts/run.sh` still called missing `method/train.py`. That stale command has been removed.
+- Job `e68797d5-12f` reran the packaged environment cleanly with exit code 0.

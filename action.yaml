@@ -27,8 +27,8 @@
 #   milestone: core_claim
 #   notes: "Reproduced the core claim. Environment packaged."
 
-action: submit
+action: done
 gpus: 0
-test: true
+test: false
 milestone: core_claim
-notes: "Clean CPU rerun after removing stale template commands from scripts/run.sh; expected to reproduce Bolt 6/6 vs raw VFB 2/6 and pass validation."
+notes: "Core claim reproduced and packaged: clean CPU job e68797d5-12f ran scripts/reproduce.sh plus validation with Bolt 6/6 vs raw VFB 2/6 on selected benchmarks."

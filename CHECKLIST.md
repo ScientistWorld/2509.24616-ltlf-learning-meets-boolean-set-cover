@@ -13,4 +13,4 @@
 - [x] Run local smoke test and `python3 validate.py --compare`.
 - [x] Run packaged CPU job through `action.yaml`.
 - [x] Promote milestone to `core_claim` after job results confirm the local smoke result.
-- [ ] Rerun packaged CPU job after removing stale template commands from `scripts/run.sh`.
+- [x] Rerun packaged CPU job after removing stale template commands from `scripts/run.sh`.

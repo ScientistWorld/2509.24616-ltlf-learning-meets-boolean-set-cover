@@ -17,3 +17,7 @@
 - Container job `e42a7275-194` ran the packaged reproduction and validation successfully before hitting a stale template command in `scripts/run.sh`.
 - On the selected benchmark subset, Bolt solved 6/6 tasks while raw bounded VFB solved 2/6; all returned formulas were independently validated.
 - Removed the stale template tail from `scripts/run.sh` and prepared a clean rerun.
+
+### [2026-05-29 02:30] - core_claim
+- Clean container job `e68797d5-12f` completed with exit code 0.
+- `scripts/reproduce.sh` and `python3 validate.py --compare` passed inside the packaged CPU test environment.
