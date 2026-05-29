@@ -10,6 +10,12 @@
 
 ## Results Achieved
 
+Local validation on 2026-05-29:
+
+- `python3 validate.py --compare` passes all scoring and structure checks.
+- Current artifacts show Bolt solving 6/6 selected tasks and raw bounded VFB solving 2/6.
+- The four additional Bolt solves all come from the Boolean Set Cover stage after bounded VFB at the same LTL switch does not find a separator.
+
 Clean container smoke job `e68797d5-12f` on 2026-05-29:
 
 - Bolt: solved 6/6 selected tasks.
@@ -28,6 +34,7 @@ The selected run supports the core claim at reduced scale: switching from full L
 
 ## What Remains
 
+- A CPU-only packaged verification job has been submitted to rerun `scripts/reproduce.sh` and `python3 validate.py --compare` from `scripts/run.sh`.
 - To go beyond `core_claim`, scale the selected suite or use the optional upstream benchmark release from `scripts/download.sh`.
 
 ## Issues Encountered
