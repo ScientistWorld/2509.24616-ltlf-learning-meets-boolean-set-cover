@@ -24,7 +24,7 @@ The VFB stage enumerates LTLf formulas by syntactic size. Each formula is evalua
 
 If no separator is found by the LTL size bound, Bolt collapses each retained formula to the vector of first-position truth values over the traces. Boolean combinations of these retained formulas are then searched with only conjunction and disjunction. This Boolean Set Cover stage uses formula weight, observational equivalence on vectors, score based on correctly classified traces, approximate domination, beam search, and a divide-and-conquer fallback.
 
-This reproduction implements the same computational steps in Python for a reduced CPU benchmark suite. It also implements raw bounded VFB as the local ablation baseline.
+This reproduction implements the same computational steps in Python for a reduced CPU benchmark suite. The upstream Rust Bolt repository is fetched for inspection and provenance, but the packaged scripts run the compact Python implementation so the core algorithm is easy to audit. It also implements raw bounded VFB as the local ablation baseline.
 
 ---
 
@@ -34,7 +34,7 @@ Evaluation reads result artifacts from `outputs/` and does not import from `meth
 
 For each returned formula, the evaluator parses the LTLf expression and evaluates it on all positive and negative traces. A formula is valid only if it accepts every positive trace and rejects every negative trace.
 
-The main benefit metric is solve rate on the selected released benchmark subset. Constraint metrics include returned-formula validity, evaluation coverage, formula-size ratio on tasks solved by both a submitted method and the provided reference baseline, and solve-rate delta over that baseline. Diagnostic metadata may appear in raw run artifacts, but method-internal diagnostics and wall-clock runtimes are not ranking targets.
+The main benefit metric is solve rate on the selected released benchmark subset. Constraint metrics include returned-formula validity, evaluation coverage, formula-size ratio on tasks solved by both a submitted method and the provided reference baseline, and solve-rate delta over that baseline. If there are no common solved tasks for a size comparison, the ratio is reported as neutral `1.0` rather than giving a size bonus. Diagnostic metadata may appear in raw run artifacts, but method-internal diagnostics and wall-clock runtimes are not ranking targets.
 
 A reusable method output is a JSON file under `outputs/` with a top-level `results` list. Each row should include at least:
 
@@ -262,6 +262,51 @@ python3 validate.py --compare
 - Final verification passed.
 - Cleaned method-agnostic documentation and set method-internal diagnostic scoring weight to zero.
 - Confirmed `python3 validate.py --compare` passes and download URLs resolve.
+
+</details>
+
+### Iteration 9: gpt-5.5 (verifier)
+- **Milestone**: `core_claim` | **Status**: done
+- **Working time**: 5m | **GPU**: 0.0h
+- **Jobs**: 4 total (3 completed, 1 failed)
+
+<details>
+<summary>Progress Log</summary>
+
+### [2026-05-29 02:21] - core_claim
+- Implemented Bolt's bounded VFB enumeration, characteristic-table observational equivalence, collapse to first-bit vectors, and Boolean Set Cover beam search/divide-and-conquer path.
+- Packaged a selected finite-trace benchmark suite and raw bounded VFB ablation baseline.
+- Validated reproduced results: Bolt solves 6/6 selected tasks, raw bounded VFB solves 2/6 at the same LTL size bound, and all returned formulas independently separate positive from negative traces.
+
+### [2026-05-29 02:29] - core_claim
+- Audited the previous `core_claim` after reset to `method_runs`.
+- Replaced the default generated suite with 10 tracked instances extracted from the paper's released benchmark zip.
+- Fixed the formula-size scoring mismatch and a divide-and-conquer recursion bug exposed by released benchmark instances.
+- Local validation passes: Bolt solves 8/10 released-subset tasks, raw bounded VFB solves 3/10, and all returned formulas independently separate positive from negative traces.
+
+### [2026-05-29 02:34] - core_claim
+- Packaged CPU verification job `0b9e9790-461` exited 0 through `scripts/run.sh`.
+- Container run passed `python3 validate.py --compare` with Bolt solve rate 0.80, valid returned formulas, formula-size ratio 1.00, and a 0.50 solve-rate gain over the raw VFB ablation.
+
+### [2026-05-29 02:53] - core_claim
+- Completed scoring-contract audit.
+- Updated the primary evaluator to report coverage, baseline-miss solve rate, and raw VFB baseline metrics alongside Bolt.
+- Prepared a CPU test job to rerun download/preparation, baseline, Bolt, scoring, and validation end to end.
+
+### [2026-05-29 02:56] - core_claim
+- Final verification passed.
+- Cleaned method-agnostic documentation and set method-internal diagnostic scoring weight to zero.
+- Confirmed `python3 validate.py --compare` passes and download URLs resolve.
+
+### [2026-05-29 03:00] - core_claim
+- Re-audited the packaged code and docs.
+- Confirmed the runnable method is the paper's symbolic VFB-to-Boolean-Set-Cover pipeline at reduced scale, not a learned surrogate.
+- Clarified that the packaged method runs the compact Python implementation while retaining the upstream Bolt fetch for provenance.
+
+### [2026-05-29 03:02] - core_claim
+- Completed final verification for gym readiness.
+- Fixed a neutral scoring fallback for formula-size comparisons when no common solved tasks exist.
+- Re-ran main, train, and test evaluators plus `python3 validate.py --compare`; all checks pass.
 
 </details>
 
