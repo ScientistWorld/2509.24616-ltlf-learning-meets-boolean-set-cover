@@ -10,12 +10,12 @@
 
 ## Results Achieved
 
-Local smoke run on 2026-05-29:
+Container smoke job `e42a7275-194` on 2026-05-29:
 
-- Bolt: solved 4/6 selected tasks.
+- Bolt: solved 6/6 selected tasks.
 - Raw bounded VFB: solved 2/6 selected tasks.
 - All returned formulas validated as separating all positive traces from all negative traces.
-- Bolt solved the two selected Subset tasks through Boolean Set Cover after raw VFB at the same LTL size bound failed.
+- Bolt solved four additional selected tasks through Boolean Set Cover after raw VFB at the same LTL size bound failed.
 
 The selected run supports the core claim at reduced scale: switching from full LTLf enumeration to Boolean Set Cover over previously enumerated formulas solves harder tasks while preserving formula validity and keeping formula sizes close on common solved tasks.
 
@@ -28,9 +28,10 @@ The selected run supports the core claim at reduced scale: switching from full L
 
 ## What Remains
 
-- Run the packaged CPU job in the target container and record its scores.
+- Rerun the packaged CPU job after removing stale template commands from `scripts/run.sh` so the job exits cleanly.
 - To go beyond `core_claim`, scale the selected suite or use the optional upstream benchmark release from `scripts/download.sh`.
 
 ## Issues Encountered
 
 - The first local smoke run showed that timeout checks needed to occur inside enumeration and Boolean Set Cover loops, not only between size layers. The implementation now checks deadlines during inner loops.
+- Job `e42a7275-194` completed reproduction and validation successfully, then exited with code 2 because the original template tail in `scripts/run.sh` still called missing `method/train.py`. That stale command has been removed.

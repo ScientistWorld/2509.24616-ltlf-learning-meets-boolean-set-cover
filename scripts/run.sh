@@ -3,23 +3,11 @@ set -euo pipefail
 
 cd /home/user
 
+export TIMEOUT_SECONDS="${TIMEOUT_SECONDS:-20}"
+export LTL_SWITCH="${LTL_SWITCH:-3}"
+export VFB_MAX_SIZE="${VFB_MAX_SIZE:-3}"
+export BEAM_WIDTH="${BEAM_WIDTH:-30}"
+export MAX_BOOL_WEIGHT="${MAX_BOOL_WEIGHT:-25}"
+
 bash scripts/reproduce.sh
 python3 validate.py --compare
-#
-# This runs inside the compute container with:
-#   - Your workspace mounted at /home/user
-#   - GPU(s) available
-#   - No internet access
-#
-# Make sure all data, code, and dependencies are already in the
-# workspace or baked into the container before submitting.
-
-set -e
-
-cd /home/user
-
-# Example: train a model
-python method/train.py --epochs 10 --lr 0.001
-
-# Example: evaluate
-bash scripts/evaluate.sh checkpoints/best.pt

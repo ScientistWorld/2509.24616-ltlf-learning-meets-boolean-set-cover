@@ -30,5 +30,5 @@
 action: submit
 gpus: 0
 test: true
-milestone: method_runs
-notes: "CPU smoke job: run raw VFB baseline, Bolt Boolean Set Cover method, independent evaluation, and validation on selected benchmarks."
+milestone: core_claim
+notes: "Clean CPU rerun after removing stale template commands from scripts/run.sh; expected to reproduce Bolt 6/6 vs raw VFB 2/6 and pass validation."

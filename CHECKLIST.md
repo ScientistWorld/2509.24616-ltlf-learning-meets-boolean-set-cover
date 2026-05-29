@@ -11,5 +11,6 @@
 - [x] Add `scripts/download.sh`, `scripts/baseline.sh`, `scripts/method.sh`, `scripts/evaluate.sh`, and `scripts/reproduce.sh`.
 - [x] Add `scoring/reference.json`.
 - [x] Run local smoke test and `python3 validate.py --compare`.
-- [ ] Run packaged CPU job through `action.yaml`.
-- [ ] Promote milestone to `core_claim` after job results confirm the local smoke result.
+- [x] Run packaged CPU job through `action.yaml`.
+- [x] Promote milestone to `core_claim` after job results confirm the local smoke result.
+- [ ] Rerun packaged CPU job after removing stale template commands from `scripts/run.sh`.
