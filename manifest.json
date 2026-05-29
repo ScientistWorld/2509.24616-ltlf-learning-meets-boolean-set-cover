@@ -1,0 +1,130 @@
+{
+  "paper": {
+    "arxiv_id": "2509.24616",
+    "title": "LTL$_f$ Learning Meets Boolean Set Cover",
+    "date": null,
+    "topics": null
+  },
+  "reproduction": {
+    "milestone": "core_claim",
+    "status": "done",
+    "error": null,
+    "scaffold": "codex",
+    "model": "gpt-5.5",
+    "profile": "gpt-5.5-medium",
+    "effort": "medium",
+    "gpu_hours_used": 0.0,
+    "current_iteration_gpu_budget": 30,
+    "current_iteration_gpu_hours_used": 0.0,
+    "total_gpu_hours_used": 0.0,
+    "current_iteration_cpu_hours_used": 0.01,
+    "total_cpu_hours_used": 0.01,
+    "gpu_budget": 30,
+    "duration_sec": 1220.8,
+    "cost_usd": null,
+    "input_tokens": 9888220,
+    "output_tokens": 29319,
+    "cached_input_tokens": 9569280,
+    "cache_creation_tokens": null,
+    "reasoning_tokens": 0,
+    "total_input_tokens": 9888220,
+    "num_turns": 138,
+    "duration_api_ms": null,
+    "num_runs": 1,
+    "iteration_count": 0,
+    "workflow": "standard",
+    "workflow_step": 0,
+    "total_gpu_jobs": 2,
+    "time_breakdown": {
+      "working": 1119.0074045658112,
+      "building": 0.12183523178100586,
+      "installing": 2.04048752784729,
+      "waiting": 43.98078799247742
+    }
+  },
+  "agents": [
+    {
+      "scaffold": "codex",
+      "model": "gpt-5.5",
+      "profile": "gpt-5.5-medium",
+      "effort": "medium",
+      "role": "reproducer",
+      "is_iteration": false,
+      "iteration": 1,
+      "workflow": "standard",
+      "workflow_step": 0,
+      "started_at": 1780019575.066286,
+      "finished_at": 1780020795.9058073,
+      "duration_sec": 1220.8,
+      "blocked_sec": 0.0,
+      "status": "done",
+      "error": null,
+      "milestone": "core_claim",
+      "gpu_budget": 30,
+      "gpu_hours_used": 0.0,
+      "total_gpu_hours_used": 0.0,
+      "cpu_hours_used": 0.01,
+      "time_breakdown": {
+        "working": 1119.0074045658112,
+        "building": 0.12183523178100586,
+        "installing": 2.04048752784729,
+        "waiting": 43.98078799247742
+      },
+      "cost_usd": null,
+      "input_tokens": 9888220,
+      "output_tokens": 29319,
+      "cached_input_tokens": 9569280,
+      "cache_creation_tokens": null,
+      "reasoning_tokens": 0,
+      "total_input_tokens": 9888220,
+      "num_turns": 138,
+      "duration_api_ms": null,
+      "tool_uses": {
+        "shell": 84,
+        "file_edit": 54
+      },
+      "gpu_jobs": [
+        {
+          "run_id": "e42a7275-194",
+          "command": "bash /home/user/scripts/run.sh",
+          "num_gpus": 0,
+          "num_cpus": 1,
+          "resource": "gpu-cpu-test",
+          "hive_job_id": "49a21d46",
+          "status": "failed",
+          "returncode": 2,
+          "duration_sec": 14.8,
+          "submitted_at": 1780020546.216137,
+          "started_at": 1780020547.7379239,
+          "completed_at": 1780020562.490038
+        },
+        {
+          "run_id": "e68797d5-12f",
+          "command": "bash /home/user/scripts/run.sh",
+          "num_gpus": 0,
+          "num_cpus": 1,
+          "resource": "gpu-cpu-test",
+          "hive_job_id": "1c490293",
+          "status": "completed",
+          "returncode": 0,
+          "duration_sec": 20.4,
+          "submitted_at": 1780020720.9058526,
+          "started_at": 1780020722.4752915,
+          "completed_at": 1780020742.9232872
+        }
+      ],
+      "progress_log": "### [2026-05-29 02:06] - none\n- Read the paper and identified the core algorithm: bounded VFB enumeration over LTLf characteristic tables, collapse to first-bit Boolean Set Cover atoms, and beam-search Boolean Set Cover with divide-and-conquer fallback.\n- Fetched the upstream Bolt and benchmark repositories for inspection.\n\n### [2026-05-29 02:06] - method_runs\n- Implemented a Python reproduction of the paper's algorithm in `method/ltlf_bolt.py`.\n- Added a raw bounded VFB ablation baseline and independent evaluation of learned formulas.\n- Local smoke run completed on the selected benchmark subset: Bolt solved 4/6 tasks and raw VFB solved 2/6, with all returned formulas validated by `eval/ltlf_eval.py`.\n\n### [2026-05-29 02:25] - core_claim\n- Container job `e42a7275-194` ran the packaged reproduction and validation successfully before hitting a stale template command in `scripts/run.sh`.\n- On the selected benchmark subset, Bolt solved 6/6 tasks while raw bounded VFB solved 2/6; all returned formulas were independently validated.\n- Removed the stale template tail from `scripts/run.sh` and prepared a clean rerun.\n\n### [2026-05-29 02:30] - core_claim\n- Clean container job `e68797d5-12f` completed with exit code 0.\n- `scripts/reproduce.sh` and `python3 validate.py --compare` passed inside the packaged CPU test environment."
+    }
+  ],
+  "components": {
+    "has_container": true,
+    "has_method_code": true,
+    "has_evaluation": true,
+    "has_download_script": true,
+    "has_reproduce_script": true,
+    "has_method_script": true,
+    "has_baseline": true,
+    "has_reference": true,
+    "has_data": true
+  }
+}

@@ -1,26 +1,83 @@
-# Problem Definition
+# Overview
 
-What problem does this paper address? Write this so that someone with no knowledge of the paper can understand what needs to be solved and how success is measured.
+`LTLf Learning Meets Boolean Set Cover` introduces Bolt, an LTLf learner that avoids exhaustive growth of temporal formulas by switching from bounded LTLf enumeration to Boolean Set Cover over already discovered formulas.
 
-Do NOT describe the paper's method or solution here — only the problem itself. Think about if a future scientist agent try to solve this problem from scratch without knowing what approach the paper took. If you leak the solution, you compromise the benchmark.
+This workspace reproduces the core claim at small CPU scale: the Boolean Set Cover stage solves selected tasks that raw bounded VFB cannot solve at the same LTL size bound, while all learned formulas are independently validated.
 
-## Research Question
+---
 
-<!-- What problem or challenge does this paper tackle? What gap in existing work does it address? -->
+# Problem
 
-## Why It Matters
+Given two disjoint finite sets of finite traces, positive traces `P` and negative traces `N`, learn an LTLf formula that accepts every trace in `P` and rejects every trace in `N`.
 
-<!-- Why is this problem important? What would a good solution enable? Make it short -->
+Each trace is a non-empty sequence of valuations over a fixed finite set of atomic propositions. The learned formula is judged by whether its LTLf semantics over finite traces separates the two trace sets. Smaller formulas are preferred when multiple valid separators exist.
 
-## Success Criteria
+This workspace evaluates small benchmark instances in the same format as the paper's benchmark suite: JSON files containing positive traces, negative traces, atomic proposition names, and metadata.
 
-<!-- What would a successful solution look like? What properties should it have? This is about the goal, not the paper's specific approach. Make it short -->
+---
+
+# Method
+
+The paper proposes Bolt, a CPU LTLf learner that first runs bounded VFB enumeration and then switches to Boolean Set Cover.
+
+The VFB stage enumerates LTLf formulas by syntactic size. Each formula is evaluated on every suffix of every input trace, producing a characteristic table. Formulas with identical characteristic tables are observationally equivalent, so only one representative is retained.
+
+If no separator is found by the LTL size bound, Bolt collapses each retained formula to the vector of first-position truth values over the traces. Boolean combinations of these retained formulas are then searched with only conjunction and disjunction. This Boolean Set Cover stage uses formula weight, observational equivalence on vectors, score based on correctly classified traces, approximate domination, beam search, and a divide-and-conquer fallback.
+
+This reproduction implements the same computational steps in Python for a reduced CPU benchmark suite. It also implements raw bounded VFB as the local ablation baseline.
+
+---
+
+# Evaluation
+
+Evaluation reads result artifacts from `outputs/` and does not import from `method/`.
+
+For each returned formula, the evaluator parses the LTLf expression and evaluates it on all positive and negative traces. A formula is valid only if it accepts every positive trace and rejects every negative trace.
+
+The main benefit metric is solved count on the selected benchmark suite. Constraint metrics include returned-formula validity and formula size ratios on tasks solved by both Bolt and the baseline. Collapse ratio is recorded to show that the Boolean Set Cover stage is operating on first-bit vector representatives rather than full characteristic tables.
+
+Run:
+
+```bash
+bash scripts/reproduce.sh
+python3 validate.py --compare
+```
+
+---
+
+# Reproduction Log
+
+### Iteration 1: gpt-5.5
+- **Milestone**: `core_claim` | **Status**: done
+- **Working time**: 19m | **GPU**: 0.0h
+- **Jobs**: 2 total (1 completed, 1 failed)
+
+<details>
+<summary>Progress Log</summary>
+
+### [2026-05-29 02:06] - none
+- Read the paper and identified the core algorithm: bounded VFB enumeration over LTLf characteristic tables, collapse to first-bit Boolean Set Cover atoms, and beam-search Boolean Set Cover with divide-and-conquer fallback.
+- Fetched the upstream Bolt and benchmark repositories for inspection.
+
+### [2026-05-29 02:06] - method_runs
+- Implemented a Python reproduction of the paper's algorithm in `method/ltlf_bolt.py`.
+- Added a raw bounded VFB ablation baseline and independent evaluation of learned formulas.
+- Local smoke run completed on the selected benchmark subset: Bolt solved 4/6 tasks and raw VFB solved 2/6, with all returned formulas validated by `eval/ltlf_eval.py`.
+
+### [2026-05-29 02:25] - core_claim
+- Container job `e42a7275-194` ran the packaged reproduction and validation successfully before hitting a stale template command in `scripts/run.sh`.
+- On the selected benchmark subset, Bolt solved 6/6 tasks while raw bounded VFB solved 2/6; all returned formulas were independently validated.
+- Removed the stale template tail from `scripts/run.sh` and prepared a clean rerun.
+
+### [2026-05-29 02:30] - core_claim
+- Clean container job `e68797d5-12f` completed with exit code 0.
+- `scripts/reproduce.sh` and `python3 validate.py --compare` passed inside the packaged CPU test environment.
+
+</details>
+
 
 ---
 
 # Reproduction Milestones
 
-**Current: none**
-
-## Stop Justification
-- Completed at milestone `none`.
+**Current: core_claim**
