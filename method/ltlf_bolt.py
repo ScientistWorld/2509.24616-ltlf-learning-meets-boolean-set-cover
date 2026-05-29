@@ -32,6 +32,7 @@ class BoolFormula:
     text: str
     weight: int
     vector: tuple[bool, ...]
+    full_vector: tuple[bool, ...] | None = None
 
 
 def _not(row: tuple[bool, ...]) -> tuple[bool, ...]:
@@ -164,7 +165,7 @@ def collapse_to_bool(lines: list[list[Formula]], target: tuple[bool, ...]) -> li
     best: dict[tuple[bool, ...], BoolFormula] = {}
     for line in lines:
         for f in line:
-            b = BoolFormula(f.text, f.size, f.vector)
+            b = BoolFormula(f.text, f.size, f.vector, f.vector)
             old = best.get(b.vector)
             if old is None or (b.weight, b.text) < (old.weight, old.text):
                 best[b.vector] = b
@@ -227,7 +228,10 @@ def beam_search_bool(
                         if left.text > right.text:
                             continue
                         vec = fn(left.vector, right.vector)
-                        f = BoolFormula(f"({left.text}) {op} ({right.text})", weight, vec)
+                        full_vec = None
+                        if left.full_vector is not None and right.full_vector is not None:
+                            full_vec = fn(left.full_vector, right.full_vector)
+                        f = BoolFormula(f"({left.text}) {op} ({right.text})", weight, vec, full_vec)
                         if vec == target:
                             return f
                         add(f)
@@ -235,7 +239,7 @@ def beam_search_bool(
 
 
 def restrict_atoms(atoms: Iterable[BoolFormula], indices: list[int]) -> list[BoolFormula]:
-    return [BoolFormula(f.text, f.weight, tuple(f.vector[i] for i in indices)) for f in atoms]
+    return [BoolFormula(f.text, f.weight, tuple(f.vector[i] for i in indices), f.full_vector) for f in atoms]
 
 
 def divconq(
@@ -271,9 +275,9 @@ def divconq(
     if left is None:
         return None
 
-    full_left_vec = next(f.vector for f in atoms if f.text == left.text) if any(f.text == left.text for f in atoms) else None
+    full_left_vec = left.full_vector
     if full_left_vec is None:
-        full_left_vec = eval_bool_text(left.text, {f.text: f.vector for f in atoms})
+        return None
     unsat = []
     for i, (got, want) in enumerate(zip(full_left_vec, target)):
         if op == "|" and (not want or not got):
@@ -287,19 +291,14 @@ def divconq(
     right = divconq(restrict_atoms(atoms, unsat), right_target, beam_width, max_weight, deadline)
     if right is None:
         return None
+    full_right_vec = right.full_vector
+    if full_right_vec is None:
+        return None
     if op == "|":
-        vec = tuple(a or b for a, b in zip(full_left_vec, eval_bool_text(right.text, {f.text: f.vector for f in atoms})))
+        vec = tuple(a or b for a, b in zip(full_left_vec, full_right_vec))
     else:
-        vec = tuple(a and b for a, b in zip(full_left_vec, eval_bool_text(right.text, {f.text: f.vector for f in atoms})))
-    return BoolFormula(f"({left.text}) {op} ({right.text})", left.weight + right.weight + 1, vec)
-
-
-def eval_bool_text(text: str, atom_vectors: dict[str, tuple[bool, ...]]) -> tuple[bool, ...]:
-    # D&C usually returns base atom texts; for compound texts this parser is not used
-    # in the common beam-success path. Fall back to exact atom lookup.
-    if text in atom_vectors:
-        return atom_vectors[text]
-    raise KeyError(text)
+        vec = tuple(a and b for a, b in zip(full_left_vec, full_right_vec))
+    return BoolFormula(f"({left.text}) {op} ({right.text})", left.weight + right.weight + 1, vec, vec)
 
 
 def run_instance(args: argparse.Namespace, path: Path) -> dict:

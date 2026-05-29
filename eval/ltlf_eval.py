@@ -148,15 +148,14 @@ def validate_formula(instance_path: Path, formula: str | None) -> tuple[bool, in
 
 def summarize(method_rows: list[dict]) -> dict[str, float]:
     solved = [r for r in method_rows if r.get("eval_valid")]
-    runtimes = [r["runtime_s"] for r in method_rows]
+    returned = [r for r in method_rows if r.get("formula")]
     sizes = [r["eval_formula_size"] for r in solved if r.get("eval_formula_size") is not None]
     collapses = [r.get("collapse_ratio", 0.0) for r in method_rows if r.get("collapse_ratio", 0.0) > 0]
     return {
         "solved_count": len(solved),
         "solve_rate": len(solved) / len(method_rows) if method_rows else 0.0,
-        "median_runtime_s": statistics.median(runtimes) if runtimes else 0.0,
         "median_formula_size": statistics.median(sizes) if sizes else 0.0,
-        "all_returned_formulas_valid": 1.0 if len(solved) == sum(1 for r in method_rows if r.get("solved")) else 0.0,
+        "all_returned_formulas_valid": 1.0 if len(solved) == len(returned) else 0.0,
         "mean_collapse_ratio": statistics.fmean(collapses) if collapses else 0.0,
     }
 
@@ -186,7 +185,6 @@ def main() -> None:
         if b.get("eval_valid") and v and v.get("eval_valid"):
             common.append((b, v))
     ratios = [b["eval_formula_size"] / v["eval_formula_size"] for b, v in common if v["eval_formula_size"]]
-    speedups = [v["runtime_s"] / b["runtime_s"] for b, v in common if b["runtime_s"] > 0]
 
     scores = {
         "experiments": {
@@ -197,7 +195,6 @@ def main() -> None:
                         "solve_count_delta_vs_vfb": bolt["solved_count"] - vfb["solved_count"],
                         "median_size_ratio_vs_vfb_common": statistics.median(ratios) if ratios else 0.0,
                         "max_size_ratio_vs_vfb_common": max(ratios) if ratios else 0.0,
-                        "runtime_speedup_vs_vfb_common": statistics.median(speedups) if speedups else 0.0,
                     },
                 }
             }

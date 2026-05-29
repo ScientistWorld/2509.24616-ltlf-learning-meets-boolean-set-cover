@@ -5,4 +5,4 @@ action: done
 gpus: 0
 test: false
 milestone: core_claim
-notes: "Core claim reproduced on the selected CPU benchmark subset: Bolt's Boolean Set Cover stage solves 6/6 tasks versus 2/6 for raw bounded VFB, with all returned formulas independently validated."
+notes: "Restored core_claim after audit. Fixed D&C fallback vector handling, removed wall-clock scored metrics, tightened validity scoring, and revalidated selected-suite results: Bolt solves 6/6 versus 2/6 for raw bounded VFB with all returned formulas valid."
