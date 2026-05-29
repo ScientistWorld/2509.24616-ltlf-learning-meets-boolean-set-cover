@@ -32,6 +32,12 @@ Continuation audit on 2026-05-29:
 - Fixed a divide-and-conquer recursion bug found by the released benchmark subset.
 - Local `bash scripts/reproduce.sh && python3 validate.py --compare` passes.
 
+Packaged released-subset verification job `0b9e9790-461` on 2026-05-29:
+
+- Exit code 0 on a CPU test node through `scripts/run.sh`.
+- `validate.py --compare` passed all scoring and structure checks in the container.
+- Reproduced scores matched the local artifacts: Bolt `solve_rate=0.80`, `formula_size_ratio=1.00`, `all_returned_formulas_valid=1.00`, `mean_collapse_ratio=3.66`, and `solve_rate_delta_vs_baseline=0.50`.
+
 The selected released-subset run supports the core claim at reduced scale: switching from full LTLf enumeration to Boolean Set Cover over previously enumerated formulas solves harder tasks while preserving formula validity and keeping formula sizes close on common solved tasks.
 
 ## Deviations From Paper
@@ -43,8 +49,7 @@ The selected released-subset run supports the core claim at reduced scale: switc
 
 ## What Remains
 
-- A CPU-only packaged verification job has been submitted to rerun `scripts/reproduce.sh` and `python3 validate.py --compare` from `scripts/run.sh`.
-- A CPU-only packaged verification job should rerun the released-subset reproduction from `scripts/run.sh`.
+- The core claim is reproduced and package-verified on the tracked released benchmark subset.
 - To go beyond `core_claim`, expand the extracted subset or run a larger slice of the upstream benchmark release from `scripts/download.sh`.
 
 ## Issues Encountered

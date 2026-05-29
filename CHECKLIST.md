@@ -16,4 +16,4 @@
 - [x] Promote milestone to `core_claim` after job results confirm the local smoke result.
 - [x] Rerun packaged CPU job after removing stale template commands from `scripts/run.sh`.
 - [x] Audit continuation workspace and fix score-contract/released-benchmark issues.
-- [ ] Rerun packaged CPU job on released benchmark subset.
+- [x] Rerun packaged CPU job on released benchmark subset.

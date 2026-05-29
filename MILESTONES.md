@@ -15,5 +15,9 @@
 - Fixed the formula-size scoring mismatch and a divide-and-conquer recursion bug exposed by released benchmark instances.
 - Local validation passes: Bolt solves 8/10 released-subset tasks, raw bounded VFB solves 3/10, and all returned formulas independently separate positive from negative traces.
 
+### [2026-05-29 02:34] - core_claim
+- Packaged CPU verification job `0b9e9790-461` exited 0 through `scripts/run.sh`.
+- Container run passed `python3 validate.py --compare` with Bolt solve rate 0.80, valid returned formulas, formula-size ratio 1.00, and a 0.50 solve-rate gain over the raw VFB ablation.
+
 ## Stop Justification
-- Not stopped yet; submitting a CPU-only packaged verification job for the released-subset setup before finalizing.
+- Stopping at `core_claim`: the actual Bolt computation is implemented, independently evaluated, and package-verified on a tracked subset of the paper's released benchmarks. Further progress would require expanding to a larger benchmark slice, not fixing a failing core reproduction.
