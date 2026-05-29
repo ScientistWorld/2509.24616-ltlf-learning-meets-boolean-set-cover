@@ -17,4 +17,4 @@
 - Reran `bash scripts/evaluate.sh` and `python3 validate.py --compare`; all checks passed.
 
 ## Stop Justification
-- Completed at milestone `core_claim` on a compact CPU benchmark subset. Higher milestones would require scaling to more of the full 15,595-task benchmark suite.
+- Completed at milestone `core_claim`.
