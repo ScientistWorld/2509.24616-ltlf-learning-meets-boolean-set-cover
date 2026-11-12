@@ -6,9 +6,9 @@
       "_cpu_budget_s": 20.0,
       "results": {
         "bolt": {
-          "size_efficiency": 0.8553729873760929,
+          "size_efficiency": 0.839670747207258,
           "solve_rate": 0.95,
-          "size_ratio_geomean": 1.321274362994149
+          "size_ratio_geomean": 1.3438177815106278
         },
         "raw_vfb": {
           "size_efficiency": 0.525,

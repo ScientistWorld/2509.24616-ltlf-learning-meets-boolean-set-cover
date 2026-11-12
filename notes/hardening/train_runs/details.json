@@ -104,7 +104,7 @@
    "family": "Subword",
    "valid": true,
    "size": 26,
-   "best_known_size": 24,
+   "best_known_size": 22,
    "check": "valid",
    "cpu_s": 1.564
   },
@@ -140,7 +140,7 @@
    "family": "Subword",
    "valid": true,
    "size": 27,
-   "best_known_size": 27,
+   "best_known_size": 24,
    "check": "valid",
    "cpu_s": 1.384
   },
@@ -221,7 +221,7 @@
    "family": "Hamming",
    "valid": true,
    "size": 70,
-   "best_known_size": 70,
+   "best_known_size": 57,
    "check": "valid",
    "cpu_s": 3.769
   },
@@ -230,7 +230,7 @@
    "family": "Hamming",
    "valid": true,
    "size": 32,
-   "best_known_size": 32,
+   "best_known_size": 29,
    "check": "valid",
    "cpu_s": 0.566
   },
@@ -248,7 +248,7 @@
    "family": "Hamming",
    "valid": false,
    "size": null,
-   "best_known_size": 3664,
+   "best_known_size": 9,
    "check": "no_formula",
    "cpu_s": 4.859
   },
@@ -257,7 +257,7 @@
    "family": "Hamming",
    "valid": true,
    "size": 35,
-   "best_known_size": 35,
+   "best_known_size": 33,
    "check": "valid",
    "cpu_s": 1.603
   },
@@ -266,7 +266,7 @@
    "family": "Hamming",
    "valid": false,
    "size": null,
-   "best_known_size": 486,
+   "best_known_size": 9,
    "check": "no_formula",
    "cpu_s": 1.2
   },
@@ -284,7 +284,7 @@
    "family": "Hamming",
    "valid": true,
    "size": 29,
-   "best_known_size": 29,
+   "best_known_size": 26,
    "check": "valid",
    "cpu_s": 0.896
   },
@@ -466,7 +466,7 @@
    "family": "Subword",
    "valid": true,
    "size": 59,
-   "best_known_size": 24,
+   "best_known_size": 22,
    "check": "valid",
    "cpu_s": 1.508
   },
@@ -491,10 +491,10 @@
   {
    "instance": "swd6",
    "family": "Subword",
-   "valid": true,
+   "valid": false,
    "size": 311,
    "best_known_size": 22,
-   "check": "valid",
+   "check": "valid but more than CAP x the best-known size",
    "cpu_s": 5.078
   },
   {
@@ -502,7 +502,7 @@
    "family": "Subword",
    "valid": true,
    "size": 30,
-   "best_known_size": 27,
+   "best_known_size": 24,
    "check": "valid",
    "cpu_s": 1.38
   },
@@ -583,7 +583,7 @@
    "family": "Hamming",
    "valid": true,
    "size": 149,
-   "best_known_size": 70,
+   "best_known_size": 57,
    "check": "valid",
    "cpu_s": 1.304
   },
@@ -592,7 +592,7 @@
    "family": "Hamming",
    "valid": true,
    "size": 43,
-   "best_known_size": 32,
+   "best_known_size": 29,
    "check": "valid",
    "cpu_s": 0.481
   },
@@ -610,7 +610,7 @@
    "family": "Hamming",
    "valid": false,
    "size": null,
-   "best_known_size": 3664,
+   "best_known_size": 9,
    "check": "no_formula",
    "cpu_s": 2.932
   },
@@ -619,7 +619,7 @@
    "family": "Hamming",
    "valid": true,
    "size": 63,
-   "best_known_size": 35,
+   "best_known_size": 33,
    "check": "valid",
    "cpu_s": 1.435
   },
@@ -628,7 +628,7 @@
    "family": "Hamming",
    "valid": false,
    "size": null,
-   "best_known_size": 486,
+   "best_known_size": 9,
    "check": "no_formula",
    "cpu_s": 1.139
   },
@@ -646,7 +646,7 @@
    "family": "Hamming",
    "valid": true,
    "size": 38,
-   "best_known_size": 29,
+   "best_known_size": 26,
    "check": "valid",
    "cpu_s": 0.874
   },
@@ -680,10 +680,10 @@
   {
    "instance": "rbc3",
    "family": "RandomBooleanCombinationsofFactors",
-   "valid": true,
+   "valid": false,
    "size": 480,
    "best_known_size": 17,
-   "check": "valid",
+   "check": "valid but more than CAP x the best-known size",
    "cpu_s": 7.155
   },
   {
@@ -721,6 +721,368 @@
    "best_known_size": 8,
    "check": "valid",
    "cpu_s": 2.11
+  }
+ ],
+ "bolt_portfolio": [
+  {
+   "instance": "ord0",
+   "family": "OrderedSequence",
+   "valid": true,
+   "size": 3,
+   "best_known_size": 3,
+   "check": "valid",
+   "cpu_s": 0.365
+  },
+  {
+   "instance": "ord1",
+   "family": "OrderedSequence",
+   "valid": true,
+   "size": 3,
+   "best_known_size": 3,
+   "check": "valid",
+   "cpu_s": 0.377
+  },
+  {
+   "instance": "ord2",
+   "family": "OrderedSequence",
+   "valid": true,
+   "size": 7,
+   "best_known_size": 7,
+   "check": "valid",
+   "cpu_s": 0.995
+  },
+  {
+   "instance": "ord3",
+   "family": "OrderedSequence",
+   "valid": true,
+   "size": 5,
+   "best_known_size": 5,
+   "check": "valid",
+   "cpu_s": 0.363
+  },
+  {
+   "instance": "ord4",
+   "family": "OrderedSequence",
+   "valid": true,
+   "size": 3,
+   "best_known_size": 3,
+   "check": "valid",
+   "cpu_s": 0.344
+  },
+  {
+   "instance": "ord5",
+   "family": "OrderedSequence",
+   "valid": true,
+   "size": 7,
+   "best_known_size": 7,
+   "check": "valid",
+   "cpu_s": 3.774
+  },
+  {
+   "instance": "ord6",
+   "family": "OrderedSequence",
+   "valid": true,
+   "size": 5,
+   "best_known_size": 5,
+   "check": "valid",
+   "cpu_s": 0.316
+  },
+  {
+   "instance": "ord7",
+   "family": "OrderedSequence",
+   "valid": true,
+   "size": 5,
+   "best_known_size": 5,
+   "check": "valid",
+   "cpu_s": 0.306
+  },
+  {
+   "instance": "swd0",
+   "family": "Subword",
+   "valid": true,
+   "size": 8,
+   "best_known_size": 8,
+   "check": "valid",
+   "cpu_s": 0.861
+  },
+  {
+   "instance": "swd1",
+   "family": "Subword",
+   "valid": true,
+   "size": 3,
+   "best_known_size": 3,
+   "check": "valid",
+   "cpu_s": 0.315
+  },
+  {
+   "instance": "swd2",
+   "family": "Subword",
+   "valid": true,
+   "size": 115,
+   "best_known_size": 34,
+   "check": "valid",
+   "cpu_s": 17.846
+  },
+  {
+   "instance": "swd3",
+   "family": "Subword",
+   "valid": true,
+   "size": 22,
+   "best_known_size": 22,
+   "check": "valid",
+   "cpu_s": 7.704
+  },
+  {
+   "instance": "swd4",
+   "family": "Subword",
+   "valid": true,
+   "size": 21,
+   "best_known_size": 21,
+   "check": "valid",
+   "cpu_s": 6.574
+  },
+  {
+   "instance": "swd5",
+   "family": "Subword",
+   "valid": true,
+   "size": 6,
+   "best_known_size": 6,
+   "check": "valid",
+   "cpu_s": 0.452
+  },
+  {
+   "instance": "swd6",
+   "family": "Subword",
+   "valid": true,
+   "size": 126,
+   "best_known_size": 22,
+   "check": "valid",
+   "cpu_s": 17.731
+  },
+  {
+   "instance": "swd7",
+   "family": "Subword",
+   "valid": true,
+   "size": 24,
+   "best_known_size": 24,
+   "check": "valid",
+   "cpu_s": 6.859
+  },
+  {
+   "instance": "sst0",
+   "family": "Subset",
+   "valid": true,
+   "size": 4,
+   "best_known_size": 4,
+   "check": "valid",
+   "cpu_s": 0.443
+  },
+  {
+   "instance": "sst1",
+   "family": "Subset",
+   "valid": true,
+   "size": 5,
+   "best_known_size": 5,
+   "check": "valid",
+   "cpu_s": 0.487
+  },
+  {
+   "instance": "sst2",
+   "family": "Subset",
+   "valid": true,
+   "size": 10,
+   "best_known_size": 10,
+   "check": "valid",
+   "cpu_s": 6.536
+  },
+  {
+   "instance": "sst3",
+   "family": "Subset",
+   "valid": true,
+   "size": 6,
+   "best_known_size": 6,
+   "check": "valid",
+   "cpu_s": 0.559
+  },
+  {
+   "instance": "sst4",
+   "family": "Subset",
+   "valid": true,
+   "size": 13,
+   "best_known_size": 12,
+   "check": "valid",
+   "cpu_s": 14.281
+  },
+  {
+   "instance": "sst5",
+   "family": "Subset",
+   "valid": true,
+   "size": 7,
+   "best_known_size": 7,
+   "check": "valid",
+   "cpu_s": 0.805
+  },
+  {
+   "instance": "sst6",
+   "family": "Subset",
+   "valid": true,
+   "size": 7,
+   "best_known_size": 7,
+   "check": "valid",
+   "cpu_s": 1.184
+  },
+  {
+   "instance": "sst7",
+   "family": "Subset",
+   "valid": true,
+   "size": 16,
+   "best_known_size": 16,
+   "check": "valid",
+   "cpu_s": 9.461
+  },
+  {
+   "instance": "ham0",
+   "family": "Hamming",
+   "valid": true,
+   "size": 57,
+   "best_known_size": 57,
+   "check": "valid",
+   "cpu_s": 11.749
+  },
+  {
+   "instance": "ham1",
+   "family": "Hamming",
+   "valid": true,
+   "size": 29,
+   "best_known_size": 29,
+   "check": "valid",
+   "cpu_s": 2.939
+  },
+  {
+   "instance": "ham2",
+   "family": "Hamming",
+   "valid": true,
+   "size": 22,
+   "best_known_size": 22,
+   "check": "valid",
+   "cpu_s": 9.211
+  },
+  {
+   "instance": "ham3",
+   "family": "Hamming",
+   "valid": false,
+   "size": null,
+   "best_known_size": 9,
+   "check": "no_formula",
+   "cpu_s": 16.187
+  },
+  {
+   "instance": "ham4",
+   "family": "Hamming",
+   "valid": true,
+   "size": 33,
+   "best_known_size": 33,
+   "check": "valid",
+   "cpu_s": 7.889
+  },
+  {
+   "instance": "ham5",
+   "family": "Hamming",
+   "valid": false,
+   "size": null,
+   "best_known_size": 9,
+   "check": "no_formula",
+   "cpu_s": 6.831
+  },
+  {
+   "instance": "ham6",
+   "family": "Hamming",
+   "valid": true,
+   "size": 14,
+   "best_known_size": 14,
+   "check": "valid",
+   "cpu_s": 4.265
+  },
+  {
+   "instance": "ham7",
+   "family": "Hamming",
+   "valid": true,
+   "size": 26,
+   "best_known_size": 26,
+   "check": "valid",
+   "cpu_s": 5.518
+  },
+  {
+   "instance": "rbc0",
+   "family": "RandomBooleanCombinationsofFactors",
+   "valid": true,
+   "size": 147,
+   "best_known_size": 47,
+   "check": "valid",
+   "cpu_s": 18.437
+  },
+  {
+   "instance": "rbc1",
+   "family": "RandomBooleanCombinationsofFactors",
+   "valid": true,
+   "size": 5,
+   "best_known_size": 5,
+   "check": "valid",
+   "cpu_s": 0.297
+  },
+  {
+   "instance": "rbc2",
+   "family": "RandomBooleanCombinationsofFactors",
+   "valid": true,
+   "size": 8,
+   "best_known_size": 8,
+   "check": "valid",
+   "cpu_s": 2.441
+  },
+  {
+   "instance": "rbc3",
+   "family": "RandomBooleanCombinationsofFactors",
+   "valid": true,
+   "size": 17,
+   "best_known_size": 17,
+   "check": "valid",
+   "cpu_s": 17.752
+  },
+  {
+   "instance": "rbc4",
+   "family": "RandomBooleanCombinationsofFactors",
+   "valid": true,
+   "size": 8,
+   "best_known_size": 8,
+   "check": "valid",
+   "cpu_s": 1.472
+  },
+  {
+   "instance": "rbc5",
+   "family": "RandomBooleanCombinationsofFactors",
+   "valid": true,
+   "size": 8,
+   "best_known_size": 8,
+   "check": "valid",
+   "cpu_s": 0.992
+  },
+  {
+   "instance": "rbc6",
+   "family": "RandomBooleanCombinationsofFactors",
+   "valid": true,
+   "size": 15,
+   "best_known_size": 15,
+   "check": "valid",
+   "cpu_s": 5.872
+  },
+  {
+   "instance": "rbc7",
+   "family": "RandomBooleanCombinationsofFactors",
+   "valid": true,
+   "size": 8,
+   "best_known_size": 8,
+   "check": "valid",
+   "cpu_s": 4.388
   }
  ],
  "bolt_simplify": [
@@ -828,7 +1190,7 @@
    "family": "Subword",
    "valid": true,
    "size": 24,
-   "best_known_size": 24,
+   "best_known_size": 22,
    "check": "valid",
    "cpu_s": 1.578
   },
@@ -864,7 +1226,7 @@
    "family": "Subword",
    "valid": true,
    "size": 27,
-   "best_known_size": 27,
+   "best_known_size": 24,
    "check": "valid",
    "cpu_s": 1.383
   },
@@ -945,7 +1307,7 @@
    "family": "Hamming",
    "valid": true,
    "size": 70,
-   "best_known_size": 70,
+   "best_known_size": 57,
    "check": "valid",
    "cpu_s": 3.708
   },
@@ -954,7 +1316,7 @@
    "family": "Hamming",
    "valid": true,
    "size": 32,
-   "best_known_size": 32,
+   "best_known_size": 29,
    "check": "valid",
    "cpu_s": 0.558
   },
@@ -972,7 +1334,7 @@
    "family": "Hamming",
    "valid": false,
    "size": null,
-   "best_known_size": 3664,
+   "best_known_size": 9,
    "check": "no_formula",
    "cpu_s": 4.867
   },
@@ -981,7 +1343,7 @@
    "family": "Hamming",
    "valid": true,
    "size": 35,
-   "best_known_size": 35,
+   "best_known_size": 33,
    "check": "valid",
    "cpu_s": 1.577
   },
@@ -990,7 +1352,7 @@
    "family": "Hamming",
    "valid": false,
    "size": null,
-   "best_known_size": 486,
+   "best_known_size": 9,
    "check": "no_formula",
    "cpu_s": 1.18
   },
@@ -1008,7 +1370,7 @@
    "family": "Hamming",
    "valid": true,
    "size": 29,
-   "best_known_size": 29,
+   "best_known_size": 26,
    "check": "valid",
    "cpu_s": 0.882
   },
@@ -1190,7 +1552,7 @@
    "family": "Subword",
    "valid": true,
    "size": 60,
-   "best_known_size": 24,
+   "best_known_size": 22,
    "check": "valid",
    "cpu_s": 1.38
   },
@@ -1226,7 +1588,7 @@
    "family": "Subword",
    "valid": true,
    "size": 63,
-   "best_known_size": 27,
+   "best_known_size": 24,
    "check": "valid",
    "cpu_s": 1.412
   },
@@ -1307,7 +1669,7 @@
    "family": "Hamming",
    "valid": false,
    "size": null,
-   "best_known_size": 70,
+   "best_known_size": 57,
    "check": "no_formula",
    "cpu_s": 0.574
   },
@@ -1316,7 +1678,7 @@
    "family": "Hamming",
    "valid": false,
    "size": null,
-   "best_known_size": 32,
+   "best_known_size": 29,
    "check": "no_formula",
    "cpu_s": 0.089
   },
@@ -1334,7 +1696,7 @@
    "family": "Hamming",
    "valid": false,
    "size": null,
-   "best_known_size": 3664,
+   "best_known_size": 9,
    "check": "no_formula",
    "cpu_s": 0.091
   },
@@ -1343,7 +1705,7 @@
    "family": "Hamming",
    "valid": false,
    "size": null,
-   "best_known_size": 35,
+   "best_known_size": 33,
    "check": "no_formula",
    "cpu_s": 0.088
   },
@@ -1352,7 +1714,7 @@
    "family": "Hamming",
    "valid": false,
    "size": null,
-   "best_known_size": 486,
+   "best_known_size": 9,
    "check": "no_formula",
    "cpu_s": 0.089
   },
@@ -1370,7 +1732,7 @@
    "family": "Hamming",
    "valid": false,
    "size": null,
-   "best_known_size": 29,
+   "best_known_size": 26,
    "check": "no_formula",
    "cpu_s": 0.088
   },
@@ -1451,19 +1813,19 @@
   {
    "instance": "ord0",
    "family": "OrderedSequence",
-   "valid": true,
+   "valid": false,
    "size": 55,
    "best_known_size": 3,
-   "check": "valid",
+   "check": "valid but more than CAP x the best-known size",
    "cpu_s": 0.087
   },
   {
    "instance": "ord1",
    "family": "OrderedSequence",
-   "valid": true,
+   "valid": false,
    "size": 57,
    "best_known_size": 3,
-   "check": "valid",
+   "check": "valid but more than CAP x the best-known size",
    "cpu_s": 0.08
   },
   {
@@ -1478,10 +1840,10 @@
   {
    "instance": "ord3",
    "family": "OrderedSequence",
-   "valid": true,
+   "valid": false,
    "size": 58,
    "best_known_size": 5,
-   "check": "valid",
+   "check": "valid but more than CAP x the best-known size",
    "cpu_s": 0.068
   },
   {
@@ -1496,10 +1858,10 @@
   {
    "instance": "ord5",
    "family": "OrderedSequence",
-   "valid": true,
+   "valid": false,
    "size": 124,
    "best_known_size": 7,
-   "check": "valid",
+   "check": "valid but more than CAP x the best-known size",
    "cpu_s": 0.173
   },
   {
@@ -1514,10 +1876,10 @@
   {
    "instance": "ord7",
    "family": "OrderedSequence",
-   "valid": true,
+   "valid": false,
    "size": 57,
    "best_known_size": 5,
-   "check": "valid",
+   "check": "valid but more than CAP x the best-known size",
    "cpu_s": 0.06
   },
   {
@@ -1541,10 +1903,10 @@
   {
    "instance": "swd2",
    "family": "Subword",
-   "valid": true,
+   "valid": false,
    "size": 670,
    "best_known_size": 34,
-   "check": "valid",
+   "check": "valid but more than CAP x the best-known size",
    "cpu_s": 0.161
   },
   {
@@ -1552,7 +1914,7 @@
    "family": "Subword",
    "valid": true,
    "size": 129,
-   "best_known_size": 24,
+   "best_known_size": 22,
    "check": "valid",
    "cpu_s": 0.073
   },
@@ -1577,10 +1939,10 @@
   {
    "instance": "swd6",
    "family": "Subword",
-   "valid": true,
+   "valid": false,
    "size": 613,
    "best_known_size": 22,
-   "check": "valid",
+   "check": "valid but more than CAP x the best-known size",
    "cpu_s": 0.122
   },
   {
@@ -1588,7 +1950,7 @@
    "family": "Subword",
    "valid": true,
    "size": 158,
-   "best_known_size": 27,
+   "best_known_size": 24,
    "check": "valid",
    "cpu_s": 0.059
   },
@@ -1622,37 +1984,37 @@
   {
    "instance": "sst3",
    "family": "Subset",
-   "valid": true,
+   "valid": false,
    "size": 92,
    "best_known_size": 6,
-   "check": "valid",
+   "check": "valid but more than CAP x the best-known size",
    "cpu_s": 0.064
   },
   {
    "instance": "sst4",
    "family": "Subset",
-   "valid": true,
+   "valid": false,
    "size": 601,
    "best_known_size": 12,
-   "check": "valid",
+   "check": "valid but more than CAP x the best-known size",
    "cpu_s": 0.19
   },
   {
    "instance": "sst5",
    "family": "Subset",
-   "valid": true,
+   "valid": false,
    "size": 439,
    "best_known_size": 7,
-   "check": "valid",
+   "check": "valid but more than CAP x the best-known size",
    "cpu_s": 0.125
   },
   {
    "instance": "sst6",
    "family": "Subset",
-   "valid": true,
+   "valid": false,
    "size": 563,
    "best_known_size": 7,
-   "check": "valid",
+   "check": "valid but more than CAP x the best-known size",
    "cpu_s": 0.243
   },
   {
@@ -1669,7 +2031,7 @@
    "family": "Hamming",
    "valid": true,
    "size": 448,
-   "best_known_size": 70,
+   "best_known_size": 57,
    "check": "valid",
    "cpu_s": 0.07
   },
@@ -1678,7 +2040,7 @@
    "family": "Hamming",
    "valid": true,
    "size": 109,
-   "best_known_size": 32,
+   "best_known_size": 29,
    "check": "valid",
    "cpu_s": 0.054
   },
@@ -1694,10 +2056,10 @@
   {
    "instance": "ham3",
    "family": "Hamming",
-   "valid": true,
+   "valid": false,
    "size": 3664,
-   "best_known_size": 3664,
-   "check": "valid",
+   "best_known_size": 9,
+   "check": "valid but more than CAP x the best-known size",
    "cpu_s": 0.268
   },
   {
@@ -1705,17 +2067,17 @@
    "family": "Hamming",
    "valid": true,
    "size": 190,
-   "best_known_size": 35,
+   "best_known_size": 33,
    "check": "valid",
    "cpu_s": 0.055
   },
   {
    "instance": "ham5",
    "family": "Hamming",
-   "valid": true,
+   "valid": false,
    "size": 486,
-   "best_known_size": 486,
-   "check": "valid",
+   "best_known_size": 9,
+   "check": "valid but more than CAP x the best-known size",
    "cpu_s": 0.077
   },
   {
@@ -1732,17 +2094,17 @@
    "family": "Hamming",
    "valid": true,
    "size": 129,
-   "best_known_size": 29,
+   "best_known_size": 26,
    "check": "valid",
    "cpu_s": 0.055
   },
   {
    "instance": "rbc0",
    "family": "RandomBooleanCombinationsofFactors",
-   "valid": true,
+   "valid": false,
    "size": 827,
    "best_known_size": 47,
-   "check": "valid",
+   "check": "valid but more than CAP x the best-known size",
    "cpu_s": 0.177
   },
   {
@@ -1757,19 +2119,19 @@
   {
    "instance": "rbc2",
    "family": "RandomBooleanCombinationsofFactors",
-   "valid": true,
+   "valid": false,
    "size": 116,
    "best_known_size": 8,
-   "check": "valid",
+   "check": "valid but more than CAP x the best-known size",
    "cpu_s": 0.063
   },
   {
    "instance": "rbc3",
    "family": "RandomBooleanCombinationsofFactors",
-   "valid": true,
+   "valid": false,
    "size": 1048,
    "best_known_size": 17,
-   "check": "valid",
+   "check": "valid but more than CAP x the best-known size",
    "cpu_s": 0.225
   },
   {
@@ -1784,10 +2146,10 @@
   {
    "instance": "rbc5",
    "family": "RandomBooleanCombinationsofFactors",
-   "valid": true,
+   "valid": false,
    "size": 88,
    "best_known_size": 8,
-   "check": "valid",
+   "check": "valid but more than CAP x the best-known size",
    "cpu_s": 0.062
   },
   {
@@ -1802,10 +2164,10 @@
   {
    "instance": "rbc7",
    "family": "RandomBooleanCombinationsofFactors",
-   "valid": true,
+   "valid": false,
    "size": 90,
    "best_known_size": 8,
-   "check": "valid",
+   "check": "valid but more than CAP x the best-known size",
    "cpu_s": 0.102
   }
  ],
@@ -1914,7 +2276,7 @@
    "family": "Subword",
    "valid": false,
    "size": null,
-   "best_known_size": 24,
+   "best_known_size": 22,
    "check": "no_formula",
    "cpu_s": 4.69
   },
@@ -1950,7 +2312,7 @@
    "family": "Subword",
    "valid": false,
    "size": null,
-   "best_known_size": 27,
+   "best_known_size": 24,
    "check": "no_formula",
    "cpu_s": 5.586
   },
@@ -2031,7 +2393,7 @@
    "family": "Hamming",
    "valid": false,
    "size": null,
-   "best_known_size": 70,
+   "best_known_size": 57,
    "check": "no_formula",
    "cpu_s": 4.118
   },
@@ -2040,7 +2402,7 @@
    "family": "Hamming",
    "valid": false,
    "size": null,
-   "best_known_size": 32,
+   "best_known_size": 29,
    "check": "no_formula",
    "cpu_s": 10.267
   },
@@ -2058,7 +2420,7 @@
    "family": "Hamming",
    "valid": false,
    "size": null,
-   "best_known_size": 3664,
+   "best_known_size": 9,
    "check": "no_formula",
    "cpu_s": 5.739
   },
@@ -2067,7 +2429,7 @@
    "family": "Hamming",
    "valid": false,
    "size": null,
-   "best_known_size": 35,
+   "best_known_size": 33,
    "check": "no_formula",
    "cpu_s": 9.781
   },
@@ -2076,7 +2438,7 @@
    "family": "Hamming",
    "valid": false,
    "size": null,
-   "best_known_size": 486,
+   "best_known_size": 9,
    "check": "no_formula",
    "cpu_s": 5.329
   },
@@ -2094,7 +2456,7 @@
    "family": "Hamming",
    "valid": false,
    "size": null,
-   "best_known_size": 29,
+   "best_known_size": 26,
    "check": "no_formula",
    "cpu_s": 9.749
   },

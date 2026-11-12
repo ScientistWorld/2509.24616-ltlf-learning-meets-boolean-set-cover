@@ -2,24 +2,29 @@
  "test": {
   "metrics": {
    "bolt": {
-    "size_efficiency": 0.7684264401604438,
+    "size_efficiency": 0.7515454877794915,
     "solve_rate": 0.9,
-    "size_ratio_geomean": 1.5701466356149247
+    "size_ratio_geomean": 1.5997989439090436
    },
    "bolt_beam1": {
-    "size_efficiency": 0.6121645993039843,
-    "solve_rate": 0.9,
-    "size_ratio_geomean": 2.237141138537371
+    "size_efficiency": 0.5906911439086128,
+    "solve_rate": 0.8,
+    "size_ratio_geomean": 2.2793896758603753
+   },
+   "bolt_portfolio": {
+    "size_efficiency": 0.8081112701145454,
+    "solve_rate": 0.925,
+    "size_ratio_geomean": 1.4520219552601814
    },
    "bolt_simplify": {
-    "size_efficiency": 0.7794667688357729,
+    "size_efficiency": 0.7625858164548206,
     "solve_rate": 0.9,
-    "size_ratio_geomean": 1.5438998327192983
+    "size_ratio_geomean": 1.57305646865165
    },
    "bolt_switch3": {
-    "size_efficiency": 0.45588719978692627,
-    "solve_rate": 0.65,
-    "size_ratio_geomean": 3.1359819446451
+    "size_efficiency": 0.44527331307323575,
+    "solve_rate": 0.575,
+    "size_ratio_geomean": 3.156882292160417
    },
    "crash": {
     "size_efficiency": 0.0,
@@ -32,9 +37,9 @@
     "size_ratio_geomean": 10.000000000000007
    },
    "literal_cover": {
-    "size_efficiency": 0.3141463928666585,
-    "solve_rate": 1.0,
-    "size_ratio_geomean": 4.293410344917025
+    "size_efficiency": 0.2035357631915403,
+    "solve_rate": 0.625,
+    "size_ratio_geomean": 5.384069991456941
    },
    "null_answer": {
     "size_efficiency": 0.0,
@@ -52,48 +57,49 @@
     "size_ratio_geomean": 3.981071705534971
    },
    "bolt_literal_fallback": {
-    "size_efficiency": 0.8684264401604439,
-    "solve_rate": 1.0,
-    "size_ratio_geomean": 1.2472118053262728
+    "size_efficiency": 0.7577201865746723,
+    "solve_rate": 0.925,
+    "size_ratio_geomean": 1.564042361335904
    }
   },
   "rank": {
    "cohort_std": {
-    "size_efficiency": 0.19829883227934098,
-    "solve_rate": 0.20328927815368153,
-    "size_ratio_geomean": 1.1460929429644235
+    "size_efficiency": 0.20554386930497842,
+    "solve_rate": 0.1861409076479429,
+    "size_ratio_geomean": 1.3468881857732706
    },
    "gain_vs_bolt": {
     "bolt": 0.0,
-    "bolt_beam1": -1.0789981248217146,
-    "bolt_simplify": 0.06712576372784913,
-    "bolt_switch3": -2.8741084124923137,
-    "literal_cover": -3.2329952923312195,
-    "raw_vfb": -4.139511871395084,
-    "bolt_literal_fallback": 0.8911294301479122
+    "bolt_beam1": -1.3034746408474955,
+    "bolt_portfolio": 0.397212630393653,
+    "bolt_simplify": 0.0636402645829893,
+    "bolt_switch3": -2.9410819387016516,
+    "literal_cover": -4.809652582662213,
+    "raw_vfb": -3.937377597595506,
+    "bolt_literal_fallback": 0.11046798630123099
    }
   },
   "paired_vs_bolt": {
    "bolt_beam1": {
     "size_efficiency": {
-     "mean_diff": -0.15626184085645975,
+     "mean_diff": -0.16085434387087882,
      "ci95": [
-      -0.2289076231902074,
-      -0.08991495966741322
+      -0.23666350114626472,
+      -0.09322185219054988
      ],
      "better": 1,
      "worse": 17,
      "ties": 22
     },
     "solve_rate": {
-     "mean_diff": 0.0,
+     "mean_diff": -0.1,
      "ci95": [
-      0.0,
-      0.0
+      -0.2,
+      -0.025
      ],
      "better": 0,
-     "worse": 0,
-     "ties": 40
+     "worse": 4,
+     "ties": 36
     },
     "log_ratio": {
      "mean_diff": 0.3540297598128973,
@@ -106,12 +112,44 @@
      "ties": 22
     }
    },
+   "bolt_portfolio": {
+    "size_efficiency": {
+     "mean_diff": 0.05656578233505384,
+     "ci95": [
+      0.017525438636051428,
+      0.11524384328180784
+     ],
+     "better": 14,
+     "worse": 0,
+     "ties": 26
+    },
+    "solve_rate": {
+     "mean_diff": 0.025,
+     "ci95": [
+      0.0,
+      0.075
+     ],
+     "better": 1,
+     "worse": 0,
+     "ties": 39
+    },
+    "log_ratio": {
+     "mean_diff": -0.0969209243021095,
+     "ci95": [
+      -0.22336801468584752,
+      -0.02328792901743137
+     ],
+     "better": 0,
+     "worse": 14,
+     "ties": 26
+    }
+   },
    "bolt_simplify": {
     "size_efficiency": {
      "mean_diff": 0.011040328675329086,
      "ci95": [
-      0.0011383579383579389,
-      0.02482333257020757
+      0.0010106298107871684,
+      0.024703761049637087
      ],
      "better": 7,
      "worse": 0,
@@ -130,8 +168,8 @@
     "log_ratio": {
      "mean_diff": -0.01685743916339682,
      "ci95": [
-      -0.03566292366366767,
-      -0.0037550587461246065
+      -0.03512485287499763,
+      -0.0035408099790479263
      ],
      "better": 0,
      "worse": 7,
@@ -140,30 +178,30 @@
    },
    "bolt_switch3": {
     "size_efficiency": {
-     "mean_diff": -0.31253924037351777,
+     "mean_diff": -0.3062721747062559,
      "ci95": [
-      -0.42452004529524257,
-      -0.21170334140507469
+      -0.4080517256545499,
+      -0.20772109234653505
      ],
      "better": 2,
      "worse": 27,
      "ties": 11
     },
     "solve_rate": {
-     "mean_diff": -0.25,
+     "mean_diff": -0.325,
      "ci95": [
-      -0.375,
-      -0.125
+      -0.475,
+      -0.175
      ],
      "better": 0,
-     "worse": 10,
-     "ties": 30
+     "worse": 13,
+     "ties": 27
     },
     "log_ratio": {
-     "mean_diff": 0.6917733315445403,
+     "mean_diff": 0.679706962874558,
      "ci95": [
-      0.442791802619951,
-      0.9532540218802857
+      0.4446711314560382,
+      0.929880779496488
      ],
      "better": 27,
      "worse": 2,
@@ -172,10 +210,10 @@
    },
    "crash": {
     "size_efficiency": {
-     "mean_diff": -0.7684264401604438,
+     "mean_diff": -0.7515454877794915,
      "ci95": [
-      -0.8762754492672483,
-      -0.648375501947774
+      -0.8521048089421545,
+      -0.6423528071588329
      ],
      "better": 0,
      "worse": 36,
@@ -192,10 +230,10 @@
      "ties": 4
     },
     "log_ratio": {
-     "mean_diff": 1.8514160795143517,
+     "mean_diff": 1.8327071317010444,
      "ci95": [
-      1.5944346153005846,
-      2.068063363991449
+      1.582519062097488,
+      2.057438557068847
      ],
      "better": 36,
      "worse": 0,
@@ -204,10 +242,10 @@
    },
    "forged_fields": {
     "size_efficiency": {
-     "mean_diff": -0.7684264401604438,
+     "mean_diff": -0.7515454877794915,
      "ci95": [
-      -0.8700458876989245,
-      -0.6564350236197014
+      -0.8586418951133213,
+      -0.6403732714621346
      ],
      "better": 0,
      "worse": 36,
@@ -224,10 +262,10 @@
      "ties": 4
     },
     "log_ratio": {
-     "mean_diff": 1.8514160795143517,
+     "mean_diff": 1.8327071317010444,
      "ci95": [
-      1.596458354109453,
-      2.080550428076756
+      1.5910323194332294,
+      2.056522871592756
      ],
      "better": 36,
      "worse": 0,
@@ -236,42 +274,42 @@
    },
    "literal_cover": {
     "size_efficiency": {
-     "mean_diff": -0.4542800472937854,
+     "mean_diff": -0.5480097245879513,
      "ci95": [
-      -0.6177115152594922,
-      -0.2744322424431079
+      -0.6460505017776916,
+      -0.44389369543087664
      ],
-     "better": 4,
+     "better": 1,
      "worse": 34,
-     "ties": 2
+     "ties": 5
     },
     "solve_rate": {
-     "mean_diff": 0.1,
+     "mean_diff": -0.275,
      "ci95": [
-      0.025,
-      0.2
+      -0.425,
+      -0.125
      ],
-     "better": 4,
-     "worse": 0,
-     "ties": 36
+     "better": 1,
+     "worse": 12,
+     "ties": 27
     },
     "log_ratio": {
-     "mean_diff": 1.0059123558482033,
+     "mean_diff": 1.2135666308640622,
      "ci95": [
-      0.6063495848899505,
-      1.3666644417989593
+      0.9718725144934659,
+      1.445759093358514
      ],
      "better": 34,
-     "worse": 4,
-     "ties": 2
+     "worse": 1,
+     "ties": 5
     }
    },
    "null_answer": {
     "size_efficiency": {
-     "mean_diff": -0.7684264401604438,
+     "mean_diff": -0.7515454877794915,
      "ci95": [
-      -0.8719618276770833,
-      -0.6507171465589987
+      -0.856274502031687,
+      -0.641204614783416
      ],
      "better": 0,
      "worse": 36,
@@ -288,10 +326,10 @@
      "ties": 4
     },
     "log_ratio": {
-     "mean_diff": 1.8514160795143517,
+     "mean_diff": 1.8327071317010444,
      "ci95": [
-      1.6034031678182394,
-      2.078381604047508
+      1.5819668440368713,
+      2.05389146901216
      ],
      "better": 36,
      "worse": 0,
@@ -300,10 +338,10 @@
    },
    "parallel_portfolio": {
     "size_efficiency": {
-     "mean_diff": -0.5934264401604439,
+     "mean_diff": -0.5765454877794916,
      "ci95": [
-      -0.7307174900535544,
-      -0.4541786841572434
+      -0.7120010421282561,
+      -0.4415509244996342
      ],
      "better": 2,
      "worse": 29,
@@ -320,10 +358,10 @@
      "ties": 11
     },
     "log_ratio": {
-     "mean_diff": 1.4484636882403934,
+     "mean_diff": 1.429754740427086,
      "ci95": [
-      1.134440416250126,
-      1.7613970929816234
+      1.1120703141951462,
+      1.7215915076959103
      ],
      "better": 29,
      "worse": 2,
@@ -332,10 +370,10 @@
    },
    "raw_vfb": {
     "size_efficiency": {
-     "mean_diff": -0.36842644016044396,
+     "mean_diff": -0.35154548777949157,
      "ci95": [
-      -0.508544457799582,
-      -0.23566252516413339
+      -0.4816219585111649,
+      -0.2244310203562736
      ],
      "better": 1,
      "worse": 20,
@@ -352,10 +390,10 @@
      "ties": 20
     },
     "log_ratio": {
-     "mean_diff": 0.9303820423167337,
+     "mean_diff": 0.9116730945034263,
      "ci95": [
-      0.618415872243227,
-      1.255593465233051
+      0.6060261554298078,
+      1.231174595096618
      ],
      "better": 20,
      "worse": 1,
@@ -364,46 +402,47 @@
    },
    "bolt_literal_fallback": {
     "size_efficiency": {
-     "mean_diff": 0.1,
+     "mean_diff": 0.006174698795180723,
      "ci95": [
-      0.025,
-      0.2
+      0.0,
+      0.018524096385542168
      ],
-     "better": 4,
+     "better": 1,
      "worse": 0,
-     "ties": 36
+     "ties": 39
     },
     "solve_rate": {
-     "mean_diff": 0.1,
+     "mean_diff": 0.025,
      "ci95": [
-      0.025,
-      0.2
+      0.0,
+      0.075
      ],
-     "better": 4,
+     "better": 1,
      "worse": 0,
-     "ties": 36
+     "ties": 39
     },
     "log_ratio": {
-     "mean_diff": -0.23025850929940458,
+     "mean_diff": -0.02260423428354526,
      "ci95": [
-      -0.4605170185988093,
-      -0.057564627324851146
+      -0.06781270285063579,
+      0.0
      ],
      "better": 0,
-     "worse": 4,
-     "ties": 36
+     "worse": 1,
+     "ties": 39
     }
    }
   },
   "bolt_cpu_s": {
-   "max": 12.472,
-   "p90": 6.339,
-   "mean": 2.1858
+   "max": 13.236,
+   "p90": 6.6,
+   "mean": 2.3020750000000003
   },
   "family_size_efficiency": {
    "OrderedSequence": {
     "bolt": 1.0,
     "bolt_beam1": 1.0,
+    "bolt_portfolio": 1.0,
     "bolt_simplify": 1.0,
     "bolt_switch3": 0.8313492063492063,
     "crash": 0.0,
@@ -416,62 +455,66 @@
    },
    "RandomBooleanCombinationsofFactors": {
     "bolt": 0.7269238886045492,
-    "bolt_beam1": 0.4574473460328107,
+    "bolt_beam1": 0.4383479014414327,
+    "bolt_portfolio": 0.7674003728963759,
     "bolt_simplify": 0.7600474317199053,
-    "bolt_switch3": 0.18729341469616068,
+    "bolt_switch3": 0.17763157894736842,
     "crash": 0.0,
     "forged_fields": 0.0,
-    "literal_cover": 0.18820777468431654,
+    "literal_cover": 0.16062407371608994,
     "null_answer": 0.0,
     "parallel_portfolio": 0.25,
     "raw_vfb": 0.125,
     "bolt_literal_fallback": 0.7269238886045492
    },
    "Subword": {
-    "bolt": 0.6957220966588233,
-    "bolt_beam1": 0.5144187515666389,
-    "bolt_simplify": 0.6969668635867794,
-    "bolt_switch3": 0.405560375597438,
+    "bolt": 0.6648887633254901,
+    "bolt_beam1": 0.4706537203016076,
+    "bolt_portfolio": 0.7078364288041707,
+    "bolt_simplify": 0.6661335302534461,
+    "bolt_switch3": 0.3621527777777778,
     "crash": 0.0,
     "forged_fields": 0.0,
-    "literal_cover": 0.2003697546099245,
+    "literal_cover": 0.17649076820610005,
     "null_answer": 0.0,
     "parallel_portfolio": 0.125,
     "raw_vfb": 0.25,
-    "bolt_literal_fallback": 0.6957220966588233
+    "bolt_literal_fallback": 0.6648887633254901
    },
    "Subset": {
     "bolt": 0.9462719298245613,
     "bolt_beam1": 0.6908476552229926,
+    "bolt_portfolio": 0.9671052631578947,
     "bolt_simplify": 0.9671052631578947,
     "bolt_switch3": 0.8552330022918259,
     "crash": 0.0,
     "forged_fields": 0.0,
-    "literal_cover": 0.16323305383200692,
+    "literal_cover": 0.14156013100146295,
     "null_answer": 0.0,
     "parallel_portfolio": 0.125,
     "raw_vfb": 0.5,
     "bolt_literal_fallback": 0.9462719298245613
    },
    "Hamming": {
-    "bolt": 0.4732142857142857,
-    "bolt_beam1": 0.39810924369747897,
-    "bolt_simplify": 0.4732142857142857,
+    "bolt": 0.41964285714285715,
+    "bolt_beam1": 0.3536064425770308,
+    "bolt_portfolio": 0.5982142857142857,
+    "bolt_simplify": 0.41964285714285715,
     "bolt_switch3": 0.0,
     "crash": 0.0,
     "forged_fields": 0.0,
-    "literal_cover": 0.6184343274111676,
+    "literal_cover": 0.13851678923817096,
     "null_answer": 0.0,
     "parallel_portfolio": 0.0,
     "raw_vfb": 0.125,
-    "bolt_literal_fallback": 0.9732142857142857
+    "bolt_literal_fallback": 0.45051635111876076
    }
   },
   "official": {
    "bolt": {
-    "size_efficiency": 0.7684264401604438,
+    "size_efficiency": 0.7515454877794915,
     "solve_rate": 0.9,
-    "size_ratio_geomean": 1.5701466356149247
+    "size_ratio_geomean": 1.5997989439090436
    },
    "raw_vfb": {
     "size_efficiency": 0.4,
@@ -499,29 +542,34 @@
  "train": {
   "metrics": {
    "bolt": {
-    "size_efficiency": 0.8553729873760929,
+    "size_efficiency": 0.839670747207258,
     "solve_rate": 0.95,
-    "size_ratio_geomean": 1.321274362994149
+    "size_ratio_geomean": 1.3438177815106278
    },
    "bolt_beam1": {
-    "size_efficiency": 0.7199504780916693,
+    "size_efficiency": 0.7072563859475233,
+    "solve_rate": 0.9,
+    "size_ratio_geomean": 1.7507681635984154
+   },
+   "bolt_portfolio": {
+    "size_efficiency": 0.89282650406874,
     "solve_rate": 0.95,
-    "size_ratio_geomean": 1.7213978873746858
+    "size_ratio_geomean": 1.245743727941578
    },
    "bolt_simplify": {
-    "size_efficiency": 0.8703388065810426,
+    "size_efficiency": 0.854476310001951,
     "solve_rate": 0.95,
-    "size_ratio_geomean": 1.2918856330045283
+    "size_ratio_geomean": 1.3139276246725193
    },
    "bolt_switch3": {
-    "size_efficiency": 0.41371490190123944,
+    "size_efficiency": 0.41169109237742985,
     "solve_rate": 0.75,
-    "size_ratio_geomean": 3.2333401408258986
+    "size_ratio_geomean": 3.2499368408403697
    },
    "literal_cover": {
-    "size_efficiency": 0.20585813110919457,
-    "solve_rate": 1.0,
-    "size_ratio_geomean": 5.708519022064981
+    "size_efficiency": 0.1312485323499212,
+    "solve_rate": 0.55,
+    "size_ratio_geomean": 6.514346087924357
    },
    "raw_vfb": {
     "size_efficiency": 0.525,
@@ -529,38 +577,71 @@
     "size_ratio_geomean": 2.9853826189179595
    },
    "bolt_literal_fallback": {
-    "size_efficiency": 0.905372987376093,
-    "solve_rate": 1.0,
-    "size_ratio_geomean": 1.1775870155506023
+    "size_efficiency": 0.839670747207258,
+    "solve_rate": 0.95,
+    "size_ratio_geomean": 1.3438177815106278
    }
   },
   "rank": {
    "cohort_std": {
-    "size_efficiency": 0.24759722365895814,
-    "solve_rate": 0.16311696066670336,
-    "size_ratio_geomean": 1.5246257298409631
+    "size_efficiency": 0.25434286606589185,
+    "solve_rate": 0.17272517006794347,
+    "size_ratio_geomean": 1.699993058133249
    },
    "gain_vs_bolt": {
     "bolt": 0.0,
-    "bolt_beam1": -0.6781670457195489,
-    "bolt_simplify": 0.07008222708283904,
-    "bolt_switch3": -3.023894145809414,
-    "literal_cover": -3.9088016950517392,
-    "raw_vfb": -3.1828056012516974,
-    "bolt_literal_fallback": 0.4023273039580368
+    "bolt_beam1": -0.7850440057284742,
+    "bolt_portfolio": 0.23783794899242733,
+    "bolt_simplify": 0.06700229867275062,
+    "bolt_switch3": -2.822267825400605,
+    "literal_cover": -5.463962711511392,
+    "raw_vfb": -2.950284460142782,
+    "bolt_literal_fallback": 0.0
    }
   },
   "paired_vs_bolt": {
    "bolt_beam1": {
     "size_efficiency": {
-     "mean_diff": -0.13542250928442365,
+     "mean_diff": -0.13241436125973466,
      "ci95": [
-      -0.20247223193184022,
-      -0.07902331495259127
+      -0.2013435558935325,
+      -0.07640265174764674
      ],
      "better": 0,
      "worse": 18,
      "ties": 22
+    },
+    "solve_rate": {
+     "mean_diff": -0.05,
+     "ci95": [
+      -0.125,
+      0.0
+     ],
+     "better": 0,
+     "worse": 2,
+     "ties": 38
+    },
+    "log_ratio": {
+     "mean_diff": 0.2645399885763455,
+     "ci95": [
+      0.14746543815068297,
+      0.42005205184122013
+     ],
+     "better": 18,
+     "worse": 0,
+     "ties": 22
+    }
+   },
+   "bolt_portfolio": {
+    "size_efficiency": {
+     "mean_diff": 0.05315575686148213,
+     "ci95": [
+      0.017666538702427008,
+      0.10127453062235672
+     ],
+     "better": 11,
+     "worse": 0,
+     "ties": 29
     },
     "solve_rate": {
      "mean_diff": 0.0,
@@ -573,22 +654,22 @@
      "ties": 40
     },
     "log_ratio": {
-     "mean_diff": 0.2645399885763455,
+     "mean_diff": -0.07578193027433505,
      "ci95": [
-      0.14691075444891957,
-      0.4156280419522357
+      -0.14922756595264047,
+      -0.022365768838966432
      ],
-     "better": 18,
-     "worse": 0,
-     "ties": 22
+     "better": 0,
+     "worse": 11,
+     "ties": 29
     }
    },
    "bolt_simplify": {
     "size_efficiency": {
-     "mean_diff": 0.014965819204949637,
+     "mean_diff": 0.014805562794693227,
      "ci95": [
       0.00013431013431013382,
-      0.0417731061209322
+      0.040615736920084744
      ],
      "better": 4,
      "worse": 0,
@@ -605,9 +686,9 @@
      "ties": 40
     },
     "log_ratio": {
-     "mean_diff": -0.022493815288547776,
+     "mean_diff": -0.02249381528854778,
      "ci95": [
-      -0.05991561561492288,
+      -0.06102639667112049,
       -0.0007813135876026112
      ],
      "better": 0,
@@ -617,10 +698,10 @@
    },
    "bolt_switch3": {
     "size_efficiency": {
-     "mean_diff": -0.44165808547485363,
+     "mean_diff": -0.4279796548298281,
      "ci95": [
-      -0.5591152906270367,
-      -0.32391642910025
+      -0.5375989503555755,
+      -0.3198022207682004
      ],
      "better": 1,
      "worse": 33,
@@ -637,10 +718,10 @@
      "ties": 32
     },
     "log_ratio": {
-     "mean_diff": 0.894919004864534,
+     "mean_diff": 0.8831209088891343,
      "ci95": [
-      0.6465991125910542,
-      1.1557646713946443
+      0.6349666077520985,
+      1.1522916184979737
      ],
      "better": 33,
      "worse": 1,
@@ -649,42 +730,42 @@
    },
    "literal_cover": {
     "size_efficiency": {
-     "mean_diff": -0.6495148562668982,
+     "mean_diff": -0.7084222148573367,
      "ci95": [
-      -0.7708050086474911,
-      -0.5039213375840652
+      -0.7890493314383585,
+      -0.6204994491409436
      ],
-     "better": 2,
+     "better": 0,
      "worse": 38,
-     "ties": 0
+     "ties": 2
     },
     "solve_rate": {
-     "mean_diff": 0.05,
+     "mean_diff": -0.4,
      "ci95": [
-      0.0,
-      0.125
+      -0.55,
+      -0.25
      ],
-     "better": 2,
-     "worse": 0,
-     "ties": 38
+     "better": 0,
+     "worse": 16,
+     "ties": 24
     },
     "log_ratio": {
-     "mean_diff": 1.463362926979404,
+     "mean_diff": 1.578492181629106,
      "ci95": [
-      1.1273055836310404,
-      1.7462626931947007
+      1.3802799238354386,
+      1.7704535516362134
      ],
      "better": 38,
-     "worse": 2,
-     "ties": 0
+     "worse": 0,
+     "ties": 2
     }
    },
    "raw_vfb": {
     "size_efficiency": {
-     "mean_diff": -0.330372987376093,
+     "mean_diff": -0.314670747207258,
      "ci95": [
-      -0.4855769230769231,
-      -0.17741388241388242
+      -0.4609410909857338,
+      -0.16991112475487474
      ],
      "better": 2,
      "worse": 17,
@@ -701,10 +782,10 @@
      "ties": 23
     },
     "log_ratio": {
-     "mean_diff": 0.8151312217876228,
+     "mean_diff": 0.7982132654960729,
      "ci95": [
-      0.4693009693527691,
-      1.1629766730188091
+      0.46889136651402563,
+      1.1461802681828954
      ],
      "better": 17,
      "worse": 2,
@@ -713,34 +794,34 @@
    },
    "bolt_literal_fallback": {
     "size_efficiency": {
-     "mean_diff": 0.05,
+     "mean_diff": 0.0,
      "ci95": [
       0.0,
-      0.125
-     ],
-     "better": 2,
-     "worse": 0,
-     "ties": 38
-    },
-    "solve_rate": {
-     "mean_diff": 0.05,
-     "ci95": [
-      0.0,
-      0.125
-     ],
-     "better": 2,
-     "worse": 0,
-     "ties": 38
-    },
-    "log_ratio": {
-     "mean_diff": -0.11512925464970229,
-     "ci95": [
-      -0.28782313662425574,
       0.0
      ],
      "better": 0,
-     "worse": 2,
-     "ties": 38
+     "worse": 0,
+     "ties": 40
+    },
+    "solve_rate": {
+     "mean_diff": 0.0,
+     "ci95": [
+      0.0,
+      0.0
+     ],
+     "better": 0,
+     "worse": 0,
+     "ties": 40
+    },
+    "log_ratio": {
+     "mean_diff": 0.0,
+     "ci95": [
+      0.0,
+      0.0
+     ],
+     "better": 0,
+     "worse": 0,
+     "ties": 40
     }
    }
   },
@@ -753,54 +834,59 @@
    "OrderedSequence": {
     "bolt": 1.0,
     "bolt_beam1": 1.0,
+    "bolt_portfolio": 1.0,
     "bolt_simplify": 1.0,
     "bolt_switch3": 0.5513856965469869,
-    "literal_cover": 0.12916537221887464,
+    "literal_cover": 0.08697101706970128,
     "raw_vfb": 1.0,
     "bolt_literal_fallback": 1.0
    },
    "Subword": {
-    "bolt": 0.7937354312354313,
-    "bolt_beam1": 0.6476078344877213,
-    "bolt_simplify": 0.8087819185645273,
-    "bolt_switch3": 0.48260551948051944,
-    "literal_cover": 0.22442502806468193,
+    "bolt": 0.7702311577311578,
+    "bolt_beam1": 0.6220281026222245,
+    "bolt_portfolio": 0.8087819185645273,
+    "bolt_simplify": 0.7844763630089717,
+    "bolt_switch3": 0.4724864718614718,
+    "literal_cover": 0.20928420849659699,
     "raw_vfb": 0.375,
-    "bolt_literal_fallback": 0.7937354312354313
+    "bolt_literal_fallback": 0.7702311577311578
    },
    "Subset": {
     "bolt": 0.9402173913043478,
     "bolt_beam1": 0.8529647435897436,
+    "bolt_portfolio": 0.9903846153846154,
     "bolt_simplify": 1.0,
     "bolt_switch3": 0.804004329004329,
-    "literal_cover": 0.12213482579491687,
+    "literal_cover": 0.10793947126113894,
     "raw_vfb": 0.625,
     "bolt_literal_fallback": 0.9402173913043478
    },
    "Hamming": {
-    "bolt": 0.75,
-    "bolt_beam1": 0.5398015550295541,
-    "bolt_simplify": 0.75,
+    "bolt": 0.6949930726600986,
+    "bolt_beam1": 0.5063379095076539,
+    "bolt_portfolio": 0.75,
+    "bolt_simplify": 0.6949930726600986,
     "bolt_switch3": 0.0,
-    "literal_cover": 0.43686557620529964,
+    "literal_cover": 0.17557521087209518,
     "raw_vfb": 0.0,
-    "bolt_literal_fallback": 1.0
+    "bolt_literal_fallback": 0.6949930726600986
    },
    "RandomBooleanCombinationsofFactors": {
     "bolt": 0.7929121143406859,
-    "bolt_beam1": 0.5593782573513276,
+    "bolt_beam1": 0.5549511740179943,
+    "bolt_portfolio": 0.9149659863945578,
     "bolt_simplify": 0.7929121143406859,
     "bolt_switch3": 0.23057896447436166,
-    "literal_cover": 0.11669985326219999,
+    "literal_cover": 0.07647275405007364,
     "raw_vfb": 0.625,
     "bolt_literal_fallback": 0.7929121143406859
    }
   },
   "official": {
    "bolt": {
-    "size_efficiency": 0.8553729873760929,
+    "size_efficiency": 0.839670747207258,
     "solve_rate": 0.95,
-    "size_ratio_geomean": 1.321274362994149
+    "size_ratio_geomean": 1.3438177815106278
    },
    "raw_vfb": {
     "size_efficiency": 0.525,

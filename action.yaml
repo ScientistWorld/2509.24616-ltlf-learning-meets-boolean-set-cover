@@ -5,4 +5,4 @@ action: submit
 gpus: 0
 test: false
 milestone: core_claim
-notes: "Hardening job: run Bolt reference, raw VFB baseline, better/weaker variants and shortcut solvers through the new budgeted train/test harness (40+40 instances, 20 CPU s each), freeze best-known sizes, score, run official no-arg evaluate_train/test, analyze, validate."
+notes: "Hardening job 2: rerun test variants/shortcuts + new bolt_portfolio (train resumes job-1 records), exhaustive VFB lower bounds where no learner separates, learner-only best-known sizes, 10x acceptability cap, official no-arg train/test evaluations, analysis, validate."

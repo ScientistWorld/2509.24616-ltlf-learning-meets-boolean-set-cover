@@ -4,13 +4,14 @@
 
 | method | size_efficiency | solve_rate | size_ratio_geomean | rank gain vs bolt |
 |---|---:|---:|---:|---:|
-| bolt_literal_fallback | 0.8684 | 1.0000 | 1.2472 | +0.891 |
-| bolt_simplify | 0.7795 | 0.9000 | 1.5439 | +0.067 |
-| bolt | 0.7684 | 0.9000 | 1.5701 | +0.000 |
-| bolt_beam1 | 0.6122 | 0.9000 | 2.2371 | -1.079 |
-| bolt_switch3 | 0.4559 | 0.6500 | 3.1360 | -2.874 |
-| raw_vfb | 0.4000 | 0.4000 | 3.9811 | -4.140 |
-| literal_cover | 0.3141 | 1.0000 | 4.2934 | -3.233 |
+| bolt_portfolio | 0.8081 | 0.9250 | 1.4520 | +0.397 |
+| bolt_simplify | 0.7626 | 0.9000 | 1.5731 | +0.064 |
+| bolt_literal_fallback | 0.7577 | 0.9250 | 1.5640 | +0.110 |
+| bolt | 0.7515 | 0.9000 | 1.5998 | +0.000 |
+| bolt_beam1 | 0.5907 | 0.8000 | 2.2794 | -1.303 |
+| bolt_switch3 | 0.4453 | 0.5750 | 3.1569 | -2.941 |
+| raw_vfb | 0.4000 | 0.4000 | 3.9811 | -3.937 |
+| literal_cover | 0.2035 | 0.6250 | 5.3841 | -4.810 |
 | parallel_portfolio | 0.1750 | 0.1750 | 6.6834 |  |
 | crash | 0.0000 | 0.0000 | 10.0000 |  |
 | forged_fields | 0.0000 | 0.0000 | 10.0000 |  |
@@ -18,18 +19,19 @@
 
 Paired size_efficiency difference vs bolt (mean, 95% bootstrap CI, better/worse/tie):
 
-- bolt_beam1: -0.1563 [-0.2289, -0.0899] 1/17/22
-- bolt_literal_fallback: +0.1000 [+0.0250, +0.2000] 4/0/36
-- bolt_simplify: +0.0110 [+0.0011, +0.0248] 7/0/33
-- bolt_switch3: -0.3125 [-0.4245, -0.2117] 2/27/11
-- crash: -0.7684 [-0.8763, -0.6484] 0/36/4
-- forged_fields: -0.7684 [-0.8700, -0.6564] 0/36/4
-- literal_cover: -0.4543 [-0.6177, -0.2744] 4/34/2
-- null_answer: -0.7684 [-0.8720, -0.6507] 0/36/4
-- parallel_portfolio: -0.5934 [-0.7307, -0.4542] 2/29/9
-- raw_vfb: -0.3684 [-0.5085, -0.2357] 1/20/19
+- bolt_beam1: -0.1609 [-0.2367, -0.0932] 1/17/22
+- bolt_literal_fallback: +0.0062 [+0.0000, +0.0185] 1/0/39
+- bolt_portfolio: +0.0566 [+0.0175, +0.1152] 14/0/26
+- bolt_simplify: +0.0110 [+0.0010, +0.0247] 7/0/33
+- bolt_switch3: -0.3063 [-0.4081, -0.2077] 2/27/11
+- crash: -0.7515 [-0.8521, -0.6424] 0/36/4
+- forged_fields: -0.7515 [-0.8586, -0.6404] 0/36/4
+- literal_cover: -0.5480 [-0.6461, -0.4439] 1/34/5
+- null_answer: -0.7515 [-0.8563, -0.6412] 0/36/4
+- parallel_portfolio: -0.5765 [-0.7120, -0.4416] 2/29/9
+- raw_vfb: -0.3515 [-0.4816, -0.2244] 1/20/19
 
-bolt CPU seconds: {'max': 12.472, 'p90': 6.339, 'mean': 2.1858}
+bolt CPU seconds: {'max': 13.236, 'p90': 6.6, 'mean': 2.3020750000000003}
 
 Repeat spread (official rerun vs hardening run): {'bolt': {'size_efficiency': 0.0, 'solve_rate': 0.0, 'size_ratio_geomean': 0.0}, 'raw_vfb': {'size_efficiency': 0.0, 'solve_rate': 0.0, 'size_ratio_geomean': 0.0}}
 Instances whose size_efficiency changed on rerun: {'bolt': 0, 'raw_vfb': 0}
@@ -38,22 +40,24 @@ Instances whose size_efficiency changed on rerun: {'bolt': 0, 'raw_vfb': 0}
 
 | method | size_efficiency | solve_rate | size_ratio_geomean | rank gain vs bolt |
 |---|---:|---:|---:|---:|
-| bolt_literal_fallback | 0.9054 | 1.0000 | 1.1776 | +0.402 |
-| bolt_simplify | 0.8703 | 0.9500 | 1.2919 | +0.070 |
-| bolt | 0.8554 | 0.9500 | 1.3213 | +0.000 |
-| bolt_beam1 | 0.7200 | 0.9500 | 1.7214 | -0.678 |
-| raw_vfb | 0.5250 | 0.5250 | 2.9854 | -3.183 |
-| bolt_switch3 | 0.4137 | 0.7500 | 3.2333 | -3.024 |
-| literal_cover | 0.2059 | 1.0000 | 5.7085 | -3.909 |
+| bolt_portfolio | 0.8928 | 0.9500 | 1.2457 | +0.238 |
+| bolt_simplify | 0.8545 | 0.9500 | 1.3139 | +0.067 |
+| bolt | 0.8397 | 0.9500 | 1.3438 | +0.000 |
+| bolt_literal_fallback | 0.8397 | 0.9500 | 1.3438 | +0.000 |
+| bolt_beam1 | 0.7073 | 0.9000 | 1.7508 | -0.785 |
+| raw_vfb | 0.5250 | 0.5250 | 2.9854 | -2.950 |
+| bolt_switch3 | 0.4117 | 0.7500 | 3.2499 | -2.822 |
+| literal_cover | 0.1312 | 0.5500 | 6.5143 | -5.464 |
 
 Paired size_efficiency difference vs bolt (mean, 95% bootstrap CI, better/worse/tie):
 
-- bolt_beam1: -0.1354 [-0.2025, -0.0790] 0/18/22
-- bolt_literal_fallback: +0.0500 [+0.0000, +0.1250] 2/0/38
-- bolt_simplify: +0.0150 [+0.0001, +0.0418] 4/0/36
-- bolt_switch3: -0.4417 [-0.5591, -0.3239] 1/33/6
-- literal_cover: -0.6495 [-0.7708, -0.5039] 2/38/0
-- raw_vfb: -0.3304 [-0.4856, -0.1774] 2/17/21
+- bolt_beam1: -0.1324 [-0.2013, -0.0764] 0/18/22
+- bolt_literal_fallback: +0.0000 [+0.0000, +0.0000] 0/0/40
+- bolt_portfolio: +0.0532 [+0.0177, +0.1013] 11/0/29
+- bolt_simplify: +0.0148 [+0.0001, +0.0406] 4/0/36
+- bolt_switch3: -0.4280 [-0.5376, -0.3198] 1/33/6
+- literal_cover: -0.7084 [-0.7890, -0.6205] 0/38/2
+- raw_vfb: -0.3147 [-0.4609, -0.1699] 2/17/21
 
 bolt CPU seconds: {'max': 8.56, 'p90': 4.859, 'mean': 1.523475}
 

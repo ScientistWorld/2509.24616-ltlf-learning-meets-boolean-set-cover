@@ -6,24 +6,29 @@
       "_cpu_budget_s": 20.0,
       "results": {
         "bolt": {
-          "size_efficiency": 0.7684264401604438,
+          "size_efficiency": 0.7515454877794915,
           "solve_rate": 0.9,
-          "size_ratio_geomean": 1.5701466356149247
+          "size_ratio_geomean": 1.5997989439090436
         },
         "bolt_beam1": {
-          "size_efficiency": 0.6121645993039843,
-          "solve_rate": 0.9,
-          "size_ratio_geomean": 2.237141138537371
+          "size_efficiency": 0.5906911439086128,
+          "solve_rate": 0.8,
+          "size_ratio_geomean": 2.2793896758603753
+        },
+        "bolt_portfolio": {
+          "size_efficiency": 0.8081112701145454,
+          "solve_rate": 0.925,
+          "size_ratio_geomean": 1.4520219552601814
         },
         "bolt_simplify": {
-          "size_efficiency": 0.7794667688357729,
+          "size_efficiency": 0.7625858164548206,
           "solve_rate": 0.9,
-          "size_ratio_geomean": 1.5438998327192983
+          "size_ratio_geomean": 1.57305646865165
         },
         "bolt_switch3": {
-          "size_efficiency": 0.45588719978692627,
-          "solve_rate": 0.65,
-          "size_ratio_geomean": 3.1359819446451
+          "size_efficiency": 0.44527331307323575,
+          "solve_rate": 0.575,
+          "size_ratio_geomean": 3.156882292160417
         },
         "crash": {
           "size_efficiency": 0.0,
@@ -36,9 +41,9 @@
           "size_ratio_geomean": 10.000000000000007
         },
         "literal_cover": {
-          "size_efficiency": 0.3141463928666585,
-          "solve_rate": 1.0,
-          "size_ratio_geomean": 4.293410344917025
+          "size_efficiency": 0.2035357631915403,
+          "solve_rate": 0.625,
+          "size_ratio_geomean": 5.384069991456941
         },
         "null_answer": {
           "size_efficiency": 0.0,
