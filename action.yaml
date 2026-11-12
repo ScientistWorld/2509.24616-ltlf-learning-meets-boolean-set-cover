@@ -1,6 +1,8 @@
-# Do NOT sleep, poll, or wait. The system reads this file after the turn ends.
-action: done
+# Once you set action to 'submit' or 'done', STOP immediately.
+# Do NOT sleep, poll, or wait for jobs. The system reads this file
+# only after your turn ends.
+action: pending
 gpus: 0
 test: false
 milestone: core_claim
-notes: "Final verification passed; compact core-claim gym is ready with neutralized size-ratio fallback."
+notes: ""
