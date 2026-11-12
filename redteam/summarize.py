@@ -121,7 +121,7 @@ def main():
     (RT / 'summary.json').write_text(json.dumps(result, indent=2) + '\n')
     metrics = list(scales['selected_benchmarks'])
     with (RT / 'summary.csv').open('w', newline='') as stream:
-        writer = csv.writer(stream)
+        writer = csv.writer(stream, lineterminator='\n')
         writer.writerow(['scenario', 'rank_delta_audit_cohort', *metrics])
         for name, attempt in attempts.items():
             values = attempt['metrics']['selected_benchmarks']
