@@ -1,0 +1,27 @@
+{
+  "variants": [
+    "reference_seed0",
+    "reference_seed1",
+    "reference_seed2",
+    "stronger_search",
+    "paper_search_settings",
+    "weaker_no_boolean",
+    "weaker_minimal_search",
+    "brute_force_vfb",
+    "brute_force_only",
+    "shortcut_bruteforce_fallback",
+    "shortcut_metadata_answers",
+    "shortcut_baseline_padding",
+    "shortcut_baseline_nulls",
+    "shortcut_ground_truth",
+    "shortcut_forged_fields",
+    "shortcut_null_outputs",
+    "shortcut_empty_outputs",
+    "shortcut_method_filter",
+    "shortcut_stale_replay"
+  ],
+  "inputs": "All 10 visible manifest instances; candidate code has no hidden split list.",
+  "scoring": "Each run executes bash scripts/evaluate_test.sh without arguments in a separate process.",
+  "mutations": "All candidate changes to method, data, outputs and scores are restored by a finally block.",
+  "reference": "Regenerate baseline and Bolt outputs using visible improve-mode source, then reuse for artifact-only checks."
+}
