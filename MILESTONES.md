@@ -39,5 +39,10 @@
 - Fixed a neutral scoring fallback for formula-size comparisons when no common solved tasks exist.
 - Re-ran main, train, and test evaluators plus `python3 validate.py --compare`; all checks pass.
 
+### [2026-11-12] - core_claim
+- Hardening: rebuilt the evaluation as budgeted solver runs (20 CPU s per instance) on 40 hidden instances freshly drawn from the paper's generators; scores computed only from the parsed formula against fixed best-known sizes.
+- Restored the paper's Bolt procedure and settings (switch 8, size-dom 10, beam 100, D&C-switch 70) in a faithful Python port.
+- Hidden test: Bolt 0.752 size_efficiency / 0.90 solve rate vs raw VFB 0.40 / 0.40; anytime portfolio variant +0.057 (paired CI excludes 0); all redteam shortcuts closed or reduced (HARDENING.md).
+
 ## Stop Justification
 - Completed at milestone `core_claim`.

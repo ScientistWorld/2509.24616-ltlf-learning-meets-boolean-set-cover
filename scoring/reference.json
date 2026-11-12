@@ -25,15 +25,15 @@
       "results": {
         "bolt": {
           "type": "proposed",
-          "size_efficiency": 0.0,
-          "solve_rate": 0.0,
-          "size_ratio_geomean": 10.0
+          "size_efficiency": 0.7515,
+          "solve_rate": 0.9,
+          "size_ratio_geomean": 1.5998
         },
         "raw_vfb": {
           "type": "baseline",
-          "size_efficiency": 0.0,
-          "solve_rate": 0.0,
-          "size_ratio_geomean": 10.0
+          "size_efficiency": 0.4,
+          "solve_rate": 0.4,
+          "size_ratio_geomean": 3.9811
         },
         "_paper_table1_bolt": {
           "type": "proposed",
