@@ -1,0 +1,9 @@
+Traceback (most recent call last):
+  File "/home/user/eval/test/evaluate.py", line 327, in <module>
+    main()
+  File "/home/user/eval/test/evaluate.py", line 320, in main
+    scores = score(load_result_files(args.results_glob, methods))
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/user/eval/test/evaluate.py", line 221, in load_result_files
+    raise ValueError(f"Missing test-slice outputs for methods: {missing}")
+ValueError: Missing test-slice outputs for methods: ['bolt']

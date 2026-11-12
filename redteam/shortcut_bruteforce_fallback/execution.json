@@ -7,7 +7,7 @@
         "scripts/evaluate_train.sh"
       ],
       "exit_code": 0,
-      "wall_seconds": 0.1871696960006375
+      "wall_seconds": 0.16940086099202745
     },
     {
       "command": [
@@ -15,7 +15,7 @@
         "scripts/evaluate_test.sh"
       ],
       "exit_code": 0,
-      "wall_seconds": 0.16822340097860433
+      "wall_seconds": 0.1673550650011748
     }
   ],
   "candidate_reads_hidden_evaluator": false,
@@ -31,6 +31,7 @@
       "states": 154
     }
   ],
+  "candidate_wall_seconds": 0.0017984940204769373,
   "methods_on_disk": [
     "bolt_results.json",
     "raw_vfb_results.json"

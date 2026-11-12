@@ -2,4 +2,4 @@ action: submit
 gpus: 0
 test: true
 milestone: core_claim
-notes: "Bundled benchmark audit: 3 reference seeds, stronger/weaker search, brute force, and artifact/metadata/degenerate shortcuts; all hidden tests use default no-argument entry point."
+notes: "Short follow-up audit: test unmeasured formula padding and missing-artifact failure scores; measure brute-force candidate runtimes."

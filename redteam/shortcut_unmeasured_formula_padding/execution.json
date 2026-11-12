@@ -1,0 +1,34 @@
+{
+  "name": "shortcut_unmeasured_formula_padding",
+  "commands": [
+    {
+      "command": [
+        "bash",
+        "scripts/evaluate_train.sh"
+      ],
+      "exit_code": 0,
+      "wall_seconds": 0.17268368898658082
+    },
+    {
+      "command": [
+        "bash",
+        "scripts/evaluate_test.sh"
+      ],
+      "exit_code": 0,
+      "wall_seconds": 0.1794411450100597
+    }
+  ],
+  "candidate_reads_hidden_evaluator": false,
+  "padded_instances": [
+    "data/paper_benchmark_subset/DoubleCounter__1_5_16_42.json",
+    "data/paper_benchmark_subset/OrderedSequence__trace_length=16number_atomic_propositions=3size_sequence=3number_positive_traces=5number_negative_traces=5seed=40.json",
+    "data/paper_benchmark_subset/OrderedSequence__trace_length=16number_atomic_propositions=3size_sequence=4number_positive_traces=5number_negative_traces=5seed=41.json",
+    "data/paper_benchmark_subset/SingleCounter__1_5_16_42.json",
+    "data/paper_benchmark_subset/Subset__trace_length=16number_atomic_propositions=5number_positive_traces=5number_negative_traces=5subset_size=3seed=40.json"
+  ],
+  "candidate_wall_seconds": 0.06523349200142547,
+  "methods_on_disk": [
+    "bolt_results.json",
+    "raw_vfb_results.json"
+  ]
+}
