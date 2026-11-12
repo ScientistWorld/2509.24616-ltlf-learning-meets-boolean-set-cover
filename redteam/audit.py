@@ -223,6 +223,7 @@ def run(name):
         base_path = ROOT / 'outputs/raw_vfb_results.json'
         bolt, base = read(bolt_path), read(base_path)
         details = {'name': name, 'commands': [], 'candidate_reads_hidden_evaluator': False}
+        candidate_started = time.perf_counter()
 
         if name.startswith('reference_seed'):
             details['commands'].append(learn(bolt_path, log, seed=int(name[-1])))
@@ -264,6 +265,19 @@ def run(name):
                     for _ in range(100):
                         row['formula'] = '(' + row['formula'] + ') & (true)'
             write(base_path, base)
+        elif name == 'shortcut_unmeasured_formula_padding':
+            baseline_by_instance = {r['instance']: r for r in base['results']}
+            details['padded_instances'] = []
+            for row in bolt['results']:
+                # The baseline's solved flags are not trusted: its actual
+                # formula is validated with the visible, independent scorer.
+                baseline_formula = baseline_by_instance[row['instance']]['formula']
+                valid, _ = visible_evaluator().validate_formula(ROOT / row['instance'], baseline_formula)
+                if row['formula'] and not valid:
+                    for _ in range(100):
+                        row['formula'] = '(' + row['formula'] + ') & (true)'
+                    details['padded_instances'].append(row['instance'])
+            write(bolt_path, bolt)
         elif name in ('shortcut_bruteforce_fallback', 'brute_force_only'):
             details['brute_force'] = []
             for row in bolt['results']:
@@ -313,9 +327,14 @@ def run(name):
             poor = {'results': [{'instance': p, 'method': 'shortcut_failed', 'formula': None}
                                 for p in instances()]}
             write(ROOT / 'outputs/shortcut_failed_results.json', poor)
+        elif name == 'shortcut_missing_artifact':
+            # Train first enumerates this method. Its artifact then disappears
+            # before test, simulating a failed attempt rather than filtering it.
+            pass
         else:
             raise ValueError(name)
 
+        details['candidate_wall_seconds'] = time.perf_counter() - candidate_started
         details['commands'].append(command(['bash', 'scripts/evaluate_train.sh'], log))
         shutil.copyfile(ROOT / 'scoring/scores_train.json', folder / 'scores_train_before_filter.json')
         if name == 'shortcut_method_filter':
@@ -326,11 +345,16 @@ def run(name):
         for path in (ROOT / 'outputs').glob('*_results.json'):
             shutil.copyfile(path, folder / path.name)
         shutil.copyfile(ROOT / 'scoring/scores_train.json', folder / 'scores_train.json')
+        if name == 'shortcut_missing_artifact':
+            bolt_path.unlink()
+            (ROOT / 'scoring/scores_test.json').unlink(missing_ok=True)
         details['commands'].append(command(['bash', 'scripts/evaluate_test.sh'], log))
         if details['commands'][-1]['exit_code'] == 0:
             shutil.copyfile(ROOT / 'scoring/scores_test.json', folder / 'scores_test.json')
         else:
             details['hidden_test_failed'] = True
+            details['scores_test_written'] = (ROOT / 'scoring/scores_test.json').exists()
+            shutil.copyfile(folder / 'run.log', folder / 'failure.txt')
         write(folder / 'execution.json', details)
         print(name, json.dumps(read(folder / 'scores_test.json')['experiments']['selected_benchmarks']['results'])
               if (folder / 'scores_test.json').exists() else 'FAILED', flush=True)
