@@ -1,3 +1,8 @@
-action: done
+# Once you set action to 'submit' or 'done', STOP immediately.
+# Do NOT sleep, poll, or wait for jobs. The system reads this file
+# only after your turn ends.
+action: pending
+gpus: 0
+test: false
 milestone: core_claim
-notes: "Audit complete: honest solve-rate controls pass, but eight shortcuts pay; exhaustive VFB solves all hidden tasks. See REDTEAM.md."
+notes: ""
