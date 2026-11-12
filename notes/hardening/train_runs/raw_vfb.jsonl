@@ -1,0 +1,40 @@
+{"instance": "ord0", "returncode": 0, "cpu_s": 0.096, "wall_s": 0.103, "formula": "(a0) U (a1)", "status": "answered", "stderr_tail": ""}
+{"instance": "ord1", "returncode": 0, "cpu_s": 0.093, "wall_s": 0.103, "formula": "(a3) U (a2)", "status": "answered", "stderr_tail": ""}
+{"instance": "ord2", "returncode": 0, "cpu_s": 0.375, "wall_s": 0.385, "formula": "((a2) | (G(X(a2)))) U (a0)", "status": "answered", "stderr_tail": ""}
+{"instance": "ord3", "returncode": 0, "cpu_s": 0.102, "wall_s": 0.113, "formula": "(a0) U ((a1) U (a2))", "status": "answered", "stderr_tail": ""}
+{"instance": "ord4", "returncode": 0, "cpu_s": 0.093, "wall_s": 0.103, "formula": "(a3) U (a2)", "status": "answered", "stderr_tail": ""}
+{"instance": "ord5", "returncode": 0, "cpu_s": 1.832, "wall_s": 1.854, "formula": "(a0) U ((a2) U ((a1) U (a3)))", "status": "answered", "stderr_tail": ""}
+{"instance": "ord6", "returncode": 0, "cpu_s": 0.095, "wall_s": 0.103, "formula": "(a2) U ((a0) U (a3))", "status": "answered", "stderr_tail": ""}
+{"instance": "ord7", "returncode": 0, "cpu_s": 0.092, "wall_s": 0.103, "formula": "(a1) U ((a0) U (a2))", "status": "answered", "stderr_tail": ""}
+{"instance": "swd0", "returncode": 0, "cpu_s": 0.362, "wall_s": 0.374, "formula": "X(X((a1) R ((a2) U (X(a2)))))", "status": "answered", "stderr_tail": ""}
+{"instance": "swd1", "returncode": 0, "cpu_s": 0.086, "wall_s": 0.093, "formula": "G(F(a3))", "status": "answered", "stderr_tail": ""}
+{"instance": "swd2", "returncode": 0, "cpu_s": 3.687, "wall_s": 3.716, "formula": null, "status": "no_formula", "stderr_tail": ""}
+{"instance": "swd3", "returncode": 0, "cpu_s": 4.69, "wall_s": 4.723, "formula": null, "status": "no_formula", "stderr_tail": ""}
+{"instance": "swd4", "returncode": 0, "cpu_s": 5.117, "wall_s": 5.155, "formula": null, "status": "no_formula", "stderr_tail": ""}
+{"instance": "swd5", "returncode": 0, "cpu_s": 0.102, "wall_s": 0.113, "formula": "(G(a2)) R (X(F(a1)))", "status": "answered", "stderr_tail": ""}
+{"instance": "swd6", "returncode": 0, "cpu_s": 4.331, "wall_s": 4.36, "formula": null, "status": "no_formula", "stderr_tail": ""}
+{"instance": "swd7", "returncode": 0, "cpu_s": 5.586, "wall_s": 5.619, "formula": null, "status": "no_formula", "stderr_tail": ""}
+{"instance": "sst0", "returncode": 0, "cpu_s": 0.088, "wall_s": 0.093, "formula": "X((a4) U (a5))", "status": "answered", "stderr_tail": ""}
+{"instance": "sst1", "returncode": 0, "cpu_s": 0.096, "wall_s": 0.103, "formula": "(a3) U ((a4) R (a0))", "status": "answered", "stderr_tail": ""}
+{"instance": "sst2", "returncode": 0, "cpu_s": 4.141, "wall_s": 4.17, "formula": null, "status": "no_formula", "stderr_tail": ""}
+{"instance": "sst3", "returncode": 0, "cpu_s": 0.14, "wall_s": 0.153, "formula": "F((a1) & ((a2) & (a6)))", "status": "answered", "stderr_tail": ""}
+{"instance": "sst4", "returncode": 0, "cpu_s": 3.803, "wall_s": 3.828, "formula": null, "status": "no_formula", "stderr_tail": ""}
+{"instance": "sst5", "returncode": 0, "cpu_s": 0.321, "wall_s": 0.335, "formula": "F((a0) & (F((a2) & (a4))))", "status": "answered", "stderr_tail": ""}
+{"instance": "sst6", "returncode": 0, "cpu_s": 0.486, "wall_s": 0.495, "formula": "F((a0) & (F((a2) & (a3))))", "status": "answered", "stderr_tail": ""}
+{"instance": "sst7", "returncode": 0, "cpu_s": 4.172, "wall_s": 4.2, "formula": null, "status": "no_formula", "stderr_tail": ""}
+{"instance": "ham0", "returncode": 0, "cpu_s": 4.118, "wall_s": 4.15, "formula": null, "status": "no_formula", "stderr_tail": ""}
+{"instance": "ham1", "returncode": 0, "cpu_s": 10.267, "wall_s": 10.329, "formula": null, "status": "no_formula", "stderr_tail": ""}
+{"instance": "ham2", "returncode": 0, "cpu_s": 9.762, "wall_s": 9.821, "formula": null, "status": "no_formula", "stderr_tail": ""}
+{"instance": "ham3", "returncode": 0, "cpu_s": 5.739, "wall_s": 5.779, "formula": null, "status": "no_formula", "stderr_tail": ""}
+{"instance": "ham4", "returncode": 0, "cpu_s": 9.781, "wall_s": 9.846, "formula": null, "status": "no_formula", "stderr_tail": ""}
+{"instance": "ham5", "returncode": 0, "cpu_s": 5.329, "wall_s": 5.367, "formula": null, "status": "no_formula", "stderr_tail": ""}
+{"instance": "ham6", "returncode": 0, "cpu_s": 18.372, "wall_s": 18.477, "formula": null, "status": "no_formula", "stderr_tail": ""}
+{"instance": "ham7", "returncode": 0, "cpu_s": 9.749, "wall_s": 9.808, "formula": null, "status": "no_formula", "stderr_tail": ""}
+{"instance": "rbc0", "returncode": 0, "cpu_s": 3.711, "wall_s": 3.737, "formula": null, "status": "no_formula", "stderr_tail": ""}
+{"instance": "rbc1", "returncode": 0, "cpu_s": 0.087, "wall_s": 0.093, "formula": "F((a1) & (X[!](a2)))", "status": "answered", "stderr_tail": ""}
+{"instance": "rbc2", "returncode": 0, "cpu_s": 1.118, "wall_s": 1.13, "formula": "F((a1) & (X[!]((a0) & (X[!](a2)))))", "status": "answered", "stderr_tail": ""}
+{"instance": "rbc3", "returncode": 0, "cpu_s": 4.289, "wall_s": 4.321, "formula": null, "status": "no_formula", "stderr_tail": ""}
+{"instance": "rbc4", "returncode": 0, "cpu_s": 0.676, "wall_s": 0.687, "formula": "F((a2) & (X[!]((a3) & (X(a2)))))", "status": "answered", "stderr_tail": ""}
+{"instance": "rbc5", "returncode": 0, "cpu_s": 0.428, "wall_s": 0.435, "formula": "F((a2) & (X[!]((a2) & (X[!](a2)))))", "status": "answered", "stderr_tail": ""}
+{"instance": "rbc6", "returncode": 0, "cpu_s": 5.546, "wall_s": 5.59, "formula": null, "status": "no_formula", "stderr_tail": ""}
+{"instance": "rbc7", "returncode": 0, "cpu_s": 2.246, "wall_s": 2.267, "formula": "F((a2) & (X[!]((a1) & (X[!](a1)))))", "status": "answered", "stderr_tail": ""}

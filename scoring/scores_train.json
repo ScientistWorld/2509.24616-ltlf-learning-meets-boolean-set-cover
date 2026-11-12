@@ -1,0 +1,21 @@
+{
+  "experiments": {
+    "budgeted_ltlf_learning": {
+      "_slice": "train",
+      "_instances": 40,
+      "_cpu_budget_s": 20.0,
+      "results": {
+        "bolt": {
+          "size_efficiency": 0.8553729873760929,
+          "solve_rate": 0.95,
+          "size_ratio_geomean": 1.321274362994149
+        },
+        "raw_vfb": {
+          "size_efficiency": 0.525,
+          "solve_rate": 0.525,
+          "size_ratio_geomean": 2.9853826189179595
+        }
+      }
+    }
+  }
+}

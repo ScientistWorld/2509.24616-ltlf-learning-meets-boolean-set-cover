@@ -1,0 +1,41 @@
+{
+  "experiments": {
+    "budgeted_ltlf_learning": {
+      "_slice": "train",
+      "_instances": 40,
+      "_cpu_budget_s": 20.0,
+      "results": {
+        "bolt": {
+          "size_efficiency": 0.8553729873760929,
+          "solve_rate": 0.95,
+          "size_ratio_geomean": 1.321274362994149
+        },
+        "bolt_beam1": {
+          "size_efficiency": 0.7199504780916693,
+          "solve_rate": 0.95,
+          "size_ratio_geomean": 1.7213978873746858
+        },
+        "bolt_simplify": {
+          "size_efficiency": 0.8703388065810426,
+          "solve_rate": 0.95,
+          "size_ratio_geomean": 1.2918856330045283
+        },
+        "bolt_switch3": {
+          "size_efficiency": 0.41371490190123944,
+          "solve_rate": 0.75,
+          "size_ratio_geomean": 3.2333401408258986
+        },
+        "literal_cover": {
+          "size_efficiency": 0.20585813110919457,
+          "solve_rate": 1.0,
+          "size_ratio_geomean": 5.708519022064981
+        },
+        "raw_vfb": {
+          "size_efficiency": 0.525,
+          "solve_rate": 0.525,
+          "size_ratio_geomean": 2.9853826189179595
+        }
+      }
+    }
+  }
+}

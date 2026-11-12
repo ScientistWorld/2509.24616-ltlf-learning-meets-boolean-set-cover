@@ -1,8 +1,8 @@
 # Once you set action to 'submit' or 'done', STOP immediately.
 # Do NOT sleep, poll, or wait for jobs. The system reads this file
 # only after your turn ends.
-action: pending
+action: submit
 gpus: 0
 test: false
 milestone: core_claim
-notes: ""
+notes: "Hardening job: run Bolt reference, raw VFB baseline, better/weaker variants and shortcut solvers through the new budgeted train/test harness (40+40 instances, 20 CPU s each), freeze best-known sizes, score, run official no-arg evaluate_train/test, analyze, validate."

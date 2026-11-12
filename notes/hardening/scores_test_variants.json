@@ -1,0 +1,61 @@
+{
+  "experiments": {
+    "budgeted_ltlf_learning": {
+      "_slice": "test",
+      "_instances": 40,
+      "_cpu_budget_s": 20.0,
+      "results": {
+        "bolt": {
+          "size_efficiency": 0.7684264401604438,
+          "solve_rate": 0.9,
+          "size_ratio_geomean": 1.5701466356149247
+        },
+        "bolt_beam1": {
+          "size_efficiency": 0.6121645993039843,
+          "solve_rate": 0.9,
+          "size_ratio_geomean": 2.237141138537371
+        },
+        "bolt_simplify": {
+          "size_efficiency": 0.7794667688357729,
+          "solve_rate": 0.9,
+          "size_ratio_geomean": 1.5438998327192983
+        },
+        "bolt_switch3": {
+          "size_efficiency": 0.45588719978692627,
+          "solve_rate": 0.65,
+          "size_ratio_geomean": 3.1359819446451
+        },
+        "crash": {
+          "size_efficiency": 0.0,
+          "solve_rate": 0.0,
+          "size_ratio_geomean": 10.000000000000007
+        },
+        "forged_fields": {
+          "size_efficiency": 0.0,
+          "solve_rate": 0.0,
+          "size_ratio_geomean": 10.000000000000007
+        },
+        "literal_cover": {
+          "size_efficiency": 0.3141463928666585,
+          "solve_rate": 1.0,
+          "size_ratio_geomean": 4.293410344917025
+        },
+        "null_answer": {
+          "size_efficiency": 0.0,
+          "solve_rate": 0.0,
+          "size_ratio_geomean": 10.000000000000007
+        },
+        "parallel_portfolio": {
+          "size_efficiency": 0.175,
+          "solve_rate": 0.175,
+          "size_ratio_geomean": 6.6834391756861455
+        },
+        "raw_vfb": {
+          "size_efficiency": 0.4,
+          "solve_rate": 0.4,
+          "size_ratio_geomean": 3.981071705534971
+        }
+      }
+    }
+  }
+}
