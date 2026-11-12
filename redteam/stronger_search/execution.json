@@ -1,0 +1,57 @@
+{
+  "name": "stronger_search",
+  "commands": [
+    {
+      "command": [
+        "python3",
+        "method/ltlf_bolt.py",
+        "--mode",
+        "bolt",
+        "--instances",
+        "data/paper_benchmark_subset/DoubleCounter__1_5_16_42.json",
+        "data/paper_benchmark_subset/Fixed_Formulas__absence1_5_16_42.json",
+        "data/paper_benchmark_subset/Hamming__trace_length=16number_atomic_propositions=3number_negative_traces=5delta=1seed=40.json",
+        "data/paper_benchmark_subset/Nim__heaps=1tokens=1_5_16_42.json",
+        "data/paper_benchmark_subset/OrderedSequence__trace_length=16number_atomic_propositions=3size_sequence=3number_positive_traces=5number_negative_traces=5seed=40.json",
+        "data/paper_benchmark_subset/OrderedSequence__trace_length=16number_atomic_propositions=3size_sequence=4number_positive_traces=5number_negative_traces=5seed=41.json",
+        "data/paper_benchmark_subset/RandomBooleanCombinationsofFactors__trace_length=16number_atomic_propositions=3number_positive_traces=5number_negative_traces=5number_patterns=3seed=43.json",
+        "data/paper_benchmark_subset/SingleCounter__1_5_16_42.json",
+        "data/paper_benchmark_subset/Subset__trace_length=16number_atomic_propositions=5number_positive_traces=5number_negative_traces=5subset_size=3seed=40.json",
+        "data/paper_benchmark_subset/Subword__trace_length=16number_atomic_propositions=3number_positive_traces=5number_negative_traces=5subword_length=10seed=40.json",
+        "--out",
+        "/home/user/outputs/bolt_results.json",
+        "--ltl-switch",
+        "5",
+        "--beam-width",
+        "100",
+        "--max-bool-weight",
+        "70",
+        "--timeout",
+        "60"
+      ],
+      "exit_code": 0,
+      "wall_seconds": 0.4764418550184928
+    },
+    {
+      "command": [
+        "bash",
+        "scripts/evaluate_train.sh"
+      ],
+      "exit_code": 0,
+      "wall_seconds": 0.16339469901868142
+    },
+    {
+      "command": [
+        "bash",
+        "scripts/evaluate_test.sh"
+      ],
+      "exit_code": 0,
+      "wall_seconds": 0.16344566899351776
+    }
+  ],
+  "candidate_reads_hidden_evaluator": false,
+  "methods_on_disk": [
+    "bolt_results.json",
+    "raw_vfb_results.json"
+  ]
+}

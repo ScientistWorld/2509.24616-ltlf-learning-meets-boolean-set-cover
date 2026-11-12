@@ -1,0 +1,27 @@
+{
+  "name": "shortcut_method_filter",
+  "commands": [
+    {
+      "command": [
+        "bash",
+        "scripts/evaluate_train.sh"
+      ],
+      "exit_code": 0,
+      "wall_seconds": 0.16565355399507098
+    },
+    {
+      "command": [
+        "bash",
+        "scripts/evaluate_test.sh"
+      ],
+      "exit_code": 0,
+      "wall_seconds": 0.1731350730115082
+    }
+  ],
+  "candidate_reads_hidden_evaluator": false,
+  "methods_on_disk": [
+    "bolt_results.json",
+    "raw_vfb_results.json",
+    "shortcut_failed_results.json"
+  ]
+}

@@ -1,0 +1,38 @@
+{
+  "name": "shortcut_bruteforce_fallback",
+  "commands": [
+    {
+      "command": [
+        "bash",
+        "scripts/evaluate_train.sh"
+      ],
+      "exit_code": 0,
+      "wall_seconds": 0.1871696960006375
+    },
+    {
+      "command": [
+        "bash",
+        "scripts/evaluate_test.sh"
+      ],
+      "exit_code": 0,
+      "wall_seconds": 0.16822340097860433
+    }
+  ],
+  "candidate_reads_hidden_evaluator": false,
+  "brute_force": [
+    {
+      "instance": "data/paper_benchmark_subset/Hamming__trace_length=16number_atomic_propositions=3number_negative_traces=5delta=1seed=40.json",
+      "transitions": 1536,
+      "states": 32
+    },
+    {
+      "instance": "data/paper_benchmark_subset/Subword__trace_length=16number_atomic_propositions=3number_positive_traces=5number_negative_traces=5subword_length=10seed=40.json",
+      "transitions": 7392,
+      "states": 154
+    }
+  ],
+  "methods_on_disk": [
+    "bolt_results.json",
+    "raw_vfb_results.json"
+  ]
+}

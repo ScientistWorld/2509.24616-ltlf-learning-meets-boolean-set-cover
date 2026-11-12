@@ -1,0 +1,28 @@
+{
+  "experiments": {
+    "selected_benchmarks": {
+      "_slice": "test",
+      "_expected_instances": 5,
+      "results": {
+        "bolt": {
+          "solve_rate": 1.0,
+          "evaluation_coverage": 1.0,
+          "all_returned_formulas_valid": 1.0,
+          "mean_collapse_ratio": 6.763320012359666,
+          "formula_size_ratio": 1.0,
+          "solve_rate_delta_vs_baseline": 0.8,
+          "baseline_miss_solve_rate": 1.0
+        },
+        "raw_vfb": {
+          "solve_rate": 0.2,
+          "evaluation_coverage": 1.0,
+          "all_returned_formulas_valid": 1.0,
+          "mean_collapse_ratio": 2.401758379551483,
+          "formula_size_ratio": 1.0,
+          "solve_rate_delta_vs_baseline": 0.0,
+          "baseline_miss_solve_rate": 0.0
+        }
+      }
+    }
+  }
+}

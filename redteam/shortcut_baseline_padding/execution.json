@@ -1,0 +1,26 @@
+{
+  "name": "shortcut_baseline_padding",
+  "commands": [
+    {
+      "command": [
+        "bash",
+        "scripts/evaluate_train.sh"
+      ],
+      "exit_code": 0,
+      "wall_seconds": 0.18445706900092773
+    },
+    {
+      "command": [
+        "bash",
+        "scripts/evaluate_test.sh"
+      ],
+      "exit_code": 0,
+      "wall_seconds": 0.17838958400534466
+    }
+  ],
+  "candidate_reads_hidden_evaluator": false,
+  "methods_on_disk": [
+    "bolt_results.json",
+    "raw_vfb_results.json"
+  ]
+}

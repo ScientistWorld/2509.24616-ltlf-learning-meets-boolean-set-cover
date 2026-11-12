@@ -1,0 +1,32 @@
+{
+  "name": "shortcut_metadata_answers",
+  "commands": [
+    {
+      "command": [
+        "bash",
+        "scripts/evaluate_train.sh"
+      ],
+      "exit_code": 0,
+      "wall_seconds": 0.17455437598982826
+    },
+    {
+      "command": [
+        "bash",
+        "scripts/evaluate_test.sh"
+      ],
+      "exit_code": 0,
+      "wall_seconds": 0.18562791199656203
+    }
+  ],
+  "candidate_reads_hidden_evaluator": false,
+  "copied_answers": [
+    {
+      "instance": "data/paper_benchmark_subset/Subword__trace_length=16number_atomic_propositions=3number_positive_traces=5number_negative_traces=5subword_length=10seed=40.json",
+      "key": "smallest_known_formula"
+    }
+  ],
+  "methods_on_disk": [
+    "bolt_results.json",
+    "raw_vfb_results.json"
+  ]
+}

@@ -1,0 +1,37 @@
+{
+  "name": "shortcut_stale_replay",
+  "commands": [
+    {
+      "command": [
+        "python3",
+        "method/ltlf_bolt.py",
+        "--out",
+        "/home/user/outputs/bolt_results.json"
+      ],
+      "exit_code": 0,
+      "wall_seconds": 0.01358474200242199
+    },
+    {
+      "command": [
+        "bash",
+        "scripts/evaluate_train.sh"
+      ],
+      "exit_code": 0,
+      "wall_seconds": 0.16809829100384377
+    },
+    {
+      "command": [
+        "bash",
+        "scripts/evaluate_test.sh"
+      ],
+      "exit_code": 0,
+      "wall_seconds": 0.1663125760096591
+    }
+  ],
+  "candidate_reads_hidden_evaluator": false,
+  "produced_new_artifact": false,
+  "methods_on_disk": [
+    "bolt_results.json",
+    "raw_vfb_results.json"
+  ]
+}
