@@ -1,22 +1,10 @@
 #!/bin/bash
-# Reproduce the paper's results end-to-end.
-#
-# This script runs inside the compute container and should call
-# scripts/baseline.sh and scripts/method.sh to run baselines and
-# the paper's method, each of which calls scripts/evaluate.sh.
-#
-# Assumes:
-#   - Container is built (environment/container.sif)
-#   - Data and models are downloaded (via scripts/download.sh)
-#   - Working directory is /home/user
-#
-# This is the "gold standard" reproduction — 
-# You do not need to run this, but keep this in good shape
-# so other agents can easily run a full loop of reproduction and get the paper's numbers.
-
+# Reproduce the reference results end to end: every solver in scripts/solvers/
+# (Bolt and the raw VFB baseline) on the training slice and, where the hidden
+# instances are present, on the test slice.
 set -euo pipefail
-
-cd /home/user
-
-bash scripts/baseline.sh
-bash scripts/method.sh
+cd "$(dirname "$0")/.."
+bash scripts/evaluate.sh
+if [ -f eval/test/instances.json ]; then
+  bash scripts/evaluate_test.sh
+fi

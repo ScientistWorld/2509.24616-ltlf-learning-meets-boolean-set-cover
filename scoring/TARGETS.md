@@ -1,15 +1,17 @@
 # Targets
 
-Optimize `selected_benchmarks`.
+One scored experiment, `budgeted_ltlf_learning` (weight 1.0), measured on hidden instances by `scripts/evaluate_test.sh` and on the visible training slice by `scripts/evaluate_train.sh`.
 
-Primary target:
+Benefit:
 
-- Increase `solve_rate` for valid learned LTLf formulas on the selected released benchmark subset.
+- `solve_rate` (coefficient 0.5, higher is better): fraction of instances for which the solver returns a valid separating LTLf formula within 20 CPU seconds.
 
-Constraints:
+Constraint (the paper's claim is that more tasks are solved *without* giving up formula size):
 
-- Keep `all_returned_formulas_valid` at `1.0`.
-- Keep `evaluation_coverage` at `1.0`; every selected instance must receive an output row.
-- Keep `formula_size_ratio` close to or below `1.0` on tasks solved by both the submitted method and the provided reference baseline; methods with no common solved tasks receive a neutral ratio, not a size bonus.
-- Preserve a positive `solve_rate_delta_vs_baseline`; gains should come from solving instances that the provided reference baseline misses under the same benchmark slice.
-- Do not improve solved count by changing the benchmark traces or labels.
+- `size_ratio_geomean` (coefficient 0.5, lower is better): geometric mean of returned size over the best-known separator size, clipped to [1, 10], with 10 for unsolved instances.
+
+Combined (primary):
+
+- `size_efficiency` (coefficient 1.0, higher is better): mean of `min(1, best_known_size / returned_size)`, 0 for unsolved instances. Solving with a huge formula earns little; solving with a best-known-size formula earns 1.
+
+Validity is not a separate target: an invalid, unparsable, late or over-budget answer simply counts as unsolved, and a run that fails everywhere gets the worst value of all three metrics (0, 0, 10).

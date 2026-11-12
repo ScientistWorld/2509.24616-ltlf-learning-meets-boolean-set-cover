@@ -1,39 +1,29 @@
 #!/bin/bash
-# Download all data and models needed for this environment.
+# Download everything this environment needs (run on a node with internet).
+# Idempotent: each fetch is skipped when its target already exists.
 #
-# Run on a node with internet access BEFORE building the container
-# or submitting compute jobs.
-#
-# This script should be idempotent — safe to run multiple times.
-# It should skip files that already exist.
-#
-# Update the storage estimate below as you add downloads.
-#
-# Estimated total download size: about 100 MB for the upstream benchmark zip
-# plus two small GitHub clones.
-# Estimated disk usage: about 110 MB without extracting the full benchmark suite.
-#
-# This script writes to workspace-local paths so a fresh clone can be
-# prepared without relying on machine-local caches.
-
+# Estimated download: ~100 MB benchmark zip + two small GitHub clones.
 set -euo pipefail
-
-cd /home/user
-
+cd "$(dirname "$0")/.."
 mkdir -p data/downloads
 
+# The paper's benchmark repository (instance generators used for the hidden test).
 if [ ! -d data/downloads/LTLf_Learning_Benchmarks ]; then
   git clone --depth 1 https://github.com/SynthesisLab/LTLf_Learning_Benchmarks.git data/downloads/LTLf_Learning_Benchmarks
 fi
 
+# The paper's released benchmark suite (15,595 instances; source of data/train/).
 if [ ! -e data/downloads/benchmarks.zip ]; then
   wget -O data/downloads/benchmarks.zip https://github.com/SynthesisLab/LTLf_Learning_Benchmarks/releases/download/benchmark/benchmarks.zip
 fi
 
-if [ ! -e data/paper_benchmark_subset/manifest.json ]; then
-  python3 data/prepare_paper_subset.py
+# Training instances are tracked in git; rebuild them only if missing.
+if [ ! -e data/train/manifest.json ]; then
+  python3 data/prepare_train.py
 fi
 
+# The authors' Rust implementation, kept for reference (the Python port in
+# method/ltlf_bolt.py follows it).
 if [ ! -d method/Bolt ]; then
   git clone --depth 1 https://github.com/SynthesisLab/Bolt.git method/Bolt
 fi

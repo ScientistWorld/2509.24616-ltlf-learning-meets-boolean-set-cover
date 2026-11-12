@@ -1,63 +1,50 @@
 {
   "experiments": {
-    "selected_benchmarks": {
-      "description": "Paper-level CPU comparison target from Table 1, evaluated in this reproduction on a small subset extracted from the paper's released benchmark archive. Size ratio is the paper's average size ratio target; reproduced scores use the median common-task size ratio against the local reference baseline.",
-      "notes": "The reference values for Bolt and Scarlet are the full-suite paper numbers. Reproduced scores are computed on the tracked 10-instance subset, so solve_rate is directly comparable as a fraction but not as a full-suite solved count.",
+    "budgeted_ltlf_learning": {
+      "description": "LTLf learning under a fixed per-instance budget of 20 CPU seconds on 40 hidden instances drawn fresh from the paper's own generators (OrderedSequence, Subword, Subset, Hamming, RandomBooleanCombinationsofFactors) over the parameter ranges of the released suite. Each returned formula is parsed and checked by the evaluator; size is compared with a fixed best-known separator size per instance.",
+      "notes": "Setup scaled from the paper: 40 hidden instances from 5 of the 10 families (the families whose generators need no external model checker) instead of 15,595 tasks; a Python port of Bolt with a 20 CPU-second budget instead of the Rust tool with a 60 s timeout; best-known sizes come from the generating formula and every run recorded in iteration 11 instead of all Scarlet/Bolt/GPU runs. The paper's numbers are therefore kept under keys starting with '_' and are not targets: Table 1 reports Bolt solving 14374/15595 tasks (0.9217) with geometric-mean size ratio 1.01 over its solved tasks, and Scarlet 11468/15595 (0.7353) with 1.15 (difference 0.1864 in solved fraction); the paper's size ratio is over solved tasks only, whereas size_ratio_geomean here also counts unsolved tasks at the cap of 10. Section 3 reports an average collapse ratio |F|/|F'| of 3.54 (min 1.09, max 48.22, sd 5.46 over 780 tasks) and approximate-domination reductions |F'|/|F''| of 3.45, 4.07, 4.97, 5.94, 6.60 for k = 3, 5, 10, 25, 50. Figure 4 (ablation) shows raw VFB solving fewer tasks than Bolt and returning minimal formulas when it succeeds. The 'bolt' and 'raw_vfb' entries are this gym's own measurements of the reference and baseline on the hidden test (iteration 11), not paper numbers. The '_paper_table1_bolt' size_efficiency is derived, not reported: 0.9217 solved x 1/1.01.",
       "weight": 1.0,
-      "primary_metric": "solve_rate",
+      "primary_metric": "size_efficiency",
       "metrics": {
+        "size_efficiency": {
+          "higher_is_better": true,
+          "coefficient": 1.0,
+          "description": "Mean over instances of min(1, best_known_size / returned_size) for valid separators returned within the budget, 0 otherwise. Rewards both solving and compactness."
+        },
         "solve_rate": {
           "higher_is_better": true,
-          "coefficient": 1.0,
-          "description": "Fraction of slice instances for which the returned formula independently separates positive from negative traces."
-        },
-        "evaluation_coverage": {
-          "higher_is_better": true,
           "coefficient": 0.5,
-          "description": "Fraction of slice instances for which the method emitted an output row, preventing omission of hard cases from improving rates."
+          "description": "Fraction of instances for which a valid separating formula was returned within the budget (the paper's solved-task count)."
         },
-        "formula_size_ratio": {
+        "size_ratio_geomean": {
           "higher_is_better": false,
-          "coefficient": -0.5,
-          "description": "Median returned-formula size ratio against the local reference baseline on instances both methods solve."
-        },
-        "all_returned_formulas_valid": {
-          "higher_is_better": true,
-          "coefficient": 2.0,
-          "description": "Whether every non-empty returned formula is syntactically parseable and semantically valid on its traces."
-        },
-        "mean_collapse_ratio": {
-          "higher_is_better": true,
-          "coefficient": 0.0,
-          "description": "Optional diagnostic ratio emitted by methods that report candidate-reduction metadata. It is not used for ranking."
-        },
-        "solve_rate_delta_vs_baseline": {
-          "higher_is_better": true,
-          "coefficient": 1.0,
-          "description": "Solve-rate improvement over the local reference baseline on the same slice."
-        },
-        "baseline_miss_solve_rate": {
-          "higher_is_better": true,
-          "coefficient": 0.8,
-          "description": "Fraction of reference-baseline-unsolved slice instances that the method solves."
+          "coefficient": 0.5,
+          "description": "Geometric mean over instances of returned_size / best_known_size clipped to [1, 10], with 10 for unsolved instances (the paper's average size ratio, extended to unsolved tasks)."
         }
       },
       "results": {
         "bolt": {
           "type": "proposed",
-          "solve_rate": 0.9217,
-          "formula_size_ratio": 1.01,
-          "all_returned_formulas_valid": 1.0,
-          "mean_collapse_ratio": 3.54,
-          "solve_rate_delta_vs_baseline": 0.1864
-        },
-        "scarlet": {
-          "type": "baseline",
-          "solve_rate": 0.7353,
-          "formula_size_ratio": 1.15
+          "size_efficiency": 0.0,
+          "solve_rate": 0.0,
+          "size_ratio_geomean": 10.0
         },
         "raw_vfb": {
-          "type": "baseline"
+          "type": "baseline",
+          "size_efficiency": 0.0,
+          "solve_rate": 0.0,
+          "size_ratio_geomean": 10.0
+        },
+        "_paper_table1_bolt": {
+          "type": "proposed",
+          "solve_rate": 0.9217,
+          "size_ratio_geomean": 1.01,
+          "size_efficiency": 0.9126
+        },
+        "_paper_table1_scarlet": {
+          "type": "baseline",
+          "solve_rate": 0.7353,
+          "size_ratio_geomean": 1.15
         }
       }
     }

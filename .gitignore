@@ -234,3 +234,6 @@ tmp/
 protocol.md
 *.egg-info
 core.[0-9]*
+
+# Per-instance solver records with formulas for hidden instances (never kept)
+eval/test/runs*/*.jsonl

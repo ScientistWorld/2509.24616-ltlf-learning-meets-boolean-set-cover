@@ -1,7 +1,13 @@
 # Direction
 
-Future work should stay within LTLf learning from positive and negative finite traces.
+Stay within LTLf learning from positive and negative finite traces under the fixed per-instance CPU budget.
 
-Valid improvements include symbolic search procedures that construct LTLf formulas, stronger pruning or compression of the explored formula space, better search heuristics, parallelization, and broader benchmark coverage.
+Promising directions (the paper's own discussion lists better time/size trade-offs as open):
 
-Invalid improvements include replacing the learner with a classifier that does not construct LTLf formulas, using labels from the generator at evaluation time, changing the task into a different temporal logic, or hardcoding formulas for the selected instances.
+- Faster formula enumeration or Boolean-combination search (better data structures, pruning, vectorisation) so that more of the budget goes to useful search.
+- Better Boolean Set Cover solvers or better splitting in divide and conquer, giving smaller combinations.
+- Post-processing that shrinks a valid formula while keeping it a separator.
+- Using the remaining budget well (anytime search: return a valid formula early, keep improving).
+- Richer building blocks than bounded enumeration (e.g. temporal pattern fragments) as long as they are generic, not tied to particular instances.
+
+Not improvements: classifiers that do not output LTLf formulas, reading answers from the benchmark release or the evaluator, hardcoding formulas, exceeding the budget through extra processes, or changing the traces.

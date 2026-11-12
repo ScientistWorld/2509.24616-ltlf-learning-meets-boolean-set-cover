@@ -1,0 +1,518 @@
+{
+ "source": "SynthesisLab/LTLf_Learning_Benchmarks release benchmarks.zip",
+ "sampling_seed": 20261112,
+ "instances": [
+  {
+   "id": "ord0",
+   "file": "data/train/instances/ord0.json",
+   "family": "OrderedSequence",
+   "parameters": {
+    "trace_length": 64,
+    "number_atomic_propositions": 3,
+    "size_sequence": 4,
+    "number_positive_traces": 100,
+    "number_negative_traces": 100
+   },
+   "source_file": "OrderedSequence/trace_length=64number_atomic_propositions=3size_sequence=4number_positive_traces=100number_negative_traces=100seed=49.json"
+  },
+  {
+   "id": "ord1",
+   "file": "data/train/instances/ord1.json",
+   "family": "OrderedSequence",
+   "parameters": {
+    "trace_length": 32,
+    "number_atomic_propositions": 5,
+    "size_sequence": 6,
+    "number_positive_traces": 100,
+    "number_negative_traces": 100
+   },
+   "source_file": "OrderedSequence/trace_length=32number_atomic_propositions=5size_sequence=6number_positive_traces=100number_negative_traces=100seed=41.json"
+  },
+  {
+   "id": "ord2",
+   "file": "data/train/instances/ord2.json",
+   "family": "OrderedSequence",
+   "parameters": {
+    "trace_length": 16,
+    "number_atomic_propositions": 4,
+    "size_sequence": 6,
+    "number_positive_traces": 100,
+    "number_negative_traces": 100
+   },
+   "source_file": "OrderedSequence/trace_length=16number_atomic_propositions=4size_sequence=6number_positive_traces=100number_negative_traces=100seed=43.json"
+  },
+  {
+   "id": "ord3",
+   "file": "data/train/instances/ord3.json",
+   "family": "OrderedSequence",
+   "parameters": {
+    "trace_length": 32,
+    "number_atomic_propositions": 3,
+    "size_sequence": 4,
+    "number_positive_traces": 100,
+    "number_negative_traces": 100
+   },
+   "source_file": "OrderedSequence/trace_length=32number_atomic_propositions=3size_sequence=4number_positive_traces=100number_negative_traces=100seed=46.json"
+  },
+  {
+   "id": "ord4",
+   "file": "data/train/instances/ord4.json",
+   "family": "OrderedSequence",
+   "parameters": {
+    "trace_length": 32,
+    "number_atomic_propositions": 4,
+    "size_sequence": 3,
+    "number_positive_traces": 20,
+    "number_negative_traces": 20
+   },
+   "source_file": "OrderedSequence/trace_length=32number_atomic_propositions=4size_sequence=3number_positive_traces=20number_negative_traces=20seed=45.json"
+  },
+  {
+   "id": "ord5",
+   "file": "data/train/instances/ord5.json",
+   "family": "OrderedSequence",
+   "parameters": {
+    "trace_length": 64,
+    "number_atomic_propositions": 5,
+    "size_sequence": 8,
+    "number_positive_traces": 100,
+    "number_negative_traces": 100
+   },
+   "source_file": "OrderedSequence/trace_length=64number_atomic_propositions=5size_sequence=8number_positive_traces=100number_negative_traces=100seed=42.json"
+  },
+  {
+   "id": "ord6",
+   "file": "data/train/instances/ord6.json",
+   "family": "OrderedSequence",
+   "parameters": {
+    "trace_length": 32,
+    "number_atomic_propositions": 5,
+    "size_sequence": 9,
+    "number_positive_traces": 20,
+    "number_negative_traces": 20
+   },
+   "source_file": "OrderedSequence/trace_length=32number_atomic_propositions=5size_sequence=9number_positive_traces=20number_negative_traces=20seed=47.json"
+  },
+  {
+   "id": "ord7",
+   "file": "data/train/instances/ord7.json",
+   "family": "OrderedSequence",
+   "parameters": {
+    "trace_length": 16,
+    "number_atomic_propositions": 3,
+    "size_sequence": 8,
+    "number_positive_traces": 100,
+    "number_negative_traces": 100
+   },
+   "source_file": "OrderedSequence/trace_length=16number_atomic_propositions=3size_sequence=8number_positive_traces=100number_negative_traces=100seed=48.json"
+  },
+  {
+   "id": "swd0",
+   "file": "data/train/instances/swd0.json",
+   "family": "Subword",
+   "parameters": {
+    "trace_length": 16,
+    "number_atomic_propositions": 4,
+    "number_positive_traces": 5,
+    "number_negative_traces": 5,
+    "subword_length": 9
+   },
+   "source_file": "Subword/trace_length=16number_atomic_propositions=4number_positive_traces=5number_negative_traces=5subword_length=9seed=48.json"
+  },
+  {
+   "id": "swd1",
+   "file": "data/train/instances/swd1.json",
+   "family": "Subword",
+   "parameters": {
+    "trace_length": 16,
+    "number_atomic_propositions": 4,
+    "number_positive_traces": 5,
+    "number_negative_traces": 5,
+    "subword_length": 12
+   },
+   "source_file": "Subword/trace_length=16number_atomic_propositions=4number_positive_traces=5number_negative_traces=5subword_length=12seed=43.json"
+  },
+  {
+   "id": "swd2",
+   "file": "data/train/instances/swd2.json",
+   "family": "Subword",
+   "parameters": {
+    "trace_length": 16,
+    "number_atomic_propositions": 5,
+    "number_positive_traces": 100,
+    "number_negative_traces": 100,
+    "subword_length": 9
+   },
+   "source_file": "Subword/trace_length=16number_atomic_propositions=5number_positive_traces=100number_negative_traces=100subword_length=9seed=41.json"
+  },
+  {
+   "id": "swd3",
+   "file": "data/train/instances/swd3.json",
+   "family": "Subword",
+   "parameters": {
+    "trace_length": 32,
+    "number_atomic_propositions": 5,
+    "number_positive_traces": 20,
+    "number_negative_traces": 20,
+    "subword_length": 7
+   },
+   "source_file": "Subword/trace_length=32number_atomic_propositions=5number_positive_traces=20number_negative_traces=20subword_length=7seed=45.json"
+  },
+  {
+   "id": "swd4",
+   "file": "data/train/instances/swd4.json",
+   "family": "Subword",
+   "parameters": {
+    "trace_length": 16,
+    "number_atomic_propositions": 5,
+    "number_positive_traces": 20,
+    "number_negative_traces": 20,
+    "subword_length": 8
+   },
+   "source_file": "Subword/trace_length=16number_atomic_propositions=5number_positive_traces=20number_negative_traces=20subword_length=8seed=48.json"
+  },
+  {
+   "id": "swd5",
+   "file": "data/train/instances/swd5.json",
+   "family": "Subword",
+   "parameters": {
+    "trace_length": 16,
+    "number_atomic_propositions": 3,
+    "number_positive_traces": 5,
+    "number_negative_traces": 5,
+    "subword_length": 8
+   },
+   "source_file": "Subword/trace_length=16number_atomic_propositions=3number_positive_traces=5number_negative_traces=5subword_length=8seed=40.json"
+  },
+  {
+   "id": "swd6",
+   "file": "data/train/instances/swd6.json",
+   "family": "Subword",
+   "parameters": {
+    "trace_length": 16,
+    "number_atomic_propositions": 4,
+    "number_positive_traces": 100,
+    "number_negative_traces": 100,
+    "subword_length": 6
+   },
+   "source_file": "Subword/trace_length=16number_atomic_propositions=4number_positive_traces=100number_negative_traces=100subword_length=6seed=41.json"
+  },
+  {
+   "id": "swd7",
+   "file": "data/train/instances/swd7.json",
+   "family": "Subword",
+   "parameters": {
+    "trace_length": 16,
+    "number_atomic_propositions": 3,
+    "number_positive_traces": 20,
+    "number_negative_traces": 20,
+    "subword_length": 9
+   },
+   "source_file": "Subword/trace_length=16number_atomic_propositions=3number_positive_traces=20number_negative_traces=20subword_length=9seed=49.json"
+  },
+  {
+   "id": "sst0",
+   "file": "data/train/instances/sst0.json",
+   "family": "Subset",
+   "parameters": {
+    "trace_length": 64,
+    "number_atomic_propositions": 8,
+    "number_positive_traces": 5,
+    "number_negative_traces": 5,
+    "subset_size": 3
+   },
+   "source_file": "Subset/trace_length=64number_atomic_propositions=8number_positive_traces=5number_negative_traces=5subset_size=3seed=44.json"
+  },
+  {
+   "id": "sst1",
+   "file": "data/train/instances/sst1.json",
+   "family": "Subset",
+   "parameters": {
+    "trace_length": 16,
+    "number_atomic_propositions": 7,
+    "number_positive_traces": 5,
+    "number_negative_traces": 5,
+    "subset_size": 4
+   },
+   "source_file": "Subset/trace_length=16number_atomic_propositions=7number_positive_traces=5number_negative_traces=5subset_size=4seed=42.json"
+  },
+  {
+   "id": "sst2",
+   "file": "data/train/instances/sst2.json",
+   "family": "Subset",
+   "parameters": {
+    "trace_length": 16,
+    "number_atomic_propositions": 8,
+    "number_positive_traces": 20,
+    "number_negative_traces": 20,
+    "subset_size": 6
+   },
+   "source_file": "Subset/trace_length=16number_atomic_propositions=8number_positive_traces=20number_negative_traces=20subset_size=6seed=46.json"
+  },
+  {
+   "id": "sst3",
+   "file": "data/train/instances/sst3.json",
+   "family": "Subset",
+   "parameters": {
+    "trace_length": 16,
+    "number_atomic_propositions": 8,
+    "number_positive_traces": 20,
+    "number_negative_traces": 20,
+    "subset_size": 3
+   },
+   "source_file": "Subset/trace_length=16number_atomic_propositions=8number_positive_traces=20number_negative_traces=20subset_size=3seed=41.json"
+  },
+  {
+   "id": "sst4",
+   "file": "data/train/instances/sst4.json",
+   "family": "Subset",
+   "parameters": {
+    "trace_length": 16,
+    "number_atomic_propositions": 7,
+    "number_positive_traces": 100,
+    "number_negative_traces": 100,
+    "subset_size": 5
+   },
+   "source_file": "Subset/trace_length=16number_atomic_propositions=7number_positive_traces=100number_negative_traces=100subset_size=5seed=43.json"
+  },
+  {
+   "id": "sst5",
+   "file": "data/train/instances/sst5.json",
+   "family": "Subset",
+   "parameters": {
+    "trace_length": 16,
+    "number_atomic_propositions": 5,
+    "number_positive_traces": 100,
+    "number_negative_traces": 100,
+    "subset_size": 3
+   },
+   "source_file": "Subset/trace_length=16number_atomic_propositions=5number_positive_traces=100number_negative_traces=100subset_size=3seed=48.json"
+  },
+  {
+   "id": "sst6",
+   "file": "data/train/instances/sst6.json",
+   "family": "Subset",
+   "parameters": {
+    "trace_length": 32,
+    "number_atomic_propositions": 5,
+    "number_positive_traces": 100,
+    "number_negative_traces": 100,
+    "subset_size": 3
+   },
+   "source_file": "Subset/trace_length=32number_atomic_propositions=5number_positive_traces=100number_negative_traces=100subset_size=3seed=41.json"
+  },
+  {
+   "id": "sst7",
+   "file": "data/train/instances/sst7.json",
+   "family": "Subset",
+   "parameters": {
+    "trace_length": 64,
+    "number_atomic_propositions": 9,
+    "number_positive_traces": 20,
+    "number_negative_traces": 20,
+    "subset_size": 8
+   },
+   "source_file": "Subset/trace_length=64number_atomic_propositions=9number_positive_traces=20number_negative_traces=20subset_size=8seed=45.json"
+  },
+  {
+   "id": "ham0",
+   "file": "data/train/instances/ham0.json",
+   "family": "Hamming",
+   "parameters": {
+    "trace_length": 16,
+    "number_atomic_propositions": 4,
+    "number_negative_traces": 100,
+    "delta": 2
+   },
+   "source_file": "Hamming/trace_length=16number_atomic_propositions=4number_negative_traces=100delta=2seed=40.json"
+  },
+  {
+   "id": "ham1",
+   "file": "data/train/instances/ham1.json",
+   "family": "Hamming",
+   "parameters": {
+    "trace_length": 16,
+    "number_atomic_propositions": 3,
+    "number_negative_traces": 20,
+    "delta": 2
+   },
+   "source_file": "Hamming/trace_length=16number_atomic_propositions=3number_negative_traces=20delta=2seed=41.json"
+  },
+  {
+   "id": "ham2",
+   "file": "data/train/instances/ham2.json",
+   "family": "Hamming",
+   "parameters": {
+    "trace_length": 32,
+    "number_atomic_propositions": 5,
+    "number_negative_traces": 5,
+    "delta": 1
+   },
+   "source_file": "Hamming/trace_length=32number_atomic_propositions=5number_negative_traces=5delta=1seed=48.json"
+  },
+  {
+   "id": "ham3",
+   "file": "data/train/instances/ham3.json",
+   "family": "Hamming",
+   "parameters": {
+    "trace_length": 64,
+    "number_atomic_propositions": 4,
+    "number_negative_traces": 100,
+    "delta": 1
+   },
+   "source_file": "Hamming/trace_length=64number_atomic_propositions=4number_negative_traces=100delta=1seed=48.json"
+  },
+  {
+   "id": "ham4",
+   "file": "data/train/instances/ham4.json",
+   "family": "Hamming",
+   "parameters": {
+    "trace_length": 16,
+    "number_atomic_propositions": 5,
+    "number_negative_traces": 20,
+    "delta": 1
+   },
+   "source_file": "Hamming/trace_length=16number_atomic_propositions=5number_negative_traces=20delta=1seed=43.json"
+  },
+  {
+   "id": "ham5",
+   "file": "data/train/instances/ham5.json",
+   "family": "Hamming",
+   "parameters": {
+    "trace_length": 64,
+    "number_atomic_propositions": 5,
+    "number_negative_traces": 20,
+    "delta": 2
+   },
+   "source_file": "Hamming/trace_length=64number_atomic_propositions=5number_negative_traces=20delta=2seed=49.json"
+  },
+  {
+   "id": "ham6",
+   "file": "data/train/instances/ham6.json",
+   "family": "Hamming",
+   "parameters": {
+    "trace_length": 16,
+    "number_atomic_propositions": 5,
+    "number_negative_traces": 5,
+    "delta": 2
+   },
+   "source_file": "Hamming/trace_length=16number_atomic_propositions=5number_negative_traces=5delta=2seed=47.json"
+  },
+  {
+   "id": "ham7",
+   "file": "data/train/instances/ham7.json",
+   "family": "Hamming",
+   "parameters": {
+    "trace_length": 32,
+    "number_atomic_propositions": 4,
+    "number_negative_traces": 5,
+    "delta": 1
+   },
+   "source_file": "Hamming/trace_length=32number_atomic_propositions=4number_negative_traces=5delta=1seed=47.json"
+  },
+  {
+   "id": "rbc0",
+   "file": "data/train/instances/rbc0.json",
+   "family": "RandomBooleanCombinationsofFactors",
+   "parameters": {
+    "trace_length": 16,
+    "number_atomic_propositions": 5,
+    "number_positive_traces": 100,
+    "number_negative_traces": 100,
+    "number_patterns": 6
+   },
+   "source_file": "RandomBooleanCombinationsofFactors/trace_length=16number_atomic_propositions=5number_positive_traces=100number_negative_traces=100number_patterns=6seed=44.json"
+  },
+  {
+   "id": "rbc1",
+   "file": "data/train/instances/rbc1.json",
+   "family": "RandomBooleanCombinationsofFactors",
+   "parameters": {
+    "trace_length": 16,
+    "number_atomic_propositions": 3,
+    "number_positive_traces": 5,
+    "number_negative_traces": 5,
+    "number_patterns": 10
+   },
+   "source_file": "RandomBooleanCombinationsofFactors/trace_length=16number_atomic_propositions=3number_positive_traces=5number_negative_traces=5number_patterns=10seed=48.json"
+  },
+  {
+   "id": "rbc2",
+   "file": "data/train/instances/rbc2.json",
+   "family": "RandomBooleanCombinationsofFactors",
+   "parameters": {
+    "trace_length": 16,
+    "number_atomic_propositions": 5,
+    "number_positive_traces": 20,
+    "number_negative_traces": 20,
+    "number_patterns": 8
+   },
+   "source_file": "RandomBooleanCombinationsofFactors/trace_length=16number_atomic_propositions=5number_positive_traces=20number_negative_traces=20number_patterns=8seed=42.json"
+  },
+  {
+   "id": "rbc3",
+   "file": "data/train/instances/rbc3.json",
+   "family": "RandomBooleanCombinationsofFactors",
+   "parameters": {
+    "trace_length": 32,
+    "number_atomic_propositions": 3,
+    "number_positive_traces": 100,
+    "number_negative_traces": 100,
+    "number_patterns": 7
+   },
+   "source_file": "RandomBooleanCombinationsofFactors/trace_length=32number_atomic_propositions=3number_positive_traces=100number_negative_traces=100number_patterns=7seed=44.json"
+  },
+  {
+   "id": "rbc4",
+   "file": "data/train/instances/rbc4.json",
+   "family": "RandomBooleanCombinationsofFactors",
+   "parameters": {
+    "trace_length": 16,
+    "number_atomic_propositions": 4,
+    "number_positive_traces": 20,
+    "number_negative_traces": 20,
+    "number_patterns": 12
+   },
+   "source_file": "RandomBooleanCombinationsofFactors/trace_length=16number_atomic_propositions=4number_positive_traces=20number_negative_traces=20number_patterns=12seed=49.json"
+  },
+  {
+   "id": "rbc5",
+   "file": "data/train/instances/rbc5.json",
+   "family": "RandomBooleanCombinationsofFactors",
+   "parameters": {
+    "trace_length": 32,
+    "number_atomic_propositions": 3,
+    "number_positive_traces": 20,
+    "number_negative_traces": 20,
+    "number_patterns": 11
+   },
+   "source_file": "RandomBooleanCombinationsofFactors/trace_length=32number_atomic_propositions=3number_positive_traces=20number_negative_traces=20number_patterns=11seed=49.json"
+  },
+  {
+   "id": "rbc6",
+   "file": "data/train/instances/rbc6.json",
+   "family": "RandomBooleanCombinationsofFactors",
+   "parameters": {
+    "trace_length": 16,
+    "number_atomic_propositions": 3,
+    "number_positive_traces": 20,
+    "number_negative_traces": 20,
+    "number_patterns": 4
+   },
+   "source_file": "RandomBooleanCombinationsofFactors/trace_length=16number_atomic_propositions=3number_positive_traces=20number_negative_traces=20number_patterns=4seed=42.json"
+  },
+  {
+   "id": "rbc7",
+   "file": "data/train/instances/rbc7.json",
+   "family": "RandomBooleanCombinationsofFactors",
+   "parameters": {
+    "trace_length": 64,
+    "number_atomic_propositions": 5,
+    "number_positive_traces": 20,
+    "number_negative_traces": 20,
+    "number_patterns": 6
+   },
+   "source_file": "RandomBooleanCombinationsofFactors/trace_length=64number_atomic_propositions=5number_positive_traces=20number_negative_traces=20number_patterns=6seed=41.json"
+  }
+ ]
+}

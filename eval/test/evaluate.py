@@ -1,326 +1,492 @@
 #!/usr/bin/env python3
-"""Held-out test-slice scorer for generated LTLf formulas."""
+"""Hidden test for budgeted LTLf learning.
+
+Runs every solver found in scripts/solvers/*.sh on the hidden instances held in
+eval/test/instances.json, one fresh process per instance under a fixed CPU
+budget, then scores the returned formulas with this file's own parser and
+LTLf semantics.  Nothing a solver reports besides its formula string is used.
+
+    python3 eval/test/evaluate.py            # run + score every solver on disk
+
+Per instance i with best known separator size r_i (fixed in instances.json):
+  valid_i  formula parses, uses only the instance's propositions, and accepts
+           every positive and no negative trace (computed here)
+  s_i      number of syntax-tree nodes of the parsed formula
+Metrics (experiment "budgeted_ltlf_learning"):
+  size_efficiency    mean_i valid_i * min(1, r_i / s_i)                (higher better)
+  solve_rate         mean_i valid_i                                    (higher better)
+  size_ratio_geomean geomean_i clip(s_i / r_i, 1, CAP), CAP if invalid (lower better)
+A solver that crashes, times out, exceeds the CPU budget or prints nothing gets
+the worst value on that instance, so a failed run gets 0 / 0 / CAP.
+"""
 
 from __future__ import annotations
 
 import argparse
-import glob
 import json
-import statistics
-from dataclasses import dataclass
+import math
+import os
+import re
+import resource
+import shutil
+import signal
+import subprocess
+import sys
+import tempfile
+import time
 from pathlib import Path
 
+HERE = Path(__file__).resolve().parent
+WORKSPACE = HERE.parents[1]
+INSTANCES = HERE / "instances.json"
+EXPERIMENT = "budgeted_ltlf_learning"
+SLICE = "test"
 
-TEST_INSTANCES = {
-    "data/paper_benchmark_subset/Nim__heaps=1tokens=1_5_16_42.json",
-    "data/paper_benchmark_subset/OrderedSequence__trace_length=16number_atomic_propositions=3size_sequence=4number_positive_traces=5number_negative_traces=5seed=41.json",
-    "data/paper_benchmark_subset/SingleCounter__1_5_16_42.json",
-    "data/paper_benchmark_subset/Subset__trace_length=16number_atomic_propositions=5number_positive_traces=5number_negative_traces=5subset_size=3seed=40.json",
-    "data/paper_benchmark_subset/Subword__trace_length=16number_atomic_propositions=3number_positive_traces=5number_negative_traces=5subword_length=10seed=40.json",
-}
-EXPECTED_INSTANCE_COUNT = len(TEST_INSTANCES)
+CPU_BUDGET_S = 20.0          # CPU seconds per instance (solver + its children)
+CPU_GRACE_S = 0.5            # interpreter start-up allowance
+WALL_LIMIT_S = 2 * CPU_BUDGET_S + 10
+MEMORY_LIMIT_BYTES = 4 * 1024**3
+RATIO_CAP = 10.0
+MAX_FORMULA_CHARS = 1_000_000
+MAX_FORMULA_NODES = 20_000
+MAX_FORMULA_DEPTH = 3_000
 
 
-@dataclass(frozen=True)
-class Node:
-    op: str
-    args: tuple
+# --------------------------------------------------------------------------
+# LTLf syntax and semantics (independent of any solver)
+# --------------------------------------------------------------------------
 
-    def size(self) -> int:
-        return 1 + sum(a.size() for a in self.args if isinstance(a, Node))
+_TOKEN = re.compile(r"\s*(X\[!\]|<->|->|&&|\|\||[()!&|]|[A-Za-z_][A-Za-z0-9_]*)")
+_UNARY = {"!", "X", "X[!]", "F", "G"}
+_BINARY = {"<->": (1, "left"), "->": (2, "right"), "|": (3, "left"), "&": (4, "left"),
+           "U": (5, "right"), "R": (5, "right")}
+_ALIAS = {"&&": "&", "||": "|"}
+_RESERVED = _UNARY | set(_BINARY) | {"true", "false"}
+
+
+class FormulaError(ValueError):
+    pass
 
 
 def tokenize(text: str) -> list[str]:
     out: list[str] = []
-    i = 0
-    while i < len(text):
-        c = text[i]
-        if c.isspace():
-            i += 1
-        elif text.startswith("X[!]", i):
-            out.append("X[!]")
-            i += 4
-        elif c in "()!&|URFG":
-            out.append(c)
-            i += 1
-        elif c.isalnum() or c == "_":
-            j = i + 1
-            while j < len(text) and (text[j].isalnum() or text[j] == "_"):
-                j += 1
-            out.append(text[i:j])
-            i = j
-        else:
-            raise ValueError(f"Unexpected token near {text[i:i+20]!r}")
+    pos = 0
+    text = text.rstrip()
+    while pos < len(text):
+        m = _TOKEN.match(text, pos)
+        if not m:
+            raise FormulaError(f"bad character at {pos}")
+        tok = m.group(1)
+        out.append(_ALIAS.get(tok, tok))
+        pos = m.end()
     return out
 
 
-class Parser:
-    prec = {"|": 1, "&": 2, "U": 3, "R": 3}
+def parse(text: str, aps: set[str]):
+    """Parse into nested tuples: ("ap", name) | ("true",) | ("false",) |
+    (unary_op, child) | (binary_op, left, right)."""
+    toks = tokenize(text)
+    pos = 0
 
-    def __init__(self, tokens: list[str]):
-        self.tokens = tokens
-        self.i = 0
+    def peek():
+        return toks[pos] if pos < len(toks) else None
 
-    def peek(self) -> str | None:
-        return self.tokens[self.i] if self.i < len(self.tokens) else None
-
-    def pop(self) -> str:
-        tok = self.peek()
+    def unary(depth: int):
+        nonlocal pos
+        if depth > MAX_FORMULA_DEPTH:
+            raise FormulaError("formula too deep")
+        tok = peek()
         if tok is None:
-            raise ValueError("Unexpected end of formula")
-        self.i += 1
-        return tok
-
-    def parse(self, min_prec: int = 0) -> Node:
-        tok = self.pop()
+            raise FormulaError("unexpected end")
+        pos += 1
+        if tok in _UNARY:
+            return (tok, unary(depth + 1))
         if tok == "(":
-            left = self.parse()
-            if self.pop() != ")":
-                raise ValueError("Expected ')'")
-        elif tok in {"!", "X[!]", "F", "G"}:
-            left = Node(tok, (self.parse(4),))
-        elif tok in {"true", "false"}:
-            left = Node(tok, ())
-        else:
-            left = Node("atom", (tok,))
-        while self.peek() in self.prec and self.prec[self.peek()] >= min_prec:
-            op = self.pop()
-            right = self.parse(self.prec[op] + 1)
-            left = Node(op, (left, right))
-        return left
+            node = binary(1, depth + 1)
+            if peek() != ")":
+                raise FormulaError("expected )")
+            pos += 1
+            return node
+        if tok in ("true", "false"):
+            return (tok,)
+        if tok in _RESERVED or tok not in aps:
+            raise FormulaError(f"unknown proposition {tok!r}")
+        return ("ap", tok)
 
+    def binary(min_prec: int, depth: int):
+        nonlocal pos
+        left = unary(depth)
+        while True:
+            tok = peek()
+            if tok not in _BINARY or _BINARY[tok][0] < min_prec:
+                return left
+            prec, assoc = _BINARY[tok]
+            pos += 1
+            right = binary(prec if assoc == "right" else prec + 1, depth + 1)
+            left = (tok, left, right)
 
-def parse_formula(text: str) -> Node:
-    parser = Parser(tokenize(text))
-    node = parser.parse()
-    if parser.peek() is not None:
-        raise ValueError(f"Trailing token {parser.peek()!r}")
+    node = binary(1, 0)
+    if pos != len(toks):
+        raise FormulaError("trailing tokens")
     return node
 
 
-def eval_row(node: Node, trace: dict[str, list[int]]) -> tuple[bool, ...]:
-    if node.op == "atom":
-        return tuple(bool(x) for x in trace[node.args[0]])
-    length = len(next(iter(trace.values())))
-    if node.op == "true":
-        return (True,) * length
-    if node.op == "false":
-        return (False,) * length
-    if node.op == "!":
-        row = eval_row(node.args[0], trace)
-        return tuple(not x for x in row)
-    if node.op == "X[!]":
-        row = eval_row(node.args[0], trace)
-        return row[1:] + (False,)
-    if node.op == "F":
-        row = eval_row(node.args[0], trace)
-        out = [False] * len(row)
-        seen = False
-        for i in range(len(row) - 1, -1, -1):
-            seen = seen or row[i]
-            out[i] = seen
-        return tuple(out)
-    if node.op == "G":
-        child_not = Node("!", (node.args[0],))
-        return tuple(not x for x in eval_row(Node("F", (child_not,)), trace))
-    left = eval_row(node.args[0], trace)
-    right = eval_row(node.args[1], trace)
-    if node.op == "&":
-        return tuple(a and b for a, b in zip(left, right))
-    if node.op == "|":
-        return tuple(a or b for a, b in zip(left, right))
-    if node.op == "U":
-        out = [False] * len(left)
-        acc = False
-        for i in range(len(left) - 1, -1, -1):
-            acc = right[i] or (left[i] and acc)
-            out[i] = acc
-        return tuple(out)
-    if node.op == "R":
-        left_not = Node("!", (node.args[0],))
-        right_not = Node("!", (node.args[1],))
-        return tuple(not x for x in eval_row(Node("U", (left_not, right_not)), trace))
-    raise ValueError(node.op)
+def node_count(node) -> int:
+    count, stack = 0, [node]
+    while stack:
+        cur = stack.pop()
+        count += 1
+        for child in cur[1:]:
+            if isinstance(child, tuple):
+                stack.append(child)
+    return count
 
 
-def accepts(node: Node, traces: list[dict[str, list[int]]]) -> list[bool]:
-    return [eval_row(node, tr)[0] for tr in traces]
+class Encoded:
+    """Instance as Python-int bitsets: bit i*n+t = position i of trace t."""
+
+    def __init__(self, inst: dict):
+        traces = inst["positive_traces"] + inst["negative_traces"]
+        aps = inst["atomic_propositions"]
+        self.n = n = len(traces)
+        self.n_pos = len(inst["positive_traces"])
+        lengths = [len(tr[aps[0]]) for tr in traces]
+        maxlen = max(lengths)
+        self.valid = 0
+        self.last = 0
+        for t, length in enumerate(lengths):
+            for i in range(length):
+                self.valid |= 1 << (i * n + t)
+            self.last |= 1 << ((length - 1) * n + t)
+        self.atoms = {}
+        for ap in aps:
+            v = 0
+            for t, tr in enumerate(traces):
+                for i, b in enumerate(tr[ap]):
+                    if b:
+                        v |= 1 << (i * n + t)
+            self.atoms[ap] = v
+        self.shifts = []
+        s = 1
+        while s < maxlen:
+            self.shifts.append(s * n)
+            s *= 2
+        self.first = (1 << n) - 1
+        self.target = (1 << self.n_pos) - 1
+
+    def until(self, a: int, b: int) -> int:
+        for s in self.shifts:
+            b |= a & (b >> s)
+            a &= a >> s
+        return b
+
+    def evaluate(self, node) -> int:
+        op = node[0]
+        if op == "ap":
+            return self.atoms[node[1]]
+        if op == "true":
+            return self.valid
+        if op == "false":
+            return 0
+        if op in _UNARY:
+            a = self.evaluate(node[1])
+            if op == "!":
+                return a ^ self.valid
+            if op == "X[!]":
+                return a >> self.n
+            if op == "X":
+                return (a >> self.n) | self.last
+            if op == "F":
+                return self.until(self.valid, a)
+            return self.valid ^ self.until(self.valid, a ^ self.valid)  # G
+        a, b = self.evaluate(node[1]), self.evaluate(node[2])
+        if op == "&":
+            return a & b
+        if op == "|":
+            return a | b
+        if op == "->":
+            return (a ^ self.valid) | b
+        if op == "<->":
+            return a ^ b ^ self.valid
+        if op == "U":
+            return self.until(a, b)
+        return self.valid ^ self.until(a ^ self.valid, b ^ self.valid)  # R
+
+    def separates(self, node) -> bool:
+        return self.evaluate(node) & self.first == self.target
 
 
-def validate_formula(instance_path: Path, formula: str | None) -> tuple[bool, int | None]:
-    if not formula:
-        return False, None
-    data = json.loads(instance_path.read_text())
-    traces = data["positive_traces"] + data["negative_traces"]
-    target = [True] * len(data["positive_traces"]) + [False] * len(data["negative_traces"])
+def check_formula(formula, inst: dict, enc: Encoded) -> tuple[bool, int | None, str]:
+    if formula is None:
+        return False, None, "no formula"
+    if not isinstance(formula, str) or not formula.strip():
+        return False, None, "not a formula string"
+    if len(formula) > MAX_FORMULA_CHARS:
+        return False, None, "formula too long"
     try:
-        node = parse_formula(formula)
-        return accepts(node, traces) == target, node.size()
-    except (KeyError, ValueError, IndexError):
-        return False, None
+        node = parse(formula, set(inst["atomic_propositions"]))
+    except (FormulaError, RecursionError) as exc:
+        return False, None, f"parse error: {exc}"
+    size = node_count(node)
+    if size > MAX_FORMULA_NODES:
+        return False, size, "formula too large"
+    try:
+        ok = enc.separates(node)
+    except RecursionError:
+        return False, size, "formula too deep"
+    return ok, size, "valid" if ok else "does not separate"
 
 
-def canonical_method_name(path: Path, rows: list[dict]) -> str:
-    stem = path.stem
-    if stem.endswith("_results"):
-        stem = stem[: -len("_results")]
-    if stem in {"raw_vfb", "vfb"}:
-        return "raw_vfb"
-    if stem:
-        return stem
-    names = {row.get("method") for row in rows if row.get("method")}
-    if len(names) == 1:
-        return str(next(iter(names)))
-    raise ValueError(f"Could not infer method name from {path}")
+# --------------------------------------------------------------------------
+# Instances
+# --------------------------------------------------------------------------
 
 
-def expected_methods(path: str | None) -> set[str] | None:
-    if not path:
-        return None
-    scores_path = Path(path)
-    if not scores_path.exists():
-        return None
-    data = json.loads(scores_path.read_text())
-    exp = data.get("experiments", {}).get("selected_benchmarks", {})
-    results = exp.get("results", {})
-    return {name for name in results if not name.startswith("_")}
+def load_instances() -> tuple[list[dict], dict]:
+    payload = json.loads(INSTANCES.read_text())
+    out = []
+    for rec in payload["instances"]:
+        aps = rec["atomic_propositions"]
+
+        def decode(rows):
+            return [{ap: [int(c) for c in row[k]] for k, ap in enumerate(aps)} for row in rows]
+
+        out.append({
+            "id": rec["id"],
+            "family": rec["family"],
+            "best_known_size": rec.get("best_known_size"),
+            "atomic_propositions": aps,
+            "positive_traces": decode(rec["positive"]),
+            "negative_traces": decode(rec["negative"]),
+        })
+    return out, payload
 
 
-def load_result_files(patterns: list[str], methods: set[str] | None) -> dict[str, list[dict]]:
-    files: list[Path] = []
-    for pattern in patterns:
-        files.extend(Path(p) for p in glob.glob(pattern))
-    files = sorted(set(files))
-    if not files:
-        raise FileNotFoundError(f"No result files matched: {patterns}")
-
-    rows_by_method: dict[str, list[dict]] = {}
-    for path in files:
-        payload = json.loads(path.read_text())
-        rows = payload.get("results", [])
-        if not isinstance(rows, list):
-            raise ValueError(f"{path} does not contain a list under 'results'")
-        method = canonical_method_name(path, rows)
-        if methods is not None and method not in methods:
-            continue
-        sliced_by_inst = {
-            row["instance"]: dict(row)
-            for row in rows
-            if row.get("instance") in TEST_INSTANCES
-        }
-        sliced = [
-            sliced_by_inst.get(
-                instance, {"instance": instance, "formula": None, "_missing_output": True}
-            )
-            for instance in sorted(TEST_INSTANCES)
-        ]
-        rows_by_method[method] = sliced
-    if methods is not None:
-        missing = sorted(methods - set(rows_by_method))
-        if missing:
-            raise ValueError(f"Missing test-slice outputs for methods: {missing}")
-    if not rows_by_method:
-        raise ValueError("Matched result files contained no test-slice instances")
-    return rows_by_method
-
-
-def summarize(method_rows: list[dict]) -> dict[str, float]:
-    solved = [r for r in method_rows if r.get("eval_valid")]
-    returned = [r for r in method_rows if r.get("formula")]
-    present = [r for r in method_rows if not r.get("_missing_output")]
-    collapses = []
-    for row in method_rows:
-        full_count = row.get("generated_ltl_formulas", 0)
-        collapsed_count = row.get("collapsed_bool_atoms", 0)
-        if full_count and collapsed_count:
-            collapses.append(full_count / collapsed_count)
+def solver_input(inst: dict) -> dict:
+    pos, neg = inst["positive_traces"], inst["negative_traces"]
+    aps = inst["atomic_propositions"]
     return {
-        "solve_rate": len(solved) / len(method_rows) if method_rows else 0.0,
-        "evaluation_coverage": len(present) / len(method_rows) if method_rows else 0.0,
-        "all_returned_formulas_valid": 1.0 if len(solved) == len(returned) else 0.0,
-        "mean_collapse_ratio": statistics.fmean(collapses) if collapses else 0.0,
+        "positive_traces": pos,
+        "negative_traces": neg,
+        "atomic_propositions": aps,
+        "number_atomic_propositions": len(aps),
+        "number_traces": len(pos) + len(neg),
+        "number_positive_traces": len(pos),
+        "number_negative_traces": len(neg),
+        "max_length_traces": max(len(tr[aps[0]]) for tr in pos + neg),
+        "trace_type": "finite",
     }
 
 
-def add_validation(rows_by_method: dict[str, list[dict]]) -> None:
-    for rows in rows_by_method.values():
-        for row in rows:
-            ok, size = validate_formula(Path(row["instance"]), row.get("formula"))
-            row["eval_valid"] = ok
-            row["eval_formula_size"] = size
+# --------------------------------------------------------------------------
+# Running solvers under the budget
+# --------------------------------------------------------------------------
 
 
-def median_size_ratio(rows: list[dict], baseline_rows: list[dict]) -> float:
-    baseline_by_inst = {r["instance"]: r for r in baseline_rows}
-    ratios = []
-    for row in rows:
-        base = baseline_by_inst.get(row["instance"])
-        if not (row.get("eval_valid") and base and base.get("eval_valid")):
+def discover_solvers(solvers_dir: Path) -> dict[str, Path]:
+    return {p.stem: p for p in sorted(solvers_dir.glob("*.sh")) if p.is_file()}
+
+
+def run_one(script: Path, inst: dict) -> dict:
+    tmp = Path(tempfile.mkdtemp(prefix="ltlf_task_"))
+    task, answer, errlog = tmp / "task.json", tmp / "answer.json", tmp / "stderr.txt"
+    task.write_text(json.dumps(solver_input(inst)))
+    cpu_limit = int(math.ceil(CPU_BUDGET_S + CPU_GRACE_S))
+
+    def limits():
+        resource.setrlimit(resource.RLIMIT_CPU, (cpu_limit, cpu_limit + 1))
+        resource.setrlimit(resource.RLIMIT_AS, (MEMORY_LIMIT_BYTES, MEMORY_LIMIT_BYTES))
+        resource.setrlimit(resource.RLIMIT_CORE, (0, 0))
+
+    env = {
+        "PATH": os.environ.get("PATH", "/usr/local/bin:/usr/bin:/bin"),
+        "HOME": str(WORKSPACE),
+        "LANG": "C.UTF-8",
+        "PYTHONHASHSEED": "0",
+        "PYTHONDONTWRITEBYTECODE": "1",
+        "OMP_NUM_THREADS": "1",
+        "OPENBLAS_NUM_THREADS": "1",
+        "MKL_NUM_THREADS": "1",
+        "LTLF_CPU_BUDGET_S": str(CPU_BUDGET_S),
+    }
+    start = time.monotonic()
+    killed = False
+    with open(errlog, "wb") as err:
+        proc = subprocess.Popen(
+            ["bash", str(script), str(task), str(answer)],
+            cwd=WORKSPACE, env=env, stdin=subprocess.DEVNULL, stdout=subprocess.DEVNULL,
+            stderr=err, preexec_fn=limits, start_new_session=True,
+        )
+        while True:
+            pid, status, usage = os.wait4(proc.pid, os.WNOHANG)
+            if pid:
+                break
+            if time.monotonic() - start > WALL_LIMIT_S:
+                killed = True
+                try:
+                    os.killpg(proc.pid, signal.SIGKILL)
+                except ProcessLookupError:
+                    pass
+                pid, status, usage = os.wait4(proc.pid, 0)
+                break
+            time.sleep(0.01)
+        proc.returncode = os.waitstatus_to_exitcode(status)
+    try:
+        os.killpg(proc.pid, signal.SIGKILL)  # stray background children
+    except (ProcessLookupError, PermissionError):
+        pass
+    wall = time.monotonic() - start
+    cpu = usage.ru_utime + usage.ru_stime
+    rec = {"instance": inst["id"], "returncode": proc.returncode, "cpu_s": round(cpu, 3),
+           "wall_s": round(wall, 3), "formula": None}
+    if killed:
+        rec["status"] = "wall_timeout"
+    elif cpu > CPU_BUDGET_S + CPU_GRACE_S:
+        rec["status"] = "cpu_budget_exceeded"
+    elif proc.returncode != 0:
+        rec["status"] = "crashed"
+    else:
+        try:
+            raw = answer.read_text()
+            data = json.loads(raw) if len(raw) <= 4 * MAX_FORMULA_CHARS else None
+            formula = data.get("formula") if isinstance(data, dict) else None
+            rec["formula"] = formula if isinstance(formula, str) else None
+            rec["status"] = "answered" if rec["formula"] is not None else "no_formula"
+        except (OSError, ValueError):
+            rec["status"] = "no_output"
+    try:
+        rec["stderr_tail"] = errlog.read_bytes()[-500:].decode("utf-8", "replace")
+    except OSError:
+        pass
+    shutil.rmtree(tmp, ignore_errors=True)
+    return rec
+
+
+def run_solver(name: str, script: Path, instances: list[dict], runs_path: Path | None, resume: bool) -> dict:
+    """Run one solver on every instance; returns {instance id: record}.
+
+    Records (including formulas) are only written to disk when an explicit
+    runs directory is given; by default they stay in memory so that no solver
+    can read another solver's answers for the hidden instances.
+    """
+    records: dict[str, dict] = {}
+    if runs_path is not None:
+        runs_path.parent.mkdir(parents=True, exist_ok=True)
+        if resume:
+            records.update(load_runs(runs_path))
+        elif runs_path.exists():
+            runs_path.unlink()
+    for inst in instances:
+        if inst["id"] in records:
             continue
-        base_size = base.get("eval_formula_size")
-        if base_size:
-            ratios.append(row["eval_formula_size"] / base_size)
-    return statistics.median(ratios) if ratios else 1.0
+        rec = run_one(script, inst)
+        records[inst["id"]] = rec
+        if runs_path is not None:
+            with open(runs_path, "a") as fh:
+                fh.write(json.dumps(rec) + "\n")
+        print(f"[{SLICE}] {name} {inst['id']} {rec['status']} cpu={rec['cpu_s']}", flush=True)
+    return records
 
 
-def baseline_miss_solve_rate(rows: list[dict], baseline_rows: list[dict] | None) -> float:
-    if not baseline_rows:
-        return 0.0
-    rows_by_inst = {r["instance"]: r for r in rows}
-    baseline_misses = [r for r in baseline_rows if not r.get("eval_valid")]
-    if not baseline_misses:
-        return 0.0
-    solved_misses = [
-        r for r in baseline_misses if rows_by_inst.get(r["instance"], {}).get("eval_valid")
-    ]
-    return len(solved_misses) / len(baseline_misses)
+# --------------------------------------------------------------------------
+# Scoring
+# --------------------------------------------------------------------------
 
 
-def score(rows_by_method: dict[str, list[dict]]) -> dict:
-    add_validation(rows_by_method)
-    baseline_rows = rows_by_method.get("raw_vfb")
-    baseline = summarize(baseline_rows) if baseline_rows else None
-    results = {}
-    for method, rows in sorted(rows_by_method.items()):
-        summary = summarize(rows)
-        if method == "raw_vfb":
-            formula_size_ratio = 1.0
-            delta = 0.0
-        elif baseline_rows and baseline:
-            formula_size_ratio = median_size_ratio(rows, baseline_rows)
-            delta = summary["solve_rate"] - baseline["solve_rate"]
+def load_runs(path: Path) -> dict[str, dict]:
+    runs: dict[str, dict] = {}
+    if path.exists():
+        for line in path.read_text().splitlines():
+            try:
+                rec = json.loads(line)
+                runs[rec["instance"]] = rec
+            except (ValueError, KeyError, TypeError):
+                continue
+    return runs
+
+
+_ENCODED: dict[str, Encoded] = {}
+
+
+def encoded(inst: dict) -> Encoded:
+    if inst["id"] not in _ENCODED:
+        _ENCODED[inst["id"]] = Encoded(inst)
+    return _ENCODED[inst["id"]]
+
+
+def score_runs(runs: dict[str, dict], instances: list[dict]) -> tuple[dict, list[dict]]:
+    eff, solved, logs, rows = [], [], [], []
+    for inst in instances:
+        rec = runs.get(inst["id"], {})
+        ok, size, why = check_formula(rec.get("formula"), inst, encoded(inst))
+        if rec and rec.get("status") not in ("answered",):
+            ok, why = False, rec.get("status", why)
+        ref = inst["best_known_size"]
+        if ok:
+            eff.append(min(1.0, ref / size))
+            logs.append(math.log(min(max(size / ref, 1.0), RATIO_CAP)))
         else:
-            formula_size_ratio = 1.0
-            delta = 0.0
-        results[method] = {
-            **summary,
-            "formula_size_ratio": formula_size_ratio,
-            "solve_rate_delta_vs_baseline": delta,
-            "baseline_miss_solve_rate": baseline_miss_solve_rate(rows, baseline_rows),
-        }
-    return {
-        "experiments": {
-            "selected_benchmarks": {
-                "_slice": "test",
-                "_expected_instances": EXPECTED_INSTANCE_COUNT,
-                "results": results,
-            }
-        }
+            eff.append(0.0)
+            logs.append(math.log(RATIO_CAP))
+        solved.append(1.0 if ok else 0.0)
+        rows.append({"instance": inst["id"], "family": inst["family"], "valid": ok, "size": size,
+                     "best_known_size": ref, "check": why, "cpu_s": rec.get("cpu_s")})
+    n = len(instances)
+    metrics = {
+        "size_efficiency": sum(eff) / n,
+        "solve_rate": sum(solved) / n,
+        "size_ratio_geomean": math.exp(sum(logs) / n),
     }
+    return metrics, rows
 
 
 def main() -> None:
-    ap = argparse.ArgumentParser()
-    ap.add_argument("--results-glob", action="append", default=["outputs/*_results.json"])
-    ap.add_argument("--train-scores", default="scoring/scores_train.json")
-    ap.add_argument("--out", default="scoring/scores_test.json")
+    ap = argparse.ArgumentParser(description=__doc__.split("\n\n")[0])
+    ap.add_argument("--solvers-dir", default=str(WORKSPACE / "scripts" / "solvers"))
+    ap.add_argument("--runs-dir", default="", help="persist per-instance records (with formulas) here; default: memory only")
+    ap.add_argument("--out", default=str(WORKSPACE / "scoring" / "scores_test.json"))
+    ap.add_argument("--skip-run", action="store_true", help="score existing runs only")
+    ap.add_argument("--no-score", action="store_true", help="run solvers only")
+    ap.add_argument("--resume", action="store_true", help="keep finished instances of earlier runs")
+    ap.add_argument("--only", default="", help="comma-separated solver names (default: every solver)")
+    ap.add_argument("--first", type=int, default=0, help=argparse.SUPPRESS)  # smoke tests only
     args = ap.parse_args()
+    sys.setrecursionlimit(4 * MAX_FORMULA_DEPTH + 1000)
 
-    methods = expected_methods(args.train_scores)
-    scores = score(load_result_files(args.results_glob, methods))
+    instances, _ = load_instances()
+    if args.first:
+        instances = instances[: args.first]
+    solvers = discover_solvers(Path(args.solvers_dir))
+    if args.only:
+        keep = set(args.only.split(","))
+        solvers = {k: v for k, v in solvers.items() if k in keep}
+    runs_dir = Path(args.runs_dir) if args.runs_dir else None
+    if args.skip_run and runs_dir is None:
+        raise SystemExit("--skip-run needs --runs-dir")
+    all_runs: dict[str, dict] = {}
+    for name, script in solvers.items():
+        path = runs_dir / f"{name}.jsonl" if runs_dir else None
+        all_runs[name] = load_runs(path) if args.skip_run else run_solver(name, script, instances, path, args.resume)
+    if args.no_score:
+        return
+    if any(inst["best_known_size"] is None for inst in instances):
+        raise SystemExit("best_known_size missing; build the reference sizes first")
+    results, details = {}, {}
+    for name in solvers:
+        metrics, rows = score_runs(all_runs[name], instances)
+        results[name] = metrics
+        details[name] = rows
     out = Path(args.out)
     out.parent.mkdir(parents=True, exist_ok=True)
-    out.write_text(json.dumps(scores, indent=2))
+    out.write_text(json.dumps({"experiments": {EXPERIMENT: {
+        "_slice": SLICE,
+        "_instances": len(instances),
+        "_cpu_budget_s": CPU_BUDGET_S,
+        "results": results,
+    }}}, indent=2) + "\n")
+    details_dir = runs_dir or HERE / "runs"
+    details_dir.mkdir(parents=True, exist_ok=True)
+    (details_dir / "details.json").write_text(json.dumps(details, indent=1))  # no formulas
 
 
 if __name__ == "__main__":

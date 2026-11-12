@@ -1,5 +1,5 @@
 # Overview
 
-`LTLf Learning Meets Boolean Set Cover` introduces Bolt, an LTLf learner that avoids exhaustive growth of temporal formulas by switching from bounded LTLf enumeration to Boolean Set Cover over already discovered formulas.
+`LTLf Learning Meets Boolean Set Cover` introduces Bolt, an LTLf learner that avoids the exponential growth of exhaustive formula enumeration by switching from bounded LTLf enumeration to Boolean Set Cover over already discovered formulas. The paper reports that Bolt solves more of its 15,595-task benchmark suite than the state of the art within a 60 s timeout while returning formulas of near-minimal size, and that removing the Boolean Set Cover stage (raw enumeration) solves fewer tasks.
 
-This workspace reproduces the core claim at small CPU scale on a tracked subset of the paper's released benchmarks: the Boolean Set Cover stage solves selected tasks that raw bounded VFB cannot solve at the same LTL size bound, while all learned formulas are independently validated.
+This gym measures that trade-off under a fixed compute budget: each method is a solver run on every instance with 20 CPU seconds, scored on whether it returns a valid separating formula and how close its size is to the best known separator. Training instances come from the paper's released suite; the hidden test instances are fresh draws from the paper's own instance generators. The reference is a Python port of Bolt at the paper's settings; the baseline is the paper's raw-enumeration ablation.

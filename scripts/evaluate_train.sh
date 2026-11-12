@@ -1,12 +1,8 @@
 #!/bin/bash
-# Score the visible train slice from pre-generated method outputs.
-
+# Train slice: runs every solver in scripts/solvers/*.sh on the visible training
+# instances (data/train/) under the same CPU budget as the hidden test, scores
+# the returned formulas, and writes scoring/scores_train.json.  Takes no arguments.
 set -euo pipefail
-
-cd /home/user
-
+cd "$(dirname "$0")/.."
 mkdir -p scoring
-
-python3 eval/train/evaluate.py \
-  --results-glob "${RESULTS_GLOB:-outputs/*_results.json}" \
-  --out scoring/scores_train.json
+python3 eval/train/evaluate.py
