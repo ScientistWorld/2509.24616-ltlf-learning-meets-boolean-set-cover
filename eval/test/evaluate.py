@@ -13,11 +13,14 @@ Per instance i with best known separator size r_i (fixed in instances.json):
            every positive and no negative trace (computed here)
   s_i      number of syntax-tree nodes of the parsed formula
 Metrics (experiment "budgeted_ltlf_learning"):
-  size_efficiency    mean_i valid_i * min(1, r_i / s_i)                (higher better)
-  solve_rate         mean_i valid_i                                    (higher better)
-  size_ratio_geomean geomean_i clip(s_i / r_i, 1, CAP), CAP if invalid (lower better)
+An answer is *acceptable* when it is valid and s_i <= CAP * r_i (CAP = 10):
+  size_efficiency    mean_i acceptable_i * min(1, r_i / s_i)            (higher better)
+  solve_rate         mean_i acceptable_i                                (higher better)
+  size_ratio_geomean geomean_i clip(s_i / r_i, 1, CAP), CAP if not acceptable (lower better)
 A solver that crashes, times out, exceeds the CPU budget or prints nothing gets
-the worst value on that instance, so a failed run gets 0 / 0 / CAP.
+the worst value on that instance, so a failed run gets 0 / 0 / CAP.  r_i is the
+smallest separator found by the generating process or any learner run, or, where
+no learner found one, a lower bound proven by exhaustive enumeration.
 """
 
 from __future__ import annotations
@@ -56,10 +59,11 @@ MAX_FORMULA_DEPTH = 3_000
 # LTLf syntax and semantics (independent of any solver)
 # --------------------------------------------------------------------------
 
-_TOKEN = re.compile(r"\s*(X\[!\]|<->|->|&&|\|\||[()!&|]|[A-Za-z_][A-Za-z0-9_]*)")
+_TOKEN = re.compile(r"\s*(X\[!\]|&&|\|\||[()!&|]|[A-Za-z_][A-Za-z0-9_]*)")
 _UNARY = {"!", "X", "X[!]", "F", "G"}
-_BINARY = {"<->": (1, "left"), "->": (2, "right"), "|": (3, "left"), "&": (4, "left"),
-           "U": (5, "right"), "R": (5, "right")}
+# The paper's operator set (Section 2.1): Boolean ! & |, temporal X[!] U and the
+# derived X F G R.  (Implication/equivalence are not part of the grammar.)
+_BINARY = {"|": (3, "left"), "&": (4, "left"), "U": (5, "right"), "R": (5, "right")}
 _ALIAS = {"&&": "&", "||": "|"}
 _RESERVED = _UNARY | set(_BINARY) | {"true", "false"}
 
@@ -204,10 +208,6 @@ class Encoded:
             return a & b
         if op == "|":
             return a | b
-        if op == "->":
-            return (a ^ self.valid) | b
-        if op == "<->":
-            return a ^ b ^ self.valid
         if op == "U":
             return self.until(a, b)
         return self.valid ^ self.until(a ^ self.valid, b ^ self.valid)  # R
@@ -422,6 +422,8 @@ def score_runs(runs: dict[str, dict], instances: list[dict]) -> tuple[dict, list
         if rec and rec.get("status") not in ("answered",):
             ok, why = False, rec.get("status", why)
         ref = inst["best_known_size"]
+        if ok and size > RATIO_CAP * ref:
+            ok, why = False, "valid but more than CAP x the best-known size"
         if ok:
             eff.append(min(1.0, ref / size))
             logs.append(math.log(min(max(size / ref, 1.0), RATIO_CAP)))

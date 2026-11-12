@@ -3,7 +3,10 @@
 
 best_known_size = smallest syntax-tree size among (a) the generating formula
 recorded in the paper's release for that instance and (b) every valid separator
-returned by any solver run stored in the given run directories.
+returned by a learner run (run records *.jsonl or formula-free details.json).
+Trivial constructions (TRIVIAL) are not counted.  Where no learner found a
+separator, the value is the lower bound proven by exhaustive enumeration
+(eval/train/lower_bounds.json).
 """
 
 from __future__ import annotations
@@ -19,6 +22,8 @@ sys.path.insert(0, str(HERE))
 from evaluate import REFERENCE_SIZES, WORKSPACE, check_formula, encoded, load_instances, node_count, parse  # noqa: E402
 
 SOURCE_ZIP = WORKSPACE / "data" / "downloads" / "benchmarks.zip"
+TRIVIAL = {"literal_cover", "null_answer", "crash", "forged_fields"}
+LOWER_BOUNDS = HERE / "lower_bounds.json"
 
 
 def balanced(formula: str) -> str:
@@ -30,13 +35,19 @@ def balanced(formula: str) -> str:
 
 def main() -> None:
     ap = argparse.ArgumentParser()
-    ap.add_argument("--runs-dir", action="append", required=True)
+    ap.add_argument("--runs-dir", action="append", default=[])
+    ap.add_argument("--details", action="append", default=[])
     args = ap.parse_args()
     sys.setrecursionlimit(20000)
     instances, manifest = load_instances()
     by_id = {inst["id"]: inst for inst in instances}
     best: dict[str, tuple[int, str]] = {}
     gen_sizes: dict[str, int | None] = {}
+
+    def offer(iid: str, size: int, source: str) -> None:
+        if iid in by_id and (iid not in best or size < best[iid][0]):
+            best[iid] = (size, source)
+
     with zipfile.ZipFile(SOURCE_ZIP) as archive:
         for rec in manifest["instances"]:
             data = json.loads(archive.read(rec["source_file"]))
@@ -47,9 +58,11 @@ def main() -> None:
                 node = parse(balanced(gen), set(inst["atomic_propositions"]))
                 if encoded(inst).separates(node):
                     gen_sizes[rec["id"]] = node_count(node)
-                    best[rec["id"]] = (gen_sizes[rec["id"]], "generating_formula")
+                    offer(rec["id"], gen_sizes[rec["id"]], "generating_formula")
     for runs_dir in args.runs_dir:
         for path in sorted(Path(runs_dir).glob("*.jsonl")):
+            if path.stem in TRIVIAL:
+                continue
             for line in path.read_text().splitlines():
                 try:
                     run = json.loads(line)
@@ -59,16 +72,27 @@ def main() -> None:
                 if inst is None:
                     continue
                 ok, size, _ = check_formula(run.get("formula"), inst, encoded(inst))
-                if ok and (inst["id"] not in best or size < best[inst["id"]][0]):
-                    best[inst["id"]] = (size, path.stem)
+                if ok:
+                    offer(inst["id"], size, path.stem)
+    for details in args.details:
+        for method, rows in json.loads(Path(details).read_text()).items():
+            if method in TRIVIAL:
+                continue
+            for row in rows:
+                if row.get("valid") and row.get("size"):
+                    offer(row["instance"], row["size"], method)
+    bounds = json.loads(LOWER_BOUNDS.read_text()) if LOWER_BOUNDS.exists() else {}
+    for iid in by_id:
+        if iid not in best and iid in bounds:
+            best[iid] = (bounds[iid]["lower_bound"], "exhaustive_lower_bound")
     missing = [i for i in by_id if i not in best]
     if missing:
-        raise SystemExit(f"no known separator for {missing}")
+        raise SystemExit(f"no learner separator and no lower bound for {missing}")
     out = {i: {"best_known_size": best[i][0], "best_known_source": best[i][1],
                "generating_formula_size": gen_sizes.get(i)} for i in by_id}
     REFERENCE_SIZES.write_text(json.dumps(out, indent=1) + "\n")
     sources: dict[str, int] = {}
-    for size, src in best.values():
+    for _, src in best.values():
         sources[src] = sources.get(src, 0) + 1
     print("best-known sizes set; sources:", sources)
 

@@ -4,7 +4,7 @@ One scored experiment, `budgeted_ltlf_learning` (weight 1.0), measured on hidden
 
 Benefit:
 
-- `solve_rate` (coefficient 0.5, higher is better): fraction of instances for which the solver returns a valid separating LTLf formula within 20 CPU seconds.
+- `solve_rate` (coefficient 0.5, higher is better): fraction of instances for which the solver returns, within 20 CPU seconds, a valid separating LTLf formula of at most 10x the reference size (best-known separator, or a proven lower bound where no learner finds one).
 
 Constraint (the paper's claim is that more tasks are solved *without* giving up formula size):
 
@@ -14,4 +14,4 @@ Combined (primary):
 
 - `size_efficiency` (coefficient 1.0, higher is better): mean of `min(1, best_known_size / returned_size)`, 0 for unsolved instances. Solving with a huge formula earns little; solving with a best-known-size formula earns 1.
 
-Validity is not a separate target: an invalid, unparsable, late or over-budget answer simply counts as unsolved, and a run that fails everywhere gets the worst value of all three metrics (0, 0, 10).
+Validity is not a separate target: an invalid, unparsable, late, over-budget or more-than-10x-oversized answer simply counts as unsolved, and a run that fails everywhere gets the worst value of all three metrics (0, 0, 10).
