@@ -1,0 +1,1241 @@
+{
+  "normalization": {
+    "cohort": "Bolt result from each successful scenario; three reference repeats included",
+    "cohort_size": 20,
+    "standard_deviation": "population, computed over this audit cohort",
+    "formula": "sum(experiment.weight * abs(coefficient) * directed(value-reference) / stddev)",
+    "reference": "redteam/reference_existing_scores_test.json",
+    "warning": "Future cohort normalization is unknown; use metric dominance for invariant conclusions.",
+    "scales": {
+      "selected_benchmarks": {
+        "solve_rate": 0.38157568056677826,
+        "evaluation_coverage": 0.21794494717703367,
+        "formula_size_ratio": 0.520050339234286,
+        "all_returned_formulas_valid": 0.21794494717703367,
+        "solve_rate_delta_vs_baseline": 0.3871692136521188,
+        "baseline_miss_solve_rate": 0.3913039100239097
+      }
+    }
+  },
+  "reference_spread": {
+    "selected_benchmarks": {
+      "solve_rate": 0.0,
+      "evaluation_coverage": 0.0,
+      "formula_size_ratio": 0.0,
+      "all_returned_formulas_valid": 0.0,
+      "solve_rate_delta_vs_baseline": 0.0,
+      "baseline_miss_solve_rate": 0.0
+    }
+  },
+  "attempts": {
+    "reference_seed0": {
+      "metrics": {
+        "selected_benchmarks": {
+          "solve_rate": 0.8,
+          "evaluation_coverage": 1.0,
+          "all_returned_formulas_valid": 1.0,
+          "mean_collapse_ratio": 2.401758379551483,
+          "formula_size_ratio": 1.0,
+          "solve_rate_delta_vs_baseline": 0.6000000000000001,
+          "baseline_miss_solve_rate": 0.75
+        }
+      },
+      "methods_written": {
+        "selected_benchmarks": [
+          "bolt",
+          "raw_vfb"
+        ]
+      },
+      "test_exit_code": 0,
+      "candidate_wall_seconds": null,
+      "learner_commands": [
+        {
+          "command": [
+            "python3",
+            "method/ltlf_bolt.py",
+            "--mode",
+            "bolt",
+            "--instances",
+            "data/paper_benchmark_subset/DoubleCounter__1_5_16_42.json",
+            "data/paper_benchmark_subset/Fixed_Formulas__absence1_5_16_42.json",
+            "data/paper_benchmark_subset/Hamming__trace_length=16number_atomic_propositions=3number_negative_traces=5delta=1seed=40.json",
+            "data/paper_benchmark_subset/Nim__heaps=1tokens=1_5_16_42.json",
+            "data/paper_benchmark_subset/OrderedSequence__trace_length=16number_atomic_propositions=3size_sequence=3number_positive_traces=5number_negative_traces=5seed=40.json",
+            "data/paper_benchmark_subset/OrderedSequence__trace_length=16number_atomic_propositions=3size_sequence=4number_positive_traces=5number_negative_traces=5seed=41.json",
+            "data/paper_benchmark_subset/RandomBooleanCombinationsofFactors__trace_length=16number_atomic_propositions=3number_positive_traces=5number_negative_traces=5number_patterns=3seed=43.json",
+            "data/paper_benchmark_subset/SingleCounter__1_5_16_42.json",
+            "data/paper_benchmark_subset/Subset__trace_length=16number_atomic_propositions=5number_positive_traces=5number_negative_traces=5subset_size=3seed=40.json",
+            "data/paper_benchmark_subset/Subword__trace_length=16number_atomic_propositions=3number_positive_traces=5number_negative_traces=5subword_length=10seed=40.json",
+            "--out",
+            "/home/user/outputs/bolt_results.json",
+            "--ltl-switch",
+            "3",
+            "--beam-width",
+            "30",
+            "--max-bool-weight",
+            "25",
+            "--timeout",
+            "20"
+          ],
+          "exit_code": 0,
+          "wall_seconds": 0.2163746349979192
+        }
+      ],
+      "rank_delta_audit_cohort": 0.0,
+      "rank_contributions": {
+        "selected_benchmarks": {
+          "solve_rate": 0.0,
+          "evaluation_coverage": 0.0,
+          "formula_size_ratio": -0.0,
+          "all_returned_formulas_valid": 0.0,
+          "solve_rate_delta_vs_baseline": 0.0,
+          "baseline_miss_solve_rate": 0.0
+        }
+      },
+      "relation_independent_of_nonzero_metric_scales": "exact tie"
+    },
+    "reference_seed1": {
+      "metrics": {
+        "selected_benchmarks": {
+          "solve_rate": 0.8,
+          "evaluation_coverage": 1.0,
+          "all_returned_formulas_valid": 1.0,
+          "mean_collapse_ratio": 2.401758379551483,
+          "formula_size_ratio": 1.0,
+          "solve_rate_delta_vs_baseline": 0.6000000000000001,
+          "baseline_miss_solve_rate": 0.75
+        }
+      },
+      "methods_written": {
+        "selected_benchmarks": [
+          "bolt",
+          "raw_vfb"
+        ]
+      },
+      "test_exit_code": 0,
+      "candidate_wall_seconds": null,
+      "learner_commands": [
+        {
+          "command": [
+            "python3",
+            "method/ltlf_bolt.py",
+            "--mode",
+            "bolt",
+            "--instances",
+            "data/paper_benchmark_subset/DoubleCounter__1_5_16_42.json",
+            "data/paper_benchmark_subset/Fixed_Formulas__absence1_5_16_42.json",
+            "data/paper_benchmark_subset/Hamming__trace_length=16number_atomic_propositions=3number_negative_traces=5delta=1seed=40.json",
+            "data/paper_benchmark_subset/Nim__heaps=1tokens=1_5_16_42.json",
+            "data/paper_benchmark_subset/OrderedSequence__trace_length=16number_atomic_propositions=3size_sequence=3number_positive_traces=5number_negative_traces=5seed=40.json",
+            "data/paper_benchmark_subset/OrderedSequence__trace_length=16number_atomic_propositions=3size_sequence=4number_positive_traces=5number_negative_traces=5seed=41.json",
+            "data/paper_benchmark_subset/RandomBooleanCombinationsofFactors__trace_length=16number_atomic_propositions=3number_positive_traces=5number_negative_traces=5number_patterns=3seed=43.json",
+            "data/paper_benchmark_subset/SingleCounter__1_5_16_42.json",
+            "data/paper_benchmark_subset/Subset__trace_length=16number_atomic_propositions=5number_positive_traces=5number_negative_traces=5subset_size=3seed=40.json",
+            "data/paper_benchmark_subset/Subword__trace_length=16number_atomic_propositions=3number_positive_traces=5number_negative_traces=5subword_length=10seed=40.json",
+            "--out",
+            "/home/user/outputs/bolt_results.json",
+            "--ltl-switch",
+            "3",
+            "--beam-width",
+            "30",
+            "--max-bool-weight",
+            "25",
+            "--timeout",
+            "20"
+          ],
+          "exit_code": 0,
+          "wall_seconds": 0.21722317699459381
+        }
+      ],
+      "rank_delta_audit_cohort": 0.0,
+      "rank_contributions": {
+        "selected_benchmarks": {
+          "solve_rate": 0.0,
+          "evaluation_coverage": 0.0,
+          "formula_size_ratio": -0.0,
+          "all_returned_formulas_valid": 0.0,
+          "solve_rate_delta_vs_baseline": 0.0,
+          "baseline_miss_solve_rate": 0.0
+        }
+      },
+      "relation_independent_of_nonzero_metric_scales": "exact tie"
+    },
+    "reference_seed2": {
+      "metrics": {
+        "selected_benchmarks": {
+          "solve_rate": 0.8,
+          "evaluation_coverage": 1.0,
+          "all_returned_formulas_valid": 1.0,
+          "mean_collapse_ratio": 2.401758379551483,
+          "formula_size_ratio": 1.0,
+          "solve_rate_delta_vs_baseline": 0.6000000000000001,
+          "baseline_miss_solve_rate": 0.75
+        }
+      },
+      "methods_written": {
+        "selected_benchmarks": [
+          "bolt",
+          "raw_vfb"
+        ]
+      },
+      "test_exit_code": 0,
+      "candidate_wall_seconds": null,
+      "learner_commands": [
+        {
+          "command": [
+            "python3",
+            "method/ltlf_bolt.py",
+            "--mode",
+            "bolt",
+            "--instances",
+            "data/paper_benchmark_subset/DoubleCounter__1_5_16_42.json",
+            "data/paper_benchmark_subset/Fixed_Formulas__absence1_5_16_42.json",
+            "data/paper_benchmark_subset/Hamming__trace_length=16number_atomic_propositions=3number_negative_traces=5delta=1seed=40.json",
+            "data/paper_benchmark_subset/Nim__heaps=1tokens=1_5_16_42.json",
+            "data/paper_benchmark_subset/OrderedSequence__trace_length=16number_atomic_propositions=3size_sequence=3number_positive_traces=5number_negative_traces=5seed=40.json",
+            "data/paper_benchmark_subset/OrderedSequence__trace_length=16number_atomic_propositions=3size_sequence=4number_positive_traces=5number_negative_traces=5seed=41.json",
+            "data/paper_benchmark_subset/RandomBooleanCombinationsofFactors__trace_length=16number_atomic_propositions=3number_positive_traces=5number_negative_traces=5number_patterns=3seed=43.json",
+            "data/paper_benchmark_subset/SingleCounter__1_5_16_42.json",
+            "data/paper_benchmark_subset/Subset__trace_length=16number_atomic_propositions=5number_positive_traces=5number_negative_traces=5subset_size=3seed=40.json",
+            "data/paper_benchmark_subset/Subword__trace_length=16number_atomic_propositions=3number_positive_traces=5number_negative_traces=5subword_length=10seed=40.json",
+            "--out",
+            "/home/user/outputs/bolt_results.json",
+            "--ltl-switch",
+            "3",
+            "--beam-width",
+            "30",
+            "--max-bool-weight",
+            "25",
+            "--timeout",
+            "20"
+          ],
+          "exit_code": 0,
+          "wall_seconds": 0.2302173379866872
+        }
+      ],
+      "rank_delta_audit_cohort": 0.0,
+      "rank_contributions": {
+        "selected_benchmarks": {
+          "solve_rate": 0.0,
+          "evaluation_coverage": 0.0,
+          "formula_size_ratio": -0.0,
+          "all_returned_formulas_valid": 0.0,
+          "solve_rate_delta_vs_baseline": 0.0,
+          "baseline_miss_solve_rate": 0.0
+        }
+      },
+      "relation_independent_of_nonzero_metric_scales": "exact tie"
+    },
+    "stronger_search": {
+      "metrics": {
+        "selected_benchmarks": {
+          "solve_rate": 1.0,
+          "evaluation_coverage": 1.0,
+          "all_returned_formulas_valid": 1.0,
+          "mean_collapse_ratio": 6.763320012359666,
+          "formula_size_ratio": 1.0,
+          "solve_rate_delta_vs_baseline": 0.8,
+          "baseline_miss_solve_rate": 1.0
+        }
+      },
+      "methods_written": {
+        "selected_benchmarks": [
+          "bolt",
+          "raw_vfb"
+        ]
+      },
+      "test_exit_code": 0,
+      "candidate_wall_seconds": null,
+      "learner_commands": [
+        {
+          "command": [
+            "python3",
+            "method/ltlf_bolt.py",
+            "--mode",
+            "bolt",
+            "--instances",
+            "data/paper_benchmark_subset/DoubleCounter__1_5_16_42.json",
+            "data/paper_benchmark_subset/Fixed_Formulas__absence1_5_16_42.json",
+            "data/paper_benchmark_subset/Hamming__trace_length=16number_atomic_propositions=3number_negative_traces=5delta=1seed=40.json",
+            "data/paper_benchmark_subset/Nim__heaps=1tokens=1_5_16_42.json",
+            "data/paper_benchmark_subset/OrderedSequence__trace_length=16number_atomic_propositions=3size_sequence=3number_positive_traces=5number_negative_traces=5seed=40.json",
+            "data/paper_benchmark_subset/OrderedSequence__trace_length=16number_atomic_propositions=3size_sequence=4number_positive_traces=5number_negative_traces=5seed=41.json",
+            "data/paper_benchmark_subset/RandomBooleanCombinationsofFactors__trace_length=16number_atomic_propositions=3number_positive_traces=5number_negative_traces=5number_patterns=3seed=43.json",
+            "data/paper_benchmark_subset/SingleCounter__1_5_16_42.json",
+            "data/paper_benchmark_subset/Subset__trace_length=16number_atomic_propositions=5number_positive_traces=5number_negative_traces=5subset_size=3seed=40.json",
+            "data/paper_benchmark_subset/Subword__trace_length=16number_atomic_propositions=3number_positive_traces=5number_negative_traces=5subword_length=10seed=40.json",
+            "--out",
+            "/home/user/outputs/bolt_results.json",
+            "--ltl-switch",
+            "5",
+            "--beam-width",
+            "100",
+            "--max-bool-weight",
+            "70",
+            "--timeout",
+            "60"
+          ],
+          "exit_code": 0,
+          "wall_seconds": 0.4764418550184928
+        }
+      ],
+      "rank_delta_audit_cohort": 1.5518240995196488,
+      "rank_contributions": {
+        "selected_benchmarks": {
+          "solve_rate": 0.524142418360959,
+          "evaluation_coverage": 0.0,
+          "formula_size_ratio": -0.0,
+          "all_returned_formulas_valid": 0.0,
+          "solve_rate_delta_vs_baseline": 0.516569998201626,
+          "baseline_miss_solve_rate": 0.511111682957064
+        }
+      },
+      "relation_independent_of_nonzero_metric_scales": "dominates reference"
+    },
+    "paper_search_settings": {
+      "metrics": {
+        "selected_benchmarks": {
+          "solve_rate": 1.0,
+          "evaluation_coverage": 1.0,
+          "all_returned_formulas_valid": 1.0,
+          "mean_collapse_ratio": 60.17088464149185,
+          "formula_size_ratio": 1.0,
+          "solve_rate_delta_vs_baseline": 0.8,
+          "baseline_miss_solve_rate": 1.0
+        }
+      },
+      "methods_written": {
+        "selected_benchmarks": [
+          "bolt",
+          "raw_vfb"
+        ]
+      },
+      "test_exit_code": 0,
+      "candidate_wall_seconds": null,
+      "learner_commands": [
+        {
+          "command": [
+            "python3",
+            "method/ltlf_bolt.py",
+            "--mode",
+            "bolt",
+            "--instances",
+            "data/paper_benchmark_subset/DoubleCounter__1_5_16_42.json",
+            "data/paper_benchmark_subset/Fixed_Formulas__absence1_5_16_42.json",
+            "data/paper_benchmark_subset/Hamming__trace_length=16number_atomic_propositions=3number_negative_traces=5delta=1seed=40.json",
+            "data/paper_benchmark_subset/Nim__heaps=1tokens=1_5_16_42.json",
+            "data/paper_benchmark_subset/OrderedSequence__trace_length=16number_atomic_propositions=3size_sequence=3number_positive_traces=5number_negative_traces=5seed=40.json",
+            "data/paper_benchmark_subset/OrderedSequence__trace_length=16number_atomic_propositions=3size_sequence=4number_positive_traces=5number_negative_traces=5seed=41.json",
+            "data/paper_benchmark_subset/RandomBooleanCombinationsofFactors__trace_length=16number_atomic_propositions=3number_positive_traces=5number_negative_traces=5number_patterns=3seed=43.json",
+            "data/paper_benchmark_subset/SingleCounter__1_5_16_42.json",
+            "data/paper_benchmark_subset/Subset__trace_length=16number_atomic_propositions=5number_positive_traces=5number_negative_traces=5subset_size=3seed=40.json",
+            "data/paper_benchmark_subset/Subword__trace_length=16number_atomic_propositions=3number_positive_traces=5number_negative_traces=5subword_length=10seed=40.json",
+            "--out",
+            "/home/user/outputs/bolt_results.json",
+            "--ltl-switch",
+            "8",
+            "--beam-width",
+            "100",
+            "--max-bool-weight",
+            "70",
+            "--timeout",
+            "60"
+          ],
+          "exit_code": 0,
+          "wall_seconds": 10.270024614990689
+        }
+      ],
+      "rank_delta_audit_cohort": 1.5518240995196488,
+      "rank_contributions": {
+        "selected_benchmarks": {
+          "solve_rate": 0.524142418360959,
+          "evaluation_coverage": 0.0,
+          "formula_size_ratio": -0.0,
+          "all_returned_formulas_valid": 0.0,
+          "solve_rate_delta_vs_baseline": 0.516569998201626,
+          "baseline_miss_solve_rate": 0.511111682957064
+        }
+      },
+      "relation_independent_of_nonzero_metric_scales": "dominates reference"
+    },
+    "weaker_no_boolean": {
+      "metrics": {
+        "selected_benchmarks": {
+          "solve_rate": 0.2,
+          "evaluation_coverage": 1.0,
+          "all_returned_formulas_valid": 1.0,
+          "mean_collapse_ratio": 2.401758379551483,
+          "formula_size_ratio": 1.0,
+          "solve_rate_delta_vs_baseline": 0.0,
+          "baseline_miss_solve_rate": 0.0
+        }
+      },
+      "methods_written": {
+        "selected_benchmarks": [
+          "bolt",
+          "raw_vfb"
+        ]
+      },
+      "test_exit_code": 0,
+      "candidate_wall_seconds": null,
+      "learner_commands": [
+        {
+          "command": [
+            "python3",
+            "method/ltlf_bolt.py",
+            "--mode",
+            "vfb",
+            "--instances",
+            "data/paper_benchmark_subset/DoubleCounter__1_5_16_42.json",
+            "data/paper_benchmark_subset/Fixed_Formulas__absence1_5_16_42.json",
+            "data/paper_benchmark_subset/Hamming__trace_length=16number_atomic_propositions=3number_negative_traces=5delta=1seed=40.json",
+            "data/paper_benchmark_subset/Nim__heaps=1tokens=1_5_16_42.json",
+            "data/paper_benchmark_subset/OrderedSequence__trace_length=16number_atomic_propositions=3size_sequence=3number_positive_traces=5number_negative_traces=5seed=40.json",
+            "data/paper_benchmark_subset/OrderedSequence__trace_length=16number_atomic_propositions=3size_sequence=4number_positive_traces=5number_negative_traces=5seed=41.json",
+            "data/paper_benchmark_subset/RandomBooleanCombinationsofFactors__trace_length=16number_atomic_propositions=3number_positive_traces=5number_negative_traces=5number_patterns=3seed=43.json",
+            "data/paper_benchmark_subset/SingleCounter__1_5_16_42.json",
+            "data/paper_benchmark_subset/Subset__trace_length=16number_atomic_propositions=5number_positive_traces=5number_negative_traces=5subset_size=3seed=40.json",
+            "data/paper_benchmark_subset/Subword__trace_length=16number_atomic_propositions=3number_positive_traces=5number_negative_traces=5subword_length=10seed=40.json",
+            "--out",
+            "/home/user/outputs/bolt_results.json",
+            "--ltl-switch",
+            "3",
+            "--beam-width",
+            "30",
+            "--max-bool-weight",
+            "25",
+            "--timeout",
+            "20"
+          ],
+          "exit_code": 0,
+          "wall_seconds": 0.18806234799558297
+        }
+      ],
+      "rank_delta_audit_cohort": -4.655472298558948,
+      "rank_contributions": {
+        "selected_benchmarks": {
+          "solve_rate": -1.5724272550828777,
+          "evaluation_coverage": 0.0,
+          "formula_size_ratio": -0.0,
+          "all_returned_formulas_valid": 0.0,
+          "solve_rate_delta_vs_baseline": -1.5497099946048785,
+          "baseline_miss_solve_rate": -1.533335048871192
+        }
+      },
+      "relation_independent_of_nonzero_metric_scales": "tradeoff or worse"
+    },
+    "weaker_minimal_search": {
+      "metrics": {
+        "selected_benchmarks": {
+          "solve_rate": 0.0,
+          "evaluation_coverage": 1.0,
+          "all_returned_formulas_valid": 1.0,
+          "mean_collapse_ratio": 1.1,
+          "formula_size_ratio": 1.0,
+          "solve_rate_delta_vs_baseline": -0.2,
+          "baseline_miss_solve_rate": 0.0
+        }
+      },
+      "methods_written": {
+        "selected_benchmarks": [
+          "bolt",
+          "raw_vfb"
+        ]
+      },
+      "test_exit_code": 0,
+      "candidate_wall_seconds": null,
+      "learner_commands": [
+        {
+          "command": [
+            "python3",
+            "method/ltlf_bolt.py",
+            "--mode",
+            "bolt",
+            "--instances",
+            "data/paper_benchmark_subset/DoubleCounter__1_5_16_42.json",
+            "data/paper_benchmark_subset/Fixed_Formulas__absence1_5_16_42.json",
+            "data/paper_benchmark_subset/Hamming__trace_length=16number_atomic_propositions=3number_negative_traces=5delta=1seed=40.json",
+            "data/paper_benchmark_subset/Nim__heaps=1tokens=1_5_16_42.json",
+            "data/paper_benchmark_subset/OrderedSequence__trace_length=16number_atomic_propositions=3size_sequence=3number_positive_traces=5number_negative_traces=5seed=40.json",
+            "data/paper_benchmark_subset/OrderedSequence__trace_length=16number_atomic_propositions=3size_sequence=4number_positive_traces=5number_negative_traces=5seed=41.json",
+            "data/paper_benchmark_subset/RandomBooleanCombinationsofFactors__trace_length=16number_atomic_propositions=3number_positive_traces=5number_negative_traces=5number_patterns=3seed=43.json",
+            "data/paper_benchmark_subset/SingleCounter__1_5_16_42.json",
+            "data/paper_benchmark_subset/Subset__trace_length=16number_atomic_propositions=5number_positive_traces=5number_negative_traces=5subset_size=3seed=40.json",
+            "data/paper_benchmark_subset/Subword__trace_length=16number_atomic_propositions=3number_positive_traces=5number_negative_traces=5subword_length=10seed=40.json",
+            "--out",
+            "/home/user/outputs/bolt_results.json",
+            "--ltl-switch",
+            "1",
+            "--beam-width",
+            "1",
+            "--max-bool-weight",
+            "3",
+            "--timeout",
+            "20"
+          ],
+          "exit_code": 0,
+          "wall_seconds": 0.1637829109968152
+        }
+      ],
+      "rank_delta_audit_cohort": -5.696184715121533,
+      "rank_contributions": {
+        "selected_benchmarks": {
+          "solve_rate": -2.096569673443837,
+          "evaluation_coverage": 0.0,
+          "formula_size_ratio": -0.0,
+          "all_returned_formulas_valid": 0.0,
+          "solve_rate_delta_vs_baseline": -2.0662799928065043,
+          "baseline_miss_solve_rate": -1.533335048871192
+        }
+      },
+      "relation_independent_of_nonzero_metric_scales": "tradeoff or worse"
+    },
+    "brute_force_vfb": {
+      "metrics": {
+        "selected_benchmarks": {
+          "solve_rate": 1.0,
+          "evaluation_coverage": 1.0,
+          "all_returned_formulas_valid": 1.0,
+          "mean_collapse_ratio": 60.17088464149185,
+          "formula_size_ratio": 1.0,
+          "solve_rate_delta_vs_baseline": 0.8,
+          "baseline_miss_solve_rate": 1.0
+        }
+      },
+      "methods_written": {
+        "selected_benchmarks": [
+          "bolt",
+          "raw_vfb"
+        ]
+      },
+      "test_exit_code": 0,
+      "candidate_wall_seconds": null,
+      "learner_commands": [
+        {
+          "command": [
+            "python3",
+            "method/ltlf_bolt.py",
+            "--mode",
+            "vfb",
+            "--instances",
+            "data/paper_benchmark_subset/DoubleCounter__1_5_16_42.json",
+            "data/paper_benchmark_subset/Fixed_Formulas__absence1_5_16_42.json",
+            "data/paper_benchmark_subset/Hamming__trace_length=16number_atomic_propositions=3number_negative_traces=5delta=1seed=40.json",
+            "data/paper_benchmark_subset/Nim__heaps=1tokens=1_5_16_42.json",
+            "data/paper_benchmark_subset/OrderedSequence__trace_length=16number_atomic_propositions=3size_sequence=3number_positive_traces=5number_negative_traces=5seed=40.json",
+            "data/paper_benchmark_subset/OrderedSequence__trace_length=16number_atomic_propositions=3size_sequence=4number_positive_traces=5number_negative_traces=5seed=41.json",
+            "data/paper_benchmark_subset/RandomBooleanCombinationsofFactors__trace_length=16number_atomic_propositions=3number_positive_traces=5number_negative_traces=5number_patterns=3seed=43.json",
+            "data/paper_benchmark_subset/SingleCounter__1_5_16_42.json",
+            "data/paper_benchmark_subset/Subset__trace_length=16number_atomic_propositions=5number_positive_traces=5number_negative_traces=5subset_size=3seed=40.json",
+            "data/paper_benchmark_subset/Subword__trace_length=16number_atomic_propositions=3number_positive_traces=5number_negative_traces=5subword_length=10seed=40.json",
+            "--out",
+            "/home/user/outputs/bolt_results.json",
+            "--ltl-switch",
+            "8",
+            "--beam-width",
+            "30",
+            "--max-bool-weight",
+            "25",
+            "--timeout",
+            "60"
+          ],
+          "exit_code": 0,
+          "wall_seconds": 10.682417547010118
+        }
+      ],
+      "rank_delta_audit_cohort": 1.5518240995196488,
+      "rank_contributions": {
+        "selected_benchmarks": {
+          "solve_rate": 0.524142418360959,
+          "evaluation_coverage": 0.0,
+          "formula_size_ratio": -0.0,
+          "all_returned_formulas_valid": 0.0,
+          "solve_rate_delta_vs_baseline": 0.516569998201626,
+          "baseline_miss_solve_rate": 0.511111682957064
+        }
+      },
+      "relation_independent_of_nonzero_metric_scales": "dominates reference"
+    },
+    "shortcut_bruteforce_only": {
+      "metrics": {
+        "selected_benchmarks": {
+          "solve_rate": 1.0,
+          "evaluation_coverage": 1.0,
+          "all_returned_formulas_valid": 1.0,
+          "mean_collapse_ratio": 2.401758379551483,
+          "formula_size_ratio": 3.0,
+          "solve_rate_delta_vs_baseline": 0.8,
+          "baseline_miss_solve_rate": 1.0
+        }
+      },
+      "methods_written": {
+        "selected_benchmarks": [
+          "bolt",
+          "raw_vfb"
+        ]
+      },
+      "test_exit_code": 0,
+      "candidate_wall_seconds": 0.015307508001569659,
+      "learner_commands": [],
+      "rank_delta_audit_cohort": -0.37106667577026686,
+      "rank_contributions": {
+        "selected_benchmarks": {
+          "solve_rate": 0.524142418360959,
+          "evaluation_coverage": 0.0,
+          "formula_size_ratio": -1.9228907752899158,
+          "all_returned_formulas_valid": 0.0,
+          "solve_rate_delta_vs_baseline": 0.516569998201626,
+          "baseline_miss_solve_rate": 0.511111682957064
+        }
+      },
+      "relation_independent_of_nonzero_metric_scales": "tradeoff or worse"
+    },
+    "shortcut_bruteforce_fallback": {
+      "metrics": {
+        "selected_benchmarks": {
+          "solve_rate": 1.0,
+          "evaluation_coverage": 1.0,
+          "all_returned_formulas_valid": 1.0,
+          "mean_collapse_ratio": 2.401758379551483,
+          "formula_size_ratio": 1.0,
+          "solve_rate_delta_vs_baseline": 0.8,
+          "baseline_miss_solve_rate": 1.0
+        }
+      },
+      "methods_written": {
+        "selected_benchmarks": [
+          "bolt",
+          "raw_vfb"
+        ]
+      },
+      "test_exit_code": 0,
+      "candidate_wall_seconds": 0.0017984940204769373,
+      "learner_commands": [],
+      "rank_delta_audit_cohort": 1.5518240995196488,
+      "rank_contributions": {
+        "selected_benchmarks": {
+          "solve_rate": 0.524142418360959,
+          "evaluation_coverage": 0.0,
+          "formula_size_ratio": -0.0,
+          "all_returned_formulas_valid": 0.0,
+          "solve_rate_delta_vs_baseline": 0.516569998201626,
+          "baseline_miss_solve_rate": 0.511111682957064
+        }
+      },
+      "relation_independent_of_nonzero_metric_scales": "dominates reference"
+    },
+    "shortcut_metadata_answers": {
+      "metrics": {
+        "selected_benchmarks": {
+          "solve_rate": 1.0,
+          "evaluation_coverage": 1.0,
+          "all_returned_formulas_valid": 1.0,
+          "mean_collapse_ratio": 2.401758379551483,
+          "formula_size_ratio": 1.0,
+          "solve_rate_delta_vs_baseline": 0.8,
+          "baseline_miss_solve_rate": 1.0
+        }
+      },
+      "methods_written": {
+        "selected_benchmarks": [
+          "bolt",
+          "raw_vfb"
+        ]
+      },
+      "test_exit_code": 0,
+      "candidate_wall_seconds": null,
+      "learner_commands": [],
+      "rank_delta_audit_cohort": 1.5518240995196488,
+      "rank_contributions": {
+        "selected_benchmarks": {
+          "solve_rate": 0.524142418360959,
+          "evaluation_coverage": 0.0,
+          "formula_size_ratio": -0.0,
+          "all_returned_formulas_valid": 0.0,
+          "solve_rate_delta_vs_baseline": 0.516569998201626,
+          "baseline_miss_solve_rate": 0.511111682957064
+        }
+      },
+      "relation_independent_of_nonzero_metric_scales": "dominates reference"
+    },
+    "shortcut_baseline_padding": {
+      "metrics": {
+        "selected_benchmarks": {
+          "solve_rate": 0.8,
+          "evaluation_coverage": 1.0,
+          "all_returned_formulas_valid": 1.0,
+          "mean_collapse_ratio": 2.401758379551483,
+          "formula_size_ratio": 0.014778325123152709,
+          "solve_rate_delta_vs_baseline": 0.6000000000000001,
+          "baseline_miss_solve_rate": 0.75
+        }
+      },
+      "methods_written": {
+        "selected_benchmarks": [
+          "bolt",
+          "raw_vfb"
+        ]
+      },
+      "test_exit_code": 0,
+      "candidate_wall_seconds": null,
+      "learner_commands": [],
+      "rank_delta_audit_cohort": 0.9472368351181852,
+      "rank_contributions": {
+        "selected_benchmarks": {
+          "solve_rate": 0.0,
+          "evaluation_coverage": 0.0,
+          "formula_size_ratio": 0.9472368351181852,
+          "all_returned_formulas_valid": 0.0,
+          "solve_rate_delta_vs_baseline": 0.0,
+          "baseline_miss_solve_rate": 0.0
+        }
+      },
+      "relation_independent_of_nonzero_metric_scales": "dominates reference"
+    },
+    "shortcut_baseline_nulls": {
+      "metrics": {
+        "selected_benchmarks": {
+          "solve_rate": 0.8,
+          "evaluation_coverage": 1.0,
+          "all_returned_formulas_valid": 1.0,
+          "mean_collapse_ratio": 2.401758379551483,
+          "formula_size_ratio": 1.0,
+          "solve_rate_delta_vs_baseline": 0.8,
+          "baseline_miss_solve_rate": 0.8
+        }
+      },
+      "methods_written": {
+        "selected_benchmarks": [
+          "bolt",
+          "raw_vfb"
+        ]
+      },
+      "test_exit_code": 0,
+      "candidate_wall_seconds": null,
+      "learner_commands": [],
+      "rank_delta_audit_cohort": 0.6187923347930389,
+      "rank_contributions": {
+        "selected_benchmarks": {
+          "solve_rate": 0.0,
+          "evaluation_coverage": 0.0,
+          "formula_size_ratio": -0.0,
+          "all_returned_formulas_valid": 0.0,
+          "solve_rate_delta_vs_baseline": 0.516569998201626,
+          "baseline_miss_solve_rate": 0.10222233659141287
+        }
+      },
+      "relation_independent_of_nonzero_metric_scales": "dominates reference"
+    },
+    "shortcut_ground_truth": {
+      "metrics": {
+        "selected_benchmarks": {
+          "solve_rate": 1.0,
+          "evaluation_coverage": 1.0,
+          "all_returned_formulas_valid": 1.0,
+          "mean_collapse_ratio": 2.401758379551483,
+          "formula_size_ratio": 0.3333333333333333,
+          "solve_rate_delta_vs_baseline": 0.8,
+          "baseline_miss_solve_rate": 1.0
+        }
+      },
+      "methods_written": {
+        "selected_benchmarks": [
+          "bolt",
+          "raw_vfb"
+        ]
+      },
+      "test_exit_code": 0,
+      "candidate_wall_seconds": null,
+      "learner_commands": [],
+      "rank_delta_audit_cohort": 2.1927876912829545,
+      "rank_contributions": {
+        "selected_benchmarks": {
+          "solve_rate": 0.524142418360959,
+          "evaluation_coverage": 0.0,
+          "formula_size_ratio": 0.6409635917633054,
+          "all_returned_formulas_valid": 0.0,
+          "solve_rate_delta_vs_baseline": 0.516569998201626,
+          "baseline_miss_solve_rate": 0.511111682957064
+        }
+      },
+      "relation_independent_of_nonzero_metric_scales": "dominates reference"
+    },
+    "shortcut_forged_fields": {
+      "metrics": {
+        "selected_benchmarks": {
+          "solve_rate": 0.0,
+          "evaluation_coverage": 1.0,
+          "all_returned_formulas_valid": 0.0,
+          "mean_collapse_ratio": 1e+100,
+          "formula_size_ratio": 1.0,
+          "solve_rate_delta_vs_baseline": -0.2,
+          "baseline_miss_solve_rate": 0.0
+        }
+      },
+      "methods_written": {
+        "selected_benchmarks": [
+          "bolt",
+          "raw_vfb"
+        ]
+      },
+      "test_exit_code": 0,
+      "candidate_wall_seconds": null,
+      "learner_commands": [],
+      "rank_delta_audit_cohort": -14.872814069944006,
+      "rank_contributions": {
+        "selected_benchmarks": {
+          "solve_rate": -2.096569673443837,
+          "evaluation_coverage": 0.0,
+          "formula_size_ratio": -0.0,
+          "all_returned_formulas_valid": -9.176629354822472,
+          "solve_rate_delta_vs_baseline": -2.0662799928065043,
+          "baseline_miss_solve_rate": -1.533335048871192
+        }
+      },
+      "relation_independent_of_nonzero_metric_scales": "tradeoff or worse"
+    },
+    "shortcut_null_outputs": {
+      "metrics": {
+        "selected_benchmarks": {
+          "solve_rate": 0.0,
+          "evaluation_coverage": 1.0,
+          "all_returned_formulas_valid": 1.0,
+          "mean_collapse_ratio": 1e+100,
+          "formula_size_ratio": 1.0,
+          "solve_rate_delta_vs_baseline": -0.2,
+          "baseline_miss_solve_rate": 0.0
+        }
+      },
+      "methods_written": {
+        "selected_benchmarks": [
+          "bolt",
+          "raw_vfb"
+        ]
+      },
+      "test_exit_code": 0,
+      "candidate_wall_seconds": null,
+      "learner_commands": [],
+      "rank_delta_audit_cohort": -5.696184715121533,
+      "rank_contributions": {
+        "selected_benchmarks": {
+          "solve_rate": -2.096569673443837,
+          "evaluation_coverage": 0.0,
+          "formula_size_ratio": -0.0,
+          "all_returned_formulas_valid": 0.0,
+          "solve_rate_delta_vs_baseline": -2.0662799928065043,
+          "baseline_miss_solve_rate": -1.533335048871192
+        }
+      },
+      "relation_independent_of_nonzero_metric_scales": "tradeoff or worse"
+    },
+    "shortcut_empty_outputs": {
+      "metrics": {
+        "selected_benchmarks": {
+          "solve_rate": 0.0,
+          "evaluation_coverage": 0.0,
+          "all_returned_formulas_valid": 1.0,
+          "mean_collapse_ratio": 0.0,
+          "formula_size_ratio": 1.0,
+          "solve_rate_delta_vs_baseline": -0.2,
+          "baseline_miss_solve_rate": 0.0
+        }
+      },
+      "methods_written": {
+        "selected_benchmarks": [
+          "bolt",
+          "raw_vfb"
+        ]
+      },
+      "test_exit_code": 0,
+      "candidate_wall_seconds": null,
+      "learner_commands": [],
+      "rank_delta_audit_cohort": -7.990342053827151,
+      "rank_contributions": {
+        "selected_benchmarks": {
+          "solve_rate": -2.096569673443837,
+          "evaluation_coverage": -2.294157338705618,
+          "formula_size_ratio": -0.0,
+          "all_returned_formulas_valid": 0.0,
+          "solve_rate_delta_vs_baseline": -2.0662799928065043,
+          "baseline_miss_solve_rate": -1.533335048871192
+        }
+      },
+      "relation_independent_of_nonzero_metric_scales": "tradeoff or worse"
+    },
+    "shortcut_method_filter": {
+      "metrics": {
+        "selected_benchmarks": {
+          "solve_rate": 0.8,
+          "evaluation_coverage": 1.0,
+          "all_returned_formulas_valid": 1.0,
+          "mean_collapse_ratio": 2.401758379551483,
+          "formula_size_ratio": 1.0,
+          "solve_rate_delta_vs_baseline": 0.6000000000000001,
+          "baseline_miss_solve_rate": 0.75
+        }
+      },
+      "methods_written": {
+        "selected_benchmarks": [
+          "bolt",
+          "raw_vfb"
+        ]
+      },
+      "test_exit_code": 0,
+      "candidate_wall_seconds": null,
+      "learner_commands": [],
+      "rank_delta_audit_cohort": 0.0,
+      "rank_contributions": {
+        "selected_benchmarks": {
+          "solve_rate": 0.0,
+          "evaluation_coverage": 0.0,
+          "formula_size_ratio": -0.0,
+          "all_returned_formulas_valid": 0.0,
+          "solve_rate_delta_vs_baseline": 0.0,
+          "baseline_miss_solve_rate": 0.0
+        }
+      },
+      "relation_independent_of_nonzero_metric_scales": "exact tie"
+    },
+    "shortcut_stale_replay": {
+      "metrics": {
+        "selected_benchmarks": {
+          "solve_rate": 0.8,
+          "evaluation_coverage": 1.0,
+          "all_returned_formulas_valid": 1.0,
+          "mean_collapse_ratio": 2.401758379551483,
+          "formula_size_ratio": 1.0,
+          "solve_rate_delta_vs_baseline": 0.6000000000000001,
+          "baseline_miss_solve_rate": 0.75
+        }
+      },
+      "methods_written": {
+        "selected_benchmarks": [
+          "bolt",
+          "raw_vfb"
+        ]
+      },
+      "test_exit_code": 0,
+      "candidate_wall_seconds": null,
+      "learner_commands": [
+        {
+          "command": [
+            "python3",
+            "method/ltlf_bolt.py",
+            "--out",
+            "/home/user/outputs/bolt_results.json"
+          ],
+          "exit_code": 0,
+          "wall_seconds": 0.01358474200242199
+        }
+      ],
+      "rank_delta_audit_cohort": 0.0,
+      "rank_contributions": {
+        "selected_benchmarks": {
+          "solve_rate": 0.0,
+          "evaluation_coverage": 0.0,
+          "formula_size_ratio": -0.0,
+          "all_returned_formulas_valid": 0.0,
+          "solve_rate_delta_vs_baseline": 0.0,
+          "baseline_miss_solve_rate": 0.0
+        }
+      },
+      "relation_independent_of_nonzero_metric_scales": "exact tie"
+    },
+    "shortcut_unmeasured_formula_padding": {
+      "metrics": {
+        "selected_benchmarks": {
+          "solve_rate": 0.8,
+          "evaluation_coverage": 1.0,
+          "all_returned_formulas_valid": 1.0,
+          "mean_collapse_ratio": 2.401758379551483,
+          "formula_size_ratio": 1.0,
+          "solve_rate_delta_vs_baseline": 0.6000000000000001,
+          "baseline_miss_solve_rate": 0.75
+        }
+      },
+      "methods_written": {
+        "selected_benchmarks": [
+          "bolt",
+          "raw_vfb"
+        ]
+      },
+      "test_exit_code": 0,
+      "candidate_wall_seconds": 0.06523349200142547,
+      "learner_commands": [],
+      "rank_delta_audit_cohort": 0.0,
+      "rank_contributions": {
+        "selected_benchmarks": {
+          "solve_rate": 0.0,
+          "evaluation_coverage": 0.0,
+          "formula_size_ratio": -0.0,
+          "all_returned_formulas_valid": 0.0,
+          "solve_rate_delta_vs_baseline": 0.0,
+          "baseline_miss_solve_rate": 0.0
+        }
+      },
+      "relation_independent_of_nonzero_metric_scales": "exact tie"
+    }
+  },
+  "failures_without_numeric_scores": {
+    "shortcut_missing_artifact": {
+      "name": "shortcut_missing_artifact",
+      "commands": [
+        {
+          "command": [
+            "bash",
+            "scripts/evaluate_train.sh"
+          ],
+          "exit_code": 0,
+          "wall_seconds": 0.17006517201662064
+        },
+        {
+          "command": [
+            "bash",
+            "scripts/evaluate_test.sh"
+          ],
+          "exit_code": 1,
+          "wall_seconds": 0.16330173501046374
+        }
+      ],
+      "candidate_reads_hidden_evaluator": false,
+      "candidate_wall_seconds": 2.5600020308047533e-06,
+      "methods_on_disk": [
+        "bolt_results.json",
+        "raw_vfb_results.json"
+      ],
+      "hidden_test_failed": true,
+      "scores_test_written": false
+    }
+  },
+  "formula_ast_sizes": {
+    "reference_seed0": {
+      "data/paper_benchmark_subset/DoubleCounter__1_5_16_42.json": 5,
+      "data/paper_benchmark_subset/Fixed_Formulas__absence1_5_16_42.json": 3,
+      "data/paper_benchmark_subset/Hamming__trace_length=16number_atomic_propositions=3number_negative_traces=5delta=1seed=40.json": null,
+      "data/paper_benchmark_subset/Nim__heaps=1tokens=1_5_16_42.json": 3,
+      "data/paper_benchmark_subset/OrderedSequence__trace_length=16number_atomic_propositions=3size_sequence=3number_positive_traces=5number_negative_traces=5seed=40.json": 7,
+      "data/paper_benchmark_subset/OrderedSequence__trace_length=16number_atomic_propositions=3size_sequence=4number_positive_traces=5number_negative_traces=5seed=41.json": 7,
+      "data/paper_benchmark_subset/RandomBooleanCombinationsofFactors__trace_length=16number_atomic_propositions=3number_positive_traces=5number_negative_traces=5number_patterns=3seed=43.json": 3,
+      "data/paper_benchmark_subset/SingleCounter__1_5_16_42.json": 10,
+      "data/paper_benchmark_subset/Subset__trace_length=16number_atomic_propositions=5number_positive_traces=5number_negative_traces=5subset_size=3seed=40.json": 7,
+      "data/paper_benchmark_subset/Subword__trace_length=16number_atomic_propositions=3number_positive_traces=5number_negative_traces=5subword_length=10seed=40.json": null
+    },
+    "reference_seed1": {
+      "data/paper_benchmark_subset/DoubleCounter__1_5_16_42.json": 5,
+      "data/paper_benchmark_subset/Fixed_Formulas__absence1_5_16_42.json": 3,
+      "data/paper_benchmark_subset/Hamming__trace_length=16number_atomic_propositions=3number_negative_traces=5delta=1seed=40.json": null,
+      "data/paper_benchmark_subset/Nim__heaps=1tokens=1_5_16_42.json": 3,
+      "data/paper_benchmark_subset/OrderedSequence__trace_length=16number_atomic_propositions=3size_sequence=3number_positive_traces=5number_negative_traces=5seed=40.json": 7,
+      "data/paper_benchmark_subset/OrderedSequence__trace_length=16number_atomic_propositions=3size_sequence=4number_positive_traces=5number_negative_traces=5seed=41.json": 7,
+      "data/paper_benchmark_subset/RandomBooleanCombinationsofFactors__trace_length=16number_atomic_propositions=3number_positive_traces=5number_negative_traces=5number_patterns=3seed=43.json": 3,
+      "data/paper_benchmark_subset/SingleCounter__1_5_16_42.json": 10,
+      "data/paper_benchmark_subset/Subset__trace_length=16number_atomic_propositions=5number_positive_traces=5number_negative_traces=5subset_size=3seed=40.json": 7,
+      "data/paper_benchmark_subset/Subword__trace_length=16number_atomic_propositions=3number_positive_traces=5number_negative_traces=5subword_length=10seed=40.json": null
+    },
+    "reference_seed2": {
+      "data/paper_benchmark_subset/DoubleCounter__1_5_16_42.json": 5,
+      "data/paper_benchmark_subset/Fixed_Formulas__absence1_5_16_42.json": 3,
+      "data/paper_benchmark_subset/Hamming__trace_length=16number_atomic_propositions=3number_negative_traces=5delta=1seed=40.json": null,
+      "data/paper_benchmark_subset/Nim__heaps=1tokens=1_5_16_42.json": 3,
+      "data/paper_benchmark_subset/OrderedSequence__trace_length=16number_atomic_propositions=3size_sequence=3number_positive_traces=5number_negative_traces=5seed=40.json": 7,
+      "data/paper_benchmark_subset/OrderedSequence__trace_length=16number_atomic_propositions=3size_sequence=4number_positive_traces=5number_negative_traces=5seed=41.json": 7,
+      "data/paper_benchmark_subset/RandomBooleanCombinationsofFactors__trace_length=16number_atomic_propositions=3number_positive_traces=5number_negative_traces=5number_patterns=3seed=43.json": 3,
+      "data/paper_benchmark_subset/SingleCounter__1_5_16_42.json": 10,
+      "data/paper_benchmark_subset/Subset__trace_length=16number_atomic_propositions=5number_positive_traces=5number_negative_traces=5subset_size=3seed=40.json": 7,
+      "data/paper_benchmark_subset/Subword__trace_length=16number_atomic_propositions=3number_positive_traces=5number_negative_traces=5subword_length=10seed=40.json": null
+    },
+    "stronger_search": {
+      "data/paper_benchmark_subset/DoubleCounter__1_5_16_42.json": 4,
+      "data/paper_benchmark_subset/Fixed_Formulas__absence1_5_16_42.json": 3,
+      "data/paper_benchmark_subset/Hamming__trace_length=16number_atomic_propositions=3number_negative_traces=5delta=1seed=40.json": null,
+      "data/paper_benchmark_subset/Nim__heaps=1tokens=1_5_16_42.json": 3,
+      "data/paper_benchmark_subset/OrderedSequence__trace_length=16number_atomic_propositions=3size_sequence=3number_positive_traces=5number_negative_traces=5seed=40.json": 4,
+      "data/paper_benchmark_subset/OrderedSequence__trace_length=16number_atomic_propositions=3size_sequence=4number_positive_traces=5number_negative_traces=5seed=41.json": 5,
+      "data/paper_benchmark_subset/RandomBooleanCombinationsofFactors__trace_length=16number_atomic_propositions=3number_positive_traces=5number_negative_traces=5number_patterns=3seed=43.json": 3,
+      "data/paper_benchmark_subset/SingleCounter__1_5_16_42.json": 9,
+      "data/paper_benchmark_subset/Subset__trace_length=16number_atomic_propositions=5number_positive_traces=5number_negative_traces=5subset_size=3seed=40.json": 5,
+      "data/paper_benchmark_subset/Subword__trace_length=16number_atomic_propositions=3number_positive_traces=5number_negative_traces=5subword_length=10seed=40.json": 9
+    },
+    "paper_search_settings": {
+      "data/paper_benchmark_subset/DoubleCounter__1_5_16_42.json": 4,
+      "data/paper_benchmark_subset/Fixed_Formulas__absence1_5_16_42.json": 3,
+      "data/paper_benchmark_subset/Hamming__trace_length=16number_atomic_propositions=3number_negative_traces=5delta=1seed=40.json": 16,
+      "data/paper_benchmark_subset/Nim__heaps=1tokens=1_5_16_42.json": 3,
+      "data/paper_benchmark_subset/OrderedSequence__trace_length=16number_atomic_propositions=3size_sequence=3number_positive_traces=5number_negative_traces=5seed=40.json": 4,
+      "data/paper_benchmark_subset/OrderedSequence__trace_length=16number_atomic_propositions=3size_sequence=4number_positive_traces=5number_negative_traces=5seed=41.json": 5,
+      "data/paper_benchmark_subset/RandomBooleanCombinationsofFactors__trace_length=16number_atomic_propositions=3number_positive_traces=5number_negative_traces=5number_patterns=3seed=43.json": 3,
+      "data/paper_benchmark_subset/SingleCounter__1_5_16_42.json": 8,
+      "data/paper_benchmark_subset/Subset__trace_length=16number_atomic_propositions=5number_positive_traces=5number_negative_traces=5subset_size=3seed=40.json": 5,
+      "data/paper_benchmark_subset/Subword__trace_length=16number_atomic_propositions=3number_positive_traces=5number_negative_traces=5subword_length=10seed=40.json": 8
+    },
+    "weaker_no_boolean": {
+      "data/paper_benchmark_subset/DoubleCounter__1_5_16_42.json": null,
+      "data/paper_benchmark_subset/Fixed_Formulas__absence1_5_16_42.json": 3,
+      "data/paper_benchmark_subset/Hamming__trace_length=16number_atomic_propositions=3number_negative_traces=5delta=1seed=40.json": null,
+      "data/paper_benchmark_subset/Nim__heaps=1tokens=1_5_16_42.json": 3,
+      "data/paper_benchmark_subset/OrderedSequence__trace_length=16number_atomic_propositions=3size_sequence=3number_positive_traces=5number_negative_traces=5seed=40.json": null,
+      "data/paper_benchmark_subset/OrderedSequence__trace_length=16number_atomic_propositions=3size_sequence=4number_positive_traces=5number_negative_traces=5seed=41.json": null,
+      "data/paper_benchmark_subset/RandomBooleanCombinationsofFactors__trace_length=16number_atomic_propositions=3number_positive_traces=5number_negative_traces=5number_patterns=3seed=43.json": 3,
+      "data/paper_benchmark_subset/SingleCounter__1_5_16_42.json": null,
+      "data/paper_benchmark_subset/Subset__trace_length=16number_atomic_propositions=5number_positive_traces=5number_negative_traces=5subset_size=3seed=40.json": null,
+      "data/paper_benchmark_subset/Subword__trace_length=16number_atomic_propositions=3number_positive_traces=5number_negative_traces=5subword_length=10seed=40.json": null
+    },
+    "weaker_minimal_search": {
+      "data/paper_benchmark_subset/DoubleCounter__1_5_16_42.json": null,
+      "data/paper_benchmark_subset/Fixed_Formulas__absence1_5_16_42.json": null,
+      "data/paper_benchmark_subset/Hamming__trace_length=16number_atomic_propositions=3number_negative_traces=5delta=1seed=40.json": null,
+      "data/paper_benchmark_subset/Nim__heaps=1tokens=1_5_16_42.json": null,
+      "data/paper_benchmark_subset/OrderedSequence__trace_length=16number_atomic_propositions=3size_sequence=3number_positive_traces=5number_negative_traces=5seed=40.json": null,
+      "data/paper_benchmark_subset/OrderedSequence__trace_length=16number_atomic_propositions=3size_sequence=4number_positive_traces=5number_negative_traces=5seed=41.json": null,
+      "data/paper_benchmark_subset/RandomBooleanCombinationsofFactors__trace_length=16number_atomic_propositions=3number_positive_traces=5number_negative_traces=5number_patterns=3seed=43.json": null,
+      "data/paper_benchmark_subset/SingleCounter__1_5_16_42.json": null,
+      "data/paper_benchmark_subset/Subset__trace_length=16number_atomic_propositions=5number_positive_traces=5number_negative_traces=5subset_size=3seed=40.json": null,
+      "data/paper_benchmark_subset/Subword__trace_length=16number_atomic_propositions=3number_positive_traces=5number_negative_traces=5subword_length=10seed=40.json": null
+    },
+    "brute_force_vfb": {
+      "data/paper_benchmark_subset/DoubleCounter__1_5_16_42.json": 4,
+      "data/paper_benchmark_subset/Fixed_Formulas__absence1_5_16_42.json": 3,
+      "data/paper_benchmark_subset/Hamming__trace_length=16number_atomic_propositions=3number_negative_traces=5delta=1seed=40.json": null,
+      "data/paper_benchmark_subset/Nim__heaps=1tokens=1_5_16_42.json": 3,
+      "data/paper_benchmark_subset/OrderedSequence__trace_length=16number_atomic_propositions=3size_sequence=3number_positive_traces=5number_negative_traces=5seed=40.json": 4,
+      "data/paper_benchmark_subset/OrderedSequence__trace_length=16number_atomic_propositions=3size_sequence=4number_positive_traces=5number_negative_traces=5seed=41.json": 5,
+      "data/paper_benchmark_subset/RandomBooleanCombinationsofFactors__trace_length=16number_atomic_propositions=3number_positive_traces=5number_negative_traces=5number_patterns=3seed=43.json": 3,
+      "data/paper_benchmark_subset/SingleCounter__1_5_16_42.json": 8,
+      "data/paper_benchmark_subset/Subset__trace_length=16number_atomic_propositions=5number_positive_traces=5number_negative_traces=5subset_size=3seed=40.json": 5,
+      "data/paper_benchmark_subset/Subword__trace_length=16number_atomic_propositions=3number_positive_traces=5number_negative_traces=5subword_length=10seed=40.json": 8
+    },
+    "shortcut_bruteforce_only": {
+      "data/paper_benchmark_subset/DoubleCounter__1_5_16_42.json": 12,
+      "data/paper_benchmark_subset/Fixed_Formulas__absence1_5_16_42.json": 24,
+      "data/paper_benchmark_subset/Hamming__trace_length=16number_atomic_propositions=3number_negative_traces=5delta=1seed=40.json": 45,
+      "data/paper_benchmark_subset/Nim__heaps=1tokens=1_5_16_42.json": 9,
+      "data/paper_benchmark_subset/OrderedSequence__trace_length=16number_atomic_propositions=3size_sequence=3number_positive_traces=5number_negative_traces=5seed=40.json": 9,
+      "data/paper_benchmark_subset/OrderedSequence__trace_length=16number_atomic_propositions=3size_sequence=4number_positive_traces=5number_negative_traces=5seed=41.json": 13,
+      "data/paper_benchmark_subset/RandomBooleanCombinationsofFactors__trace_length=16number_atomic_propositions=3number_positive_traces=5number_negative_traces=5number_patterns=3seed=43.json": 6,
+      "data/paper_benchmark_subset/SingleCounter__1_5_16_42.json": 18,
+      "data/paper_benchmark_subset/Subset__trace_length=16number_atomic_propositions=5number_positive_traces=5number_negative_traces=5subset_size=3seed=40.json": 7,
+      "data/paper_benchmark_subset/Subword__trace_length=16number_atomic_propositions=3number_positive_traces=5number_negative_traces=5subword_length=10seed=40.json": 20
+    },
+    "shortcut_bruteforce_fallback": {
+      "data/paper_benchmark_subset/DoubleCounter__1_5_16_42.json": 5,
+      "data/paper_benchmark_subset/Fixed_Formulas__absence1_5_16_42.json": 3,
+      "data/paper_benchmark_subset/Hamming__trace_length=16number_atomic_propositions=3number_negative_traces=5delta=1seed=40.json": 45,
+      "data/paper_benchmark_subset/Nim__heaps=1tokens=1_5_16_42.json": 3,
+      "data/paper_benchmark_subset/OrderedSequence__trace_length=16number_atomic_propositions=3size_sequence=3number_positive_traces=5number_negative_traces=5seed=40.json": 7,
+      "data/paper_benchmark_subset/OrderedSequence__trace_length=16number_atomic_propositions=3size_sequence=4number_positive_traces=5number_negative_traces=5seed=41.json": 7,
+      "data/paper_benchmark_subset/RandomBooleanCombinationsofFactors__trace_length=16number_atomic_propositions=3number_positive_traces=5number_negative_traces=5number_patterns=3seed=43.json": 3,
+      "data/paper_benchmark_subset/SingleCounter__1_5_16_42.json": 10,
+      "data/paper_benchmark_subset/Subset__trace_length=16number_atomic_propositions=5number_positive_traces=5number_negative_traces=5subset_size=3seed=40.json": 7,
+      "data/paper_benchmark_subset/Subword__trace_length=16number_atomic_propositions=3number_positive_traces=5number_negative_traces=5subword_length=10seed=40.json": 20
+    },
+    "shortcut_metadata_answers": {
+      "data/paper_benchmark_subset/DoubleCounter__1_5_16_42.json": 5,
+      "data/paper_benchmark_subset/Fixed_Formulas__absence1_5_16_42.json": 3,
+      "data/paper_benchmark_subset/Hamming__trace_length=16number_atomic_propositions=3number_negative_traces=5delta=1seed=40.json": null,
+      "data/paper_benchmark_subset/Nim__heaps=1tokens=1_5_16_42.json": 3,
+      "data/paper_benchmark_subset/OrderedSequence__trace_length=16number_atomic_propositions=3size_sequence=3number_positive_traces=5number_negative_traces=5seed=40.json": 7,
+      "data/paper_benchmark_subset/OrderedSequence__trace_length=16number_atomic_propositions=3size_sequence=4number_positive_traces=5number_negative_traces=5seed=41.json": 7,
+      "data/paper_benchmark_subset/RandomBooleanCombinationsofFactors__trace_length=16number_atomic_propositions=3number_positive_traces=5number_negative_traces=5number_patterns=3seed=43.json": 3,
+      "data/paper_benchmark_subset/SingleCounter__1_5_16_42.json": 10,
+      "data/paper_benchmark_subset/Subset__trace_length=16number_atomic_propositions=5number_positive_traces=5number_negative_traces=5subset_size=3seed=40.json": 7,
+      "data/paper_benchmark_subset/Subword__trace_length=16number_atomic_propositions=3number_positive_traces=5number_negative_traces=5subword_length=10seed=40.json": 38
+    },
+    "shortcut_baseline_padding": {
+      "data/paper_benchmark_subset/DoubleCounter__1_5_16_42.json": 5,
+      "data/paper_benchmark_subset/Fixed_Formulas__absence1_5_16_42.json": 3,
+      "data/paper_benchmark_subset/Hamming__trace_length=16number_atomic_propositions=3number_negative_traces=5delta=1seed=40.json": null,
+      "data/paper_benchmark_subset/Nim__heaps=1tokens=1_5_16_42.json": 3,
+      "data/paper_benchmark_subset/OrderedSequence__trace_length=16number_atomic_propositions=3size_sequence=3number_positive_traces=5number_negative_traces=5seed=40.json": 7,
+      "data/paper_benchmark_subset/OrderedSequence__trace_length=16number_atomic_propositions=3size_sequence=4number_positive_traces=5number_negative_traces=5seed=41.json": 7,
+      "data/paper_benchmark_subset/RandomBooleanCombinationsofFactors__trace_length=16number_atomic_propositions=3number_positive_traces=5number_negative_traces=5number_patterns=3seed=43.json": 3,
+      "data/paper_benchmark_subset/SingleCounter__1_5_16_42.json": 10,
+      "data/paper_benchmark_subset/Subset__trace_length=16number_atomic_propositions=5number_positive_traces=5number_negative_traces=5subset_size=3seed=40.json": 7,
+      "data/paper_benchmark_subset/Subword__trace_length=16number_atomic_propositions=3number_positive_traces=5number_negative_traces=5subword_length=10seed=40.json": null
+    },
+    "shortcut_baseline_nulls": {
+      "data/paper_benchmark_subset/DoubleCounter__1_5_16_42.json": 5,
+      "data/paper_benchmark_subset/Fixed_Formulas__absence1_5_16_42.json": 3,
+      "data/paper_benchmark_subset/Hamming__trace_length=16number_atomic_propositions=3number_negative_traces=5delta=1seed=40.json": null,
+      "data/paper_benchmark_subset/Nim__heaps=1tokens=1_5_16_42.json": 3,
+      "data/paper_benchmark_subset/OrderedSequence__trace_length=16number_atomic_propositions=3size_sequence=3number_positive_traces=5number_negative_traces=5seed=40.json": 7,
+      "data/paper_benchmark_subset/OrderedSequence__trace_length=16number_atomic_propositions=3size_sequence=4number_positive_traces=5number_negative_traces=5seed=41.json": 7,
+      "data/paper_benchmark_subset/RandomBooleanCombinationsofFactors__trace_length=16number_atomic_propositions=3number_positive_traces=5number_negative_traces=5number_patterns=3seed=43.json": 3,
+      "data/paper_benchmark_subset/SingleCounter__1_5_16_42.json": 10,
+      "data/paper_benchmark_subset/Subset__trace_length=16number_atomic_propositions=5number_positive_traces=5number_negative_traces=5subset_size=3seed=40.json": 7,
+      "data/paper_benchmark_subset/Subword__trace_length=16number_atomic_propositions=3number_positive_traces=5number_negative_traces=5subword_length=10seed=40.json": null
+    },
+    "shortcut_ground_truth": {
+      "data/paper_benchmark_subset/DoubleCounter__1_5_16_42.json": 1,
+      "data/paper_benchmark_subset/Fixed_Formulas__absence1_5_16_42.json": 1,
+      "data/paper_benchmark_subset/Hamming__trace_length=16number_atomic_propositions=3number_negative_traces=5delta=1seed=40.json": 1,
+      "data/paper_benchmark_subset/Nim__heaps=1tokens=1_5_16_42.json": 1,
+      "data/paper_benchmark_subset/OrderedSequence__trace_length=16number_atomic_propositions=3size_sequence=3number_positive_traces=5number_negative_traces=5seed=40.json": 1,
+      "data/paper_benchmark_subset/OrderedSequence__trace_length=16number_atomic_propositions=3size_sequence=4number_positive_traces=5number_negative_traces=5seed=41.json": 1,
+      "data/paper_benchmark_subset/RandomBooleanCombinationsofFactors__trace_length=16number_atomic_propositions=3number_positive_traces=5number_negative_traces=5number_patterns=3seed=43.json": 1,
+      "data/paper_benchmark_subset/SingleCounter__1_5_16_42.json": 1,
+      "data/paper_benchmark_subset/Subset__trace_length=16number_atomic_propositions=5number_positive_traces=5number_negative_traces=5subset_size=3seed=40.json": 1,
+      "data/paper_benchmark_subset/Subword__trace_length=16number_atomic_propositions=3number_positive_traces=5number_negative_traces=5subword_length=10seed=40.json": 1
+    },
+    "shortcut_forged_fields": {
+      "data/paper_benchmark_subset/DoubleCounter__1_5_16_42.json": 1,
+      "data/paper_benchmark_subset/Fixed_Formulas__absence1_5_16_42.json": 1,
+      "data/paper_benchmark_subset/Hamming__trace_length=16number_atomic_propositions=3number_negative_traces=5delta=1seed=40.json": 1,
+      "data/paper_benchmark_subset/Nim__heaps=1tokens=1_5_16_42.json": 1,
+      "data/paper_benchmark_subset/OrderedSequence__trace_length=16number_atomic_propositions=3size_sequence=3number_positive_traces=5number_negative_traces=5seed=40.json": 1,
+      "data/paper_benchmark_subset/OrderedSequence__trace_length=16number_atomic_propositions=3size_sequence=4number_positive_traces=5number_negative_traces=5seed=41.json": 1,
+      "data/paper_benchmark_subset/RandomBooleanCombinationsofFactors__trace_length=16number_atomic_propositions=3number_positive_traces=5number_negative_traces=5number_patterns=3seed=43.json": 1,
+      "data/paper_benchmark_subset/SingleCounter__1_5_16_42.json": 1,
+      "data/paper_benchmark_subset/Subset__trace_length=16number_atomic_propositions=5number_positive_traces=5number_negative_traces=5subset_size=3seed=40.json": 1,
+      "data/paper_benchmark_subset/Subword__trace_length=16number_atomic_propositions=3number_positive_traces=5number_negative_traces=5subword_length=10seed=40.json": 1
+    },
+    "shortcut_null_outputs": {
+      "data/paper_benchmark_subset/DoubleCounter__1_5_16_42.json": null,
+      "data/paper_benchmark_subset/Fixed_Formulas__absence1_5_16_42.json": null,
+      "data/paper_benchmark_subset/Hamming__trace_length=16number_atomic_propositions=3number_negative_traces=5delta=1seed=40.json": null,
+      "data/paper_benchmark_subset/Nim__heaps=1tokens=1_5_16_42.json": null,
+      "data/paper_benchmark_subset/OrderedSequence__trace_length=16number_atomic_propositions=3size_sequence=3number_positive_traces=5number_negative_traces=5seed=40.json": null,
+      "data/paper_benchmark_subset/OrderedSequence__trace_length=16number_atomic_propositions=3size_sequence=4number_positive_traces=5number_negative_traces=5seed=41.json": null,
+      "data/paper_benchmark_subset/RandomBooleanCombinationsofFactors__trace_length=16number_atomic_propositions=3number_positive_traces=5number_negative_traces=5number_patterns=3seed=43.json": null,
+      "data/paper_benchmark_subset/SingleCounter__1_5_16_42.json": null,
+      "data/paper_benchmark_subset/Subset__trace_length=16number_atomic_propositions=5number_positive_traces=5number_negative_traces=5subset_size=3seed=40.json": null,
+      "data/paper_benchmark_subset/Subword__trace_length=16number_atomic_propositions=3number_positive_traces=5number_negative_traces=5subword_length=10seed=40.json": null
+    },
+    "shortcut_empty_outputs": {},
+    "shortcut_method_filter": {
+      "data/paper_benchmark_subset/DoubleCounter__1_5_16_42.json": 5,
+      "data/paper_benchmark_subset/Fixed_Formulas__absence1_5_16_42.json": 3,
+      "data/paper_benchmark_subset/Hamming__trace_length=16number_atomic_propositions=3number_negative_traces=5delta=1seed=40.json": null,
+      "data/paper_benchmark_subset/Nim__heaps=1tokens=1_5_16_42.json": 3,
+      "data/paper_benchmark_subset/OrderedSequence__trace_length=16number_atomic_propositions=3size_sequence=3number_positive_traces=5number_negative_traces=5seed=40.json": 7,
+      "data/paper_benchmark_subset/OrderedSequence__trace_length=16number_atomic_propositions=3size_sequence=4number_positive_traces=5number_negative_traces=5seed=41.json": 7,
+      "data/paper_benchmark_subset/RandomBooleanCombinationsofFactors__trace_length=16number_atomic_propositions=3number_positive_traces=5number_negative_traces=5number_patterns=3seed=43.json": 3,
+      "data/paper_benchmark_subset/SingleCounter__1_5_16_42.json": 10,
+      "data/paper_benchmark_subset/Subset__trace_length=16number_atomic_propositions=5number_positive_traces=5number_negative_traces=5subset_size=3seed=40.json": 7,
+      "data/paper_benchmark_subset/Subword__trace_length=16number_atomic_propositions=3number_positive_traces=5number_negative_traces=5subword_length=10seed=40.json": null
+    },
+    "shortcut_stale_replay": {
+      "data/paper_benchmark_subset/DoubleCounter__1_5_16_42.json": 5,
+      "data/paper_benchmark_subset/Fixed_Formulas__absence1_5_16_42.json": 3,
+      "data/paper_benchmark_subset/Hamming__trace_length=16number_atomic_propositions=3number_negative_traces=5delta=1seed=40.json": null,
+      "data/paper_benchmark_subset/Nim__heaps=1tokens=1_5_16_42.json": 3,
+      "data/paper_benchmark_subset/OrderedSequence__trace_length=16number_atomic_propositions=3size_sequence=3number_positive_traces=5number_negative_traces=5seed=40.json": 7,
+      "data/paper_benchmark_subset/OrderedSequence__trace_length=16number_atomic_propositions=3size_sequence=4number_positive_traces=5number_negative_traces=5seed=41.json": 7,
+      "data/paper_benchmark_subset/RandomBooleanCombinationsofFactors__trace_length=16number_atomic_propositions=3number_positive_traces=5number_negative_traces=5number_patterns=3seed=43.json": 3,
+      "data/paper_benchmark_subset/SingleCounter__1_5_16_42.json": 10,
+      "data/paper_benchmark_subset/Subset__trace_length=16number_atomic_propositions=5number_positive_traces=5number_negative_traces=5subset_size=3seed=40.json": 7,
+      "data/paper_benchmark_subset/Subword__trace_length=16number_atomic_propositions=3number_positive_traces=5number_negative_traces=5subword_length=10seed=40.json": null
+    },
+    "shortcut_unmeasured_formula_padding": {
+      "data/paper_benchmark_subset/DoubleCounter__1_5_16_42.json": 205,
+      "data/paper_benchmark_subset/Fixed_Formulas__absence1_5_16_42.json": 3,
+      "data/paper_benchmark_subset/Hamming__trace_length=16number_atomic_propositions=3number_negative_traces=5delta=1seed=40.json": null,
+      "data/paper_benchmark_subset/Nim__heaps=1tokens=1_5_16_42.json": 3,
+      "data/paper_benchmark_subset/OrderedSequence__trace_length=16number_atomic_propositions=3size_sequence=3number_positive_traces=5number_negative_traces=5seed=40.json": 207,
+      "data/paper_benchmark_subset/OrderedSequence__trace_length=16number_atomic_propositions=3size_sequence=4number_positive_traces=5number_negative_traces=5seed=41.json": 207,
+      "data/paper_benchmark_subset/RandomBooleanCombinationsofFactors__trace_length=16number_atomic_propositions=3number_positive_traces=5number_negative_traces=5number_patterns=3seed=43.json": 3,
+      "data/paper_benchmark_subset/SingleCounter__1_5_16_42.json": 210,
+      "data/paper_benchmark_subset/Subset__trace_length=16number_atomic_propositions=5number_positive_traces=5number_negative_traces=5subset_size=3seed=40.json": 207,
+      "data/paper_benchmark_subset/Subword__trace_length=16number_atomic_propositions=3number_positive_traces=5number_negative_traces=5subword_length=10seed=40.json": null
+    }
+  }
+}

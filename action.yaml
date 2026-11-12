@@ -1,5 +1,3 @@
-action: submit
-gpus: 0
-test: true
+action: done
 milestone: core_claim
-notes: "Short follow-up audit: test unmeasured formula padding and missing-artifact failure scores; measure brute-force candidate runtimes."
+notes: "Audit complete: honest solve-rate controls pass, but eight shortcuts pay; exhaustive VFB solves all hidden tasks. See REDTEAM.md."

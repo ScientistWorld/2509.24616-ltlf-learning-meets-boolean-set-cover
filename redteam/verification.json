@@ -1,0 +1,31 @@
+{
+  "start_commit": "d24cec5",
+  "protected_paths": [
+    "baseline",
+    "briefing",
+    "data",
+    "environment",
+    "eval",
+    "method",
+    "scoring",
+    "scripts"
+  ],
+  "changed_protected_files": [],
+  "test_scores_equal_original_snapshot": true,
+  "reference_metrics_match_original": true,
+  "successful_scenarios": 20,
+  "explicit_failure_scenarios": 1,
+  "paying_shortcut_cases": [
+    "shortcut_bruteforce_fallback",
+    "shortcut_metadata_answers",
+    "shortcut_baseline_padding",
+    "shortcut_baseline_nulls",
+    "shortcut_ground_truth",
+    "shortcut_method_filter",
+    "shortcut_stale_replay",
+    "shortcut_unmeasured_formula_padding"
+  ],
+  "report_links_verified": 30,
+  "preexisting_differences": "README.md and manifest.json are system-managed special files; trajectory deletions and untracked .git-shims predate the audit. Their initial state was preserved.",
+  "protocol_exception": "action.yaml records action: done; mandatory job-protocol file."
+}

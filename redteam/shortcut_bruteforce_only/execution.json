@@ -1,5 +1,5 @@
 {
-  "name": "brute_force_only",
+  "name": "shortcut_bruteforce_only",
   "commands": [
     {
       "command": [
@@ -75,5 +75,6 @@
   "methods_on_disk": [
     "bolt_results.json",
     "raw_vfb_results.json"
-  ]
+  ],
+  "name_at_execution": "brute_force_only"
 }

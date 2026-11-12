@@ -278,7 +278,7 @@ def run(name):
                         row['formula'] = '(' + row['formula'] + ') & (true)'
                     details['padded_instances'].append(row['instance'])
             write(bolt_path, bolt)
-        elif name in ('shortcut_bruteforce_fallback', 'brute_force_only'):
+        elif name in ('shortcut_bruteforce_fallback', 'shortcut_bruteforce_only'):
             details['brute_force'] = []
             for row in bolt['results']:
                 if name == 'shortcut_bruteforce_fallback' and row['formula']:

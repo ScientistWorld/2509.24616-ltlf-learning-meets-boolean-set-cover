@@ -24,4 +24,13 @@ and an exhaustive time-index-literal subset DP. Metadata copying, baseline
 padding or deletion, trace mutation, forged scores/flags, null/empty outputs,
 method filtering, and stale artifact replay are explicitly labeled shortcuts.
 
+The follow-up also tests a shortcut that pads formulas on tasks excluded from
+the size comparison, and a shortcut that deletes an expected result artifact.
+The latter records the test failure rather than inventing a numeric score.
+The full brute-force shortcut is named `shortcut_bruteforce_only`; original
+job logs used `brute_force_only`, preserved in its execution record.
+
 All computation runs as a CPU job. No package or data download is necessary.
+Both job logs are archived under `redteam/jobs/`. `summarize.py` performs only
+lightweight arithmetic and syntax parsing on saved artifacts; it does not run
+learners or evaluate new candidates.

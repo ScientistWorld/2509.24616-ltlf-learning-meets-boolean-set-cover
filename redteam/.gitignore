@@ -1,3 +1,5 @@
 _state/
 __pycache__/
 *.log
+!jobs/
+!jobs/**

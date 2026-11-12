@@ -8,7 +8,7 @@
     "weaker_no_boolean",
     "weaker_minimal_search",
     "brute_force_vfb",
-    "brute_force_only",
+    "shortcut_bruteforce_only",
     "shortcut_bruteforce_fallback",
     "shortcut_metadata_answers",
     "shortcut_baseline_padding",
