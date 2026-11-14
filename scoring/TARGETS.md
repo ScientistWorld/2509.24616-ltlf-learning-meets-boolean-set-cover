@@ -1,10 +1,10 @@
 # Targets
 
-One scored experiment, `budgeted_ltlf_learning` (weight 1.0), measured on hidden instances by `scripts/evaluate_test.sh` and on the visible training slice by `scripts/evaluate_train.sh`.
+One scored experiment, `budgeted_ltlf_learning` (weight 1.0), measured on 80 hidden instances (8 from each of the paper's ten benchmark families) by `scripts/evaluate_test.sh` and on the 80 visible training instances by `scripts/evaluate_train.sh`.
 
 Benefit:
 
-- `solve_rate` (coefficient 0.5, higher is better): fraction of instances for which the solver returns, within 20 CPU seconds, a valid separating LTLf formula of at most 10x the reference size (best-known separator, or a proven lower bound where no learner finds one).
+- `solve_rate` (coefficient 0.5, higher is better): fraction of instances for which the solver returns, within 20 CPU seconds, a valid separating LTLf formula of at most 10x the reference size (best-known learner separator, or a proven lower bound where no learner finds one).
 
 Constraint (the paper's claim is that more tasks are solved *without* giving up formula size):
 

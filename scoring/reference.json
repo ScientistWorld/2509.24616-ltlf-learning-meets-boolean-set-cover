@@ -1,8 +1,8 @@
 {
   "experiments": {
     "budgeted_ltlf_learning": {
-      "description": "LTLf learning under a fixed per-instance budget of 20 CPU seconds on 40 hidden instances drawn fresh from the paper's own generators (OrderedSequence, Subword, Subset, Hamming, RandomBooleanCombinationsofFactors) over the parameter ranges of the released suite. Each returned formula is parsed and checked by the evaluator; size is compared with a fixed best-known separator size per instance.",
-      "notes": "Setup scaled from the paper: 40 hidden instances from 5 of the 10 families (the families whose generators need no external model checker) instead of 15,595 tasks; a Python port of Bolt with a 20 CPU-second budget instead of the Rust tool with a 60 s timeout; best-known sizes come from the generating formula and every learner run recorded in iteration 11 instead of all Scarlet/Bolt/GPU runs, and from an exhaustive-enumeration lower bound where no learner found a separator. The paper's numbers are therefore kept under keys starting with '_' and are not targets: Table 1 reports Bolt solving 14374/15595 tasks (0.9217) with geometric-mean size ratio 1.01 over its solved tasks, and Scarlet 11468/15595 (0.7353) with 1.15 (difference 0.1864 in solved fraction); the paper's size ratio is over solved tasks only, whereas size_ratio_geomean here also counts unsolved tasks at the cap of 10. Section 3 reports an average collapse ratio |F|/|F'| of 3.54 (min 1.09, max 48.22, sd 5.46 over 780 tasks) and approximate-domination reductions |F'|/|F''| of 3.45, 4.07, 4.97, 5.94, 6.60 for k = 3, 5, 10, 25, 50. Figure 4 (ablation) shows raw VFB solving fewer tasks than Bolt and returning minimal formulas when it succeeds. The 'bolt' and 'raw_vfb' entries are this gym's own measurements of the reference and baseline on the hidden test (iteration 11), not paper numbers. The '_paper_table1_bolt' size_efficiency is derived, not reported: 0.9217 solved x 1/1.01.",
+      "description": "LTLf learning under a fixed per-instance budget of 20 CPU seconds on 80 hidden instances drawn fresh from the paper's own generators, 8 from each of the ten benchmark families (OrderedSequence, Subword, Subset, Hamming, RandomBooleanCombinationsofFactors, Fixed_Formulas, SingleCounter, DoubleCounter, Nim, Random_Conjuncts_from_Basis), over the parameter ranges of the released suite. Each returned formula is parsed and checked by the evaluator; size is compared with a fixed best-known separator size per instance.",
+      "notes": "Setup scaled from the paper: 80 hidden instances (8 per family, all ten families) instead of 15,595 tasks; the five formula-based families are sampled uniformly from the language of the family's formula and its complement, as the paper's Spot-based sample.py does, with a Spot-free exact sampler (eval/test/trace_sampler.py); a Python port of Bolt with a 20 CPU-second budget instead of the Rust tool with a 60 s timeout; best-known sizes come from every learner run recorded in iterations 11-12 (and from the generating formula where it is smaller and some learner solved the instance) instead of all Scarlet/Bolt/GPU runs, and from an exhaustive-enumeration lower bound where no learner found a separator. The paper's numbers are therefore kept under keys starting with '_' and are not targets: Table 1 reports Bolt solving 14374/15595 tasks (0.9217) with geometric-mean size ratio 1.01 over its solved tasks, and Scarlet 11468/15595 (0.7353) with 1.15 (difference 0.1864 in solved fraction); the paper's size ratio is over solved tasks only, whereas size_ratio_geomean here also counts unsolved tasks at the cap of 10. Section 3 reports an average collapse ratio |F|/|F'| of 3.54 (min 1.09, max 48.22, sd 5.46 over 780 tasks) and approximate-domination reductions |F'|/|F''| of 3.45, 4.07, 4.97, 5.94, 6.60 for k = 3, 5, 10, 25, 50. Figure 4 (ablation) shows raw VFB solving fewer tasks than Bolt and returning minimal formulas when it succeeds. The 'bolt' and 'raw_vfb' entries are this gym's own measurements of the reference and baseline on the hidden test (iteration 12), not paper numbers. The '_paper_table1_bolt' size_efficiency is derived, not reported: 0.9217 solved x 1/1.01.",
       "weight": 1.0,
       "primary_metric": "size_efficiency",
       "metrics": {
@@ -25,15 +25,15 @@
       "results": {
         "bolt": {
           "type": "proposed",
-          "size_efficiency": 0.7515,
-          "solve_rate": 0.9,
-          "size_ratio_geomean": 1.5998
+          "size_efficiency": 0.8449,
+          "solve_rate": 0.95,
+          "size_ratio_geomean": 1.3393
         },
         "raw_vfb": {
           "type": "baseline",
-          "size_efficiency": 0.4,
-          "solve_rate": 0.4,
-          "size_ratio_geomean": 3.9811
+          "size_efficiency": 0.4875,
+          "solve_rate": 0.4875,
+          "size_ratio_geomean": 3.2546
         },
         "_paper_table1_bolt": {
           "type": "proposed",

@@ -44,5 +44,10 @@
 - Restored the paper's Bolt procedure and settings (switch 8, size-dom 10, beam 100, D&C-switch 70) in a faithful Python port.
 - Hidden test: Bolt 0.752 size_efficiency / 0.90 solve rate vs raw VFB 0.40 / 0.40; anytime portfolio variant +0.057 (paired CI excludes 0); all redteam shortcuts closed or reduced (HARDENING.md).
 
+### [2026-11-14] - core_claim
+- Second hardening pass (REVIEW.md): CPU-only budget with a 200 s wall safety net; worst scores pre-written for every solver; reference sizes unreadable during hidden runs.
+- All ten benchmark families: 80 train (release) and 80 hidden (fresh draws) instances; the five Spot-based families sampled with an exact Spot-free uniform sampler validated against the release.
+- Hidden test: Bolt 0.845 size_efficiency / 0.95 solve rate vs raw VFB 0.488 / 0.488; Bolt + directed-pattern atoms +0.048 at the same CPU (paired CI excludes 0); repeat spread 0 (HARDENING.md).
+
 ## Stop Justification
 - Completed at milestone `core_claim`.

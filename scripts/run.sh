@@ -1,7 +1,10 @@
 #!/bin/bash
-# Iteration 12 hardening job: rerun reference, baseline, variants and shortcuts
-# on the ten-family train / hidden-test slices, freeze best-known sizes, run the
-# official evaluations and analyse (scripts/hardening/run_hardening.sh).
+# Reproduce the reference end to end: fetch data, run every solver on disk
+# (Bolt reference and raw VFB baseline) through the train and hidden-test
+# harnesses with the fixed per-instance CPU budget, and validate.
+# The iteration-12 hardening experiments are in scripts/hardening/run_hardening.sh.
 set -euo pipefail
 cd /home/user
-bash scripts/hardening/run_hardening.sh
+bash scripts/download.sh
+bash scripts/reproduce.sh
+python3 validate.py --compare
