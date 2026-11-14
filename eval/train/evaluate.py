@@ -50,9 +50,12 @@ SLICE = "train"
 
 CPU_BUDGET_S = 20.0          # CPU seconds per instance (solver + its children)
 CPU_GRACE_S = 0.5            # interpreter start-up allowance
-WALL_LIMIT_S = 2 * CPU_BUDGET_S + 10
+# Wall clock is only a safety net against hung solvers, far above the CPU
+# budget, so node load cannot decide an instance: the budget is CPU time.
+WALL_LIMIT_S = 10 * CPU_BUDGET_S
 MEMORY_LIMIT_BYTES = 4 * 1024**3
 RATIO_CAP = 10.0
+WORST = {"size_efficiency": 0.0, "solve_rate": 0.0, "size_ratio_geomean": RATIO_CAP}
 MAX_FORMULA_CHARS = 1_000_000
 MAX_FORMULA_NODES = 20_000
 MAX_FORMULA_DEPTH = 3_000
@@ -457,28 +460,36 @@ def main() -> None:
         keep = set(args.only.split(","))
         solvers = {k: v for k, v in solvers.items() if k in keep}
     runs_dir = Path(args.runs_dir)
-    all_runs: dict[str, dict] = {}
+    if not args.no_score and any(inst["best_known_size"] is None for inst in instances):
+        raise SystemExit("best_known_size missing; build the reference sizes first")
+    out = Path(args.out)
+    # Every solver on disk starts with the worst value of every metric; its entry
+    # is replaced once it has run, so an interrupted evaluation never leaves a
+    # solver without a score.
+    results = {name: dict(WORST) for name in solvers}
+    details: dict[str, list] = {}
+    if not args.no_score:
+        write_scores(out, results, len(instances))
     for name, script in solvers.items():
         path = runs_dir / f"{name}.jsonl"
-        all_runs[name] = load_runs(path) if args.skip_run else run_solver(name, script, instances, path, args.resume)
-    if args.no_score:
-        return
-    if any(inst["best_known_size"] is None for inst in instances):
-        raise SystemExit("best_known_size missing; build the reference sizes first")
-    results, details = {}, {}
-    for name in solvers:
-        metrics, rows = score_runs(all_runs[name], instances)
-        results[name] = metrics
-        details[name] = rows
-    out = Path(args.out)
+        runs = load_runs(path) if args.skip_run else run_solver(name, script, instances, path, args.resume)
+        if args.no_score:
+            continue
+        results[name], details[name] = score_runs(runs, instances)
+        write_scores(out, results, len(instances))
+    if not args.no_score:
+        runs_dir.mkdir(parents=True, exist_ok=True)
+        (runs_dir / "details.json").write_text(json.dumps(details, indent=1))
+
+
+def write_scores(out: Path, results: dict, n_instances: int) -> None:
     out.parent.mkdir(parents=True, exist_ok=True)
     out.write_text(json.dumps({"experiments": {EXPERIMENT: {
         "_slice": SLICE,
-        "_instances": len(instances),
+        "_instances": n_instances,
         "_cpu_budget_s": CPU_BUDGET_S,
         "results": results,
     }}}, indent=2) + "\n")
-    (runs_dir / "details.json").write_text(json.dumps(details, indent=1))
 
 
 if __name__ == "__main__":

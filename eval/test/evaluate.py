@@ -47,9 +47,12 @@ SLICE = "test"
 
 CPU_BUDGET_S = 20.0          # CPU seconds per instance (solver + its children)
 CPU_GRACE_S = 0.5            # interpreter start-up allowance
-WALL_LIMIT_S = 2 * CPU_BUDGET_S + 10
+# Wall clock is only a safety net against hung solvers, far above the CPU
+# budget, so node load cannot decide an instance: the budget is CPU time.
+WALL_LIMIT_S = 10 * CPU_BUDGET_S
 MEMORY_LIMIT_BYTES = 4 * 1024**3
 RATIO_CAP = 10.0
+WORST = {"size_efficiency": 0.0, "solve_rate": 0.0, "size_ratio_geomean": RATIO_CAP}
 MAX_FORMULA_CHARS = 1_000_000
 MAX_FORMULA_NODES = 20_000
 MAX_FORMULA_DEPTH = 3_000
@@ -242,7 +245,49 @@ def check_formula(formula, inst: dict, enc: Encoded) -> tuple[bool, int | None, 
 # --------------------------------------------------------------------------
 
 
+# Files a solver must not read while it runs (reference sizes and lower bounds).
+PROTECTED = (INSTANCES, HERE / "lower_bounds.json")
+
+
+class protected_files:
+    """Make PROTECTED unreadable while solvers run; restore afterwards.
+
+    The evaluator has already loaded everything it needs into memory.  Best
+    effort: on a filesystem that refuses chmod, nothing changes.
+    """
+
+    def __enter__(self):
+        self.saved = []
+        for path in PROTECTED:
+            try:
+                mode = path.stat().st_mode & 0o7777
+                path.chmod(0)
+                self.saved.append((path, mode))
+            except OSError:
+                pass
+        return self
+
+    def __exit__(self, *exc):
+        for path, mode in self.saved:
+            try:
+                path.chmod(mode)
+            except OSError:
+                pass
+        return False
+
+
+def _readable(path: Path) -> None:
+    """Undo a protection left behind by an evaluation that was killed mid-run."""
+    try:
+        if path.exists() and not os.access(path, os.R_OK):
+            path.chmod(0o644)
+    except OSError:
+        pass
+
+
 def load_instances() -> tuple[list[dict], dict]:
+    for path in PROTECTED:
+        _readable(path)
     payload = json.loads(INSTANCES.read_text())
     out = []
     for rec in payload["instances"]:
@@ -465,30 +510,41 @@ def main() -> None:
     runs_dir = Path(args.runs_dir) if args.runs_dir else None
     if args.skip_run and runs_dir is None:
         raise SystemExit("--skip-run needs --runs-dir")
-    all_runs: dict[str, dict] = {}
+    if not args.no_score and any(inst["best_known_size"] is None for inst in instances):
+        raise SystemExit("best_known_size missing; build the reference sizes first")
+    out = Path(args.out)
+    # Every solver on disk starts with the worst value of every metric; its entry
+    # is replaced once it has run, so an interrupted evaluation never leaves a
+    # solver without a score.
+    results = {name: dict(WORST) for name in solvers}
+    details: dict[str, list] = {}
+    if not args.no_score:
+        write_scores(out, results, len(instances))
     for name, script in solvers.items():
         path = runs_dir / f"{name}.jsonl" if runs_dir else None
-        all_runs[name] = load_runs(path) if args.skip_run else run_solver(name, script, instances, path, args.resume)
-    if args.no_score:
-        return
-    if any(inst["best_known_size"] is None for inst in instances):
-        raise SystemExit("best_known_size missing; build the reference sizes first")
-    results, details = {}, {}
-    for name in solvers:
-        metrics, rows = score_runs(all_runs[name], instances)
-        results[name] = metrics
-        details[name] = rows
-    out = Path(args.out)
+        if args.skip_run:
+            runs = load_runs(path)
+        else:
+            with protected_files():
+                runs = run_solver(name, script, instances, path, args.resume)
+        if args.no_score:
+            continue
+        results[name], details[name] = score_runs(runs, instances)
+        write_scores(out, results, len(instances))
+    if not args.no_score:
+        details_dir = runs_dir or HERE / "runs"
+        details_dir.mkdir(parents=True, exist_ok=True)
+        (details_dir / "details.json").write_text(json.dumps(details, indent=1))  # no formulas
+
+
+def write_scores(out: Path, results: dict, n_instances: int) -> None:
     out.parent.mkdir(parents=True, exist_ok=True)
     out.write_text(json.dumps({"experiments": {EXPERIMENT: {
         "_slice": SLICE,
-        "_instances": len(instances),
+        "_instances": n_instances,
         "_cpu_budget_s": CPU_BUDGET_S,
         "results": results,
     }}}, indent=2) + "\n")
-    details_dir = runs_dir or HERE / "runs"
-    details_dir.mkdir(parents=True, exist_ok=True)
-    (details_dir / "details.json").write_text(json.dumps(details, indent=1))  # no formulas
 
 
 if __name__ == "__main__":

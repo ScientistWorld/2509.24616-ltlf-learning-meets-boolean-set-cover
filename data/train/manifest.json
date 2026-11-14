@@ -513,6 +513,929 @@
     "number_patterns": 6
    },
    "source_file": "RandomBooleanCombinationsofFactors/trace_length=64number_atomic_propositions=5number_positive_traces=20number_negative_traces=20number_patterns=6seed=41.json"
+  },
+  {
+   "id": "fix0",
+   "file": "data/train/instances/fix0.json",
+   "family": "Fixed_Formulas",
+   "parameters": {
+    "number_positive_traces": 20,
+    "number_negative_traces": 20,
+    "trace_length": 16,
+    "formula": "absence2"
+   },
+   "source_file": "Fixed_Formulas/absence2_20_16_42.json",
+   "proposition_renaming": {
+    "var0": "a0",
+    "var1": "a1"
+   }
+  },
+  {
+   "id": "fix1",
+   "file": "data/train/instances/fix1.json",
+   "family": "Fixed_Formulas",
+   "parameters": {
+    "number_positive_traces": 5,
+    "number_negative_traces": 5,
+    "trace_length": 16,
+    "formula": "absence2"
+   },
+   "source_file": "Fixed_Formulas/absence2_5_16_42.json",
+   "proposition_renaming": {
+    "var0": "a0",
+    "var1": "a1"
+   }
+  },
+  {
+   "id": "fix2",
+   "file": "data/train/instances/fix2.json",
+   "family": "Fixed_Formulas",
+   "parameters": {
+    "number_positive_traces": 100,
+    "number_negative_traces": 100,
+    "trace_length": 16,
+    "formula": "universality2"
+   },
+   "source_file": "Fixed_Formulas/universality2_100_16_42.json",
+   "proposition_renaming": {
+    "var0": "a0",
+    "var1": "a1"
+   }
+  },
+  {
+   "id": "fix3",
+   "file": "data/train/instances/fix3.json",
+   "family": "Fixed_Formulas",
+   "parameters": {
+    "number_positive_traces": 5,
+    "number_negative_traces": 5,
+    "trace_length": 16,
+    "formula": "absence3"
+   },
+   "source_file": "Fixed_Formulas/absence3_5_16_42.json",
+   "proposition_renaming": {
+    "var0": "a1",
+    "var1": "a0"
+   }
+  },
+  {
+   "id": "fix4",
+   "file": "data/train/instances/fix4.json",
+   "family": "Fixed_Formulas",
+   "parameters": {
+    "number_positive_traces": 20,
+    "number_negative_traces": 20,
+    "trace_length": 16,
+    "formula": "absence1"
+   },
+   "source_file": "Fixed_Formulas/absence1_20_16_42.json",
+   "proposition_renaming": {
+    "var0": "a1",
+    "var1": "a0"
+   }
+  },
+  {
+   "id": "fix5",
+   "file": "data/train/instances/fix5.json",
+   "family": "Fixed_Formulas",
+   "parameters": {
+    "number_positive_traces": 20,
+    "number_negative_traces": 20,
+    "trace_length": 32,
+    "formula": "existence1"
+   },
+   "source_file": "Fixed_Formulas/existence1_20_32_42.json",
+   "proposition_renaming": {
+    "var0": "a0",
+    "var1": "a1"
+   }
+  },
+  {
+   "id": "fix6",
+   "file": "data/train/instances/fix6.json",
+   "family": "Fixed_Formulas",
+   "parameters": {
+    "number_positive_traces": 100,
+    "number_negative_traces": 100,
+    "trace_length": 32,
+    "formula": "existence2"
+   },
+   "source_file": "Fixed_Formulas/existence2_100_32_42.json",
+   "proposition_renaming": {
+    "var0": "a0",
+    "var1": "a1"
+   }
+  },
+  {
+   "id": "fix7",
+   "file": "data/train/instances/fix7.json",
+   "family": "Fixed_Formulas",
+   "parameters": {
+    "number_positive_traces": 20,
+    "number_negative_traces": 20,
+    "trace_length": 16,
+    "formula": "existence2"
+   },
+   "source_file": "Fixed_Formulas/existence2_20_16_42.json",
+   "proposition_renaming": {
+    "var0": "a0",
+    "var1": "a1"
+   }
+  },
+  {
+   "id": "sgc0",
+   "file": "data/train/instances/sgc0.json",
+   "family": "SingleCounter",
+   "parameters": {
+    "number_positive_traces": 100,
+    "number_negative_traces": 100,
+    "trace_length": 16,
+    "bits": 4
+   },
+   "source_file": "SingleCounter/4_100_16_42.json",
+   "proposition_renaming": {
+    "init_counter_0": "a12",
+    "init_counter_1": "a6",
+    "init_counter_2": "a10",
+    "init_counter_3": "a0",
+    "inc": "a1",
+    "counter_0": "a2",
+    "counter_1": "a9",
+    "counter_2": "a8",
+    "counter_3": "a5",
+    "carry_0": "a11",
+    "carry_1": "a7",
+    "carry_2": "a4",
+    "carry_3": "a3"
+   }
+  },
+  {
+   "id": "sgc1",
+   "file": "data/train/instances/sgc1.json",
+   "family": "SingleCounter",
+   "parameters": {
+    "number_positive_traces": 20,
+    "number_negative_traces": 20,
+    "trace_length": 32,
+    "bits": 5
+   },
+   "source_file": "SingleCounter/5_20_32_42.json",
+   "proposition_renaming": {
+    "init_counter_0": "a14",
+    "init_counter_1": "a2",
+    "init_counter_2": "a11",
+    "init_counter_3": "a4",
+    "init_counter_4": "a8",
+    "inc": "a6",
+    "counter_0": "a13",
+    "counter_1": "a3",
+    "counter_2": "a15",
+    "counter_3": "a7",
+    "counter_4": "a1",
+    "carry_0": "a10",
+    "carry_1": "a0",
+    "carry_2": "a9",
+    "carry_3": "a12",
+    "carry_4": "a5"
+   }
+  },
+  {
+   "id": "sgc2",
+   "file": "data/train/instances/sgc2.json",
+   "family": "SingleCounter",
+   "parameters": {
+    "number_positive_traces": 100,
+    "number_negative_traces": 100,
+    "trace_length": 64,
+    "bits": 4
+   },
+   "source_file": "SingleCounter/4_100_64_42.json",
+   "proposition_renaming": {
+    "init_counter_0": "a3",
+    "init_counter_1": "a6",
+    "init_counter_2": "a7",
+    "init_counter_3": "a0",
+    "inc": "a12",
+    "counter_0": "a1",
+    "counter_1": "a2",
+    "counter_2": "a11",
+    "counter_3": "a4",
+    "carry_0": "a8",
+    "carry_1": "a5",
+    "carry_2": "a10",
+    "carry_3": "a9"
+   }
+  },
+  {
+   "id": "sgc3",
+   "file": "data/train/instances/sgc3.json",
+   "family": "SingleCounter",
+   "parameters": {
+    "number_positive_traces": 5,
+    "number_negative_traces": 5,
+    "trace_length": 16,
+    "bits": 4
+   },
+   "source_file": "SingleCounter/4_5_16_42.json",
+   "proposition_renaming": {
+    "init_counter_0": "a9",
+    "init_counter_1": "a4",
+    "init_counter_2": "a2",
+    "init_counter_3": "a11",
+    "inc": "a5",
+    "counter_0": "a10",
+    "counter_1": "a0",
+    "counter_2": "a12",
+    "counter_3": "a7",
+    "carry_0": "a6",
+    "carry_1": "a1",
+    "carry_2": "a3",
+    "carry_3": "a8"
+   }
+  },
+  {
+   "id": "sgc4",
+   "file": "data/train/instances/sgc4.json",
+   "family": "SingleCounter",
+   "parameters": {
+    "number_positive_traces": 5,
+    "number_negative_traces": 5,
+    "trace_length": 64,
+    "bits": 1
+   },
+   "source_file": "SingleCounter/1_5_64_42.json",
+   "proposition_renaming": {
+    "init_counter_0": "a1",
+    "inc": "a0",
+    "counter_0": "a2",
+    "carry_0": "a3"
+   }
+  },
+  {
+   "id": "sgc5",
+   "file": "data/train/instances/sgc5.json",
+   "family": "SingleCounter",
+   "parameters": {
+    "number_positive_traces": 20,
+    "number_negative_traces": 20,
+    "trace_length": 32,
+    "bits": 1
+   },
+   "source_file": "SingleCounter/1_20_32_42.json",
+   "proposition_renaming": {
+    "init_counter_0": "a2",
+    "inc": "a3",
+    "counter_0": "a0",
+    "carry_0": "a1"
+   }
+  },
+  {
+   "id": "sgc6",
+   "file": "data/train/instances/sgc6.json",
+   "family": "SingleCounter",
+   "parameters": {
+    "number_positive_traces": 5,
+    "number_negative_traces": 5,
+    "trace_length": 64,
+    "bits": 4
+   },
+   "source_file": "SingleCounter/4_5_64_42.json",
+   "proposition_renaming": {
+    "init_counter_0": "a10",
+    "init_counter_1": "a4",
+    "init_counter_2": "a1",
+    "init_counter_3": "a9",
+    "inc": "a3",
+    "counter_0": "a6",
+    "counter_1": "a11",
+    "counter_2": "a8",
+    "counter_3": "a0",
+    "carry_0": "a12",
+    "carry_1": "a2",
+    "carry_2": "a5",
+    "carry_3": "a7"
+   }
+  },
+  {
+   "id": "sgc7",
+   "file": "data/train/instances/sgc7.json",
+   "family": "SingleCounter",
+   "parameters": {
+    "number_positive_traces": 100,
+    "number_negative_traces": 100,
+    "trace_length": 64,
+    "bits": 1
+   },
+   "source_file": "SingleCounter/1_100_64_42.json",
+   "proposition_renaming": {
+    "init_counter_0": "a2",
+    "inc": "a1",
+    "counter_0": "a3",
+    "carry_0": "a0"
+   }
+  },
+  {
+   "id": "dbc0",
+   "file": "data/train/instances/dbc0.json",
+   "family": "DoubleCounter",
+   "parameters": {
+    "number_positive_traces": 5,
+    "number_negative_traces": 5,
+    "trace_length": 64,
+    "bits": 2
+   },
+   "source_file": "DoubleCounter/2_5_64_42.json",
+   "proposition_renaming": {
+    "init_counter_0": "a8",
+    "init_counter_1": "a11",
+    "inc_env": "a6",
+    "counter_env_0": "a9",
+    "counter_sys_0": "a2",
+    "counter_env_1": "a1",
+    "counter_sys_1": "a7",
+    "carry_env_0": "a10",
+    "carry_sys_0": "a4",
+    "carry_env_1": "a3",
+    "carry_sys_1": "a5",
+    "inc_sys": "a0"
+   }
+  },
+  {
+   "id": "dbc1",
+   "file": "data/train/instances/dbc1.json",
+   "family": "DoubleCounter",
+   "parameters": {
+    "number_positive_traces": 100,
+    "number_negative_traces": 100,
+    "trace_length": 64,
+    "bits": 2
+   },
+   "source_file": "DoubleCounter/2_100_64_42.json",
+   "proposition_renaming": {
+    "init_counter_0": "a0",
+    "init_counter_1": "a4",
+    "inc_env": "a8",
+    "counter_env_0": "a9",
+    "counter_sys_0": "a1",
+    "counter_env_1": "a6",
+    "counter_sys_1": "a5",
+    "carry_env_0": "a3",
+    "carry_sys_0": "a2",
+    "carry_env_1": "a7",
+    "carry_sys_1": "a11",
+    "inc_sys": "a10"
+   }
+  },
+  {
+   "id": "dbc2",
+   "file": "data/train/instances/dbc2.json",
+   "family": "DoubleCounter",
+   "parameters": {
+    "number_positive_traces": 100,
+    "number_negative_traces": 100,
+    "trace_length": 32,
+    "bits": 1
+   },
+   "source_file": "DoubleCounter/1_100_32_42.json",
+   "proposition_renaming": {
+    "init_counter_0": "a6",
+    "inc_env": "a4",
+    "counter_env_0": "a0",
+    "counter_sys_0": "a2",
+    "carry_env_0": "a3",
+    "carry_sys_0": "a1",
+    "inc_sys": "a5"
+   }
+  },
+  {
+   "id": "dbc3",
+   "file": "data/train/instances/dbc3.json",
+   "family": "DoubleCounter",
+   "parameters": {
+    "number_positive_traces": 20,
+    "number_negative_traces": 20,
+    "trace_length": 64,
+    "bits": 2
+   },
+   "source_file": "DoubleCounter/2_20_64_42.json",
+   "proposition_renaming": {
+    "init_counter_0": "a3",
+    "init_counter_1": "a10",
+    "inc_env": "a9",
+    "counter_env_0": "a8",
+    "counter_sys_0": "a11",
+    "counter_env_1": "a2",
+    "counter_sys_1": "a7",
+    "carry_env_0": "a5",
+    "carry_sys_0": "a1",
+    "carry_env_1": "a4",
+    "carry_sys_1": "a6",
+    "inc_sys": "a0"
+   }
+  },
+  {
+   "id": "dbc4",
+   "file": "data/train/instances/dbc4.json",
+   "family": "DoubleCounter",
+   "parameters": {
+    "number_positive_traces": 5,
+    "number_negative_traces": 5,
+    "trace_length": 16,
+    "bits": 1
+   },
+   "source_file": "DoubleCounter/1_5_16_42.json",
+   "proposition_renaming": {
+    "init_counter_0": "a6",
+    "inc_env": "a2",
+    "counter_env_0": "a5",
+    "counter_sys_0": "a1",
+    "carry_env_0": "a4",
+    "carry_sys_0": "a3",
+    "inc_sys": "a0"
+   }
+  },
+  {
+   "id": "dbc5",
+   "file": "data/train/instances/dbc5.json",
+   "family": "DoubleCounter",
+   "parameters": {
+    "number_positive_traces": 5,
+    "number_negative_traces": 5,
+    "trace_length": 64,
+    "bits": 1
+   },
+   "source_file": "DoubleCounter/1_5_64_42.json",
+   "proposition_renaming": {
+    "init_counter_0": "a3",
+    "inc_env": "a5",
+    "counter_env_0": "a2",
+    "counter_sys_0": "a4",
+    "carry_env_0": "a0",
+    "carry_sys_0": "a6",
+    "inc_sys": "a1"
+   }
+  },
+  {
+   "id": "dbc6",
+   "file": "data/train/instances/dbc6.json",
+   "family": "DoubleCounter",
+   "parameters": {
+    "number_positive_traces": 20,
+    "number_negative_traces": 20,
+    "trace_length": 16,
+    "bits": 1
+   },
+   "source_file": "DoubleCounter/1_20_16_42.json",
+   "proposition_renaming": {
+    "init_counter_0": "a2",
+    "inc_env": "a3",
+    "counter_env_0": "a6",
+    "counter_sys_0": "a5",
+    "carry_env_0": "a0",
+    "carry_sys_0": "a1",
+    "inc_sys": "a4"
+   }
+  },
+  {
+   "id": "dbc7",
+   "file": "data/train/instances/dbc7.json",
+   "family": "DoubleCounter",
+   "parameters": {
+    "number_positive_traces": 5,
+    "number_negative_traces": 5,
+    "trace_length": 32,
+    "bits": 1
+   },
+   "source_file": "DoubleCounter/1_5_32_42.json",
+   "proposition_renaming": {
+    "init_counter_0": "a6",
+    "inc_env": "a1",
+    "counter_env_0": "a0",
+    "counter_sys_0": "a5",
+    "carry_env_0": "a4",
+    "carry_sys_0": "a3",
+    "inc_sys": "a2"
+   }
+  },
+  {
+   "id": "nim0",
+   "file": "data/train/instances/nim0.json",
+   "family": "Nim",
+   "parameters": {
+    "number_positive_traces": 5,
+    "number_negative_traces": 5,
+    "trace_length": 16,
+    "heaps": 1,
+    "tokens": 1
+   },
+   "source_file": "Nim/heaps=1tokens=1_5_16_42.json",
+   "proposition_renaming": {
+    "select_env_0": "a1",
+    "change_env_0": "a2",
+    "select_sys_0": "a7",
+    "change_sys_0": "a4",
+    "turn_sys": "a5",
+    "turn_env": "a6",
+    "heap_0_0": "a3",
+    "heap_0_1": "a0"
+   }
+  },
+  {
+   "id": "nim1",
+   "file": "data/train/instances/nim1.json",
+   "family": "Nim",
+   "parameters": {
+    "number_positive_traces": 20,
+    "number_negative_traces": 20,
+    "trace_length": 16,
+    "heaps": 1,
+    "tokens": 2
+   },
+   "source_file": "Nim/heaps=1tokens=2_20_16_42.json",
+   "proposition_renaming": {
+    "select_env_0": "a3",
+    "change_env_0": "a7",
+    "change_env_1": "a10",
+    "select_sys_0": "a8",
+    "change_sys_0": "a5",
+    "change_sys_1": "a9",
+    "turn_sys": "a2",
+    "turn_env": "a1",
+    "heap_0_0": "a0",
+    "heap_0_1": "a6",
+    "heap_0_2": "a4"
+   }
+  },
+  {
+   "id": "nim2",
+   "file": "data/train/instances/nim2.json",
+   "family": "Nim",
+   "parameters": {
+    "number_positive_traces": 5,
+    "number_negative_traces": 5,
+    "trace_length": 32,
+    "heaps": 2,
+    "tokens": 2
+   },
+   "source_file": "Nim/heaps=2tokens=2_5_32_42.json",
+   "proposition_renaming": {
+    "select_env_0": "a11",
+    "select_env_1": "a9",
+    "change_env_0": "a3",
+    "change_env_1": "a4",
+    "select_sys_0": "a12",
+    "select_sys_1": "a13",
+    "change_sys_0": "a8",
+    "change_sys_1": "a14",
+    "turn_sys": "a0",
+    "turn_env": "a7",
+    "heap_0_0": "a2",
+    "heap_0_1": "a10",
+    "heap_0_2": "a1",
+    "heap_1_0": "a5",
+    "heap_1_1": "a15",
+    "heap_1_2": "a6"
+   }
+  },
+  {
+   "id": "nim3",
+   "file": "data/train/instances/nim3.json",
+   "family": "Nim",
+   "parameters": {
+    "number_positive_traces": 100,
+    "number_negative_traces": 100,
+    "trace_length": 16,
+    "heaps": 2,
+    "tokens": 2
+   },
+   "source_file": "Nim/heaps=2tokens=2_100_16_42.json",
+   "proposition_renaming": {
+    "select_env_0": "a13",
+    "select_env_1": "a8",
+    "change_env_0": "a11",
+    "change_env_1": "a10",
+    "select_sys_0": "a15",
+    "select_sys_1": "a4",
+    "change_sys_0": "a14",
+    "change_sys_1": "a1",
+    "turn_sys": "a9",
+    "turn_env": "a7",
+    "heap_0_0": "a0",
+    "heap_0_1": "a5",
+    "heap_0_2": "a6",
+    "heap_1_0": "a12",
+    "heap_1_1": "a2",
+    "heap_1_2": "a3"
+   }
+  },
+  {
+   "id": "nim4",
+   "file": "data/train/instances/nim4.json",
+   "family": "Nim",
+   "parameters": {
+    "number_positive_traces": 100,
+    "number_negative_traces": 100,
+    "trace_length": 64,
+    "heaps": 2,
+    "tokens": 2
+   },
+   "source_file": "Nim/heaps=2tokens=2_100_64_42.json",
+   "proposition_renaming": {
+    "select_env_0": "a15",
+    "select_env_1": "a14",
+    "change_env_0": "a8",
+    "change_env_1": "a5",
+    "select_sys_0": "a10",
+    "select_sys_1": "a6",
+    "change_sys_0": "a2",
+    "change_sys_1": "a9",
+    "turn_sys": "a13",
+    "turn_env": "a12",
+    "heap_0_0": "a11",
+    "heap_0_1": "a4",
+    "heap_0_2": "a0",
+    "heap_1_0": "a3",
+    "heap_1_1": "a7",
+    "heap_1_2": "a1"
+   }
+  },
+  {
+   "id": "nim5",
+   "file": "data/train/instances/nim5.json",
+   "family": "Nim",
+   "parameters": {
+    "number_positive_traces": 20,
+    "number_negative_traces": 20,
+    "trace_length": 16,
+    "heaps": 2,
+    "tokens": 2
+   },
+   "source_file": "Nim/heaps=2tokens=2_20_16_42.json",
+   "proposition_renaming": {
+    "select_env_0": "a13",
+    "select_env_1": "a5",
+    "change_env_0": "a3",
+    "change_env_1": "a0",
+    "select_sys_0": "a14",
+    "select_sys_1": "a9",
+    "change_sys_0": "a11",
+    "change_sys_1": "a7",
+    "turn_sys": "a4",
+    "turn_env": "a10",
+    "heap_0_0": "a6",
+    "heap_0_1": "a8",
+    "heap_0_2": "a1",
+    "heap_1_0": "a15",
+    "heap_1_1": "a2",
+    "heap_1_2": "a12"
+   }
+  },
+  {
+   "id": "nim6",
+   "file": "data/train/instances/nim6.json",
+   "family": "Nim",
+   "parameters": {
+    "number_positive_traces": 20,
+    "number_negative_traces": 20,
+    "trace_length": 16,
+    "heaps": 2,
+    "tokens": 1
+   },
+   "source_file": "Nim/heaps=2tokens=1_20_16_42.json",
+   "proposition_renaming": {
+    "select_env_0": "a0",
+    "select_env_1": "a3",
+    "change_env_0": "a1",
+    "select_sys_0": "a6",
+    "select_sys_1": "a11",
+    "change_sys_0": "a9",
+    "turn_sys": "a4",
+    "turn_env": "a2",
+    "heap_0_0": "a5",
+    "heap_0_1": "a10",
+    "heap_1_0": "a7",
+    "heap_1_1": "a8"
+   }
+  },
+  {
+   "id": "nim7",
+   "file": "data/train/instances/nim7.json",
+   "family": "Nim",
+   "parameters": {
+    "number_positive_traces": 5,
+    "number_negative_traces": 5,
+    "trace_length": 64,
+    "heaps": 1,
+    "tokens": 3
+   },
+   "source_file": "Nim/heaps=1tokens=3_5_64_42.json",
+   "proposition_renaming": {
+    "select_env_0": "a2",
+    "change_env_0": "a8",
+    "change_env_1": "a10",
+    "change_env_2": "a0",
+    "select_sys_0": "a5",
+    "change_sys_0": "a4",
+    "change_sys_1": "a12",
+    "change_sys_2": "a11",
+    "turn_sys": "a13",
+    "turn_env": "a3",
+    "heap_0_0": "a6",
+    "heap_0_1": "a7",
+    "heap_0_2": "a1",
+    "heap_0_3": "a9"
+   }
+  },
+  {
+   "id": "rcj0",
+   "file": "data/train/instances/rcj0.json",
+   "family": "Random_Conjuncts_from_Basis",
+   "parameters": {
+    "number_positive_traces": 20,
+    "number_negative_traces": 20,
+    "trace_length": 32,
+    "conjuncts": 14,
+    "atomic_propositions": 7
+   },
+   "source_file": "Random_Conjuncts_from_Basis/conjuncts=14_atomic_propositions=7_seed=47_20_32_42.json",
+   "proposition_renaming": {
+    "a0": "a2",
+    "a1": "a5",
+    "a2": "a3",
+    "a3": "a0",
+    "a4": "a6",
+    "a5": "a1",
+    "a6": "a4"
+   }
+  },
+  {
+   "id": "rcj1",
+   "file": "data/train/instances/rcj1.json",
+   "family": "Random_Conjuncts_from_Basis",
+   "parameters": {
+    "number_positive_traces": 5,
+    "number_negative_traces": 5,
+    "trace_length": 32,
+    "conjuncts": 4,
+    "atomic_propositions": 10
+   },
+   "source_file": "Random_Conjuncts_from_Basis/conjuncts=4_atomic_propositions=10_seed=43_5_32_42.json",
+   "proposition_renaming": {
+    "a0": "a0",
+    "a1": "a9",
+    "a2": "a6",
+    "a3": "a7",
+    "a4": "a2",
+    "a5": "a8",
+    "a6": "a4",
+    "a7": "a1",
+    "a8": "a5",
+    "a9": "a3"
+   }
+  },
+  {
+   "id": "rcj2",
+   "file": "data/train/instances/rcj2.json",
+   "family": "Random_Conjuncts_from_Basis",
+   "parameters": {
+    "number_positive_traces": 20,
+    "number_negative_traces": 20,
+    "trace_length": 64,
+    "conjuncts": 3,
+    "atomic_propositions": 7
+   },
+   "source_file": "Random_Conjuncts_from_Basis/conjuncts=3_atomic_propositions=7_seed=45_20_64_42.json",
+   "proposition_renaming": {
+    "a0": "a4",
+    "a1": "a1",
+    "a2": "a5",
+    "a3": "a2",
+    "a4": "a0",
+    "a5": "a3",
+    "a6": "a6"
+   }
+  },
+  {
+   "id": "rcj3",
+   "file": "data/train/instances/rcj3.json",
+   "family": "Random_Conjuncts_from_Basis",
+   "parameters": {
+    "number_positive_traces": 5,
+    "number_negative_traces": 5,
+    "trace_length": 16,
+    "conjuncts": 10,
+    "atomic_propositions": 14
+   },
+   "source_file": "Random_Conjuncts_from_Basis/conjuncts=10_atomic_propositions=14_seed=40_5_16_42.json",
+   "proposition_renaming": {
+    "a0": "a11",
+    "a1": "a13",
+    "a2": "a5",
+    "a3": "a2",
+    "a4": "a4",
+    "a5": "a8",
+    "a6": "a12",
+    "a7": "a1",
+    "a8": "a7",
+    "a9": "a3",
+    "a10": "a9",
+    "a11": "a10",
+    "a12": "a0",
+    "a13": "a6"
+   }
+  },
+  {
+   "id": "rcj4",
+   "file": "data/train/instances/rcj4.json",
+   "family": "Random_Conjuncts_from_Basis",
+   "parameters": {
+    "number_positive_traces": 100,
+    "number_negative_traces": 100,
+    "trace_length": 32,
+    "conjuncts": 4,
+    "atomic_propositions": 14
+   },
+   "source_file": "Random_Conjuncts_from_Basis/conjuncts=4_atomic_propositions=14_seed=40_100_32_42.json",
+   "proposition_renaming": {
+    "a0": "a1",
+    "a1": "a9",
+    "a2": "a6",
+    "a3": "a11",
+    "a4": "a3",
+    "a5": "a7",
+    "a6": "a0",
+    "a7": "a2",
+    "a8": "a5",
+    "a9": "a8",
+    "a10": "a4",
+    "a11": "a13",
+    "a12": "a12",
+    "a13": "a10"
+   }
+  },
+  {
+   "id": "rcj5",
+   "file": "data/train/instances/rcj5.json",
+   "family": "Random_Conjuncts_from_Basis",
+   "parameters": {
+    "number_positive_traces": 20,
+    "number_negative_traces": 20,
+    "trace_length": 64,
+    "conjuncts": 7,
+    "atomic_propositions": 9
+   },
+   "source_file": "Random_Conjuncts_from_Basis/conjuncts=7_atomic_propositions=9_seed=42_20_64_42.json",
+   "proposition_renaming": {
+    "a0": "a4",
+    "a1": "a2",
+    "a2": "a3",
+    "a3": "a6",
+    "a4": "a8",
+    "a5": "a1",
+    "a6": "a0",
+    "a7": "a7",
+    "a8": "a5"
+   }
+  },
+  {
+   "id": "rcj6",
+   "file": "data/train/instances/rcj6.json",
+   "family": "Random_Conjuncts_from_Basis",
+   "parameters": {
+    "number_positive_traces": 100,
+    "number_negative_traces": 100,
+    "trace_length": 16,
+    "conjuncts": 10,
+    "atomic_propositions": 3
+   },
+   "source_file": "Random_Conjuncts_from_Basis/conjuncts=10_atomic_propositions=3_seed=41_100_16_42.json",
+   "proposition_renaming": {
+    "a0": "a1",
+    "a1": "a2",
+    "a2": "a0"
+   }
+  },
+  {
+   "id": "rcj7",
+   "file": "data/train/instances/rcj7.json",
+   "family": "Random_Conjuncts_from_Basis",
+   "parameters": {
+    "number_positive_traces": 100,
+    "number_negative_traces": 100,
+    "trace_length": 64,
+    "conjuncts": 3,
+    "atomic_propositions": 7
+   },
+   "source_file": "Random_Conjuncts_from_Basis/conjuncts=3_atomic_propositions=7_seed=43_100_64_42.json",
+   "proposition_renaming": {
+    "a0": "a6",
+    "a1": "a5",
+    "a2": "a3",
+    "a3": "a4",
+    "a4": "a0",
+    "a5": "a2",
+    "a6": "a1"
+   }
   }
  ]
 }

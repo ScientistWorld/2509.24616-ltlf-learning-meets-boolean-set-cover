@@ -1,0 +1,202 @@
+{
+ "ord0": {
+  "best_known_size": 3,
+  "best_known_source": "bolt",
+  "generating_formula_size": 7
+ },
+ "ord1": {
+  "best_known_size": 3,
+  "best_known_source": "bolt",
+  "generating_formula_size": 11
+ },
+ "ord2": {
+  "best_known_size": 7,
+  "best_known_source": "bolt",
+  "generating_formula_size": 11
+ },
+ "ord3": {
+  "best_known_size": 5,
+  "best_known_source": "bolt",
+  "generating_formula_size": 7
+ },
+ "ord4": {
+  "best_known_size": 3,
+  "best_known_source": "bolt",
+  "generating_formula_size": 5
+ },
+ "ord5": {
+  "best_known_size": 7,
+  "best_known_source": "bolt",
+  "generating_formula_size": 15
+ },
+ "ord6": {
+  "best_known_size": 5,
+  "best_known_source": "bolt",
+  "generating_formula_size": 17
+ },
+ "ord7": {
+  "best_known_size": 5,
+  "best_known_source": "bolt",
+  "generating_formula_size": 15
+ },
+ "swd0": {
+  "best_known_size": 8,
+  "best_known_source": "bolt",
+  "generating_formula_size": 34
+ },
+ "swd1": {
+  "best_known_size": 3,
+  "best_known_source": "bolt",
+  "generating_formula_size": 46
+ },
+ "swd2": {
+  "best_known_size": 34,
+  "best_known_source": "generating_formula",
+  "generating_formula_size": 34
+ },
+ "swd3": {
+  "best_known_size": 22,
+  "best_known_source": "bolt_portfolio",
+  "generating_formula_size": 26
+ },
+ "swd4": {
+  "best_known_size": 21,
+  "best_known_source": "bolt",
+  "generating_formula_size": 30
+ },
+ "swd5": {
+  "best_known_size": 6,
+  "best_known_source": "bolt",
+  "generating_formula_size": 30
+ },
+ "swd6": {
+  "best_known_size": 22,
+  "best_known_source": "generating_formula",
+  "generating_formula_size": 22
+ },
+ "swd7": {
+  "best_known_size": 24,
+  "best_known_source": "bolt_portfolio",
+  "generating_formula_size": 34
+ },
+ "sst0": {
+  "best_known_size": 4,
+  "best_known_source": "bolt",
+  "generating_formula_size": 8
+ },
+ "sst1": {
+  "best_known_size": 5,
+  "best_known_source": "bolt",
+  "generating_formula_size": 11
+ },
+ "sst2": {
+  "best_known_size": 10,
+  "best_known_source": "bolt",
+  "generating_formula_size": 17
+ },
+ "sst3": {
+  "best_known_size": 6,
+  "best_known_source": "bolt",
+  "generating_formula_size": 8
+ },
+ "sst4": {
+  "best_known_size": 12,
+  "best_known_source": "bolt_simplify",
+  "generating_formula_size": 14
+ },
+ "sst5": {
+  "best_known_size": 7,
+  "best_known_source": "bolt",
+  "generating_formula_size": 8
+ },
+ "sst6": {
+  "best_known_size": 7,
+  "best_known_source": "bolt",
+  "generating_formula_size": 8
+ },
+ "sst7": {
+  "best_known_size": 16,
+  "best_known_source": "bolt",
+  "generating_formula_size": 23
+ },
+ "ham0": {
+  "best_known_size": 57,
+  "best_known_source": "bolt_portfolio",
+  "generating_formula_size": null
+ },
+ "ham1": {
+  "best_known_size": 29,
+  "best_known_source": "bolt_portfolio",
+  "generating_formula_size": null
+ },
+ "ham2": {
+  "best_known_size": 22,
+  "best_known_source": "bolt",
+  "generating_formula_size": null
+ },
+ "ham3": {
+  "best_known_size": 9,
+  "best_known_source": "exhaustive_lower_bound",
+  "generating_formula_size": null
+ },
+ "ham4": {
+  "best_known_size": 33,
+  "best_known_source": "bolt_portfolio",
+  "generating_formula_size": null
+ },
+ "ham5": {
+  "best_known_size": 9,
+  "best_known_source": "exhaustive_lower_bound",
+  "generating_formula_size": null
+ },
+ "ham6": {
+  "best_known_size": 14,
+  "best_known_source": "bolt",
+  "generating_formula_size": null
+ },
+ "ham7": {
+  "best_known_size": 26,
+  "best_known_source": "bolt_portfolio",
+  "generating_formula_size": null
+ },
+ "rbc0": {
+  "best_known_size": 47,
+  "best_known_source": "generating_formula",
+  "generating_formula_size": 47
+ },
+ "rbc1": {
+  "best_known_size": 5,
+  "best_known_source": "bolt",
+  "generating_formula_size": 74
+ },
+ "rbc2": {
+  "best_known_size": 8,
+  "best_known_source": "bolt_portfolio",
+  "generating_formula_size": 56
+ },
+ "rbc3": {
+  "best_known_size": 17,
+  "best_known_source": "bolt",
+  "generating_formula_size": 50
+ },
+ "rbc4": {
+  "best_known_size": 8,
+  "best_known_source": "bolt",
+  "generating_formula_size": 89
+ },
+ "rbc5": {
+  "best_known_size": 8,
+  "best_known_source": "bolt",
+  "generating_formula_size": 80
+ },
+ "rbc6": {
+  "best_known_size": 15,
+  "best_known_source": "bolt",
+  "generating_formula_size": 26
+ },
+ "rbc7": {
+  "best_known_size": 8,
+  "best_known_source": "bolt_portfolio",
+  "generating_formula_size": 44
+ }
+}

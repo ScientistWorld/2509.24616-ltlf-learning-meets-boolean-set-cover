@@ -1,0 +1,162 @@
+{
+"t00": {
+"best_known_size": 4,
+"best_known_source": "bolt"
+},
+"t01": {
+"best_known_size": 98,
+"best_known_source": "generating_formula"
+},
+"t02": {
+"best_known_size": 5,
+"best_known_source": "generating_formula"
+},
+"t03": {
+"best_known_size": 17,
+"best_known_source": "bolt"
+},
+"t04": {
+"best_known_size": 21,
+"best_known_source": "bolt_portfolio"
+},
+"t05": {
+"best_known_size": 5,
+"best_known_source": "bolt"
+},
+"t06": {
+"best_known_size": 11,
+"best_known_source": "bolt"
+},
+"t07": {
+"best_known_size": 16,
+"best_known_source": "bolt_portfolio"
+},
+"t08": {
+"best_known_size": 6,
+"best_known_source": "bolt"
+},
+"t09": {
+"best_known_size": 18,
+"best_known_source": "generating_formula"
+},
+"t10": {
+"best_known_size": 9,
+"best_known_source": "exhaustive_lower_bound"
+},
+"t11": {
+"best_known_size": 3,
+"best_known_source": "bolt"
+},
+"t12": {
+"best_known_size": 4,
+"best_known_source": "bolt"
+},
+"t13": {
+"best_known_size": 41,
+"best_known_source": "bolt_portfolio"
+},
+"t14": {
+"best_known_size": 15,
+"best_known_source": "bolt_portfolio"
+},
+"t15": {
+"best_known_size": 6,
+"best_known_source": "bolt"
+},
+"t16": {
+"best_known_size": 1,
+"best_known_source": "bolt"
+},
+"t17": {
+"best_known_size": 26,
+"best_known_source": "generating_formula"
+},
+"t18": {
+"best_known_size": 4,
+"best_known_source": "bolt"
+},
+"t19": {
+"best_known_size": 3,
+"best_known_source": "bolt"
+},
+"t20": {
+"best_known_size": 10,
+"best_known_source": "exhaustive_lower_bound"
+},
+"t21": {
+"best_known_size": 27,
+"best_known_source": "bolt_portfolio"
+},
+"t22": {
+"best_known_size": 10,
+"best_known_source": "bolt_portfolio"
+},
+"t23": {
+"best_known_size": 14,
+"best_known_source": "generating_formula"
+},
+"t24": {
+"best_known_size": 23,
+"best_known_source": "bolt_portfolio"
+},
+"t25": {
+"best_known_size": 3,
+"best_known_source": "bolt"
+},
+"t26": {
+"best_known_size": 3,
+"best_known_source": "bolt"
+},
+"t27": {
+"best_known_size": 5,
+"best_known_source": "bolt"
+},
+"t28": {
+"best_known_size": 11,
+"best_known_source": "raw_vfb"
+},
+"t29": {
+"best_known_size": 17,
+"best_known_source": "bolt"
+},
+"t30": {
+"best_known_size": 6,
+"best_known_source": "bolt"
+},
+"t31": {
+"best_known_size": 53,
+"best_known_source": "generating_formula"
+},
+"t32": {
+"best_known_size": 52,
+"best_known_source": "bolt_portfolio"
+},
+"t33": {
+"best_known_size": 30,
+"best_known_source": "generating_formula"
+},
+"t34": {
+"best_known_size": 10,
+"best_known_source": "exhaustive_lower_bound"
+},
+"t35": {
+"best_known_size": 11,
+"best_known_source": "bolt"
+},
+"t36": {
+"best_known_size": 16,
+"best_known_source": "bolt"
+},
+"t37": {
+"best_known_size": 59,
+"best_known_source": "generating_formula"
+},
+"t38": {
+"best_known_size": 5,
+"best_known_source": "bolt"
+},
+"t39": {
+"best_known_size": 32,
+"best_known_source": "generating_formula"
+}
+}

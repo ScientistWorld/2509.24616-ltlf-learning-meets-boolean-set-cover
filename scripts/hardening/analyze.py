@@ -34,6 +34,14 @@ SLICES = {
 }
 
 
+def generating_sizes(slc: str) -> dict[str, int]:
+    if slc == "test":
+        payload = json.loads((ROOT / "eval" / "test" / "instances.json").read_text())
+        return {r["id"]: r["generating_formula_size"] for r in payload["instances"] if r.get("generating_formula_size")}
+    sizes = json.loads((ROOT / "eval" / "train" / "reference_sizes.json").read_text())
+    return {i: v["generating_formula_size"] for i, v in sizes.items() if v.get("generating_formula_size")}
+
+
 def per_instance(rows: list[dict]) -> dict[str, dict]:
     out = {}
     for r in rows:
@@ -97,9 +105,33 @@ def main() -> None:
                 "solve_rate": sum(1.0 for r in combo if r["valid"]) / n,
                 "size_ratio_geomean": math.exp(sum(v["log_ratio"] for v in per_instance(combo).values()) / n),
             }
+        gen_sizes = generating_sizes(slc)
+        if "bolt" in details and gen_sizes:
+            # Oracle for the "write down the generating process" shortcut: return the
+            # instance's generating formula (an upper bound on what hand-written family
+            # templates could earn), and the reference with that oracle as a fallback
+            # whenever the oracle is smaller.
+            oracle, best_of = [], []
+            for r in details["bolt"]:
+                g = gen_sizes.get(r["instance"])
+                ok = g is not None and g <= CAP * r["best_known_size"]
+                o = dict(r, valid=ok, size=g, cpu_s=0.0)
+                oracle.append(o)
+                take = ok and (not r["valid"] or g < r["size"])
+                best_of.append(o if take else r)
+            for name, rows in (("generator_oracle", oracle), ("bolt_or_generator_oracle", best_of)):
+                details[name] = rows
+                pi = per_instance(rows)
+                n = len(rows)
+                results[name] = {
+                    "size_efficiency": sum(v["size_efficiency"] for v in pi.values()) / n,
+                    "solve_rate": sum(v["solve_rate"] for v in pi.values()) / n,
+                    "size_ratio_geomean": math.exp(sum(v["log_ratio"] for v in pi.values()) / n),
+                }
         inst = {m: per_instance(rows) for m, rows in details.items()}
         block: dict = {"metrics": results, "rank": rank_gains(
-            {k: v for k, v in results.items() if k not in ("crash", "null_answer", "forged_fields", "parallel_portfolio")})}
+            {k: v for k, v in results.items() if k not in ("crash", "null_answer", "forged_fields", "parallel_portfolio",
+                                                         "generator_oracle", "bolt_or_generator_oracle")})}
         if "bolt" in inst:
             block["paired_vs_bolt"] = {
                 m: {key: paired(inst[m], inst["bolt"], key, rng) for key in ("size_efficiency", "solve_rate", "log_ratio")}
@@ -108,6 +140,11 @@ def main() -> None:
             cpus = sorted(v["cpu_s"] for v in inst["bolt"].values() if v["cpu_s"] is not None)
             block["bolt_cpu_s"] = {"max": cpus[-1], "p90": cpus[int(0.9 * (len(cpus) - 1))],
                                    "mean": sum(cpus) / len(cpus)}
+            block["cpu_s"] = {}
+            for m in inst:
+                c = sorted(v["cpu_s"] for v in inst[m].values() if v["cpu_s"] is not None)
+                if c:
+                    block["cpu_s"][m] = {"mean": sum(c) / len(c), "p90": c[int(0.9 * (len(c) - 1))], "max": c[-1]}
             fam: dict = {}
             for m in inst:
                 for v in inst[m].values():
@@ -144,7 +181,16 @@ def main() -> None:
                 e = d["size_efficiency"]
                 lines.append(f"- {m}: {e['mean_diff']:+.4f} [{e['ci95'][0]:+.4f}, {e['ci95'][1]:+.4f}] "
                              f"{e['better']}/{e['worse']}/{e['ties']}")
-            lines += ["", f"bolt CPU seconds: {block['bolt_cpu_s']}"]
+            lines += ["", "CPU seconds per instance (mean / p90 / max):", ""]
+            for m, c in sorted(block["cpu_s"].items()):
+                lines.append(f"- {m}: {c['mean']:.2f} / {c['p90']:.2f} / {c['max']:.2f}")
+            fams = block["family_size_efficiency"]
+            show = [m for m in ("bolt", "raw_vfb", "bolt_patterns", "bolt_simplify", "bolt_portfolio", "generator_oracle")
+                    if any(m in v for v in fams.values())]
+            lines += ["", "size_efficiency by family:", "", "| family | " + " | ".join(show) + " |",
+                      "|---|" + "---:|" * len(show)]
+            for f in sorted(fams):
+                lines.append(f"| {f} | " + " | ".join(f"{fams[f][m]:.3f}" if m in fams[f] else "" for m in show) + " |")
         if "repeat_spread" in block:
             lines += ["", f"Repeat spread (official rerun vs hardening run): {block['repeat_spread']}",
                       f"Instances whose size_efficiency changed on rerun: {block['repeat_instance_changes']}"]

@@ -13,6 +13,7 @@ from __future__ import annotations
 
 import argparse
 import json
+import re
 import sys
 import zipfile
 from pathlib import Path
@@ -24,6 +25,62 @@ from evaluate import REFERENCE_SIZES, WORKSPACE, check_formula, encoded, load_in
 SOURCE_ZIP = WORKSPACE / "data" / "downloads" / "benchmarks.zip"
 TRIVIAL = {"literal_cover", "null_answer", "crash", "forged_fields"}
 LOWER_BOUNDS = HERE / "lower_bounds.json"
+
+
+_SPOT_TOK = re.compile(r"\s*(X\[!\]|<->|->|&&|\|\||[()!&|]|[A-Za-z_][A-Za-z0-9_]*)")
+_SPOT_BIN = {"<->": (1, "right"), "->": (1, "right"), "|": (2, "left"), "&": (3, "left"),
+             "U": (4, "right"), "R": (4, "right"), "W": (4, "right"), "M": (4, "right")}
+
+
+def spot_to_core(text: str, renaming: dict[str, str]) -> str:
+    """Release formula (Spot LTLf syntax: -> <-> W M, Spot precedence) -> the
+    evaluated grammar, with propositions renamed as in the training files."""
+    toks, pos = [], 0
+    text = text.strip()
+    while pos < len(text):
+        m = _SPOT_TOK.match(text, pos)
+        if not m:
+            raise ValueError(f"bad character at {pos}")
+        toks.append({"&&": "&", "||": "|"}.get(m.group(1), m.group(1)))
+        pos = m.end()
+    i = 0
+
+    def unary():
+        nonlocal i
+        tok = toks[i]
+        i += 1
+        if tok in ("!", "X", "X[!]", "F", "G"):
+            return f"{tok}({unary()})"
+        if tok == "(":
+            out = binary(0)
+            i += 1  # ')'
+            return out
+        if tok in ("true", "false"):
+            return tok
+        return renaming.get(tok, tok)
+
+    def binary(min_prec):
+        nonlocal i
+        left = unary()
+        while i < len(toks) and toks[i] in _SPOT_BIN and _SPOT_BIN[toks[i]][0] >= min_prec:
+            op = toks[i]
+            prec, assoc = _SPOT_BIN[op]
+            i += 1
+            right = binary(prec if assoc == "right" else prec + 1)
+            a, b = f"({left})", f"({right})"
+            if op == "->":
+                left = f"(!{a}) | {b}"
+            elif op == "<->":
+                left = f"({a} & {b}) | ((!{a}) & (!{b}))"
+            elif op == "W":
+                left = f"{b} R ({a} | {b})"
+            elif op == "M":
+                left = f"{b} U ({a} & {b})"
+            else:
+                left = f"{a} {op} {b}"
+        return left
+
+    return binary(0)
 
 
 def balanced(formula: str) -> str:
@@ -44,7 +101,11 @@ def main() -> None:
     best: dict[str, tuple[int, str]] = {}
     gen_sizes: dict[str, int | None] = {}
 
+    learner_hits: set[str] = set()
+
     def offer(iid: str, size: int, source: str) -> None:
+        if source != "generating_formula":
+            learner_hits.add(iid)
         if iid in by_id and (iid not in best or size < best[iid][0]):
             best[iid] = (size, source)
 
@@ -55,6 +116,8 @@ def main() -> None:
             gen_sizes[rec["id"]] = None
             if gen:
                 inst = by_id[rec["id"]]
+                if "proposition_renaming" in rec:  # formula families: Spot syntax, renamed propositions
+                    gen = spot_to_core(gen, rec["proposition_renaming"])
                 node = parse(balanced(gen), set(inst["atomic_propositions"]))
                 if encoded(inst).separates(node):
                     gen_sizes[rec["id"]] = node_count(node)
@@ -81,6 +144,14 @@ def main() -> None:
             for row in rows:
                 if row.get("valid") and row.get("size"):
                     offer(row["instance"], row["size"], method)
+    # A generating formula only tightens an instance that some learner solved;
+    # where no learner found a separator the reference is the exhaustive lower
+    # bound (the paper's size ratio is relative to learner runs; a generating
+    # specification of hundreds of nodes would make such an instance lenient).
+    learner_solved = {iid for iid, (_, src) in best.items() if src != "generating_formula"} | learner_hits
+    for iid in list(best):
+        if iid not in learner_solved:
+            del best[iid]
     bounds = json.loads(LOWER_BOUNDS.read_text()) if LOWER_BOUNDS.exists() else {}
     for iid in by_id:
         if iid not in best and iid in bounds:

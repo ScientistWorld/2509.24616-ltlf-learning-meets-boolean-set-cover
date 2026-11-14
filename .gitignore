@@ -237,3 +237,7 @@ core.[0-9]*
 
 # Per-instance solver records with formulas for hidden instances (never kept)
 eval/test/runs*/*.jsonl
+
+# Formula records of hidden-test runs (hardening pipeline): never commit
+eval/test/runs_hardening/*.jsonl
+eval/test/runs_official/

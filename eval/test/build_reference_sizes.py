@@ -36,7 +36,11 @@ def main() -> None:
     by_id = {inst["id"]: inst for inst in instances}
     best: dict[str, tuple[int, str]] = {}
 
+    learner_hits: set[str] = set()
+
     def offer(iid: str, size: int, source: str) -> None:
+        if source != "generating_formula":
+            learner_hits.add(iid)
         if iid in by_id and (iid not in best or size < best[iid][0]):
             best[iid] = (size, source)
 
@@ -65,6 +69,14 @@ def main() -> None:
             for row in rows:
                 if row.get("valid") and row.get("size"):
                     offer(row["instance"], row["size"], method)
+    # A generating formula only tightens an instance that some learner solved;
+    # where no learner found a separator the reference is the exhaustive lower
+    # bound (the paper's size ratio is relative to learner runs; a generating
+    # specification of hundreds of nodes would make such an instance lenient).
+    learner_solved = {iid for iid, (_, src) in best.items() if src != "generating_formula"} | learner_hits
+    for iid in list(best):
+        if iid not in learner_solved:
+            del best[iid]
     bounds = json.loads(LOWER_BOUNDS.read_text()) if LOWER_BOUNDS.exists() else {}
     for iid in by_id:
         if iid not in best and iid in bounds:

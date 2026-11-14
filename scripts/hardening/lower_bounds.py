@@ -1,6 +1,8 @@
 #!/usr/bin/env python3
 """Exhaustive-enumeration lower bounds for instances without a learner separator.
 
+Computed for every instance on which no learner run (TRIVIAL constructions
+excluded) found a separator, whether or not a generating formula is known.
 Raw VFB enumerates every LTLf formula of the evaluated grammar by size, keeping
 one representative per characteristic table (observational equivalence is
 complete), and checks each against the target.  If it finishes size k without a
@@ -41,12 +43,9 @@ def main() -> None:
     sys.setrecursionlimit(20000)
     E = load_eval(args.slice)
     instances, payload = E.load_instances()
-    if args.slice == "test":
-        gen = {r["id"]: r.get("generating_formula_size") for r in payload["instances"]}
-    else:
-        sizes = json.loads((ROOT / "eval" / "train" / "reference_sizes.json").read_text())
-        gen = {i: v.get("generating_formula_size") for i, v in sizes.items()}
-    solved = {i for i, g in gen.items() if g}
+    # Only learner runs count as solving an instance: a generating formula (up to
+    # hundreds of nodes for the SYNTCOMP families) says little about the minimum.
+    solved: set[str] = set()
     for details in args.details:
         for method, rows in json.loads(Path(details).read_text()).items():
             if method not in TRIVIAL:
@@ -69,7 +68,7 @@ def main() -> None:
             task, ans = Path(tmp) / "task.json", Path(tmp) / "answer.json"
             task.write_text(json.dumps(E.solver_input(inst)))
             subprocess.run([sys.executable, str(ROOT / "method" / "ltlf_bolt.py"), "--mode", "vfb",
-                            "--budget", str(args.budget), "--max-memory-mb", "2000",
+                            "--budget", str(args.budget), "--max-memory-mb", "1200",
                             "--instance", str(task), "--out", str(ans)], check=False)
             try:
                 res = json.loads(ans.read_text())
