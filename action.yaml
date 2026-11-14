@@ -1,6 +1,8 @@
 # Once you set action to 'submit' or 'done', STOP immediately.
 # Do NOT sleep, poll, or wait for jobs. The system reads this file
 # only after your turn ends.
-action: done
+action: pending
+gpus: 0
+test: false
 milestone: core_claim
-notes: "Hardened: budgeted solver evaluation on 40 hidden fresh instances; paper-faithful Bolt reference 0.752 vs raw VFB 0.400; portfolio variant +0.057 (CI>0); shortcuts closed (see HARDENING.md)."
+notes: ""
