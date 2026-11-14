@@ -1,0 +1,7944 @@
+{
+ "bolt": [
+  {
+   "instance": "t00",
+   "family": "OrderedSequence",
+   "valid": true,
+   "size": 4,
+   "best_known_size": 4,
+   "check": "valid",
+   "cpu_s": 0.088
+  },
+  {
+   "instance": "t01",
+   "family": "RandomBooleanCombinationsofFactors",
+   "valid": true,
+   "size": 179,
+   "best_known_size": 29,
+   "check": "valid",
+   "cpu_s": 11.204
+  },
+  {
+   "instance": "t02",
+   "family": "OrderedSequence",
+   "valid": true,
+   "size": 5,
+   "best_known_size": 5,
+   "check": "valid",
+   "cpu_s": 0.091
+  },
+  {
+   "instance": "t03",
+   "family": "RandomBooleanCombinationsofFactors",
+   "valid": true,
+   "size": 17,
+   "best_known_size": 17,
+   "check": "valid",
+   "cpu_s": 2.902
+  },
+  {
+   "instance": "t04",
+   "family": "Subword",
+   "valid": true,
+   "size": 23,
+   "best_known_size": 21,
+   "check": "valid",
+   "cpu_s": 1.179
+  },
+  {
+   "instance": "t05",
+   "family": "OrderedSequence",
+   "valid": true,
+   "size": 5,
+   "best_known_size": 5,
+   "check": "valid",
+   "cpu_s": 0.097
+  },
+  {
+   "instance": "t06",
+   "family": "Subset",
+   "valid": true,
+   "size": 11,
+   "best_known_size": 11,
+   "check": "valid",
+   "cpu_s": 1.349
+  },
+  {
+   "instance": "t07",
+   "family": "RandomBooleanCombinationsofFactors",
+   "valid": true,
+   "size": 17,
+   "best_known_size": 16,
+   "check": "valid",
+   "cpu_s": 1.098
+  },
+  {
+   "instance": "t08",
+   "family": "Subset",
+   "valid": true,
+   "size": 6,
+   "best_known_size": 6,
+   "check": "valid",
+   "cpu_s": 0.105
+  },
+  {
+   "instance": "t09",
+   "family": "Subword",
+   "valid": true,
+   "size": 82,
+   "best_known_size": 17,
+   "check": "valid",
+   "cpu_s": 3.619
+  },
+  {
+   "instance": "t10",
+   "family": "Hamming",
+   "valid": false,
+   "size": null,
+   "best_known_size": 9,
+   "check": "no_formula",
+   "cpu_s": 6.346
+  },
+  {
+   "instance": "t11",
+   "family": "OrderedSequence",
+   "valid": true,
+   "size": 3,
+   "best_known_size": 3,
+   "check": "valid",
+   "cpu_s": 0.091
+  },
+  {
+   "instance": "t12",
+   "family": "Subset",
+   "valid": true,
+   "size": 4,
+   "best_known_size": 4,
+   "check": "valid",
+   "cpu_s": 0.089
+  },
+  {
+   "instance": "t13",
+   "family": "Hamming",
+   "valid": false,
+   "size": null,
+   "best_known_size": 41,
+   "check": "no_formula",
+   "cpu_s": 1.041
+  },
+  {
+   "instance": "t14",
+   "family": "Subword",
+   "valid": true,
+   "size": 18,
+   "best_known_size": 15,
+   "check": "valid",
+   "cpu_s": 1.297
+  },
+  {
+   "instance": "t15",
+   "family": "RandomBooleanCombinationsofFactors",
+   "valid": true,
+   "size": 6,
+   "best_known_size": 6,
+   "check": "valid",
+   "cpu_s": 0.135
+  },
+  {
+   "instance": "t16",
+   "family": "OrderedSequence",
+   "valid": true,
+   "size": 1,
+   "best_known_size": 1,
+   "check": "valid",
+   "cpu_s": 0.088
+  },
+  {
+   "instance": "t17",
+   "family": "Subword",
+   "valid": true,
+   "size": 162,
+   "best_known_size": 26,
+   "check": "valid",
+   "cpu_s": 9.159
+  },
+  {
+   "instance": "t18",
+   "family": "Subword",
+   "valid": true,
+   "size": 4,
+   "best_known_size": 4,
+   "check": "valid",
+   "cpu_s": 0.089
+  },
+  {
+   "instance": "t19",
+   "family": "Subset",
+   "valid": true,
+   "size": 3,
+   "best_known_size": 3,
+   "check": "valid",
+   "cpu_s": 0.088
+  },
+  {
+   "instance": "t20",
+   "family": "Hamming",
+   "valid": false,
+   "size": null,
+   "best_known_size": 49,
+   "check": "no_formula",
+   "cpu_s": 1.051
+  },
+  {
+   "instance": "t21",
+   "family": "Hamming",
+   "valid": true,
+   "size": 35,
+   "best_known_size": 27,
+   "check": "valid",
+   "cpu_s": 1.021
+  },
+  {
+   "instance": "t22",
+   "family": "Subset",
+   "valid": true,
+   "size": 12,
+   "best_known_size": 10,
+   "check": "valid",
+   "cpu_s": 2.593
+  },
+  {
+   "instance": "t23",
+   "family": "Subset",
+   "valid": true,
+   "size": 19,
+   "best_known_size": 14,
+   "check": "valid",
+   "cpu_s": 3.425
+  },
+  {
+   "instance": "t24",
+   "family": "Subword",
+   "valid": true,
+   "size": 25,
+   "best_known_size": 23,
+   "check": "valid",
+   "cpu_s": 1.299
+  },
+  {
+   "instance": "t25",
+   "family": "OrderedSequence",
+   "valid": true,
+   "size": 3,
+   "best_known_size": 3,
+   "check": "valid",
+   "cpu_s": 0.091
+  },
+  {
+   "instance": "t26",
+   "family": "OrderedSequence",
+   "valid": true,
+   "size": 3,
+   "best_known_size": 3,
+   "check": "valid",
+   "cpu_s": 0.088
+  },
+  {
+   "instance": "t27",
+   "family": "Subword",
+   "valid": true,
+   "size": 5,
+   "best_known_size": 5,
+   "check": "valid",
+   "cpu_s": 0.091
+  },
+  {
+   "instance": "t28",
+   "family": "Hamming",
+   "valid": true,
+   "size": 14,
+   "best_known_size": 11,
+   "check": "valid",
+   "cpu_s": 0.364
+  },
+  {
+   "instance": "t29",
+   "family": "RandomBooleanCombinationsofFactors",
+   "valid": true,
+   "size": 17,
+   "best_known_size": 17,
+   "check": "valid",
+   "cpu_s": 2.48
+  },
+  {
+   "instance": "t30",
+   "family": "Subset",
+   "valid": true,
+   "size": 6,
+   "best_known_size": 6,
+   "check": "valid",
+   "cpu_s": 0.115
+  },
+  {
+   "instance": "t31",
+   "family": "RandomBooleanCombinationsofFactors",
+   "valid": true,
+   "size": 84,
+   "best_known_size": 53,
+   "check": "valid",
+   "cpu_s": 3.654
+  },
+  {
+   "instance": "t32",
+   "family": "Hamming",
+   "valid": true,
+   "size": 65,
+   "best_known_size": 52,
+   "check": "valid",
+   "cpu_s": 1.592
+  },
+  {
+   "instance": "t33",
+   "family": "Subword",
+   "valid": true,
+   "size": 110,
+   "best_known_size": 30,
+   "check": "valid",
+   "cpu_s": 4.789
+  },
+  {
+   "instance": "t34",
+   "family": "Hamming",
+   "valid": false,
+   "size": null,
+   "best_known_size": 10,
+   "check": "no_formula",
+   "cpu_s": 1.658
+  },
+  {
+   "instance": "t35",
+   "family": "Subset",
+   "valid": true,
+   "size": 11,
+   "best_known_size": 11,
+   "check": "valid",
+   "cpu_s": 1.041
+  },
+  {
+   "instance": "t36",
+   "family": "Hamming",
+   "valid": true,
+   "size": 16,
+   "best_known_size": 16,
+   "check": "valid",
+   "cpu_s": 0.852
+  },
+  {
+   "instance": "t37",
+   "family": "RandomBooleanCombinationsofFactors",
+   "valid": true,
+   "size": 125,
+   "best_known_size": 29,
+   "check": "valid",
+   "cpu_s": 8.746
+  },
+  {
+   "instance": "t38",
+   "family": "OrderedSequence",
+   "valid": true,
+   "size": 5,
+   "best_known_size": 5,
+   "check": "valid",
+   "cpu_s": 0.095
+  },
+  {
+   "instance": "t39",
+   "family": "RandomBooleanCombinationsofFactors",
+   "valid": true,
+   "size": 143,
+   "best_known_size": 32,
+   "check": "valid",
+   "cpu_s": 12.455
+  },
+  {
+   "instance": "t40",
+   "family": "SingleCounter",
+   "valid": true,
+   "size": 8,
+   "best_known_size": 8,
+   "check": "valid",
+   "cpu_s": 0.355
+  },
+  {
+   "instance": "t41",
+   "family": "Fixed_Formulas",
+   "valid": true,
+   "size": 5,
+   "best_known_size": 5,
+   "check": "valid",
+   "cpu_s": 0.094
+  },
+  {
+   "instance": "t42",
+   "family": "DoubleCounter",
+   "valid": true,
+   "size": 33,
+   "best_known_size": 30,
+   "check": "valid",
+   "cpu_s": 5.637
+  },
+  {
+   "instance": "t43",
+   "family": "Random_Conjuncts_from_Basis",
+   "valid": true,
+   "size": 3,
+   "best_known_size": 3,
+   "check": "valid",
+   "cpu_s": 0.091
+  },
+  {
+   "instance": "t44",
+   "family": "Nim",
+   "valid": true,
+   "size": 7,
+   "best_known_size": 7,
+   "check": "valid",
+   "cpu_s": 1.655
+  },
+  {
+   "instance": "t45",
+   "family": "Random_Conjuncts_from_Basis",
+   "valid": true,
+   "size": 2,
+   "best_known_size": 2,
+   "check": "valid",
+   "cpu_s": 0.089
+  },
+  {
+   "instance": "t46",
+   "family": "Fixed_Formulas",
+   "valid": true,
+   "size": 2,
+   "best_known_size": 2,
+   "check": "valid",
+   "cpu_s": 0.087
+  },
+  {
+   "instance": "t47",
+   "family": "Nim",
+   "valid": true,
+   "size": 8,
+   "best_known_size": 8,
+   "check": "valid",
+   "cpu_s": 1.084
+  },
+  {
+   "instance": "t48",
+   "family": "DoubleCounter",
+   "valid": true,
+   "size": 4,
+   "best_known_size": 4,
+   "check": "valid",
+   "cpu_s": 0.087
+  },
+  {
+   "instance": "t49",
+   "family": "DoubleCounter",
+   "valid": true,
+   "size": 13,
+   "best_known_size": 11,
+   "check": "valid",
+   "cpu_s": 1.196
+  },
+  {
+   "instance": "t50",
+   "family": "Nim",
+   "valid": true,
+   "size": 22,
+   "best_known_size": 22,
+   "check": "valid",
+   "cpu_s": 3.745
+  },
+  {
+   "instance": "t51",
+   "family": "Nim",
+   "valid": true,
+   "size": 14,
+   "best_known_size": 14,
+   "check": "valid",
+   "cpu_s": 2.775
+  },
+  {
+   "instance": "t52",
+   "family": "Fixed_Formulas",
+   "valid": true,
+   "size": 2,
+   "best_known_size": 2,
+   "check": "valid",
+   "cpu_s": 0.089
+  },
+  {
+   "instance": "t53",
+   "family": "Nim",
+   "valid": true,
+   "size": 14,
+   "best_known_size": 14,
+   "check": "valid",
+   "cpu_s": 2.938
+  },
+  {
+   "instance": "t54",
+   "family": "SingleCounter",
+   "valid": true,
+   "size": 10,
+   "best_known_size": 10,
+   "check": "valid",
+   "cpu_s": 4.6
+  },
+  {
+   "instance": "t55",
+   "family": "Fixed_Formulas",
+   "valid": true,
+   "size": 4,
+   "best_known_size": 4,
+   "check": "valid",
+   "cpu_s": 0.092
+  },
+  {
+   "instance": "t56",
+   "family": "SingleCounter",
+   "valid": true,
+   "size": 114,
+   "best_known_size": 35,
+   "check": "valid",
+   "cpu_s": 6.684
+  },
+  {
+   "instance": "t57",
+   "family": "SingleCounter",
+   "valid": true,
+   "size": 1,
+   "best_known_size": 1,
+   "check": "valid",
+   "cpu_s": 0.088
+  },
+  {
+   "instance": "t58",
+   "family": "SingleCounter",
+   "valid": true,
+   "size": 7,
+   "best_known_size": 7,
+   "check": "valid",
+   "cpu_s": 0.154
+  },
+  {
+   "instance": "t59",
+   "family": "Fixed_Formulas",
+   "valid": true,
+   "size": 3,
+   "best_known_size": 3,
+   "check": "valid",
+   "cpu_s": 0.088
+  },
+  {
+   "instance": "t60",
+   "family": "Nim",
+   "valid": true,
+   "size": 12,
+   "best_known_size": 12,
+   "check": "valid",
+   "cpu_s": 1.338
+  },
+  {
+   "instance": "t61",
+   "family": "Random_Conjuncts_from_Basis",
+   "valid": true,
+   "size": 5,
+   "best_known_size": 5,
+   "check": "valid",
+   "cpu_s": 0.099
+  },
+  {
+   "instance": "t62",
+   "family": "Nim",
+   "valid": true,
+   "size": 4,
+   "best_known_size": 4,
+   "check": "valid",
+   "cpu_s": 0.091
+  },
+  {
+   "instance": "t63",
+   "family": "Fixed_Formulas",
+   "valid": true,
+   "size": 3,
+   "best_known_size": 3,
+   "check": "valid",
+   "cpu_s": 0.09
+  },
+  {
+   "instance": "t64",
+   "family": "SingleCounter",
+   "valid": true,
+   "size": 32,
+   "best_known_size": 32,
+   "check": "valid",
+   "cpu_s": 5.728
+  },
+  {
+   "instance": "t65",
+   "family": "DoubleCounter",
+   "valid": true,
+   "size": 13,
+   "best_known_size": 10,
+   "check": "valid",
+   "cpu_s": 1.703
+  },
+  {
+   "instance": "t66",
+   "family": "Random_Conjuncts_from_Basis",
+   "valid": true,
+   "size": 3,
+   "best_known_size": 3,
+   "check": "valid",
+   "cpu_s": 0.105
+  },
+  {
+   "instance": "t67",
+   "family": "Random_Conjuncts_from_Basis",
+   "valid": true,
+   "size": 2,
+   "best_known_size": 2,
+   "check": "valid",
+   "cpu_s": 0.094
+  },
+  {
+   "instance": "t68",
+   "family": "Random_Conjuncts_from_Basis",
+   "valid": true,
+   "size": 2,
+   "best_known_size": 2,
+   "check": "valid",
+   "cpu_s": 0.089
+  },
+  {
+   "instance": "t69",
+   "family": "Random_Conjuncts_from_Basis",
+   "valid": true,
+   "size": 10,
+   "best_known_size": 10,
+   "check": "valid",
+   "cpu_s": 1.852
+  },
+  {
+   "instance": "t70",
+   "family": "Random_Conjuncts_from_Basis",
+   "valid": true,
+   "size": 3,
+   "best_known_size": 3,
+   "check": "valid",
+   "cpu_s": 0.09
+  },
+  {
+   "instance": "t71",
+   "family": "Nim",
+   "valid": true,
+   "size": 3,
+   "best_known_size": 3,
+   "check": "valid",
+   "cpu_s": 0.09
+  },
+  {
+   "instance": "t72",
+   "family": "DoubleCounter",
+   "valid": true,
+   "size": 6,
+   "best_known_size": 6,
+   "check": "valid",
+   "cpu_s": 0.259
+  },
+  {
+   "instance": "t73",
+   "family": "Fixed_Formulas",
+   "valid": true,
+   "size": 4,
+   "best_known_size": 4,
+   "check": "valid",
+   "cpu_s": 0.087
+  },
+  {
+   "instance": "t74",
+   "family": "SingleCounter",
+   "valid": true,
+   "size": 20,
+   "best_known_size": 20,
+   "check": "valid",
+   "cpu_s": 1.356
+  },
+  {
+   "instance": "t75",
+   "family": "SingleCounter",
+   "valid": true,
+   "size": 18,
+   "best_known_size": 18,
+   "check": "valid",
+   "cpu_s": 1.753
+  },
+  {
+   "instance": "t76",
+   "family": "DoubleCounter",
+   "valid": true,
+   "size": 4,
+   "best_known_size": 4,
+   "check": "valid",
+   "cpu_s": 0.091
+  },
+  {
+   "instance": "t77",
+   "family": "Fixed_Formulas",
+   "valid": true,
+   "size": 2,
+   "best_known_size": 2,
+   "check": "valid",
+   "cpu_s": 0.087
+  },
+  {
+   "instance": "t78",
+   "family": "DoubleCounter",
+   "valid": true,
+   "size": 36,
+   "best_known_size": 31,
+   "check": "valid",
+   "cpu_s": 4.007
+  },
+  {
+   "instance": "t79",
+   "family": "DoubleCounter",
+   "valid": true,
+   "size": 67,
+   "best_known_size": 32,
+   "check": "valid",
+   "cpu_s": 4.42
+  }
+ ],
+ "bolt_beam1": [
+  {
+   "instance": "t00",
+   "family": "OrderedSequence",
+   "valid": true,
+   "size": 4,
+   "best_known_size": 4,
+   "check": "valid",
+   "cpu_s": 0.088
+  },
+  {
+   "instance": "t01",
+   "family": "RandomBooleanCombinationsofFactors",
+   "valid": false,
+   "size": 463,
+   "best_known_size": 29,
+   "check": "valid but more than CAP x the best-known size",
+   "cpu_s": 9.518
+  },
+  {
+   "instance": "t02",
+   "family": "OrderedSequence",
+   "valid": true,
+   "size": 5,
+   "best_known_size": 5,
+   "check": "valid",
+   "cpu_s": 0.093
+  },
+  {
+   "instance": "t03",
+   "family": "RandomBooleanCombinationsofFactors",
+   "valid": false,
+   "size": 199,
+   "best_known_size": 17,
+   "check": "valid but more than CAP x the best-known size",
+   "cpu_s": 5.136
+  },
+  {
+   "instance": "t04",
+   "family": "Subword",
+   "valid": true,
+   "size": 45,
+   "best_known_size": 21,
+   "check": "valid",
+   "cpu_s": 1.204
+  },
+  {
+   "instance": "t05",
+   "family": "OrderedSequence",
+   "valid": true,
+   "size": 5,
+   "best_known_size": 5,
+   "check": "valid",
+   "cpu_s": 0.096
+  },
+  {
+   "instance": "t06",
+   "family": "Subset",
+   "valid": true,
+   "size": 30,
+   "best_known_size": 11,
+   "check": "valid",
+   "cpu_s": 1.54
+  },
+  {
+   "instance": "t07",
+   "family": "RandomBooleanCombinationsofFactors",
+   "valid": true,
+   "size": 34,
+   "best_known_size": 16,
+   "check": "valid",
+   "cpu_s": 1.208
+  },
+  {
+   "instance": "t08",
+   "family": "Subset",
+   "valid": true,
+   "size": 6,
+   "best_known_size": 6,
+   "check": "valid",
+   "cpu_s": 0.107
+  },
+  {
+   "instance": "t09",
+   "family": "Subword",
+   "valid": false,
+   "size": 189,
+   "best_known_size": 17,
+   "check": "valid but more than CAP x the best-known size",
+   "cpu_s": 4.302
+  },
+  {
+   "instance": "t10",
+   "family": "Hamming",
+   "valid": false,
+   "size": null,
+   "best_known_size": 9,
+   "check": "no_formula",
+   "cpu_s": 1.727
+  },
+  {
+   "instance": "t11",
+   "family": "OrderedSequence",
+   "valid": true,
+   "size": 3,
+   "best_known_size": 3,
+   "check": "valid",
+   "cpu_s": 0.088
+  },
+  {
+   "instance": "t12",
+   "family": "Subset",
+   "valid": true,
+   "size": 4,
+   "best_known_size": 4,
+   "check": "valid",
+   "cpu_s": 0.088
+  },
+  {
+   "instance": "t13",
+   "family": "Hamming",
+   "valid": false,
+   "size": null,
+   "best_known_size": 41,
+   "check": "no_formula",
+   "cpu_s": 1.029
+  },
+  {
+   "instance": "t14",
+   "family": "Subword",
+   "valid": true,
+   "size": 22,
+   "best_known_size": 15,
+   "check": "valid",
+   "cpu_s": 1.336
+  },
+  {
+   "instance": "t15",
+   "family": "RandomBooleanCombinationsofFactors",
+   "valid": true,
+   "size": 6,
+   "best_known_size": 6,
+   "check": "valid",
+   "cpu_s": 0.135
+  },
+  {
+   "instance": "t16",
+   "family": "OrderedSequence",
+   "valid": true,
+   "size": 1,
+   "best_known_size": 1,
+   "check": "valid",
+   "cpu_s": 0.09
+  },
+  {
+   "instance": "t17",
+   "family": "Subword",
+   "valid": false,
+   "size": 351,
+   "best_known_size": 26,
+   "check": "valid but more than CAP x the best-known size",
+   "cpu_s": 7.281
+  },
+  {
+   "instance": "t18",
+   "family": "Subword",
+   "valid": true,
+   "size": 4,
+   "best_known_size": 4,
+   "check": "valid",
+   "cpu_s": 0.089
+  },
+  {
+   "instance": "t19",
+   "family": "Subset",
+   "valid": true,
+   "size": 3,
+   "best_known_size": 3,
+   "check": "valid",
+   "cpu_s": 0.088
+  },
+  {
+   "instance": "t20",
+   "family": "Hamming",
+   "valid": false,
+   "size": null,
+   "best_known_size": 49,
+   "check": "no_formula",
+   "cpu_s": 1.023
+  },
+  {
+   "instance": "t21",
+   "family": "Hamming",
+   "valid": true,
+   "size": 35,
+   "best_known_size": 27,
+   "check": "valid",
+   "cpu_s": 1.001
+  },
+  {
+   "instance": "t22",
+   "family": "Subset",
+   "valid": true,
+   "size": 26,
+   "best_known_size": 10,
+   "check": "valid",
+   "cpu_s": 2.991
+  },
+  {
+   "instance": "t23",
+   "family": "Subset",
+   "valid": true,
+   "size": 109,
+   "best_known_size": 14,
+   "check": "valid",
+   "cpu_s": 5.608
+  },
+  {
+   "instance": "t24",
+   "family": "Subword",
+   "valid": true,
+   "size": 45,
+   "best_known_size": 23,
+   "check": "valid",
+   "cpu_s": 1.388
+  },
+  {
+   "instance": "t25",
+   "family": "OrderedSequence",
+   "valid": true,
+   "size": 3,
+   "best_known_size": 3,
+   "check": "valid",
+   "cpu_s": 0.09
+  },
+  {
+   "instance": "t26",
+   "family": "OrderedSequence",
+   "valid": true,
+   "size": 3,
+   "best_known_size": 3,
+   "check": "valid",
+   "cpu_s": 0.09
+  },
+  {
+   "instance": "t27",
+   "family": "Subword",
+   "valid": true,
+   "size": 5,
+   "best_known_size": 5,
+   "check": "valid",
+   "cpu_s": 0.09
+  },
+  {
+   "instance": "t28",
+   "family": "Hamming",
+   "valid": true,
+   "size": 14,
+   "best_known_size": 11,
+   "check": "valid",
+   "cpu_s": 0.361
+  },
+  {
+   "instance": "t29",
+   "family": "RandomBooleanCombinationsofFactors",
+   "valid": true,
+   "size": 17,
+   "best_known_size": 17,
+   "check": "valid",
+   "cpu_s": 2.485
+  },
+  {
+   "instance": "t30",
+   "family": "Subset",
+   "valid": true,
+   "size": 6,
+   "best_known_size": 6,
+   "check": "valid",
+   "cpu_s": 0.117
+  },
+  {
+   "instance": "t31",
+   "family": "RandomBooleanCombinationsofFactors",
+   "valid": true,
+   "size": 79,
+   "best_known_size": 53,
+   "check": "valid",
+   "cpu_s": 2.982
+  },
+  {
+   "instance": "t32",
+   "family": "Hamming",
+   "valid": true,
+   "size": 102,
+   "best_known_size": 52,
+   "check": "valid",
+   "cpu_s": 1.155
+  },
+  {
+   "instance": "t33",
+   "family": "Subword",
+   "valid": true,
+   "size": 284,
+   "best_known_size": 30,
+   "check": "valid",
+   "cpu_s": 5.629
+  },
+  {
+   "instance": "t34",
+   "family": "Hamming",
+   "valid": false,
+   "size": null,
+   "best_known_size": 10,
+   "check": "no_formula",
+   "cpu_s": 1.436
+  },
+  {
+   "instance": "t35",
+   "family": "Subset",
+   "valid": true,
+   "size": 17,
+   "best_known_size": 11,
+   "check": "valid",
+   "cpu_s": 1.22
+  },
+  {
+   "instance": "t36",
+   "family": "Hamming",
+   "valid": true,
+   "size": 21,
+   "best_known_size": 16,
+   "check": "valid",
+   "cpu_s": 0.877
+  },
+  {
+   "instance": "t37",
+   "family": "RandomBooleanCombinationsofFactors",
+   "valid": false,
+   "size": 384,
+   "best_known_size": 29,
+   "check": "valid but more than CAP x the best-known size",
+   "cpu_s": 8.765
+  },
+  {
+   "instance": "t38",
+   "family": "OrderedSequence",
+   "valid": true,
+   "size": 5,
+   "best_known_size": 5,
+   "check": "valid",
+   "cpu_s": 0.094
+  },
+  {
+   "instance": "t39",
+   "family": "RandomBooleanCombinationsofFactors",
+   "valid": false,
+   "size": 475,
+   "best_known_size": 32,
+   "check": "valid but more than CAP x the best-known size",
+   "cpu_s": 9.585
+  },
+  {
+   "instance": "t40",
+   "family": "SingleCounter",
+   "valid": true,
+   "size": 8,
+   "best_known_size": 8,
+   "check": "valid",
+   "cpu_s": 0.353
+  },
+  {
+   "instance": "t41",
+   "family": "Fixed_Formulas",
+   "valid": true,
+   "size": 5,
+   "best_known_size": 5,
+   "check": "valid",
+   "cpu_s": 0.088
+  },
+  {
+   "instance": "t42",
+   "family": "DoubleCounter",
+   "valid": true,
+   "size": 97,
+   "best_known_size": 30,
+   "check": "valid",
+   "cpu_s": 8.676
+  },
+  {
+   "instance": "t43",
+   "family": "Random_Conjuncts_from_Basis",
+   "valid": true,
+   "size": 3,
+   "best_known_size": 3,
+   "check": "valid",
+   "cpu_s": 0.091
+  },
+  {
+   "instance": "t44",
+   "family": "Nim",
+   "valid": true,
+   "size": 10,
+   "best_known_size": 7,
+   "check": "valid",
+   "cpu_s": 1.727
+  },
+  {
+   "instance": "t45",
+   "family": "Random_Conjuncts_from_Basis",
+   "valid": true,
+   "size": 2,
+   "best_known_size": 2,
+   "check": "valid",
+   "cpu_s": 0.089
+  },
+  {
+   "instance": "t46",
+   "family": "Fixed_Formulas",
+   "valid": true,
+   "size": 2,
+   "best_known_size": 2,
+   "check": "valid",
+   "cpu_s": 0.087
+  },
+  {
+   "instance": "t47",
+   "family": "Nim",
+   "valid": true,
+   "size": 12,
+   "best_known_size": 8,
+   "check": "valid",
+   "cpu_s": 1.241
+  },
+  {
+   "instance": "t48",
+   "family": "DoubleCounter",
+   "valid": true,
+   "size": 4,
+   "best_known_size": 4,
+   "check": "valid",
+   "cpu_s": 0.088
+  },
+  {
+   "instance": "t49",
+   "family": "DoubleCounter",
+   "valid": true,
+   "size": 23,
+   "best_known_size": 11,
+   "check": "valid",
+   "cpu_s": 1.112
+  },
+  {
+   "instance": "t50",
+   "family": "Nim",
+   "valid": true,
+   "size": 86,
+   "best_known_size": 22,
+   "check": "valid",
+   "cpu_s": 7.174
+  },
+  {
+   "instance": "t51",
+   "family": "Nim",
+   "valid": true,
+   "size": 14,
+   "best_known_size": 14,
+   "check": "valid",
+   "cpu_s": 2.741
+  },
+  {
+   "instance": "t52",
+   "family": "Fixed_Formulas",
+   "valid": true,
+   "size": 2,
+   "best_known_size": 2,
+   "check": "valid",
+   "cpu_s": 0.087
+  },
+  {
+   "instance": "t53",
+   "family": "Nim",
+   "valid": true,
+   "size": 14,
+   "best_known_size": 14,
+   "check": "valid",
+   "cpu_s": 2.775
+  },
+  {
+   "instance": "t54",
+   "family": "SingleCounter",
+   "valid": true,
+   "size": 37,
+   "best_known_size": 10,
+   "check": "valid",
+   "cpu_s": 5.092
+  },
+  {
+   "instance": "t55",
+   "family": "Fixed_Formulas",
+   "valid": true,
+   "size": 4,
+   "best_known_size": 4,
+   "check": "valid",
+   "cpu_s": 0.088
+  },
+  {
+   "instance": "t56",
+   "family": "SingleCounter",
+   "valid": false,
+   "size": 472,
+   "best_known_size": 35,
+   "check": "valid but more than CAP x the best-known size",
+   "cpu_s": 15.285
+  },
+  {
+   "instance": "t57",
+   "family": "SingleCounter",
+   "valid": true,
+   "size": 1,
+   "best_known_size": 1,
+   "check": "valid",
+   "cpu_s": 0.091
+  },
+  {
+   "instance": "t58",
+   "family": "SingleCounter",
+   "valid": true,
+   "size": 7,
+   "best_known_size": 7,
+   "check": "valid",
+   "cpu_s": 0.153
+  },
+  {
+   "instance": "t59",
+   "family": "Fixed_Formulas",
+   "valid": true,
+   "size": 3,
+   "best_known_size": 3,
+   "check": "valid",
+   "cpu_s": 0.089
+  },
+  {
+   "instance": "t60",
+   "family": "Nim",
+   "valid": true,
+   "size": 12,
+   "best_known_size": 12,
+   "check": "valid",
+   "cpu_s": 1.566
+  },
+  {
+   "instance": "t61",
+   "family": "Random_Conjuncts_from_Basis",
+   "valid": true,
+   "size": 5,
+   "best_known_size": 5,
+   "check": "valid",
+   "cpu_s": 0.101
+  },
+  {
+   "instance": "t62",
+   "family": "Nim",
+   "valid": true,
+   "size": 4,
+   "best_known_size": 4,
+   "check": "valid",
+   "cpu_s": 0.104
+  },
+  {
+   "instance": "t63",
+   "family": "Fixed_Formulas",
+   "valid": true,
+   "size": 3,
+   "best_known_size": 3,
+   "check": "valid",
+   "cpu_s": 0.1
+  },
+  {
+   "instance": "t64",
+   "family": "SingleCounter",
+   "valid": false,
+   "size": 331,
+   "best_known_size": 32,
+   "check": "valid but more than CAP x the best-known size",
+   "cpu_s": 12.794
+  },
+  {
+   "instance": "t65",
+   "family": "DoubleCounter",
+   "valid": true,
+   "size": 20,
+   "best_known_size": 10,
+   "check": "valid",
+   "cpu_s": 1.87
+  },
+  {
+   "instance": "t66",
+   "family": "Random_Conjuncts_from_Basis",
+   "valid": true,
+   "size": 3,
+   "best_known_size": 3,
+   "check": "valid",
+   "cpu_s": 0.103
+  },
+  {
+   "instance": "t67",
+   "family": "Random_Conjuncts_from_Basis",
+   "valid": true,
+   "size": 2,
+   "best_known_size": 2,
+   "check": "valid",
+   "cpu_s": 0.093
+  },
+  {
+   "instance": "t68",
+   "family": "Random_Conjuncts_from_Basis",
+   "valid": true,
+   "size": 2,
+   "best_known_size": 2,
+   "check": "valid",
+   "cpu_s": 0.087
+  },
+  {
+   "instance": "t69",
+   "family": "Random_Conjuncts_from_Basis",
+   "valid": true,
+   "size": 10,
+   "best_known_size": 10,
+   "check": "valid",
+   "cpu_s": 1.834
+  },
+  {
+   "instance": "t70",
+   "family": "Random_Conjuncts_from_Basis",
+   "valid": true,
+   "size": 3,
+   "best_known_size": 3,
+   "check": "valid",
+   "cpu_s": 0.088
+  },
+  {
+   "instance": "t71",
+   "family": "Nim",
+   "valid": true,
+   "size": 3,
+   "best_known_size": 3,
+   "check": "valid",
+   "cpu_s": 0.09
+  },
+  {
+   "instance": "t72",
+   "family": "DoubleCounter",
+   "valid": true,
+   "size": 6,
+   "best_known_size": 6,
+   "check": "valid",
+   "cpu_s": 0.253
+  },
+  {
+   "instance": "t73",
+   "family": "Fixed_Formulas",
+   "valid": true,
+   "size": 4,
+   "best_known_size": 4,
+   "check": "valid",
+   "cpu_s": 0.089
+  },
+  {
+   "instance": "t74",
+   "family": "SingleCounter",
+   "valid": true,
+   "size": 44,
+   "best_known_size": 20,
+   "check": "valid",
+   "cpu_s": 1.955
+  },
+  {
+   "instance": "t75",
+   "family": "SingleCounter",
+   "valid": true,
+   "size": 36,
+   "best_known_size": 18,
+   "check": "valid",
+   "cpu_s": 2.323
+  },
+  {
+   "instance": "t76",
+   "family": "DoubleCounter",
+   "valid": true,
+   "size": 4,
+   "best_known_size": 4,
+   "check": "valid",
+   "cpu_s": 0.089
+  },
+  {
+   "instance": "t77",
+   "family": "Fixed_Formulas",
+   "valid": true,
+   "size": 2,
+   "best_known_size": 2,
+   "check": "valid",
+   "cpu_s": 0.087
+  },
+  {
+   "instance": "t78",
+   "family": "DoubleCounter",
+   "valid": true,
+   "size": 138,
+   "best_known_size": 31,
+   "check": "valid",
+   "cpu_s": 7.47
+  },
+  {
+   "instance": "t79",
+   "family": "DoubleCounter",
+   "valid": true,
+   "size": 116,
+   "best_known_size": 32,
+   "check": "valid",
+   "cpu_s": 6.743
+  }
+ ],
+ "bolt_patterns": [
+  {
+   "instance": "t00",
+   "family": "OrderedSequence",
+   "valid": true,
+   "size": 4,
+   "best_known_size": 4,
+   "check": "valid",
+   "cpu_s": 0.111
+  },
+  {
+   "instance": "t01",
+   "family": "RandomBooleanCombinationsofFactors",
+   "valid": true,
+   "size": 29,
+   "best_known_size": 29,
+   "check": "valid",
+   "cpu_s": 3.855
+  },
+  {
+   "instance": "t02",
+   "family": "OrderedSequence",
+   "valid": true,
+   "size": 5,
+   "best_known_size": 5,
+   "check": "valid",
+   "cpu_s": 0.111
+  },
+  {
+   "instance": "t03",
+   "family": "RandomBooleanCombinationsofFactors",
+   "valid": true,
+   "size": 18,
+   "best_known_size": 17,
+   "check": "valid",
+   "cpu_s": 2.495
+  },
+  {
+   "instance": "t04",
+   "family": "Subword",
+   "valid": true,
+   "size": 22,
+   "best_known_size": 21,
+   "check": "valid",
+   "cpu_s": 1.25
+  },
+  {
+   "instance": "t05",
+   "family": "OrderedSequence",
+   "valid": true,
+   "size": 5,
+   "best_known_size": 5,
+   "check": "valid",
+   "cpu_s": 0.124
+  },
+  {
+   "instance": "t06",
+   "family": "Subset",
+   "valid": true,
+   "size": 15,
+   "best_known_size": 11,
+   "check": "valid",
+   "cpu_s": 1.465
+  },
+  {
+   "instance": "t07",
+   "family": "RandomBooleanCombinationsofFactors",
+   "valid": true,
+   "size": 16,
+   "best_known_size": 16,
+   "check": "valid",
+   "cpu_s": 1.229
+  },
+  {
+   "instance": "t08",
+   "family": "Subset",
+   "valid": true,
+   "size": 6,
+   "best_known_size": 6,
+   "check": "valid",
+   "cpu_s": 0.126
+  },
+  {
+   "instance": "t09",
+   "family": "Subword",
+   "valid": true,
+   "size": 17,
+   "best_known_size": 17,
+   "check": "valid",
+   "cpu_s": 1.737
+  },
+  {
+   "instance": "t10",
+   "family": "Hamming",
+   "valid": false,
+   "size": null,
+   "best_known_size": 9,
+   "check": "no_formula",
+   "cpu_s": 6.77
+  },
+  {
+   "instance": "t11",
+   "family": "OrderedSequence",
+   "valid": true,
+   "size": 3,
+   "best_known_size": 3,
+   "check": "valid",
+   "cpu_s": 0.113
+  },
+  {
+   "instance": "t12",
+   "family": "Subset",
+   "valid": true,
+   "size": 4,
+   "best_known_size": 4,
+   "check": "valid",
+   "cpu_s": 0.105
+  },
+  {
+   "instance": "t13",
+   "family": "Hamming",
+   "valid": true,
+   "size": 61,
+   "best_known_size": 41,
+   "check": "valid",
+   "cpu_s": 1.15
+  },
+  {
+   "instance": "t14",
+   "family": "Subword",
+   "valid": true,
+   "size": 19,
+   "best_known_size": 15,
+   "check": "valid",
+   "cpu_s": 1.366
+  },
+  {
+   "instance": "t15",
+   "family": "RandomBooleanCombinationsofFactors",
+   "valid": true,
+   "size": 6,
+   "best_known_size": 6,
+   "check": "valid",
+   "cpu_s": 0.16
+  },
+  {
+   "instance": "t16",
+   "family": "OrderedSequence",
+   "valid": true,
+   "size": 1,
+   "best_known_size": 1,
+   "check": "valid",
+   "cpu_s": 0.106
+  },
+  {
+   "instance": "t17",
+   "family": "Subword",
+   "valid": true,
+   "size": 172,
+   "best_known_size": 26,
+   "check": "valid",
+   "cpu_s": 12.461
+  },
+  {
+   "instance": "t18",
+   "family": "Subword",
+   "valid": true,
+   "size": 4,
+   "best_known_size": 4,
+   "check": "valid",
+   "cpu_s": 0.116
+  },
+  {
+   "instance": "t19",
+   "family": "Subset",
+   "valid": true,
+   "size": 3,
+   "best_known_size": 3,
+   "check": "valid",
+   "cpu_s": 0.106
+  },
+  {
+   "instance": "t20",
+   "family": "Hamming",
+   "valid": true,
+   "size": 49,
+   "best_known_size": 49,
+   "check": "valid",
+   "cpu_s": 1.133
+  },
+  {
+   "instance": "t21",
+   "family": "Hamming",
+   "valid": true,
+   "size": 33,
+   "best_known_size": 27,
+   "check": "valid",
+   "cpu_s": 1.043
+  },
+  {
+   "instance": "t22",
+   "family": "Subset",
+   "valid": true,
+   "size": 13,
+   "best_known_size": 10,
+   "check": "valid",
+   "cpu_s": 1.947
+  },
+  {
+   "instance": "t23",
+   "family": "Subset",
+   "valid": true,
+   "size": 16,
+   "best_known_size": 14,
+   "check": "valid",
+   "cpu_s": 2.598
+  },
+  {
+   "instance": "t24",
+   "family": "Subword",
+   "valid": true,
+   "size": 23,
+   "best_known_size": 23,
+   "check": "valid",
+   "cpu_s": 1.406
+  },
+  {
+   "instance": "t25",
+   "family": "OrderedSequence",
+   "valid": true,
+   "size": 3,
+   "best_known_size": 3,
+   "check": "valid",
+   "cpu_s": 0.107
+  },
+  {
+   "instance": "t26",
+   "family": "OrderedSequence",
+   "valid": true,
+   "size": 3,
+   "best_known_size": 3,
+   "check": "valid",
+   "cpu_s": 0.104
+  },
+  {
+   "instance": "t27",
+   "family": "Subword",
+   "valid": true,
+   "size": 5,
+   "best_known_size": 5,
+   "check": "valid",
+   "cpu_s": 0.106
+  },
+  {
+   "instance": "t28",
+   "family": "Hamming",
+   "valid": true,
+   "size": 14,
+   "best_known_size": 11,
+   "check": "valid",
+   "cpu_s": 0.391
+  },
+  {
+   "instance": "t29",
+   "family": "RandomBooleanCombinationsofFactors",
+   "valid": true,
+   "size": 17,
+   "best_known_size": 17,
+   "check": "valid",
+   "cpu_s": 2.557
+  },
+  {
+   "instance": "t30",
+   "family": "Subset",
+   "valid": true,
+   "size": 6,
+   "best_known_size": 6,
+   "check": "valid",
+   "cpu_s": 0.134
+  },
+  {
+   "instance": "t31",
+   "family": "RandomBooleanCombinationsofFactors",
+   "valid": true,
+   "size": 59,
+   "best_known_size": 53,
+   "check": "valid",
+   "cpu_s": 3.05
+  },
+  {
+   "instance": "t32",
+   "family": "Hamming",
+   "valid": true,
+   "size": 64,
+   "best_known_size": 52,
+   "check": "valid",
+   "cpu_s": 1.681
+  },
+  {
+   "instance": "t33",
+   "family": "Subword",
+   "valid": true,
+   "size": 125,
+   "best_known_size": 30,
+   "check": "valid",
+   "cpu_s": 5.55
+  },
+  {
+   "instance": "t34",
+   "family": "Hamming",
+   "valid": false,
+   "size": null,
+   "best_known_size": 10,
+   "check": "no_formula",
+   "cpu_s": 2.068
+  },
+  {
+   "instance": "t35",
+   "family": "Subset",
+   "valid": true,
+   "size": 16,
+   "best_known_size": 11,
+   "check": "valid",
+   "cpu_s": 1.069
+  },
+  {
+   "instance": "t36",
+   "family": "Hamming",
+   "valid": true,
+   "size": 30,
+   "best_known_size": 16,
+   "check": "valid",
+   "cpu_s": 0.86
+  },
+  {
+   "instance": "t37",
+   "family": "RandomBooleanCombinationsofFactors",
+   "valid": true,
+   "size": 29,
+   "best_known_size": 29,
+   "check": "valid",
+   "cpu_s": 3.895
+  },
+  {
+   "instance": "t38",
+   "family": "OrderedSequence",
+   "valid": true,
+   "size": 5,
+   "best_known_size": 5,
+   "check": "valid",
+   "cpu_s": 0.115
+  },
+  {
+   "instance": "t39",
+   "family": "RandomBooleanCombinationsofFactors",
+   "valid": true,
+   "size": 43,
+   "best_known_size": 32,
+   "check": "valid",
+   "cpu_s": 5.297
+  },
+  {
+   "instance": "t40",
+   "family": "SingleCounter",
+   "valid": true,
+   "size": 8,
+   "best_known_size": 8,
+   "check": "valid",
+   "cpu_s": 0.418
+  },
+  {
+   "instance": "t41",
+   "family": "Fixed_Formulas",
+   "valid": true,
+   "size": 5,
+   "best_known_size": 5,
+   "check": "valid",
+   "cpu_s": 0.113
+  },
+  {
+   "instance": "t42",
+   "family": "DoubleCounter",
+   "valid": true,
+   "size": 33,
+   "best_known_size": 30,
+   "check": "valid",
+   "cpu_s": 6.062
+  },
+  {
+   "instance": "t43",
+   "family": "Random_Conjuncts_from_Basis",
+   "valid": true,
+   "size": 3,
+   "best_known_size": 3,
+   "check": "valid",
+   "cpu_s": 0.108
+  },
+  {
+   "instance": "t44",
+   "family": "Nim",
+   "valid": true,
+   "size": 7,
+   "best_known_size": 7,
+   "check": "valid",
+   "cpu_s": 1.83
+  },
+  {
+   "instance": "t45",
+   "family": "Random_Conjuncts_from_Basis",
+   "valid": true,
+   "size": 2,
+   "best_known_size": 2,
+   "check": "valid",
+   "cpu_s": 0.108
+  },
+  {
+   "instance": "t46",
+   "family": "Fixed_Formulas",
+   "valid": true,
+   "size": 2,
+   "best_known_size": 2,
+   "check": "valid",
+   "cpu_s": 0.104
+  },
+  {
+   "instance": "t47",
+   "family": "Nim",
+   "valid": true,
+   "size": 8,
+   "best_known_size": 8,
+   "check": "valid",
+   "cpu_s": 1.264
+  },
+  {
+   "instance": "t48",
+   "family": "DoubleCounter",
+   "valid": true,
+   "size": 4,
+   "best_known_size": 4,
+   "check": "valid",
+   "cpu_s": 0.109
+  },
+  {
+   "instance": "t49",
+   "family": "DoubleCounter",
+   "valid": true,
+   "size": 12,
+   "best_known_size": 11,
+   "check": "valid",
+   "cpu_s": 1.335
+  },
+  {
+   "instance": "t50",
+   "family": "Nim",
+   "valid": true,
+   "size": 22,
+   "best_known_size": 22,
+   "check": "valid",
+   "cpu_s": 4.008
+  },
+  {
+   "instance": "t51",
+   "family": "Nim",
+   "valid": true,
+   "size": 14,
+   "best_known_size": 14,
+   "check": "valid",
+   "cpu_s": 3.084
+  },
+  {
+   "instance": "t52",
+   "family": "Fixed_Formulas",
+   "valid": true,
+   "size": 2,
+   "best_known_size": 2,
+   "check": "valid",
+   "cpu_s": 0.106
+  },
+  {
+   "instance": "t53",
+   "family": "Nim",
+   "valid": true,
+   "size": 14,
+   "best_known_size": 14,
+   "check": "valid",
+   "cpu_s": 3.173
+  },
+  {
+   "instance": "t54",
+   "family": "SingleCounter",
+   "valid": true,
+   "size": 10,
+   "best_known_size": 10,
+   "check": "valid",
+   "cpu_s": 4.713
+  },
+  {
+   "instance": "t55",
+   "family": "Fixed_Formulas",
+   "valid": true,
+   "size": 4,
+   "best_known_size": 4,
+   "check": "valid",
+   "cpu_s": 0.109
+  },
+  {
+   "instance": "t56",
+   "family": "SingleCounter",
+   "valid": true,
+   "size": 90,
+   "best_known_size": 35,
+   "check": "valid",
+   "cpu_s": 6.843
+  },
+  {
+   "instance": "t57",
+   "family": "SingleCounter",
+   "valid": true,
+   "size": 1,
+   "best_known_size": 1,
+   "check": "valid",
+   "cpu_s": 0.104
+  },
+  {
+   "instance": "t58",
+   "family": "SingleCounter",
+   "valid": true,
+   "size": 7,
+   "best_known_size": 7,
+   "check": "valid",
+   "cpu_s": 0.167
+  },
+  {
+   "instance": "t59",
+   "family": "Fixed_Formulas",
+   "valid": true,
+   "size": 3,
+   "best_known_size": 3,
+   "check": "valid",
+   "cpu_s": 0.103
+  },
+  {
+   "instance": "t60",
+   "family": "Nim",
+   "valid": true,
+   "size": 12,
+   "best_known_size": 12,
+   "check": "valid",
+   "cpu_s": 1.511
+  },
+  {
+   "instance": "t61",
+   "family": "Random_Conjuncts_from_Basis",
+   "valid": true,
+   "size": 5,
+   "best_known_size": 5,
+   "check": "valid",
+   "cpu_s": 0.116
+  },
+  {
+   "instance": "t62",
+   "family": "Nim",
+   "valid": true,
+   "size": 4,
+   "best_known_size": 4,
+   "check": "valid",
+   "cpu_s": 0.107
+  },
+  {
+   "instance": "t63",
+   "family": "Fixed_Formulas",
+   "valid": true,
+   "size": 3,
+   "best_known_size": 3,
+   "check": "valid",
+   "cpu_s": 0.104
+  },
+  {
+   "instance": "t64",
+   "family": "SingleCounter",
+   "valid": true,
+   "size": 32,
+   "best_known_size": 32,
+   "check": "valid",
+   "cpu_s": 6.346
+  },
+  {
+   "instance": "t65",
+   "family": "DoubleCounter",
+   "valid": true,
+   "size": 13,
+   "best_known_size": 10,
+   "check": "valid",
+   "cpu_s": 1.928
+  },
+  {
+   "instance": "t66",
+   "family": "Random_Conjuncts_from_Basis",
+   "valid": true,
+   "size": 3,
+   "best_known_size": 3,
+   "check": "valid",
+   "cpu_s": 0.12
+  },
+  {
+   "instance": "t67",
+   "family": "Random_Conjuncts_from_Basis",
+   "valid": true,
+   "size": 2,
+   "best_known_size": 2,
+   "check": "valid",
+   "cpu_s": 0.111
+  },
+  {
+   "instance": "t68",
+   "family": "Random_Conjuncts_from_Basis",
+   "valid": true,
+   "size": 2,
+   "best_known_size": 2,
+   "check": "valid",
+   "cpu_s": 0.104
+  },
+  {
+   "instance": "t69",
+   "family": "Random_Conjuncts_from_Basis",
+   "valid": true,
+   "size": 10,
+   "best_known_size": 10,
+   "check": "valid",
+   "cpu_s": 2.042
+  },
+  {
+   "instance": "t70",
+   "family": "Random_Conjuncts_from_Basis",
+   "valid": true,
+   "size": 3,
+   "best_known_size": 3,
+   "check": "valid",
+   "cpu_s": 0.11
+  },
+  {
+   "instance": "t71",
+   "family": "Nim",
+   "valid": true,
+   "size": 3,
+   "best_known_size": 3,
+   "check": "valid",
+   "cpu_s": 0.119
+  },
+  {
+   "instance": "t72",
+   "family": "DoubleCounter",
+   "valid": true,
+   "size": 6,
+   "best_known_size": 6,
+   "check": "valid",
+   "cpu_s": 0.286
+  },
+  {
+   "instance": "t73",
+   "family": "Fixed_Formulas",
+   "valid": true,
+   "size": 4,
+   "best_known_size": 4,
+   "check": "valid",
+   "cpu_s": 0.106
+  },
+  {
+   "instance": "t74",
+   "family": "SingleCounter",
+   "valid": true,
+   "size": 21,
+   "best_known_size": 20,
+   "check": "valid",
+   "cpu_s": 1.651
+  },
+  {
+   "instance": "t75",
+   "family": "SingleCounter",
+   "valid": true,
+   "size": 18,
+   "best_known_size": 18,
+   "check": "valid",
+   "cpu_s": 2.004
+  },
+  {
+   "instance": "t76",
+   "family": "DoubleCounter",
+   "valid": true,
+   "size": 4,
+   "best_known_size": 4,
+   "check": "valid",
+   "cpu_s": 0.109
+  },
+  {
+   "instance": "t77",
+   "family": "Fixed_Formulas",
+   "valid": true,
+   "size": 2,
+   "best_known_size": 2,
+   "check": "valid",
+   "cpu_s": 0.109
+  },
+  {
+   "instance": "t78",
+   "family": "DoubleCounter",
+   "valid": true,
+   "size": 44,
+   "best_known_size": 31,
+   "check": "valid",
+   "cpu_s": 4.798
+  },
+  {
+   "instance": "t79",
+   "family": "DoubleCounter",
+   "valid": true,
+   "size": 79,
+   "best_known_size": 32,
+   "check": "valid",
+   "cpu_s": 5.18
+  }
+ ],
+ "bolt_portfolio": [
+  {
+   "instance": "t00",
+   "family": "OrderedSequence",
+   "valid": true,
+   "size": 4,
+   "best_known_size": 4,
+   "check": "valid",
+   "cpu_s": 0.299
+  },
+  {
+   "instance": "t01",
+   "family": "RandomBooleanCombinationsofFactors",
+   "valid": true,
+   "size": 172,
+   "best_known_size": 29,
+   "check": "valid",
+   "cpu_s": 18.322
+  },
+  {
+   "instance": "t02",
+   "family": "OrderedSequence",
+   "valid": true,
+   "size": 5,
+   "best_known_size": 5,
+   "check": "valid",
+   "cpu_s": 0.312
+  },
+  {
+   "instance": "t03",
+   "family": "RandomBooleanCombinationsofFactors",
+   "valid": true,
+   "size": 17,
+   "best_known_size": 17,
+   "check": "valid",
+   "cpu_s": 13.136
+  },
+  {
+   "instance": "t04",
+   "family": "Subword",
+   "valid": true,
+   "size": 21,
+   "best_known_size": 21,
+   "check": "valid",
+   "cpu_s": 5.833
+  },
+  {
+   "instance": "t05",
+   "family": "OrderedSequence",
+   "valid": true,
+   "size": 5,
+   "best_known_size": 5,
+   "check": "valid",
+   "cpu_s": 0.31
+  },
+  {
+   "instance": "t06",
+   "family": "Subset",
+   "valid": true,
+   "size": 11,
+   "best_known_size": 11,
+   "check": "valid",
+   "cpu_s": 6.727
+  },
+  {
+   "instance": "t07",
+   "family": "RandomBooleanCombinationsofFactors",
+   "valid": true,
+   "size": 16,
+   "best_known_size": 16,
+   "check": "valid",
+   "cpu_s": 5.995
+  },
+  {
+   "instance": "t08",
+   "family": "Subset",
+   "valid": true,
+   "size": 6,
+   "best_known_size": 6,
+   "check": "valid",
+   "cpu_s": 0.329
+  },
+  {
+   "instance": "t09",
+   "family": "Subword",
+   "valid": true,
+   "size": 81,
+   "best_known_size": 17,
+   "check": "valid",
+   "cpu_s": 17.451
+  },
+  {
+   "instance": "t10",
+   "family": "Hamming",
+   "valid": false,
+   "size": null,
+   "best_known_size": 9,
+   "check": "no_formula",
+   "cpu_s": 17.623
+  },
+  {
+   "instance": "t11",
+   "family": "OrderedSequence",
+   "valid": true,
+   "size": 3,
+   "best_known_size": 3,
+   "check": "valid",
+   "cpu_s": 0.337
+  },
+  {
+   "instance": "t12",
+   "family": "Subset",
+   "valid": true,
+   "size": 4,
+   "best_known_size": 4,
+   "check": "valid",
+   "cpu_s": 0.356
+  },
+  {
+   "instance": "t13",
+   "family": "Hamming",
+   "valid": true,
+   "size": 41,
+   "best_known_size": 41,
+   "check": "valid",
+   "cpu_s": 4.997
+  },
+  {
+   "instance": "t14",
+   "family": "Subword",
+   "valid": true,
+   "size": 15,
+   "best_known_size": 15,
+   "check": "valid",
+   "cpu_s": 5.812
+  },
+  {
+   "instance": "t15",
+   "family": "RandomBooleanCombinationsofFactors",
+   "valid": true,
+   "size": 6,
+   "best_known_size": 6,
+   "check": "valid",
+   "cpu_s": 0.405
+  },
+  {
+   "instance": "t16",
+   "family": "OrderedSequence",
+   "valid": true,
+   "size": 1,
+   "best_known_size": 1,
+   "check": "valid",
+   "cpu_s": 0.304
+  },
+  {
+   "instance": "t17",
+   "family": "Subword",
+   "valid": true,
+   "size": 155,
+   "best_known_size": 26,
+   "check": "valid",
+   "cpu_s": 18.193
+  },
+  {
+   "instance": "t18",
+   "family": "Subword",
+   "valid": true,
+   "size": 4,
+   "best_known_size": 4,
+   "check": "valid",
+   "cpu_s": 0.32
+  },
+  {
+   "instance": "t19",
+   "family": "Subset",
+   "valid": true,
+   "size": 3,
+   "best_known_size": 3,
+   "check": "valid",
+   "cpu_s": 0.329
+  },
+  {
+   "instance": "t20",
+   "family": "Hamming",
+   "valid": false,
+   "size": null,
+   "best_known_size": 49,
+   "check": "no_formula",
+   "cpu_s": 6.547
+  },
+  {
+   "instance": "t21",
+   "family": "Hamming",
+   "valid": true,
+   "size": 27,
+   "best_known_size": 27,
+   "check": "valid",
+   "cpu_s": 6.878
+  },
+  {
+   "instance": "t22",
+   "family": "Subset",
+   "valid": true,
+   "size": 10,
+   "best_known_size": 10,
+   "check": "valid",
+   "cpu_s": 12.67
+  },
+  {
+   "instance": "t23",
+   "family": "Subset",
+   "valid": true,
+   "size": 19,
+   "best_known_size": 14,
+   "check": "valid",
+   "cpu_s": 13.257
+  },
+  {
+   "instance": "t24",
+   "family": "Subword",
+   "valid": true,
+   "size": 23,
+   "best_known_size": 23,
+   "check": "valid",
+   "cpu_s": 6.276
+  },
+  {
+   "instance": "t25",
+   "family": "OrderedSequence",
+   "valid": true,
+   "size": 3,
+   "best_known_size": 3,
+   "check": "valid",
+   "cpu_s": 0.327
+  },
+  {
+   "instance": "t26",
+   "family": "OrderedSequence",
+   "valid": true,
+   "size": 3,
+   "best_known_size": 3,
+   "check": "valid",
+   "cpu_s": 0.307
+  },
+  {
+   "instance": "t27",
+   "family": "Subword",
+   "valid": true,
+   "size": 5,
+   "best_known_size": 5,
+   "check": "valid",
+   "cpu_s": 0.327
+  },
+  {
+   "instance": "t28",
+   "family": "Hamming",
+   "valid": true,
+   "size": 14,
+   "best_known_size": 11,
+   "check": "valid",
+   "cpu_s": 1.949
+  },
+  {
+   "instance": "t29",
+   "family": "RandomBooleanCombinationsofFactors",
+   "valid": true,
+   "size": 17,
+   "best_known_size": 17,
+   "check": "valid",
+   "cpu_s": 11.374
+  },
+  {
+   "instance": "t30",
+   "family": "Subset",
+   "valid": true,
+   "size": 6,
+   "best_known_size": 6,
+   "check": "valid",
+   "cpu_s": 0.378
+  },
+  {
+   "instance": "t31",
+   "family": "RandomBooleanCombinationsofFactors",
+   "valid": true,
+   "size": 64,
+   "best_known_size": 53,
+   "check": "valid",
+   "cpu_s": 17.785
+  },
+  {
+   "instance": "t32",
+   "family": "Hamming",
+   "valid": true,
+   "size": 52,
+   "best_known_size": 52,
+   "check": "valid",
+   "cpu_s": 6.669
+  },
+  {
+   "instance": "t33",
+   "family": "Subword",
+   "valid": true,
+   "size": 110,
+   "best_known_size": 30,
+   "check": "valid",
+   "cpu_s": 17.598
+  },
+  {
+   "instance": "t34",
+   "family": "Hamming",
+   "valid": false,
+   "size": null,
+   "best_known_size": 10,
+   "check": "no_formula",
+   "cpu_s": 10.54
+  },
+  {
+   "instance": "t35",
+   "family": "Subset",
+   "valid": true,
+   "size": 11,
+   "best_known_size": 11,
+   "check": "valid",
+   "cpu_s": 5.595
+  },
+  {
+   "instance": "t36",
+   "family": "Hamming",
+   "valid": true,
+   "size": 16,
+   "best_known_size": 16,
+   "check": "valid",
+   "cpu_s": 5.089
+  },
+  {
+   "instance": "t37",
+   "family": "RandomBooleanCombinationsofFactors",
+   "valid": true,
+   "size": 117,
+   "best_known_size": 29,
+   "check": "valid",
+   "cpu_s": 18.02
+  },
+  {
+   "instance": "t38",
+   "family": "OrderedSequence",
+   "valid": true,
+   "size": 5,
+   "best_known_size": 5,
+   "check": "valid",
+   "cpu_s": 0.347
+  },
+  {
+   "instance": "t39",
+   "family": "RandomBooleanCombinationsofFactors",
+   "valid": true,
+   "size": 135,
+   "best_known_size": 32,
+   "check": "valid",
+   "cpu_s": 18.271
+  },
+  {
+   "instance": "t40",
+   "family": "SingleCounter",
+   "valid": true,
+   "size": 8,
+   "best_known_size": 8,
+   "check": "valid",
+   "cpu_s": 0.872
+  },
+  {
+   "instance": "t41",
+   "family": "Fixed_Formulas",
+   "valid": true,
+   "size": 5,
+   "best_known_size": 5,
+   "check": "valid",
+   "cpu_s": 0.3
+  },
+  {
+   "instance": "t42",
+   "family": "DoubleCounter",
+   "valid": true,
+   "size": 30,
+   "best_known_size": 30,
+   "check": "valid",
+   "cpu_s": 15.079
+  },
+  {
+   "instance": "t43",
+   "family": "Random_Conjuncts_from_Basis",
+   "valid": true,
+   "size": 3,
+   "best_known_size": 3,
+   "check": "valid",
+   "cpu_s": 0.341
+  },
+  {
+   "instance": "t44",
+   "family": "Nim",
+   "valid": true,
+   "size": 7,
+   "best_known_size": 7,
+   "check": "valid",
+   "cpu_s": 7.75
+  },
+  {
+   "instance": "t45",
+   "family": "Random_Conjuncts_from_Basis",
+   "valid": true,
+   "size": 2,
+   "best_known_size": 2,
+   "check": "valid",
+   "cpu_s": 0.338
+  },
+  {
+   "instance": "t46",
+   "family": "Fixed_Formulas",
+   "valid": true,
+   "size": 2,
+   "best_known_size": 2,
+   "check": "valid",
+   "cpu_s": 0.358
+  },
+  {
+   "instance": "t47",
+   "family": "Nim",
+   "valid": true,
+   "size": 8,
+   "best_known_size": 8,
+   "check": "valid",
+   "cpu_s": 5.791
+  },
+  {
+   "instance": "t48",
+   "family": "DoubleCounter",
+   "valid": true,
+   "size": 4,
+   "best_known_size": 4,
+   "check": "valid",
+   "cpu_s": 0.335
+  },
+  {
+   "instance": "t49",
+   "family": "DoubleCounter",
+   "valid": true,
+   "size": 11,
+   "best_known_size": 11,
+   "check": "valid",
+   "cpu_s": 5.675
+  },
+  {
+   "instance": "t50",
+   "family": "Nim",
+   "valid": true,
+   "size": 22,
+   "best_known_size": 22,
+   "check": "valid",
+   "cpu_s": 13.685
+  },
+  {
+   "instance": "t51",
+   "family": "Nim",
+   "valid": true,
+   "size": 14,
+   "best_known_size": 14,
+   "check": "valid",
+   "cpu_s": 13.058
+  },
+  {
+   "instance": "t52",
+   "family": "Fixed_Formulas",
+   "valid": true,
+   "size": 2,
+   "best_known_size": 2,
+   "check": "valid",
+   "cpu_s": 0.328
+  },
+  {
+   "instance": "t53",
+   "family": "Nim",
+   "valid": true,
+   "size": 14,
+   "best_known_size": 14,
+   "check": "valid",
+   "cpu_s": 14.733
+  },
+  {
+   "instance": "t54",
+   "family": "SingleCounter",
+   "valid": true,
+   "size": 10,
+   "best_known_size": 10,
+   "check": "valid",
+   "cpu_s": 12.552
+  },
+  {
+   "instance": "t55",
+   "family": "Fixed_Formulas",
+   "valid": true,
+   "size": 4,
+   "best_known_size": 4,
+   "check": "valid",
+   "cpu_s": 0.335
+  },
+  {
+   "instance": "t56",
+   "family": "SingleCounter",
+   "valid": true,
+   "size": 35,
+   "best_known_size": 35,
+   "check": "valid",
+   "cpu_s": 17.918
+  },
+  {
+   "instance": "t57",
+   "family": "SingleCounter",
+   "valid": true,
+   "size": 1,
+   "best_known_size": 1,
+   "check": "valid",
+   "cpu_s": 0.384
+  },
+  {
+   "instance": "t58",
+   "family": "SingleCounter",
+   "valid": true,
+   "size": 7,
+   "best_known_size": 7,
+   "check": "valid",
+   "cpu_s": 0.527
+  },
+  {
+   "instance": "t59",
+   "family": "Fixed_Formulas",
+   "valid": true,
+   "size": 3,
+   "best_known_size": 3,
+   "check": "valid",
+   "cpu_s": 0.357
+  },
+  {
+   "instance": "t60",
+   "family": "Nim",
+   "valid": true,
+   "size": 12,
+   "best_known_size": 12,
+   "check": "valid",
+   "cpu_s": 6.595
+  },
+  {
+   "instance": "t61",
+   "family": "Random_Conjuncts_from_Basis",
+   "valid": true,
+   "size": 5,
+   "best_known_size": 5,
+   "check": "valid",
+   "cpu_s": 0.359
+  },
+  {
+   "instance": "t62",
+   "family": "Nim",
+   "valid": true,
+   "size": 4,
+   "best_known_size": 4,
+   "check": "valid",
+   "cpu_s": 0.353
+  },
+  {
+   "instance": "t63",
+   "family": "Fixed_Formulas",
+   "valid": true,
+   "size": 3,
+   "best_known_size": 3,
+   "check": "valid",
+   "cpu_s": 0.335
+  },
+  {
+   "instance": "t64",
+   "family": "SingleCounter",
+   "valid": true,
+   "size": 32,
+   "best_known_size": 32,
+   "check": "valid",
+   "cpu_s": 15.277
+  },
+  {
+   "instance": "t65",
+   "family": "DoubleCounter",
+   "valid": true,
+   "size": 10,
+   "best_known_size": 10,
+   "check": "valid",
+   "cpu_s": 7.83
+  },
+  {
+   "instance": "t66",
+   "family": "Random_Conjuncts_from_Basis",
+   "valid": true,
+   "size": 3,
+   "best_known_size": 3,
+   "check": "valid",
+   "cpu_s": 0.395
+  },
+  {
+   "instance": "t67",
+   "family": "Random_Conjuncts_from_Basis",
+   "valid": true,
+   "size": 2,
+   "best_known_size": 2,
+   "check": "valid",
+   "cpu_s": 0.348
+  },
+  {
+   "instance": "t68",
+   "family": "Random_Conjuncts_from_Basis",
+   "valid": true,
+   "size": 2,
+   "best_known_size": 2,
+   "check": "valid",
+   "cpu_s": 0.326
+  },
+  {
+   "instance": "t69",
+   "family": "Random_Conjuncts_from_Basis",
+   "valid": true,
+   "size": 10,
+   "best_known_size": 10,
+   "check": "valid",
+   "cpu_s": 9.701
+  },
+  {
+   "instance": "t70",
+   "family": "Random_Conjuncts_from_Basis",
+   "valid": true,
+   "size": 3,
+   "best_known_size": 3,
+   "check": "valid",
+   "cpu_s": 0.307
+  },
+  {
+   "instance": "t71",
+   "family": "Nim",
+   "valid": true,
+   "size": 3,
+   "best_known_size": 3,
+   "check": "valid",
+   "cpu_s": 0.319
+  },
+  {
+   "instance": "t72",
+   "family": "DoubleCounter",
+   "valid": true,
+   "size": 6,
+   "best_known_size": 6,
+   "check": "valid",
+   "cpu_s": 0.623
+  },
+  {
+   "instance": "t73",
+   "family": "Fixed_Formulas",
+   "valid": true,
+   "size": 4,
+   "best_known_size": 4,
+   "check": "valid",
+   "cpu_s": 0.322
+  },
+  {
+   "instance": "t74",
+   "family": "SingleCounter",
+   "valid": true,
+   "size": 20,
+   "best_known_size": 20,
+   "check": "valid",
+   "cpu_s": 7.308
+  },
+  {
+   "instance": "t75",
+   "family": "SingleCounter",
+   "valid": true,
+   "size": 18,
+   "best_known_size": 18,
+   "check": "valid",
+   "cpu_s": 8.528
+  },
+  {
+   "instance": "t76",
+   "family": "DoubleCounter",
+   "valid": true,
+   "size": 4,
+   "best_known_size": 4,
+   "check": "valid",
+   "cpu_s": 0.359
+  },
+  {
+   "instance": "t77",
+   "family": "Fixed_Formulas",
+   "valid": true,
+   "size": 2,
+   "best_known_size": 2,
+   "check": "valid",
+   "cpu_s": 0.33
+  },
+  {
+   "instance": "t78",
+   "family": "DoubleCounter",
+   "valid": true,
+   "size": 33,
+   "best_known_size": 31,
+   "check": "valid",
+   "cpu_s": 15.091
+  },
+  {
+   "instance": "t79",
+   "family": "DoubleCounter",
+   "valid": true,
+   "size": 36,
+   "best_known_size": 32,
+   "check": "valid",
+   "cpu_s": 17.524
+  }
+ ],
+ "bolt_simplify": [
+  {
+   "instance": "t00",
+   "family": "OrderedSequence",
+   "valid": true,
+   "size": 4,
+   "best_known_size": 4,
+   "check": "valid",
+   "cpu_s": 0.1
+  },
+  {
+   "instance": "t01",
+   "family": "RandomBooleanCombinationsofFactors",
+   "valid": true,
+   "size": 172,
+   "best_known_size": 29,
+   "check": "valid",
+   "cpu_s": 11.949
+  },
+  {
+   "instance": "t02",
+   "family": "OrderedSequence",
+   "valid": true,
+   "size": 5,
+   "best_known_size": 5,
+   "check": "valid",
+   "cpu_s": 0.107
+  },
+  {
+   "instance": "t03",
+   "family": "RandomBooleanCombinationsofFactors",
+   "valid": true,
+   "size": 17,
+   "best_known_size": 17,
+   "check": "valid",
+   "cpu_s": 2.941
+  },
+  {
+   "instance": "t04",
+   "family": "Subword",
+   "valid": true,
+   "size": 23,
+   "best_known_size": 21,
+   "check": "valid",
+   "cpu_s": 1.208
+  },
+  {
+   "instance": "t05",
+   "family": "OrderedSequence",
+   "valid": true,
+   "size": 5,
+   "best_known_size": 5,
+   "check": "valid",
+   "cpu_s": 0.106
+  },
+  {
+   "instance": "t06",
+   "family": "Subset",
+   "valid": true,
+   "size": 11,
+   "best_known_size": 11,
+   "check": "valid",
+   "cpu_s": 1.393
+  },
+  {
+   "instance": "t07",
+   "family": "RandomBooleanCombinationsofFactors",
+   "valid": true,
+   "size": 17,
+   "best_known_size": 16,
+   "check": "valid",
+   "cpu_s": 1.202
+  },
+  {
+   "instance": "t08",
+   "family": "Subset",
+   "valid": true,
+   "size": 6,
+   "best_known_size": 6,
+   "check": "valid",
+   "cpu_s": 0.118
+  },
+  {
+   "instance": "t09",
+   "family": "Subword",
+   "valid": true,
+   "size": 81,
+   "best_known_size": 17,
+   "check": "valid",
+   "cpu_s": 3.951
+  },
+  {
+   "instance": "t10",
+   "family": "Hamming",
+   "valid": false,
+   "size": null,
+   "best_known_size": 9,
+   "check": "no_formula",
+   "cpu_s": 6.61
+  },
+  {
+   "instance": "t11",
+   "family": "OrderedSequence",
+   "valid": true,
+   "size": 3,
+   "best_known_size": 3,
+   "check": "valid",
+   "cpu_s": 0.096
+  },
+  {
+   "instance": "t12",
+   "family": "Subset",
+   "valid": true,
+   "size": 4,
+   "best_known_size": 4,
+   "check": "valid",
+   "cpu_s": 0.096
+  },
+  {
+   "instance": "t13",
+   "family": "Hamming",
+   "valid": false,
+   "size": null,
+   "best_known_size": 41,
+   "check": "no_formula",
+   "cpu_s": 1.099
+  },
+  {
+   "instance": "t14",
+   "family": "Subword",
+   "valid": true,
+   "size": 18,
+   "best_known_size": 15,
+   "check": "valid",
+   "cpu_s": 1.27
+  },
+  {
+   "instance": "t15",
+   "family": "RandomBooleanCombinationsofFactors",
+   "valid": true,
+   "size": 6,
+   "best_known_size": 6,
+   "check": "valid",
+   "cpu_s": 0.145
+  },
+  {
+   "instance": "t16",
+   "family": "OrderedSequence",
+   "valid": true,
+   "size": 1,
+   "best_known_size": 1,
+   "check": "valid",
+   "cpu_s": 0.091
+  },
+  {
+   "instance": "t17",
+   "family": "Subword",
+   "valid": true,
+   "size": 155,
+   "best_known_size": 26,
+   "check": "valid",
+   "cpu_s": 9.709
+  },
+  {
+   "instance": "t18",
+   "family": "Subword",
+   "valid": true,
+   "size": 4,
+   "best_known_size": 4,
+   "check": "valid",
+   "cpu_s": 0.099
+  },
+  {
+   "instance": "t19",
+   "family": "Subset",
+   "valid": true,
+   "size": 3,
+   "best_known_size": 3,
+   "check": "valid",
+   "cpu_s": 0.092
+  },
+  {
+   "instance": "t20",
+   "family": "Hamming",
+   "valid": false,
+   "size": null,
+   "best_known_size": 49,
+   "check": "no_formula",
+   "cpu_s": 1.072
+  },
+  {
+   "instance": "t21",
+   "family": "Hamming",
+   "valid": true,
+   "size": 35,
+   "best_known_size": 27,
+   "check": "valid",
+   "cpu_s": 1.009
+  },
+  {
+   "instance": "t22",
+   "family": "Subset",
+   "valid": true,
+   "size": 10,
+   "best_known_size": 10,
+   "check": "valid",
+   "cpu_s": 2.609
+  },
+  {
+   "instance": "t23",
+   "family": "Subset",
+   "valid": true,
+   "size": 19,
+   "best_known_size": 14,
+   "check": "valid",
+   "cpu_s": 3.561
+  },
+  {
+   "instance": "t24",
+   "family": "Subword",
+   "valid": true,
+   "size": 25,
+   "best_known_size": 23,
+   "check": "valid",
+   "cpu_s": 1.402
+  },
+  {
+   "instance": "t25",
+   "family": "OrderedSequence",
+   "valid": true,
+   "size": 3,
+   "best_known_size": 3,
+   "check": "valid",
+   "cpu_s": 0.107
+  },
+  {
+   "instance": "t26",
+   "family": "OrderedSequence",
+   "valid": true,
+   "size": 3,
+   "best_known_size": 3,
+   "check": "valid",
+   "cpu_s": 0.115
+  },
+  {
+   "instance": "t27",
+   "family": "Subword",
+   "valid": true,
+   "size": 5,
+   "best_known_size": 5,
+   "check": "valid",
+   "cpu_s": 0.107
+  },
+  {
+   "instance": "t28",
+   "family": "Hamming",
+   "valid": true,
+   "size": 14,
+   "best_known_size": 11,
+   "check": "valid",
+   "cpu_s": 0.389
+  },
+  {
+   "instance": "t29",
+   "family": "RandomBooleanCombinationsofFactors",
+   "valid": true,
+   "size": 17,
+   "best_known_size": 17,
+   "check": "valid",
+   "cpu_s": 2.64
+  },
+  {
+   "instance": "t30",
+   "family": "Subset",
+   "valid": true,
+   "size": 6,
+   "best_known_size": 6,
+   "check": "valid",
+   "cpu_s": 0.128
+  },
+  {
+   "instance": "t31",
+   "family": "RandomBooleanCombinationsofFactors",
+   "valid": true,
+   "size": 64,
+   "best_known_size": 53,
+   "check": "valid",
+   "cpu_s": 3.858
+  },
+  {
+   "instance": "t32",
+   "family": "Hamming",
+   "valid": true,
+   "size": 65,
+   "best_known_size": 52,
+   "check": "valid",
+   "cpu_s": 1.794
+  },
+  {
+   "instance": "t33",
+   "family": "Subword",
+   "valid": true,
+   "size": 110,
+   "best_known_size": 30,
+   "check": "valid",
+   "cpu_s": 5.254
+  },
+  {
+   "instance": "t34",
+   "family": "Hamming",
+   "valid": false,
+   "size": null,
+   "best_known_size": 10,
+   "check": "no_formula",
+   "cpu_s": 1.786
+  },
+  {
+   "instance": "t35",
+   "family": "Subset",
+   "valid": true,
+   "size": 11,
+   "best_known_size": 11,
+   "check": "valid",
+   "cpu_s": 1.185
+  },
+  {
+   "instance": "t36",
+   "family": "Hamming",
+   "valid": true,
+   "size": 16,
+   "best_known_size": 16,
+   "check": "valid",
+   "cpu_s": 0.945
+  },
+  {
+   "instance": "t37",
+   "family": "RandomBooleanCombinationsofFactors",
+   "valid": true,
+   "size": 117,
+   "best_known_size": 29,
+   "check": "valid",
+   "cpu_s": 9.404
+  },
+  {
+   "instance": "t38",
+   "family": "OrderedSequence",
+   "valid": true,
+   "size": 5,
+   "best_known_size": 5,
+   "check": "valid",
+   "cpu_s": 0.115
+  },
+  {
+   "instance": "t39",
+   "family": "RandomBooleanCombinationsofFactors",
+   "valid": true,
+   "size": 135,
+   "best_known_size": 32,
+   "check": "valid",
+   "cpu_s": 13.216
+  },
+  {
+   "instance": "t40",
+   "family": "SingleCounter",
+   "valid": true,
+   "size": 8,
+   "best_known_size": 8,
+   "check": "valid",
+   "cpu_s": 0.374
+  },
+  {
+   "instance": "t41",
+   "family": "Fixed_Formulas",
+   "valid": true,
+   "size": 5,
+   "best_known_size": 5,
+   "check": "valid",
+   "cpu_s": 0.1
+  },
+  {
+   "instance": "t42",
+   "family": "DoubleCounter",
+   "valid": true,
+   "size": 30,
+   "best_known_size": 30,
+   "check": "valid",
+   "cpu_s": 5.675
+  },
+  {
+   "instance": "t43",
+   "family": "Random_Conjuncts_from_Basis",
+   "valid": true,
+   "size": 3,
+   "best_known_size": 3,
+   "check": "valid",
+   "cpu_s": 0.099
+  },
+  {
+   "instance": "t44",
+   "family": "Nim",
+   "valid": true,
+   "size": 7,
+   "best_known_size": 7,
+   "check": "valid",
+   "cpu_s": 1.715
+  },
+  {
+   "instance": "t45",
+   "family": "Random_Conjuncts_from_Basis",
+   "valid": true,
+   "size": 2,
+   "best_known_size": 2,
+   "check": "valid",
+   "cpu_s": 0.1
+  },
+  {
+   "instance": "t46",
+   "family": "Fixed_Formulas",
+   "valid": true,
+   "size": 2,
+   "best_known_size": 2,
+   "check": "valid",
+   "cpu_s": 0.1
+  },
+  {
+   "instance": "t47",
+   "family": "Nim",
+   "valid": true,
+   "size": 8,
+   "best_known_size": 8,
+   "check": "valid",
+   "cpu_s": 1.145
+  },
+  {
+   "instance": "t48",
+   "family": "DoubleCounter",
+   "valid": true,
+   "size": 4,
+   "best_known_size": 4,
+   "check": "valid",
+   "cpu_s": 0.107
+  },
+  {
+   "instance": "t49",
+   "family": "DoubleCounter",
+   "valid": true,
+   "size": 13,
+   "best_known_size": 11,
+   "check": "valid",
+   "cpu_s": 1.264
+  },
+  {
+   "instance": "t50",
+   "family": "Nim",
+   "valid": true,
+   "size": 22,
+   "best_known_size": 22,
+   "check": "valid",
+   "cpu_s": 3.851
+  },
+  {
+   "instance": "t51",
+   "family": "Nim",
+   "valid": true,
+   "size": 14,
+   "best_known_size": 14,
+   "check": "valid",
+   "cpu_s": 2.766
+  },
+  {
+   "instance": "t52",
+   "family": "Fixed_Formulas",
+   "valid": true,
+   "size": 2,
+   "best_known_size": 2,
+   "check": "valid",
+   "cpu_s": 0.103
+  },
+  {
+   "instance": "t53",
+   "family": "Nim",
+   "valid": true,
+   "size": 14,
+   "best_known_size": 14,
+   "check": "valid",
+   "cpu_s": 2.87
+  },
+  {
+   "instance": "t54",
+   "family": "SingleCounter",
+   "valid": true,
+   "size": 10,
+   "best_known_size": 10,
+   "check": "valid",
+   "cpu_s": 4.61
+  },
+  {
+   "instance": "t55",
+   "family": "Fixed_Formulas",
+   "valid": true,
+   "size": 4,
+   "best_known_size": 4,
+   "check": "valid",
+   "cpu_s": 0.103
+  },
+  {
+   "instance": "t56",
+   "family": "SingleCounter",
+   "valid": true,
+   "size": 35,
+   "best_known_size": 35,
+   "check": "valid",
+   "cpu_s": 7.029
+  },
+  {
+   "instance": "t57",
+   "family": "SingleCounter",
+   "valid": true,
+   "size": 1,
+   "best_known_size": 1,
+   "check": "valid",
+   "cpu_s": 0.1
+  },
+  {
+   "instance": "t58",
+   "family": "SingleCounter",
+   "valid": true,
+   "size": 7,
+   "best_known_size": 7,
+   "check": "valid",
+   "cpu_s": 0.157
+  },
+  {
+   "instance": "t59",
+   "family": "Fixed_Formulas",
+   "valid": true,
+   "size": 3,
+   "best_known_size": 3,
+   "check": "valid",
+   "cpu_s": 0.088
+  },
+  {
+   "instance": "t60",
+   "family": "Nim",
+   "valid": true,
+   "size": 12,
+   "best_known_size": 12,
+   "check": "valid",
+   "cpu_s": 1.395
+  },
+  {
+   "instance": "t61",
+   "family": "Random_Conjuncts_from_Basis",
+   "valid": true,
+   "size": 5,
+   "best_known_size": 5,
+   "check": "valid",
+   "cpu_s": 0.104
+  },
+  {
+   "instance": "t62",
+   "family": "Nim",
+   "valid": true,
+   "size": 4,
+   "best_known_size": 4,
+   "check": "valid",
+   "cpu_s": 0.101
+  },
+  {
+   "instance": "t63",
+   "family": "Fixed_Formulas",
+   "valid": true,
+   "size": 3,
+   "best_known_size": 3,
+   "check": "valid",
+   "cpu_s": 0.101
+  },
+  {
+   "instance": "t64",
+   "family": "SingleCounter",
+   "valid": true,
+   "size": 32,
+   "best_known_size": 32,
+   "check": "valid",
+   "cpu_s": 5.979
+  },
+  {
+   "instance": "t65",
+   "family": "DoubleCounter",
+   "valid": true,
+   "size": 13,
+   "best_known_size": 10,
+   "check": "valid",
+   "cpu_s": 1.794
+  },
+  {
+   "instance": "t66",
+   "family": "Random_Conjuncts_from_Basis",
+   "valid": true,
+   "size": 3,
+   "best_known_size": 3,
+   "check": "valid",
+   "cpu_s": 0.115
+  },
+  {
+   "instance": "t67",
+   "family": "Random_Conjuncts_from_Basis",
+   "valid": true,
+   "size": 2,
+   "best_known_size": 2,
+   "check": "valid",
+   "cpu_s": 0.108
+  },
+  {
+   "instance": "t68",
+   "family": "Random_Conjuncts_from_Basis",
+   "valid": true,
+   "size": 2,
+   "best_known_size": 2,
+   "check": "valid",
+   "cpu_s": 0.102
+  },
+  {
+   "instance": "t69",
+   "family": "Random_Conjuncts_from_Basis",
+   "valid": true,
+   "size": 10,
+   "best_known_size": 10,
+   "check": "valid",
+   "cpu_s": 1.883
+  },
+  {
+   "instance": "t70",
+   "family": "Random_Conjuncts_from_Basis",
+   "valid": true,
+   "size": 3,
+   "best_known_size": 3,
+   "check": "valid",
+   "cpu_s": 0.101
+  },
+  {
+   "instance": "t71",
+   "family": "Nim",
+   "valid": true,
+   "size": 3,
+   "best_known_size": 3,
+   "check": "valid",
+   "cpu_s": 0.091
+  },
+  {
+   "instance": "t72",
+   "family": "DoubleCounter",
+   "valid": true,
+   "size": 6,
+   "best_known_size": 6,
+   "check": "valid",
+   "cpu_s": 0.256
+  },
+  {
+   "instance": "t73",
+   "family": "Fixed_Formulas",
+   "valid": true,
+   "size": 4,
+   "best_known_size": 4,
+   "check": "valid",
+   "cpu_s": 0.089
+  },
+  {
+   "instance": "t74",
+   "family": "SingleCounter",
+   "valid": true,
+   "size": 20,
+   "best_known_size": 20,
+   "check": "valid",
+   "cpu_s": 1.407
+  },
+  {
+   "instance": "t75",
+   "family": "SingleCounter",
+   "valid": true,
+   "size": 18,
+   "best_known_size": 18,
+   "check": "valid",
+   "cpu_s": 1.829
+  },
+  {
+   "instance": "t76",
+   "family": "DoubleCounter",
+   "valid": true,
+   "size": 4,
+   "best_known_size": 4,
+   "check": "valid",
+   "cpu_s": 0.091
+  },
+  {
+   "instance": "t77",
+   "family": "Fixed_Formulas",
+   "valid": true,
+   "size": 2,
+   "best_known_size": 2,
+   "check": "valid",
+   "cpu_s": 0.089
+  },
+  {
+   "instance": "t78",
+   "family": "DoubleCounter",
+   "valid": true,
+   "size": 31,
+   "best_known_size": 31,
+   "check": "valid",
+   "cpu_s": 4.304
+  },
+  {
+   "instance": "t79",
+   "family": "DoubleCounter",
+   "valid": true,
+   "size": 36,
+   "best_known_size": 32,
+   "check": "valid",
+   "cpu_s": 4.345
+  }
+ ],
+ "bolt_switch3": [
+  {
+   "instance": "t00",
+   "family": "OrderedSequence",
+   "valid": true,
+   "size": 6,
+   "best_known_size": 4,
+   "check": "valid",
+   "cpu_s": 0.094
+  },
+  {
+   "instance": "t01",
+   "family": "RandomBooleanCombinationsofFactors",
+   "valid": false,
+   "size": null,
+   "best_known_size": 29,
+   "check": "no_formula",
+   "cpu_s": 18.098
+  },
+  {
+   "instance": "t02",
+   "family": "OrderedSequence",
+   "valid": true,
+   "size": 7,
+   "best_known_size": 5,
+   "check": "valid",
+   "cpu_s": 0.104
+  },
+  {
+   "instance": "t03",
+   "family": "RandomBooleanCombinationsofFactors",
+   "valid": false,
+   "size": null,
+   "best_known_size": 17,
+   "check": "no_formula",
+   "cpu_s": 12.567
+  },
+  {
+   "instance": "t04",
+   "family": "Subword",
+   "valid": true,
+   "size": 45,
+   "best_known_size": 21,
+   "check": "valid",
+   "cpu_s": 0.797
+  },
+  {
+   "instance": "t05",
+   "family": "OrderedSequence",
+   "valid": true,
+   "size": 7,
+   "best_known_size": 5,
+   "check": "valid",
+   "cpu_s": 0.105
+  },
+  {
+   "instance": "t06",
+   "family": "Subset",
+   "valid": true,
+   "size": 14,
+   "best_known_size": 11,
+   "check": "valid",
+   "cpu_s": 0.138
+  },
+  {
+   "instance": "t07",
+   "family": "RandomBooleanCombinationsofFactors",
+   "valid": true,
+   "size": 38,
+   "best_known_size": 16,
+   "check": "valid",
+   "cpu_s": 0.553
+  },
+  {
+   "instance": "t08",
+   "family": "Subset",
+   "valid": true,
+   "size": 8,
+   "best_known_size": 6,
+   "check": "valid",
+   "cpu_s": 0.114
+  },
+  {
+   "instance": "t09",
+   "family": "Subword",
+   "valid": false,
+   "size": null,
+   "best_known_size": 17,
+   "check": "no_formula",
+   "cpu_s": 13.255
+  },
+  {
+   "instance": "t10",
+   "family": "Hamming",
+   "valid": false,
+   "size": null,
+   "best_known_size": 9,
+   "check": "no_formula",
+   "cpu_s": 1.114
+  },
+  {
+   "instance": "t11",
+   "family": "OrderedSequence",
+   "valid": true,
+   "size": 3,
+   "best_known_size": 3,
+   "check": "valid",
+   "cpu_s": 0.097
+  },
+  {
+   "instance": "t12",
+   "family": "Subset",
+   "valid": true,
+   "size": 4,
+   "best_known_size": 4,
+   "check": "valid",
+   "cpu_s": 0.098
+  },
+  {
+   "instance": "t13",
+   "family": "Hamming",
+   "valid": false,
+   "size": null,
+   "best_known_size": 41,
+   "check": "no_formula",
+   "cpu_s": 0.092
+  },
+  {
+   "instance": "t14",
+   "family": "Subword",
+   "valid": true,
+   "size": 24,
+   "best_known_size": 15,
+   "check": "valid",
+   "cpu_s": 0.232
+  },
+  {
+   "instance": "t15",
+   "family": "RandomBooleanCombinationsofFactors",
+   "valid": true,
+   "size": 6,
+   "best_known_size": 6,
+   "check": "valid",
+   "cpu_s": 0.09
+  },
+  {
+   "instance": "t16",
+   "family": "OrderedSequence",
+   "valid": true,
+   "size": 1,
+   "best_known_size": 1,
+   "check": "valid",
+   "cpu_s": 0.093
+  },
+  {
+   "instance": "t17",
+   "family": "Subword",
+   "valid": false,
+   "size": 322,
+   "best_known_size": 26,
+   "check": "valid but more than CAP x the best-known size",
+   "cpu_s": 16.567
+  },
+  {
+   "instance": "t18",
+   "family": "Subword",
+   "valid": true,
+   "size": 12,
+   "best_known_size": 4,
+   "check": "valid",
+   "cpu_s": 0.093
+  },
+  {
+   "instance": "t19",
+   "family": "Subset",
+   "valid": true,
+   "size": 3,
+   "best_known_size": 3,
+   "check": "valid",
+   "cpu_s": 0.094
+  },
+  {
+   "instance": "t20",
+   "family": "Hamming",
+   "valid": false,
+   "size": null,
+   "best_known_size": 49,
+   "check": "no_formula",
+   "cpu_s": 0.092
+  },
+  {
+   "instance": "t21",
+   "family": "Hamming",
+   "valid": false,
+   "size": null,
+   "best_known_size": 27,
+   "check": "no_formula",
+   "cpu_s": 0.091
+  },
+  {
+   "instance": "t22",
+   "family": "Subset",
+   "valid": true,
+   "size": 11,
+   "best_known_size": 10,
+   "check": "valid",
+   "cpu_s": 0.11
+  },
+  {
+   "instance": "t23",
+   "family": "Subset",
+   "valid": true,
+   "size": 14,
+   "best_known_size": 14,
+   "check": "valid",
+   "cpu_s": 0.141
+  },
+  {
+   "instance": "t24",
+   "family": "Subword",
+   "valid": true,
+   "size": 36,
+   "best_known_size": 23,
+   "check": "valid",
+   "cpu_s": 0.488
+  },
+  {
+   "instance": "t25",
+   "family": "OrderedSequence",
+   "valid": true,
+   "size": 3,
+   "best_known_size": 3,
+   "check": "valid",
+   "cpu_s": 0.091
+  },
+  {
+   "instance": "t26",
+   "family": "OrderedSequence",
+   "valid": true,
+   "size": 3,
+   "best_known_size": 3,
+   "check": "valid",
+   "cpu_s": 0.09
+  },
+  {
+   "instance": "t27",
+   "family": "Subword",
+   "valid": true,
+   "size": 6,
+   "best_known_size": 5,
+   "check": "valid",
+   "cpu_s": 0.092
+  },
+  {
+   "instance": "t28",
+   "family": "Hamming",
+   "valid": false,
+   "size": null,
+   "best_known_size": 11,
+   "check": "no_formula",
+   "cpu_s": 0.092
+  },
+  {
+   "instance": "t29",
+   "family": "RandomBooleanCombinationsofFactors",
+   "valid": false,
+   "size": null,
+   "best_known_size": 17,
+   "check": "no_formula",
+   "cpu_s": 10.661
+  },
+  {
+   "instance": "t30",
+   "family": "Subset",
+   "valid": true,
+   "size": 8,
+   "best_known_size": 6,
+   "check": "valid",
+   "cpu_s": 0.11
+  },
+  {
+   "instance": "t31",
+   "family": "RandomBooleanCombinationsofFactors",
+   "valid": false,
+   "size": null,
+   "best_known_size": 53,
+   "check": "no_formula",
+   "cpu_s": 18.108
+  },
+  {
+   "instance": "t32",
+   "family": "Hamming",
+   "valid": false,
+   "size": null,
+   "best_known_size": 52,
+   "check": "no_formula",
+   "cpu_s": 0.104
+  },
+  {
+   "instance": "t33",
+   "family": "Subword",
+   "valid": false,
+   "size": null,
+   "best_known_size": 30,
+   "check": "no_formula",
+   "cpu_s": 18.091
+  },
+  {
+   "instance": "t34",
+   "family": "Hamming",
+   "valid": false,
+   "size": null,
+   "best_known_size": 10,
+   "check": "no_formula",
+   "cpu_s": 0.092
+  },
+  {
+   "instance": "t35",
+   "family": "Subset",
+   "valid": true,
+   "size": 17,
+   "best_known_size": 11,
+   "check": "valid",
+   "cpu_s": 0.164
+  },
+  {
+   "instance": "t36",
+   "family": "Hamming",
+   "valid": false,
+   "size": null,
+   "best_known_size": 16,
+   "check": "no_formula",
+   "cpu_s": 0.092
+  },
+  {
+   "instance": "t37",
+   "family": "RandomBooleanCombinationsofFactors",
+   "valid": false,
+   "size": null,
+   "best_known_size": 29,
+   "check": "no_formula",
+   "cpu_s": 18.098
+  },
+  {
+   "instance": "t38",
+   "family": "OrderedSequence",
+   "valid": true,
+   "size": 9,
+   "best_known_size": 5,
+   "check": "valid",
+   "cpu_s": 0.094
+  },
+  {
+   "instance": "t39",
+   "family": "RandomBooleanCombinationsofFactors",
+   "valid": false,
+   "size": null,
+   "best_known_size": 32,
+   "check": "no_formula",
+   "cpu_s": 18.096
+  },
+  {
+   "instance": "t40",
+   "family": "SingleCounter",
+   "valid": true,
+   "size": 11,
+   "best_known_size": 8,
+   "check": "valid",
+   "cpu_s": 0.092
+  },
+  {
+   "instance": "t41",
+   "family": "Fixed_Formulas",
+   "valid": true,
+   "size": 10,
+   "best_known_size": 5,
+   "check": "valid",
+   "cpu_s": 0.096
+  },
+  {
+   "instance": "t42",
+   "family": "DoubleCounter",
+   "valid": true,
+   "size": 32,
+   "best_known_size": 30,
+   "check": "valid",
+   "cpu_s": 0.297
+  },
+  {
+   "instance": "t43",
+   "family": "Random_Conjuncts_from_Basis",
+   "valid": true,
+   "size": 3,
+   "best_known_size": 3,
+   "check": "valid",
+   "cpu_s": 0.094
+  },
+  {
+   "instance": "t44",
+   "family": "Nim",
+   "valid": true,
+   "size": 8,
+   "best_known_size": 7,
+   "check": "valid",
+   "cpu_s": 0.103
+  },
+  {
+   "instance": "t45",
+   "family": "Random_Conjuncts_from_Basis",
+   "valid": true,
+   "size": 2,
+   "best_known_size": 2,
+   "check": "valid",
+   "cpu_s": 0.094
+  },
+  {
+   "instance": "t46",
+   "family": "Fixed_Formulas",
+   "valid": true,
+   "size": 2,
+   "best_known_size": 2,
+   "check": "valid",
+   "cpu_s": 0.095
+  },
+  {
+   "instance": "t47",
+   "family": "Nim",
+   "valid": true,
+   "size": 10,
+   "best_known_size": 8,
+   "check": "valid",
+   "cpu_s": 0.121
+  },
+  {
+   "instance": "t48",
+   "family": "DoubleCounter",
+   "valid": true,
+   "size": 5,
+   "best_known_size": 4,
+   "check": "valid",
+   "cpu_s": 0.094
+  },
+  {
+   "instance": "t49",
+   "family": "DoubleCounter",
+   "valid": true,
+   "size": 14,
+   "best_known_size": 11,
+   "check": "valid",
+   "cpu_s": 0.138
+  },
+  {
+   "instance": "t50",
+   "family": "Nim",
+   "valid": true,
+   "size": 22,
+   "best_known_size": 22,
+   "check": "valid",
+   "cpu_s": 0.191
+  },
+  {
+   "instance": "t51",
+   "family": "Nim",
+   "valid": true,
+   "size": 16,
+   "best_known_size": 14,
+   "check": "valid",
+   "cpu_s": 0.117
+  },
+  {
+   "instance": "t52",
+   "family": "Fixed_Formulas",
+   "valid": true,
+   "size": 2,
+   "best_known_size": 2,
+   "check": "valid",
+   "cpu_s": 0.088
+  },
+  {
+   "instance": "t53",
+   "family": "Nim",
+   "valid": true,
+   "size": 16,
+   "best_known_size": 14,
+   "check": "valid",
+   "cpu_s": 0.115
+  },
+  {
+   "instance": "t54",
+   "family": "SingleCounter",
+   "valid": true,
+   "size": 11,
+   "best_known_size": 10,
+   "check": "valid",
+   "cpu_s": 0.105
+  },
+  {
+   "instance": "t55",
+   "family": "Fixed_Formulas",
+   "valid": true,
+   "size": 15,
+   "best_known_size": 4,
+   "check": "valid",
+   "cpu_s": 0.093
+  },
+  {
+   "instance": "t56",
+   "family": "SingleCounter",
+   "valid": true,
+   "size": 135,
+   "best_known_size": 35,
+   "check": "valid",
+   "cpu_s": 5.041
+  },
+  {
+   "instance": "t57",
+   "family": "SingleCounter",
+   "valid": true,
+   "size": 1,
+   "best_known_size": 1,
+   "check": "valid",
+   "cpu_s": 0.098
+  },
+  {
+   "instance": "t58",
+   "family": "SingleCounter",
+   "valid": true,
+   "size": 10,
+   "best_known_size": 7,
+   "check": "valid",
+   "cpu_s": 0.101
+  },
+  {
+   "instance": "t59",
+   "family": "Fixed_Formulas",
+   "valid": true,
+   "size": 3,
+   "best_known_size": 3,
+   "check": "valid",
+   "cpu_s": 0.093
+  },
+  {
+   "instance": "t60",
+   "family": "Nim",
+   "valid": true,
+   "size": 12,
+   "best_known_size": 12,
+   "check": "valid",
+   "cpu_s": 0.123
+  },
+  {
+   "instance": "t61",
+   "family": "Random_Conjuncts_from_Basis",
+   "valid": true,
+   "size": 9,
+   "best_known_size": 5,
+   "check": "valid",
+   "cpu_s": 0.103
+  },
+  {
+   "instance": "t62",
+   "family": "Nim",
+   "valid": true,
+   "size": 5,
+   "best_known_size": 4,
+   "check": "valid",
+   "cpu_s": 0.093
+  },
+  {
+   "instance": "t63",
+   "family": "Fixed_Formulas",
+   "valid": true,
+   "size": 3,
+   "best_known_size": 3,
+   "check": "valid",
+   "cpu_s": 0.091
+  },
+  {
+   "instance": "t64",
+   "family": "SingleCounter",
+   "valid": true,
+   "size": 119,
+   "best_known_size": 32,
+   "check": "valid",
+   "cpu_s": 2.285
+  },
+  {
+   "instance": "t65",
+   "family": "DoubleCounter",
+   "valid": true,
+   "size": 15,
+   "best_known_size": 10,
+   "check": "valid",
+   "cpu_s": 0.152
+  },
+  {
+   "instance": "t66",
+   "family": "Random_Conjuncts_from_Basis",
+   "valid": true,
+   "size": 3,
+   "best_known_size": 3,
+   "check": "valid",
+   "cpu_s": 0.108
+  },
+  {
+   "instance": "t67",
+   "family": "Random_Conjuncts_from_Basis",
+   "valid": true,
+   "size": 2,
+   "best_known_size": 2,
+   "check": "valid",
+   "cpu_s": 0.103
+  },
+  {
+   "instance": "t68",
+   "family": "Random_Conjuncts_from_Basis",
+   "valid": true,
+   "size": 2,
+   "best_known_size": 2,
+   "check": "valid",
+   "cpu_s": 0.088
+  },
+  {
+   "instance": "t69",
+   "family": "Random_Conjuncts_from_Basis",
+   "valid": true,
+   "size": 57,
+   "best_known_size": 10,
+   "check": "valid",
+   "cpu_s": 0.502
+  },
+  {
+   "instance": "t70",
+   "family": "Random_Conjuncts_from_Basis",
+   "valid": true,
+   "size": 3,
+   "best_known_size": 3,
+   "check": "valid",
+   "cpu_s": 0.088
+  },
+  {
+   "instance": "t71",
+   "family": "Nim",
+   "valid": true,
+   "size": 3,
+   "best_known_size": 3,
+   "check": "valid",
+   "cpu_s": 0.089
+  },
+  {
+   "instance": "t72",
+   "family": "DoubleCounter",
+   "valid": true,
+   "size": 8,
+   "best_known_size": 6,
+   "check": "valid",
+   "cpu_s": 0.097
+  },
+  {
+   "instance": "t73",
+   "family": "Fixed_Formulas",
+   "valid": true,
+   "size": 8,
+   "best_known_size": 4,
+   "check": "valid",
+   "cpu_s": 0.089
+  },
+  {
+   "instance": "t74",
+   "family": "SingleCounter",
+   "valid": true,
+   "size": 27,
+   "best_known_size": 20,
+   "check": "valid",
+   "cpu_s": 0.334
+  },
+  {
+   "instance": "t75",
+   "family": "SingleCounter",
+   "valid": true,
+   "size": 21,
+   "best_known_size": 18,
+   "check": "valid",
+   "cpu_s": 0.219
+  },
+  {
+   "instance": "t76",
+   "family": "DoubleCounter",
+   "valid": true,
+   "size": 4,
+   "best_known_size": 4,
+   "check": "valid",
+   "cpu_s": 0.087
+  },
+  {
+   "instance": "t77",
+   "family": "Fixed_Formulas",
+   "valid": true,
+   "size": 2,
+   "best_known_size": 2,
+   "check": "valid",
+   "cpu_s": 0.086
+  },
+  {
+   "instance": "t78",
+   "family": "DoubleCounter",
+   "valid": true,
+   "size": 82,
+   "best_known_size": 31,
+   "check": "valid",
+   "cpu_s": 1.828
+  },
+  {
+   "instance": "t79",
+   "family": "DoubleCounter",
+   "valid": true,
+   "size": 32,
+   "best_known_size": 32,
+   "check": "valid",
+   "cpu_s": 0.356
+  }
+ ],
+ "crash": [
+  {
+   "instance": "t00",
+   "family": "OrderedSequence",
+   "valid": false,
+   "size": null,
+   "best_known_size": 4,
+   "check": "crashed",
+   "cpu_s": 0.004
+  },
+  {
+   "instance": "t01",
+   "family": "RandomBooleanCombinationsofFactors",
+   "valid": false,
+   "size": null,
+   "best_known_size": 29,
+   "check": "crashed",
+   "cpu_s": 0.003
+  },
+  {
+   "instance": "t02",
+   "family": "OrderedSequence",
+   "valid": false,
+   "size": null,
+   "best_known_size": 5,
+   "check": "crashed",
+   "cpu_s": 0.004
+  },
+  {
+   "instance": "t03",
+   "family": "RandomBooleanCombinationsofFactors",
+   "valid": false,
+   "size": null,
+   "best_known_size": 17,
+   "check": "crashed",
+   "cpu_s": 0.003
+  },
+  {
+   "instance": "t04",
+   "family": "Subword",
+   "valid": false,
+   "size": null,
+   "best_known_size": 21,
+   "check": "crashed",
+   "cpu_s": 0.005
+  },
+  {
+   "instance": "t05",
+   "family": "OrderedSequence",
+   "valid": false,
+   "size": null,
+   "best_known_size": 5,
+   "check": "crashed",
+   "cpu_s": 0.003
+  },
+  {
+   "instance": "t06",
+   "family": "Subset",
+   "valid": false,
+   "size": null,
+   "best_known_size": 11,
+   "check": "crashed",
+   "cpu_s": 0.003
+  },
+  {
+   "instance": "t07",
+   "family": "RandomBooleanCombinationsofFactors",
+   "valid": false,
+   "size": null,
+   "best_known_size": 16,
+   "check": "crashed",
+   "cpu_s": 0.003
+  },
+  {
+   "instance": "t08",
+   "family": "Subset",
+   "valid": false,
+   "size": null,
+   "best_known_size": 6,
+   "check": "crashed",
+   "cpu_s": 0.003
+  },
+  {
+   "instance": "t09",
+   "family": "Subword",
+   "valid": false,
+   "size": null,
+   "best_known_size": 17,
+   "check": "crashed",
+   "cpu_s": 0.003
+  },
+  {
+   "instance": "t10",
+   "family": "Hamming",
+   "valid": false,
+   "size": null,
+   "best_known_size": 9,
+   "check": "crashed",
+   "cpu_s": 0.004
+  },
+  {
+   "instance": "t11",
+   "family": "OrderedSequence",
+   "valid": false,
+   "size": null,
+   "best_known_size": 3,
+   "check": "crashed",
+   "cpu_s": 0.004
+  },
+  {
+   "instance": "t12",
+   "family": "Subset",
+   "valid": false,
+   "size": null,
+   "best_known_size": 4,
+   "check": "crashed",
+   "cpu_s": 0.003
+  },
+  {
+   "instance": "t13",
+   "family": "Hamming",
+   "valid": false,
+   "size": null,
+   "best_known_size": 41,
+   "check": "crashed",
+   "cpu_s": 0.003
+  },
+  {
+   "instance": "t14",
+   "family": "Subword",
+   "valid": false,
+   "size": null,
+   "best_known_size": 15,
+   "check": "crashed",
+   "cpu_s": 0.004
+  },
+  {
+   "instance": "t15",
+   "family": "RandomBooleanCombinationsofFactors",
+   "valid": false,
+   "size": null,
+   "best_known_size": 6,
+   "check": "crashed",
+   "cpu_s": 0.004
+  },
+  {
+   "instance": "t16",
+   "family": "OrderedSequence",
+   "valid": false,
+   "size": null,
+   "best_known_size": 1,
+   "check": "crashed",
+   "cpu_s": 0.004
+  },
+  {
+   "instance": "t17",
+   "family": "Subword",
+   "valid": false,
+   "size": null,
+   "best_known_size": 26,
+   "check": "crashed",
+   "cpu_s": 0.004
+  },
+  {
+   "instance": "t18",
+   "family": "Subword",
+   "valid": false,
+   "size": null,
+   "best_known_size": 4,
+   "check": "crashed",
+   "cpu_s": 0.003
+  },
+  {
+   "instance": "t19",
+   "family": "Subset",
+   "valid": false,
+   "size": null,
+   "best_known_size": 3,
+   "check": "crashed",
+   "cpu_s": 0.003
+  },
+  {
+   "instance": "t20",
+   "family": "Hamming",
+   "valid": false,
+   "size": null,
+   "best_known_size": 49,
+   "check": "crashed",
+   "cpu_s": 0.003
+  },
+  {
+   "instance": "t21",
+   "family": "Hamming",
+   "valid": false,
+   "size": null,
+   "best_known_size": 27,
+   "check": "crashed",
+   "cpu_s": 0.003
+  },
+  {
+   "instance": "t22",
+   "family": "Subset",
+   "valid": false,
+   "size": null,
+   "best_known_size": 10,
+   "check": "crashed",
+   "cpu_s": 0.004
+  },
+  {
+   "instance": "t23",
+   "family": "Subset",
+   "valid": false,
+   "size": null,
+   "best_known_size": 14,
+   "check": "crashed",
+   "cpu_s": 0.003
+  },
+  {
+   "instance": "t24",
+   "family": "Subword",
+   "valid": false,
+   "size": null,
+   "best_known_size": 23,
+   "check": "crashed",
+   "cpu_s": 0.003
+  },
+  {
+   "instance": "t25",
+   "family": "OrderedSequence",
+   "valid": false,
+   "size": null,
+   "best_known_size": 3,
+   "check": "crashed",
+   "cpu_s": 0.003
+  },
+  {
+   "instance": "t26",
+   "family": "OrderedSequence",
+   "valid": false,
+   "size": null,
+   "best_known_size": 3,
+   "check": "crashed",
+   "cpu_s": 0.003
+  },
+  {
+   "instance": "t27",
+   "family": "Subword",
+   "valid": false,
+   "size": null,
+   "best_known_size": 5,
+   "check": "crashed",
+   "cpu_s": 0.003
+  },
+  {
+   "instance": "t28",
+   "family": "Hamming",
+   "valid": false,
+   "size": null,
+   "best_known_size": 11,
+   "check": "crashed",
+   "cpu_s": 0.003
+  },
+  {
+   "instance": "t29",
+   "family": "RandomBooleanCombinationsofFactors",
+   "valid": false,
+   "size": null,
+   "best_known_size": 17,
+   "check": "crashed",
+   "cpu_s": 0.003
+  },
+  {
+   "instance": "t30",
+   "family": "Subset",
+   "valid": false,
+   "size": null,
+   "best_known_size": 6,
+   "check": "crashed",
+   "cpu_s": 0.003
+  },
+  {
+   "instance": "t31",
+   "family": "RandomBooleanCombinationsofFactors",
+   "valid": false,
+   "size": null,
+   "best_known_size": 53,
+   "check": "crashed",
+   "cpu_s": 0.003
+  },
+  {
+   "instance": "t32",
+   "family": "Hamming",
+   "valid": false,
+   "size": null,
+   "best_known_size": 52,
+   "check": "crashed",
+   "cpu_s": 0.004
+  },
+  {
+   "instance": "t33",
+   "family": "Subword",
+   "valid": false,
+   "size": null,
+   "best_known_size": 30,
+   "check": "crashed",
+   "cpu_s": 0.003
+  },
+  {
+   "instance": "t34",
+   "family": "Hamming",
+   "valid": false,
+   "size": null,
+   "best_known_size": 10,
+   "check": "crashed",
+   "cpu_s": 0.004
+  },
+  {
+   "instance": "t35",
+   "family": "Subset",
+   "valid": false,
+   "size": null,
+   "best_known_size": 11,
+   "check": "crashed",
+   "cpu_s": 0.003
+  },
+  {
+   "instance": "t36",
+   "family": "Hamming",
+   "valid": false,
+   "size": null,
+   "best_known_size": 16,
+   "check": "crashed",
+   "cpu_s": 0.004
+  },
+  {
+   "instance": "t37",
+   "family": "RandomBooleanCombinationsofFactors",
+   "valid": false,
+   "size": null,
+   "best_known_size": 29,
+   "check": "crashed",
+   "cpu_s": 0.004
+  },
+  {
+   "instance": "t38",
+   "family": "OrderedSequence",
+   "valid": false,
+   "size": null,
+   "best_known_size": 5,
+   "check": "crashed",
+   "cpu_s": 0.004
+  },
+  {
+   "instance": "t39",
+   "family": "RandomBooleanCombinationsofFactors",
+   "valid": false,
+   "size": null,
+   "best_known_size": 32,
+   "check": "crashed",
+   "cpu_s": 0.004
+  },
+  {
+   "instance": "t40",
+   "family": "SingleCounter",
+   "valid": false,
+   "size": null,
+   "best_known_size": 8,
+   "check": "crashed",
+   "cpu_s": 0.004
+  },
+  {
+   "instance": "t41",
+   "family": "Fixed_Formulas",
+   "valid": false,
+   "size": null,
+   "best_known_size": 5,
+   "check": "crashed",
+   "cpu_s": 0.003
+  },
+  {
+   "instance": "t42",
+   "family": "DoubleCounter",
+   "valid": false,
+   "size": null,
+   "best_known_size": 30,
+   "check": "crashed",
+   "cpu_s": 0.004
+  },
+  {
+   "instance": "t43",
+   "family": "Random_Conjuncts_from_Basis",
+   "valid": false,
+   "size": null,
+   "best_known_size": 3,
+   "check": "crashed",
+   "cpu_s": 0.004
+  },
+  {
+   "instance": "t44",
+   "family": "Nim",
+   "valid": false,
+   "size": null,
+   "best_known_size": 7,
+   "check": "crashed",
+   "cpu_s": 0.003
+  },
+  {
+   "instance": "t45",
+   "family": "Random_Conjuncts_from_Basis",
+   "valid": false,
+   "size": null,
+   "best_known_size": 2,
+   "check": "crashed",
+   "cpu_s": 0.003
+  },
+  {
+   "instance": "t46",
+   "family": "Fixed_Formulas",
+   "valid": false,
+   "size": null,
+   "best_known_size": 2,
+   "check": "crashed",
+   "cpu_s": 0.003
+  },
+  {
+   "instance": "t47",
+   "family": "Nim",
+   "valid": false,
+   "size": null,
+   "best_known_size": 8,
+   "check": "crashed",
+   "cpu_s": 0.003
+  },
+  {
+   "instance": "t48",
+   "family": "DoubleCounter",
+   "valid": false,
+   "size": null,
+   "best_known_size": 4,
+   "check": "crashed",
+   "cpu_s": 0.003
+  },
+  {
+   "instance": "t49",
+   "family": "DoubleCounter",
+   "valid": false,
+   "size": null,
+   "best_known_size": 11,
+   "check": "crashed",
+   "cpu_s": 0.004
+  },
+  {
+   "instance": "t50",
+   "family": "Nim",
+   "valid": false,
+   "size": null,
+   "best_known_size": 22,
+   "check": "crashed",
+   "cpu_s": 0.004
+  },
+  {
+   "instance": "t51",
+   "family": "Nim",
+   "valid": false,
+   "size": null,
+   "best_known_size": 14,
+   "check": "crashed",
+   "cpu_s": 0.003
+  },
+  {
+   "instance": "t52",
+   "family": "Fixed_Formulas",
+   "valid": false,
+   "size": null,
+   "best_known_size": 2,
+   "check": "crashed",
+   "cpu_s": 0.003
+  },
+  {
+   "instance": "t53",
+   "family": "Nim",
+   "valid": false,
+   "size": null,
+   "best_known_size": 14,
+   "check": "crashed",
+   "cpu_s": 0.003
+  },
+  {
+   "instance": "t54",
+   "family": "SingleCounter",
+   "valid": false,
+   "size": null,
+   "best_known_size": 10,
+   "check": "crashed",
+   "cpu_s": 0.003
+  },
+  {
+   "instance": "t55",
+   "family": "Fixed_Formulas",
+   "valid": false,
+   "size": null,
+   "best_known_size": 4,
+   "check": "crashed",
+   "cpu_s": 0.003
+  },
+  {
+   "instance": "t56",
+   "family": "SingleCounter",
+   "valid": false,
+   "size": null,
+   "best_known_size": 35,
+   "check": "crashed",
+   "cpu_s": 0.003
+  },
+  {
+   "instance": "t57",
+   "family": "SingleCounter",
+   "valid": false,
+   "size": null,
+   "best_known_size": 1,
+   "check": "crashed",
+   "cpu_s": 0.004
+  },
+  {
+   "instance": "t58",
+   "family": "SingleCounter",
+   "valid": false,
+   "size": null,
+   "best_known_size": 7,
+   "check": "crashed",
+   "cpu_s": 0.004
+  },
+  {
+   "instance": "t59",
+   "family": "Fixed_Formulas",
+   "valid": false,
+   "size": null,
+   "best_known_size": 3,
+   "check": "crashed",
+   "cpu_s": 0.004
+  },
+  {
+   "instance": "t60",
+   "family": "Nim",
+   "valid": false,
+   "size": null,
+   "best_known_size": 12,
+   "check": "crashed",
+   "cpu_s": 0.004
+  },
+  {
+   "instance": "t61",
+   "family": "Random_Conjuncts_from_Basis",
+   "valid": false,
+   "size": null,
+   "best_known_size": 5,
+   "check": "crashed",
+   "cpu_s": 0.004
+  },
+  {
+   "instance": "t62",
+   "family": "Nim",
+   "valid": false,
+   "size": null,
+   "best_known_size": 4,
+   "check": "crashed",
+   "cpu_s": 0.003
+  },
+  {
+   "instance": "t63",
+   "family": "Fixed_Formulas",
+   "valid": false,
+   "size": null,
+   "best_known_size": 3,
+   "check": "crashed",
+   "cpu_s": 0.003
+  },
+  {
+   "instance": "t64",
+   "family": "SingleCounter",
+   "valid": false,
+   "size": null,
+   "best_known_size": 32,
+   "check": "crashed",
+   "cpu_s": 0.003
+  },
+  {
+   "instance": "t65",
+   "family": "DoubleCounter",
+   "valid": false,
+   "size": null,
+   "best_known_size": 10,
+   "check": "crashed",
+   "cpu_s": 0.004
+  },
+  {
+   "instance": "t66",
+   "family": "Random_Conjuncts_from_Basis",
+   "valid": false,
+   "size": null,
+   "best_known_size": 3,
+   "check": "crashed",
+   "cpu_s": 0.003
+  },
+  {
+   "instance": "t67",
+   "family": "Random_Conjuncts_from_Basis",
+   "valid": false,
+   "size": null,
+   "best_known_size": 2,
+   "check": "crashed",
+   "cpu_s": 0.003
+  },
+  {
+   "instance": "t68",
+   "family": "Random_Conjuncts_from_Basis",
+   "valid": false,
+   "size": null,
+   "best_known_size": 2,
+   "check": "crashed",
+   "cpu_s": 0.003
+  },
+  {
+   "instance": "t69",
+   "family": "Random_Conjuncts_from_Basis",
+   "valid": false,
+   "size": null,
+   "best_known_size": 10,
+   "check": "crashed",
+   "cpu_s": 0.003
+  },
+  {
+   "instance": "t70",
+   "family": "Random_Conjuncts_from_Basis",
+   "valid": false,
+   "size": null,
+   "best_known_size": 3,
+   "check": "crashed",
+   "cpu_s": 0.003
+  },
+  {
+   "instance": "t71",
+   "family": "Nim",
+   "valid": false,
+   "size": null,
+   "best_known_size": 3,
+   "check": "crashed",
+   "cpu_s": 0.004
+  },
+  {
+   "instance": "t72",
+   "family": "DoubleCounter",
+   "valid": false,
+   "size": null,
+   "best_known_size": 6,
+   "check": "crashed",
+   "cpu_s": 0.003
+  },
+  {
+   "instance": "t73",
+   "family": "Fixed_Formulas",
+   "valid": false,
+   "size": null,
+   "best_known_size": 4,
+   "check": "crashed",
+   "cpu_s": 0.003
+  },
+  {
+   "instance": "t74",
+   "family": "SingleCounter",
+   "valid": false,
+   "size": null,
+   "best_known_size": 20,
+   "check": "crashed",
+   "cpu_s": 0.003
+  },
+  {
+   "instance": "t75",
+   "family": "SingleCounter",
+   "valid": false,
+   "size": null,
+   "best_known_size": 18,
+   "check": "crashed",
+   "cpu_s": 0.003
+  },
+  {
+   "instance": "t76",
+   "family": "DoubleCounter",
+   "valid": false,
+   "size": null,
+   "best_known_size": 4,
+   "check": "crashed",
+   "cpu_s": 0.003
+  },
+  {
+   "instance": "t77",
+   "family": "Fixed_Formulas",
+   "valid": false,
+   "size": null,
+   "best_known_size": 2,
+   "check": "crashed",
+   "cpu_s": 0.003
+  },
+  {
+   "instance": "t78",
+   "family": "DoubleCounter",
+   "valid": false,
+   "size": null,
+   "best_known_size": 31,
+   "check": "crashed",
+   "cpu_s": 0.004
+  },
+  {
+   "instance": "t79",
+   "family": "DoubleCounter",
+   "valid": false,
+   "size": null,
+   "best_known_size": 32,
+   "check": "crashed",
+   "cpu_s": 0.004
+  }
+ ],
+ "forged_fields": [
+  {
+   "instance": "t00",
+   "family": "OrderedSequence",
+   "valid": false,
+   "size": 1,
+   "best_known_size": 4,
+   "check": "does not separate",
+   "cpu_s": 0.056
+  },
+  {
+   "instance": "t01",
+   "family": "RandomBooleanCombinationsofFactors",
+   "valid": false,
+   "size": 1,
+   "best_known_size": 29,
+   "check": "does not separate",
+   "cpu_s": 0.063
+  },
+  {
+   "instance": "t02",
+   "family": "OrderedSequence",
+   "valid": false,
+   "size": 1,
+   "best_known_size": 5,
+   "check": "does not separate",
+   "cpu_s": 0.058
+  },
+  {
+   "instance": "t03",
+   "family": "RandomBooleanCombinationsofFactors",
+   "valid": false,
+   "size": 1,
+   "best_known_size": 17,
+   "check": "does not separate",
+   "cpu_s": 0.059
+  },
+  {
+   "instance": "t04",
+   "family": "Subword",
+   "valid": false,
+   "size": 1,
+   "best_known_size": 21,
+   "check": "does not separate",
+   "cpu_s": 0.056
+  },
+  {
+   "instance": "t05",
+   "family": "OrderedSequence",
+   "valid": false,
+   "size": 1,
+   "best_known_size": 5,
+   "check": "does not separate",
+   "cpu_s": 0.058
+  },
+  {
+   "instance": "t06",
+   "family": "Subset",
+   "valid": false,
+   "size": 1,
+   "best_known_size": 11,
+   "check": "does not separate",
+   "cpu_s": 0.056
+  },
+  {
+   "instance": "t07",
+   "family": "RandomBooleanCombinationsofFactors",
+   "valid": false,
+   "size": 1,
+   "best_known_size": 16,
+   "check": "does not separate",
+   "cpu_s": 0.059
+  },
+  {
+   "instance": "t08",
+   "family": "Subset",
+   "valid": false,
+   "size": 1,
+   "best_known_size": 6,
+   "check": "does not separate",
+   "cpu_s": 0.054
+  },
+  {
+   "instance": "t09",
+   "family": "Subword",
+   "valid": false,
+   "size": 1,
+   "best_known_size": 17,
+   "check": "does not separate",
+   "cpu_s": 0.054
+  },
+  {
+   "instance": "t10",
+   "family": "Hamming",
+   "valid": false,
+   "size": 1,
+   "best_known_size": 9,
+   "check": "does not separate",
+   "cpu_s": 0.055
+  },
+  {
+   "instance": "t11",
+   "family": "OrderedSequence",
+   "valid": false,
+   "size": 1,
+   "best_known_size": 3,
+   "check": "does not separate",
+   "cpu_s": 0.053
+  },
+  {
+   "instance": "t12",
+   "family": "Subset",
+   "valid": false,
+   "size": 1,
+   "best_known_size": 4,
+   "check": "does not separate",
+   "cpu_s": 0.06
+  },
+  {
+   "instance": "t13",
+   "family": "Hamming",
+   "valid": false,
+   "size": 1,
+   "best_known_size": 41,
+   "check": "does not separate",
+   "cpu_s": 0.056
+  },
+  {
+   "instance": "t14",
+   "family": "Subword",
+   "valid": false,
+   "size": 1,
+   "best_known_size": 15,
+   "check": "does not separate",
+   "cpu_s": 0.055
+  },
+  {
+   "instance": "t15",
+   "family": "RandomBooleanCombinationsofFactors",
+   "valid": false,
+   "size": 1,
+   "best_known_size": 6,
+   "check": "does not separate",
+   "cpu_s": 0.057
+  },
+  {
+   "instance": "t16",
+   "family": "OrderedSequence",
+   "valid": false,
+   "size": 1,
+   "best_known_size": 1,
+   "check": "does not separate",
+   "cpu_s": 0.055
+  },
+  {
+   "instance": "t17",
+   "family": "Subword",
+   "valid": false,
+   "size": 1,
+   "best_known_size": 26,
+   "check": "does not separate",
+   "cpu_s": 0.055
+  },
+  {
+   "instance": "t18",
+   "family": "Subword",
+   "valid": false,
+   "size": 1,
+   "best_known_size": 4,
+   "check": "does not separate",
+   "cpu_s": 0.057
+  },
+  {
+   "instance": "t19",
+   "family": "Subset",
+   "valid": false,
+   "size": 1,
+   "best_known_size": 3,
+   "check": "does not separate",
+   "cpu_s": 0.059
+  },
+  {
+   "instance": "t20",
+   "family": "Hamming",
+   "valid": false,
+   "size": 1,
+   "best_known_size": 49,
+   "check": "does not separate",
+   "cpu_s": 0.057
+  },
+  {
+   "instance": "t21",
+   "family": "Hamming",
+   "valid": false,
+   "size": 1,
+   "best_known_size": 27,
+   "check": "does not separate",
+   "cpu_s": 0.058
+  },
+  {
+   "instance": "t22",
+   "family": "Subset",
+   "valid": false,
+   "size": 1,
+   "best_known_size": 10,
+   "check": "does not separate",
+   "cpu_s": 0.06
+  },
+  {
+   "instance": "t23",
+   "family": "Subset",
+   "valid": false,
+   "size": 1,
+   "best_known_size": 14,
+   "check": "does not separate",
+   "cpu_s": 0.059
+  },
+  {
+   "instance": "t24",
+   "family": "Subword",
+   "valid": false,
+   "size": 1,
+   "best_known_size": 23,
+   "check": "does not separate",
+   "cpu_s": 0.057
+  },
+  {
+   "instance": "t25",
+   "family": "OrderedSequence",
+   "valid": false,
+   "size": 1,
+   "best_known_size": 3,
+   "check": "does not separate",
+   "cpu_s": 0.061
+  },
+  {
+   "instance": "t26",
+   "family": "OrderedSequence",
+   "valid": false,
+   "size": 1,
+   "best_known_size": 3,
+   "check": "does not separate",
+   "cpu_s": 0.055
+  },
+  {
+   "instance": "t27",
+   "family": "Subword",
+   "valid": false,
+   "size": 1,
+   "best_known_size": 5,
+   "check": "does not separate",
+   "cpu_s": 0.055
+  },
+  {
+   "instance": "t28",
+   "family": "Hamming",
+   "valid": false,
+   "size": 1,
+   "best_known_size": 11,
+   "check": "does not separate",
+   "cpu_s": 0.059
+  },
+  {
+   "instance": "t29",
+   "family": "RandomBooleanCombinationsofFactors",
+   "valid": false,
+   "size": 1,
+   "best_known_size": 17,
+   "check": "does not separate",
+   "cpu_s": 0.061
+  },
+  {
+   "instance": "t30",
+   "family": "Subset",
+   "valid": false,
+   "size": 1,
+   "best_known_size": 6,
+   "check": "does not separate",
+   "cpu_s": 0.054
+  },
+  {
+   "instance": "t31",
+   "family": "RandomBooleanCombinationsofFactors",
+   "valid": false,
+   "size": 1,
+   "best_known_size": 53,
+   "check": "does not separate",
+   "cpu_s": 0.054
+  },
+  {
+   "instance": "t32",
+   "family": "Hamming",
+   "valid": false,
+   "size": 1,
+   "best_known_size": 52,
+   "check": "does not separate",
+   "cpu_s": 0.057
+  },
+  {
+   "instance": "t33",
+   "family": "Subword",
+   "valid": false,
+   "size": 1,
+   "best_known_size": 30,
+   "check": "does not separate",
+   "cpu_s": 0.054
+  },
+  {
+   "instance": "t34",
+   "family": "Hamming",
+   "valid": false,
+   "size": 1,
+   "best_known_size": 10,
+   "check": "does not separate",
+   "cpu_s": 0.062
+  },
+  {
+   "instance": "t35",
+   "family": "Subset",
+   "valid": false,
+   "size": 1,
+   "best_known_size": 11,
+   "check": "does not separate",
+   "cpu_s": 0.056
+  },
+  {
+   "instance": "t36",
+   "family": "Hamming",
+   "valid": false,
+   "size": 1,
+   "best_known_size": 16,
+   "check": "does not separate",
+   "cpu_s": 0.057
+  },
+  {
+   "instance": "t37",
+   "family": "RandomBooleanCombinationsofFactors",
+   "valid": false,
+   "size": 1,
+   "best_known_size": 29,
+   "check": "does not separate",
+   "cpu_s": 0.06
+  },
+  {
+   "instance": "t38",
+   "family": "OrderedSequence",
+   "valid": false,
+   "size": 1,
+   "best_known_size": 5,
+   "check": "does not separate",
+   "cpu_s": 0.055
+  },
+  {
+   "instance": "t39",
+   "family": "RandomBooleanCombinationsofFactors",
+   "valid": false,
+   "size": 1,
+   "best_known_size": 32,
+   "check": "does not separate",
+   "cpu_s": 0.056
+  },
+  {
+   "instance": "t40",
+   "family": "SingleCounter",
+   "valid": false,
+   "size": 1,
+   "best_known_size": 8,
+   "check": "does not separate",
+   "cpu_s": 0.056
+  },
+  {
+   "instance": "t41",
+   "family": "Fixed_Formulas",
+   "valid": false,
+   "size": 1,
+   "best_known_size": 5,
+   "check": "does not separate",
+   "cpu_s": 0.053
+  },
+  {
+   "instance": "t42",
+   "family": "DoubleCounter",
+   "valid": false,
+   "size": 1,
+   "best_known_size": 30,
+   "check": "does not separate",
+   "cpu_s": 0.062
+  },
+  {
+   "instance": "t43",
+   "family": "Random_Conjuncts_from_Basis",
+   "valid": false,
+   "size": 1,
+   "best_known_size": 3,
+   "check": "does not separate",
+   "cpu_s": 0.054
+  },
+  {
+   "instance": "t44",
+   "family": "Nim",
+   "valid": false,
+   "size": 1,
+   "best_known_size": 7,
+   "check": "does not separate",
+   "cpu_s": 0.054
+  },
+  {
+   "instance": "t45",
+   "family": "Random_Conjuncts_from_Basis",
+   "valid": false,
+   "size": 1,
+   "best_known_size": 2,
+   "check": "does not separate",
+   "cpu_s": 0.054
+  },
+  {
+   "instance": "t46",
+   "family": "Fixed_Formulas",
+   "valid": false,
+   "size": 1,
+   "best_known_size": 2,
+   "check": "does not separate",
+   "cpu_s": 0.053
+  },
+  {
+   "instance": "t47",
+   "family": "Nim",
+   "valid": false,
+   "size": 1,
+   "best_known_size": 8,
+   "check": "does not separate",
+   "cpu_s": 0.054
+  },
+  {
+   "instance": "t48",
+   "family": "DoubleCounter",
+   "valid": false,
+   "size": 1,
+   "best_known_size": 4,
+   "check": "does not separate",
+   "cpu_s": 0.054
+  },
+  {
+   "instance": "t49",
+   "family": "DoubleCounter",
+   "valid": false,
+   "size": 1,
+   "best_known_size": 11,
+   "check": "does not separate",
+   "cpu_s": 0.054
+  },
+  {
+   "instance": "t50",
+   "family": "Nim",
+   "valid": false,
+   "size": 1,
+   "best_known_size": 22,
+   "check": "does not separate",
+   "cpu_s": 0.06
+  },
+  {
+   "instance": "t51",
+   "family": "Nim",
+   "valid": false,
+   "size": 1,
+   "best_known_size": 14,
+   "check": "does not separate",
+   "cpu_s": 0.058
+  },
+  {
+   "instance": "t52",
+   "family": "Fixed_Formulas",
+   "valid": false,
+   "size": 1,
+   "best_known_size": 2,
+   "check": "does not separate",
+   "cpu_s": 0.054
+  },
+  {
+   "instance": "t53",
+   "family": "Nim",
+   "valid": false,
+   "size": 1,
+   "best_known_size": 14,
+   "check": "does not separate",
+   "cpu_s": 0.057
+  },
+  {
+   "instance": "t54",
+   "family": "SingleCounter",
+   "valid": false,
+   "size": 1,
+   "best_known_size": 10,
+   "check": "does not separate",
+   "cpu_s": 0.056
+  },
+  {
+   "instance": "t55",
+   "family": "Fixed_Formulas",
+   "valid": false,
+   "size": 1,
+   "best_known_size": 4,
+   "check": "does not separate",
+   "cpu_s": 0.057
+  },
+  {
+   "instance": "t56",
+   "family": "SingleCounter",
+   "valid": false,
+   "size": 1,
+   "best_known_size": 35,
+   "check": "does not separate",
+   "cpu_s": 0.06
+  },
+  {
+   "instance": "t57",
+   "family": "SingleCounter",
+   "valid": false,
+   "size": 1,
+   "best_known_size": 1,
+   "check": "does not separate",
+   "cpu_s": 0.058
+  },
+  {
+   "instance": "t58",
+   "family": "SingleCounter",
+   "valid": false,
+   "size": 1,
+   "best_known_size": 7,
+   "check": "does not separate",
+   "cpu_s": 0.056
+  },
+  {
+   "instance": "t59",
+   "family": "Fixed_Formulas",
+   "valid": false,
+   "size": 1,
+   "best_known_size": 3,
+   "check": "does not separate",
+   "cpu_s": 0.053
+  },
+  {
+   "instance": "t60",
+   "family": "Nim",
+   "valid": false,
+   "size": 1,
+   "best_known_size": 12,
+   "check": "does not separate",
+   "cpu_s": 0.057
+  },
+  {
+   "instance": "t61",
+   "family": "Random_Conjuncts_from_Basis",
+   "valid": false,
+   "size": 1,
+   "best_known_size": 5,
+   "check": "does not separate",
+   "cpu_s": 0.056
+  },
+  {
+   "instance": "t62",
+   "family": "Nim",
+   "valid": false,
+   "size": 1,
+   "best_known_size": 4,
+   "check": "does not separate",
+   "cpu_s": 0.058
+  },
+  {
+   "instance": "t63",
+   "family": "Fixed_Formulas",
+   "valid": false,
+   "size": 1,
+   "best_known_size": 3,
+   "check": "does not separate",
+   "cpu_s": 0.056
+  },
+  {
+   "instance": "t64",
+   "family": "SingleCounter",
+   "valid": false,
+   "size": 1,
+   "best_known_size": 32,
+   "check": "does not separate",
+   "cpu_s": 0.066
+  },
+  {
+   "instance": "t65",
+   "family": "DoubleCounter",
+   "valid": false,
+   "size": 1,
+   "best_known_size": 10,
+   "check": "does not separate",
+   "cpu_s": 0.057
+  },
+  {
+   "instance": "t66",
+   "family": "Random_Conjuncts_from_Basis",
+   "valid": false,
+   "size": 1,
+   "best_known_size": 3,
+   "check": "does not separate",
+   "cpu_s": 0.067
+  },
+  {
+   "instance": "t67",
+   "family": "Random_Conjuncts_from_Basis",
+   "valid": false,
+   "size": 1,
+   "best_known_size": 2,
+   "check": "does not separate",
+   "cpu_s": 0.065
+  },
+  {
+   "instance": "t68",
+   "family": "Random_Conjuncts_from_Basis",
+   "valid": false,
+   "size": 1,
+   "best_known_size": 2,
+   "check": "does not separate",
+   "cpu_s": 0.059
+  },
+  {
+   "instance": "t69",
+   "family": "Random_Conjuncts_from_Basis",
+   "valid": false,
+   "size": 1,
+   "best_known_size": 10,
+   "check": "does not separate",
+   "cpu_s": 0.057
+  },
+  {
+   "instance": "t70",
+   "family": "Random_Conjuncts_from_Basis",
+   "valid": false,
+   "size": 1,
+   "best_known_size": 3,
+   "check": "does not separate",
+   "cpu_s": 0.059
+  },
+  {
+   "instance": "t71",
+   "family": "Nim",
+   "valid": false,
+   "size": 1,
+   "best_known_size": 3,
+   "check": "does not separate",
+   "cpu_s": 0.056
+  },
+  {
+   "instance": "t72",
+   "family": "DoubleCounter",
+   "valid": false,
+   "size": 1,
+   "best_known_size": 6,
+   "check": "does not separate",
+   "cpu_s": 0.061
+  },
+  {
+   "instance": "t73",
+   "family": "Fixed_Formulas",
+   "valid": false,
+   "size": 1,
+   "best_known_size": 4,
+   "check": "does not separate",
+   "cpu_s": 0.058
+  },
+  {
+   "instance": "t74",
+   "family": "SingleCounter",
+   "valid": false,
+   "size": 1,
+   "best_known_size": 20,
+   "check": "does not separate",
+   "cpu_s": 0.058
+  },
+  {
+   "instance": "t75",
+   "family": "SingleCounter",
+   "valid": false,
+   "size": 1,
+   "best_known_size": 18,
+   "check": "does not separate",
+   "cpu_s": 0.059
+  },
+  {
+   "instance": "t76",
+   "family": "DoubleCounter",
+   "valid": false,
+   "size": 1,
+   "best_known_size": 4,
+   "check": "does not separate",
+   "cpu_s": 0.058
+  },
+  {
+   "instance": "t77",
+   "family": "Fixed_Formulas",
+   "valid": false,
+   "size": 1,
+   "best_known_size": 2,
+   "check": "does not separate",
+   "cpu_s": 0.06
+  },
+  {
+   "instance": "t78",
+   "family": "DoubleCounter",
+   "valid": false,
+   "size": 1,
+   "best_known_size": 31,
+   "check": "does not separate",
+   "cpu_s": 0.062
+  },
+  {
+   "instance": "t79",
+   "family": "DoubleCounter",
+   "valid": false,
+   "size": 1,
+   "best_known_size": 32,
+   "check": "does not separate",
+   "cpu_s": 0.061
+  }
+ ],
+ "literal_cover": [
+  {
+   "instance": "t00",
+   "family": "OrderedSequence",
+   "valid": true,
+   "size": 9,
+   "best_known_size": 4,
+   "check": "valid",
+   "cpu_s": 0.061
+  },
+  {
+   "instance": "t01",
+   "family": "RandomBooleanCombinationsofFactors",
+   "valid": false,
+   "size": 739,
+   "best_known_size": 29,
+   "check": "valid but more than CAP x the best-known size",
+   "cpu_s": 0.287
+  },
+  {
+   "instance": "t02",
+   "family": "OrderedSequence",
+   "valid": true,
+   "size": 13,
+   "best_known_size": 5,
+   "check": "valid",
+   "cpu_s": 0.059
+  },
+  {
+   "instance": "t03",
+   "family": "RandomBooleanCombinationsofFactors",
+   "valid": false,
+   "size": 987,
+   "best_known_size": 17,
+   "check": "valid but more than CAP x the best-known size",
+   "cpu_s": 0.297
+  },
+  {
+   "instance": "t04",
+   "family": "Subword",
+   "valid": true,
+   "size": 124,
+   "best_known_size": 21,
+   "check": "valid",
+   "cpu_s": 0.067
+  },
+  {
+   "instance": "t05",
+   "family": "OrderedSequence",
+   "valid": true,
+   "size": 34,
+   "best_known_size": 5,
+   "check": "valid",
+   "cpu_s": 0.075
+  },
+  {
+   "instance": "t06",
+   "family": "Subset",
+   "valid": true,
+   "size": 73,
+   "best_known_size": 11,
+   "check": "valid",
+   "cpu_s": 0.086
+  },
+  {
+   "instance": "t07",
+   "family": "RandomBooleanCombinationsofFactors",
+   "valid": true,
+   "size": 105,
+   "best_known_size": 16,
+   "check": "valid",
+   "cpu_s": 0.066
+  },
+  {
+   "instance": "t08",
+   "family": "Subset",
+   "valid": false,
+   "size": 91,
+   "best_known_size": 6,
+   "check": "valid but more than CAP x the best-known size",
+   "cpu_s": 0.064
+  },
+  {
+   "instance": "t09",
+   "family": "Subword",
+   "valid": false,
+   "size": 494,
+   "best_known_size": 17,
+   "check": "valid but more than CAP x the best-known size",
+   "cpu_s": 0.116
+  },
+  {
+   "instance": "t10",
+   "family": "Hamming",
+   "valid": false,
+   "size": 1771,
+   "best_known_size": 9,
+   "check": "valid but more than CAP x the best-known size",
+   "cpu_s": 0.169
+  },
+  {
+   "instance": "t11",
+   "family": "OrderedSequence",
+   "valid": true,
+   "size": 6,
+   "best_known_size": 3,
+   "check": "valid",
+   "cpu_s": 0.062
+  },
+  {
+   "instance": "t12",
+   "family": "Subset",
+   "valid": true,
+   "size": 8,
+   "best_known_size": 4,
+   "check": "valid",
+   "cpu_s": 0.068
+  },
+  {
+   "instance": "t13",
+   "family": "Hamming",
+   "valid": true,
+   "size": 166,
+   "best_known_size": 41,
+   "check": "valid",
+   "cpu_s": 0.068
+  },
+  {
+   "instance": "t14",
+   "family": "Subword",
+   "valid": true,
+   "size": 58,
+   "best_known_size": 15,
+   "check": "valid",
+   "cpu_s": 0.07
+  },
+  {
+   "instance": "t15",
+   "family": "RandomBooleanCombinationsofFactors",
+   "valid": true,
+   "size": 6,
+   "best_known_size": 6,
+   "check": "valid",
+   "cpu_s": 0.069
+  },
+  {
+   "instance": "t16",
+   "family": "OrderedSequence",
+   "valid": true,
+   "size": 1,
+   "best_known_size": 1,
+   "check": "valid",
+   "cpu_s": 0.059
+  },
+  {
+   "instance": "t17",
+   "family": "Subword",
+   "valid": false,
+   "size": 681,
+   "best_known_size": 26,
+   "check": "valid but more than CAP x the best-known size",
+   "cpu_s": 0.152
+  },
+  {
+   "instance": "t18",
+   "family": "Subword",
+   "valid": true,
+   "size": 20,
+   "best_known_size": 4,
+   "check": "valid",
+   "cpu_s": 0.065
+  },
+  {
+   "instance": "t19",
+   "family": "Subset",
+   "valid": true,
+   "size": 8,
+   "best_known_size": 3,
+   "check": "valid",
+   "cpu_s": 0.064
+  },
+  {
+   "instance": "t20",
+   "family": "Hamming",
+   "valid": true,
+   "size": 157,
+   "best_known_size": 49,
+   "check": "valid",
+   "cpu_s": 0.064
+  },
+  {
+   "instance": "t21",
+   "family": "Hamming",
+   "valid": true,
+   "size": 150,
+   "best_known_size": 27,
+   "check": "valid",
+   "cpu_s": 0.064
+  },
+  {
+   "instance": "t22",
+   "family": "Subset",
+   "valid": false,
+   "size": 541,
+   "best_known_size": 10,
+   "check": "valid but more than CAP x the best-known size",
+   "cpu_s": 0.153
+  },
+  {
+   "instance": "t23",
+   "family": "Subset",
+   "valid": false,
+   "size": 529,
+   "best_known_size": 14,
+   "check": "valid but more than CAP x the best-known size",
+   "cpu_s": 0.281
+  },
+  {
+   "instance": "t24",
+   "family": "Subword",
+   "valid": true,
+   "size": 81,
+   "best_known_size": 23,
+   "check": "valid",
+   "cpu_s": 0.071
+  },
+  {
+   "instance": "t25",
+   "family": "OrderedSequence",
+   "valid": true,
+   "size": 15,
+   "best_known_size": 3,
+   "check": "valid",
+   "cpu_s": 0.067
+  },
+  {
+   "instance": "t26",
+   "family": "OrderedSequence",
+   "valid": true,
+   "size": 12,
+   "best_known_size": 3,
+   "check": "valid",
+   "cpu_s": 0.065
+  },
+  {
+   "instance": "t27",
+   "family": "Subword",
+   "valid": true,
+   "size": 10,
+   "best_known_size": 5,
+   "check": "valid",
+   "cpu_s": 0.061
+  },
+  {
+   "instance": "t28",
+   "family": "Hamming",
+   "valid": true,
+   "size": 48,
+   "best_known_size": 11,
+   "check": "valid",
+   "cpu_s": 0.06
+  },
+  {
+   "instance": "t29",
+   "family": "RandomBooleanCombinationsofFactors",
+   "valid": false,
+   "size": 653,
+   "best_known_size": 17,
+   "check": "valid but more than CAP x the best-known size",
+   "cpu_s": 0.112
+  },
+  {
+   "instance": "t30",
+   "family": "Subset",
+   "valid": false,
+   "size": 96,
+   "best_known_size": 6,
+   "check": "valid but more than CAP x the best-known size",
+   "cpu_s": 0.075
+  },
+  {
+   "instance": "t31",
+   "family": "RandomBooleanCombinationsofFactors",
+   "valid": false,
+   "size": 891,
+   "best_known_size": 53,
+   "check": "valid but more than CAP x the best-known size",
+   "cpu_s": 0.154
+  },
+  {
+   "instance": "t32",
+   "family": "Hamming",
+   "valid": true,
+   "size": 394,
+   "best_known_size": 52,
+   "check": "valid",
+   "cpu_s": 0.068
+  },
+  {
+   "instance": "t33",
+   "family": "Subword",
+   "valid": false,
+   "size": 750,
+   "best_known_size": 30,
+   "check": "valid but more than CAP x the best-known size",
+   "cpu_s": 0.137
+  },
+  {
+   "instance": "t34",
+   "family": "Hamming",
+   "valid": false,
+   "size": 572,
+   "best_known_size": 10,
+   "check": "valid but more than CAP x the best-known size",
+   "cpu_s": 0.079
+  },
+  {
+   "instance": "t35",
+   "family": "Subset",
+   "valid": true,
+   "size": 103,
+   "best_known_size": 11,
+   "check": "valid",
+   "cpu_s": 0.071
+  },
+  {
+   "instance": "t36",
+   "family": "Hamming",
+   "valid": true,
+   "size": 50,
+   "best_known_size": 16,
+   "check": "valid",
+   "cpu_s": 0.059
+  },
+  {
+   "instance": "t37",
+   "family": "RandomBooleanCombinationsofFactors",
+   "valid": false,
+   "size": 781,
+   "best_known_size": 29,
+   "check": "valid but more than CAP x the best-known size",
+   "cpu_s": 0.313
+  },
+  {
+   "instance": "t38",
+   "family": "OrderedSequence",
+   "valid": true,
+   "size": 18,
+   "best_known_size": 5,
+   "check": "valid",
+   "cpu_s": 0.069
+  },
+  {
+   "instance": "t39",
+   "family": "RandomBooleanCombinationsofFactors",
+   "valid": false,
+   "size": 755,
+   "best_known_size": 32,
+   "check": "valid but more than CAP x the best-known size",
+   "cpu_s": 0.534
+  },
+  {
+   "instance": "t40",
+   "family": "SingleCounter",
+   "valid": true,
+   "size": 32,
+   "best_known_size": 8,
+   "check": "valid",
+   "cpu_s": 0.059
+  },
+  {
+   "instance": "t41",
+   "family": "Fixed_Formulas",
+   "valid": true,
+   "size": 17,
+   "best_known_size": 5,
+   "check": "valid",
+   "cpu_s": 0.057
+  },
+  {
+   "instance": "t42",
+   "family": "DoubleCounter",
+   "valid": false,
+   "size": 539,
+   "best_known_size": 30,
+   "check": "valid but more than CAP x the best-known size",
+   "cpu_s": 1.254
+  },
+  {
+   "instance": "t43",
+   "family": "Random_Conjuncts_from_Basis",
+   "valid": false,
+   "size": 71,
+   "best_known_size": 3,
+   "check": "valid but more than CAP x the best-known size",
+   "cpu_s": 0.108
+  },
+  {
+   "instance": "t44",
+   "family": "Nim",
+   "valid": true,
+   "size": 19,
+   "best_known_size": 7,
+   "check": "valid",
+   "cpu_s": 0.095
+  },
+  {
+   "instance": "t45",
+   "family": "Random_Conjuncts_from_Basis",
+   "valid": true,
+   "size": 4,
+   "best_known_size": 2,
+   "check": "valid",
+   "cpu_s": 0.072
+  },
+  {
+   "instance": "t46",
+   "family": "Fixed_Formulas",
+   "valid": true,
+   "size": 4,
+   "best_known_size": 2,
+   "check": "valid",
+   "cpu_s": 0.062
+  },
+  {
+   "instance": "t47",
+   "family": "Nim",
+   "valid": true,
+   "size": 36,
+   "best_known_size": 8,
+   "check": "valid",
+   "cpu_s": 0.069
+  },
+  {
+   "instance": "t48",
+   "family": "DoubleCounter",
+   "valid": true,
+   "size": 14,
+   "best_known_size": 4,
+   "check": "valid",
+   "cpu_s": 0.065
+  },
+  {
+   "instance": "t49",
+   "family": "DoubleCounter",
+   "valid": true,
+   "size": 80,
+   "best_known_size": 11,
+   "check": "valid",
+   "cpu_s": 0.073
+  },
+  {
+   "instance": "t50",
+   "family": "Nim",
+   "valid": false,
+   "size": 306,
+   "best_known_size": 22,
+   "check": "valid but more than CAP x the best-known size",
+   "cpu_s": 0.376
+  },
+  {
+   "instance": "t51",
+   "family": "Nim",
+   "valid": false,
+   "size": 177,
+   "best_known_size": 14,
+   "check": "valid but more than CAP x the best-known size",
+   "cpu_s": 0.153
+  },
+  {
+   "instance": "t52",
+   "family": "Fixed_Formulas",
+   "valid": false,
+   "size": 22,
+   "best_known_size": 2,
+   "check": "valid but more than CAP x the best-known size",
+   "cpu_s": 0.06
+  },
+  {
+   "instance": "t53",
+   "family": "Nim",
+   "valid": true,
+   "size": 111,
+   "best_known_size": 14,
+   "check": "valid",
+   "cpu_s": 0.138
+  },
+  {
+   "instance": "t54",
+   "family": "SingleCounter",
+   "valid": false,
+   "size": 213,
+   "best_known_size": 10,
+   "check": "valid but more than CAP x the best-known size",
+   "cpu_s": 0.212
+  },
+  {
+   "instance": "t55",
+   "family": "Fixed_Formulas",
+   "valid": true,
+   "size": 18,
+   "best_known_size": 4,
+   "check": "valid",
+   "cpu_s": 0.061
+  },
+  {
+   "instance": "t56",
+   "family": "SingleCounter",
+   "valid": false,
+   "size": 589,
+   "best_known_size": 35,
+   "check": "valid but more than CAP x the best-known size",
+   "cpu_s": 0.484
+  },
+  {
+   "instance": "t57",
+   "family": "SingleCounter",
+   "valid": true,
+   "size": 1,
+   "best_known_size": 1,
+   "check": "valid",
+   "cpu_s": 0.062
+  },
+  {
+   "instance": "t58",
+   "family": "SingleCounter",
+   "valid": true,
+   "size": 26,
+   "best_known_size": 7,
+   "check": "valid",
+   "cpu_s": 0.064
+  },
+  {
+   "instance": "t59",
+   "family": "Fixed_Formulas",
+   "valid": true,
+   "size": 20,
+   "best_known_size": 3,
+   "check": "valid",
+   "cpu_s": 0.062
+  },
+  {
+   "instance": "t60",
+   "family": "Nim",
+   "valid": true,
+   "size": 51,
+   "best_known_size": 12,
+   "check": "valid",
+   "cpu_s": 0.092
+  },
+  {
+   "instance": "t61",
+   "family": "Random_Conjuncts_from_Basis",
+   "valid": false,
+   "size": 61,
+   "best_known_size": 5,
+   "check": "valid but more than CAP x the best-known size",
+   "cpu_s": 0.081
+  },
+  {
+   "instance": "t62",
+   "family": "Nim",
+   "valid": true,
+   "size": 11,
+   "best_known_size": 4,
+   "check": "valid",
+   "cpu_s": 0.058
+  },
+  {
+   "instance": "t63",
+   "family": "Fixed_Formulas",
+   "valid": false,
+   "size": 590,
+   "best_known_size": 3,
+   "check": "valid but more than CAP x the best-known size",
+   "cpu_s": 0.085
+  },
+  {
+   "instance": "t64",
+   "family": "SingleCounter",
+   "valid": false,
+   "size": 719,
+   "best_known_size": 32,
+   "check": "valid but more than CAP x the best-known size",
+   "cpu_s": 1.496
+  },
+  {
+   "instance": "t65",
+   "family": "DoubleCounter",
+   "valid": true,
+   "size": 74,
+   "best_known_size": 10,
+   "check": "valid",
+   "cpu_s": 0.177
+  },
+  {
+   "instance": "t66",
+   "family": "Random_Conjuncts_from_Basis",
+   "valid": false,
+   "size": 157,
+   "best_known_size": 3,
+   "check": "valid but more than CAP x the best-known size",
+   "cpu_s": 0.458
+  },
+  {
+   "instance": "t67",
+   "family": "Random_Conjuncts_from_Basis",
+   "valid": false,
+   "size": 172,
+   "best_known_size": 2,
+   "check": "valid but more than CAP x the best-known size",
+   "cpu_s": 0.18
+  },
+  {
+   "instance": "t68",
+   "family": "Random_Conjuncts_from_Basis",
+   "valid": true,
+   "size": 6,
+   "best_known_size": 2,
+   "check": "valid",
+   "cpu_s": 0.06
+  },
+  {
+   "instance": "t69",
+   "family": "Random_Conjuncts_from_Basis",
+   "valid": false,
+   "size": 292,
+   "best_known_size": 10,
+   "check": "valid but more than CAP x the best-known size",
+   "cpu_s": 0.128
+  },
+  {
+   "instance": "t70",
+   "family": "Random_Conjuncts_from_Basis",
+   "valid": true,
+   "size": 8,
+   "best_known_size": 3,
+   "check": "valid",
+   "cpu_s": 0.063
+  },
+  {
+   "instance": "t71",
+   "family": "Nim",
+   "valid": true,
+   "size": 3,
+   "best_known_size": 3,
+   "check": "valid",
+   "cpu_s": 0.062
+  },
+  {
+   "instance": "t72",
+   "family": "DoubleCounter",
+   "valid": false,
+   "size": 111,
+   "best_known_size": 6,
+   "check": "valid but more than CAP x the best-known size",
+   "cpu_s": 0.108
+  },
+  {
+   "instance": "t73",
+   "family": "Fixed_Formulas",
+   "valid": true,
+   "size": 21,
+   "best_known_size": 4,
+   "check": "valid",
+   "cpu_s": 0.063
+  },
+  {
+   "instance": "t74",
+   "family": "SingleCounter",
+   "valid": true,
+   "size": 76,
+   "best_known_size": 20,
+   "check": "valid",
+   "cpu_s": 0.109
+  },
+  {
+   "instance": "t75",
+   "family": "SingleCounter",
+   "valid": true,
+   "size": 110,
+   "best_known_size": 18,
+   "check": "valid",
+   "cpu_s": 0.226
+  },
+  {
+   "instance": "t76",
+   "family": "DoubleCounter",
+   "valid": true,
+   "size": 14,
+   "best_known_size": 4,
+   "check": "valid",
+   "cpu_s": 0.066
+  },
+  {
+   "instance": "t77",
+   "family": "Fixed_Formulas",
+   "valid": true,
+   "size": 4,
+   "best_known_size": 2,
+   "check": "valid",
+   "cpu_s": 0.057
+  },
+  {
+   "instance": "t78",
+   "family": "DoubleCounter",
+   "valid": false,
+   "size": 587,
+   "best_known_size": 31,
+   "check": "valid but more than CAP x the best-known size",
+   "cpu_s": 0.592
+  },
+  {
+   "instance": "t79",
+   "family": "DoubleCounter",
+   "valid": false,
+   "size": 718,
+   "best_known_size": 32,
+   "check": "valid but more than CAP x the best-known size",
+   "cpu_s": 0.343
+  }
+ ],
+ "null_answer": [
+  {
+   "instance": "t00",
+   "family": "OrderedSequence",
+   "valid": false,
+   "size": null,
+   "best_known_size": 4,
+   "check": "no_formula",
+   "cpu_s": 0.004
+  },
+  {
+   "instance": "t01",
+   "family": "RandomBooleanCombinationsofFactors",
+   "valid": false,
+   "size": null,
+   "best_known_size": 29,
+   "check": "no_formula",
+   "cpu_s": 0.004
+  },
+  {
+   "instance": "t02",
+   "family": "OrderedSequence",
+   "valid": false,
+   "size": null,
+   "best_known_size": 5,
+   "check": "no_formula",
+   "cpu_s": 0.004
+  },
+  {
+   "instance": "t03",
+   "family": "RandomBooleanCombinationsofFactors",
+   "valid": false,
+   "size": null,
+   "best_known_size": 17,
+   "check": "no_formula",
+   "cpu_s": 0.004
+  },
+  {
+   "instance": "t04",
+   "family": "Subword",
+   "valid": false,
+   "size": null,
+   "best_known_size": 21,
+   "check": "no_formula",
+   "cpu_s": 0.004
+  },
+  {
+   "instance": "t05",
+   "family": "OrderedSequence",
+   "valid": false,
+   "size": null,
+   "best_known_size": 5,
+   "check": "no_formula",
+   "cpu_s": 0.004
+  },
+  {
+   "instance": "t06",
+   "family": "Subset",
+   "valid": false,
+   "size": null,
+   "best_known_size": 11,
+   "check": "no_formula",
+   "cpu_s": 0.004
+  },
+  {
+   "instance": "t07",
+   "family": "RandomBooleanCombinationsofFactors",
+   "valid": false,
+   "size": null,
+   "best_known_size": 16,
+   "check": "no_formula",
+   "cpu_s": 0.004
+  },
+  {
+   "instance": "t08",
+   "family": "Subset",
+   "valid": false,
+   "size": null,
+   "best_known_size": 6,
+   "check": "no_formula",
+   "cpu_s": 0.004
+  },
+  {
+   "instance": "t09",
+   "family": "Subword",
+   "valid": false,
+   "size": null,
+   "best_known_size": 17,
+   "check": "no_formula",
+   "cpu_s": 0.003
+  },
+  {
+   "instance": "t10",
+   "family": "Hamming",
+   "valid": false,
+   "size": null,
+   "best_known_size": 9,
+   "check": "no_formula",
+   "cpu_s": 0.004
+  },
+  {
+   "instance": "t11",
+   "family": "OrderedSequence",
+   "valid": false,
+   "size": null,
+   "best_known_size": 3,
+   "check": "no_formula",
+   "cpu_s": 0.004
+  },
+  {
+   "instance": "t12",
+   "family": "Subset",
+   "valid": false,
+   "size": null,
+   "best_known_size": 4,
+   "check": "no_formula",
+   "cpu_s": 0.004
+  },
+  {
+   "instance": "t13",
+   "family": "Hamming",
+   "valid": false,
+   "size": null,
+   "best_known_size": 41,
+   "check": "no_formula",
+   "cpu_s": 0.004
+  },
+  {
+   "instance": "t14",
+   "family": "Subword",
+   "valid": false,
+   "size": null,
+   "best_known_size": 15,
+   "check": "no_formula",
+   "cpu_s": 0.003
+  },
+  {
+   "instance": "t15",
+   "family": "RandomBooleanCombinationsofFactors",
+   "valid": false,
+   "size": null,
+   "best_known_size": 6,
+   "check": "no_formula",
+   "cpu_s": 0.003
+  },
+  {
+   "instance": "t16",
+   "family": "OrderedSequence",
+   "valid": false,
+   "size": null,
+   "best_known_size": 1,
+   "check": "no_formula",
+   "cpu_s": 0.004
+  },
+  {
+   "instance": "t17",
+   "family": "Subword",
+   "valid": false,
+   "size": null,
+   "best_known_size": 26,
+   "check": "no_formula",
+   "cpu_s": 0.003
+  },
+  {
+   "instance": "t18",
+   "family": "Subword",
+   "valid": false,
+   "size": null,
+   "best_known_size": 4,
+   "check": "no_formula",
+   "cpu_s": 0.004
+  },
+  {
+   "instance": "t19",
+   "family": "Subset",
+   "valid": false,
+   "size": null,
+   "best_known_size": 3,
+   "check": "no_formula",
+   "cpu_s": 0.003
+  },
+  {
+   "instance": "t20",
+   "family": "Hamming",
+   "valid": false,
+   "size": null,
+   "best_known_size": 49,
+   "check": "no_formula",
+   "cpu_s": 0.003
+  },
+  {
+   "instance": "t21",
+   "family": "Hamming",
+   "valid": false,
+   "size": null,
+   "best_known_size": 27,
+   "check": "no_formula",
+   "cpu_s": 0.003
+  },
+  {
+   "instance": "t22",
+   "family": "Subset",
+   "valid": false,
+   "size": null,
+   "best_known_size": 10,
+   "check": "no_formula",
+   "cpu_s": 0.003
+  },
+  {
+   "instance": "t23",
+   "family": "Subset",
+   "valid": false,
+   "size": null,
+   "best_known_size": 14,
+   "check": "no_formula",
+   "cpu_s": 0.003
+  },
+  {
+   "instance": "t24",
+   "family": "Subword",
+   "valid": false,
+   "size": null,
+   "best_known_size": 23,
+   "check": "no_formula",
+   "cpu_s": 0.003
+  },
+  {
+   "instance": "t25",
+   "family": "OrderedSequence",
+   "valid": false,
+   "size": null,
+   "best_known_size": 3,
+   "check": "no_formula",
+   "cpu_s": 0.003
+  },
+  {
+   "instance": "t26",
+   "family": "OrderedSequence",
+   "valid": false,
+   "size": null,
+   "best_known_size": 3,
+   "check": "no_formula",
+   "cpu_s": 0.003
+  },
+  {
+   "instance": "t27",
+   "family": "Subword",
+   "valid": false,
+   "size": null,
+   "best_known_size": 5,
+   "check": "no_formula",
+   "cpu_s": 0.003
+  },
+  {
+   "instance": "t28",
+   "family": "Hamming",
+   "valid": false,
+   "size": null,
+   "best_known_size": 11,
+   "check": "no_formula",
+   "cpu_s": 0.004
+  },
+  {
+   "instance": "t29",
+   "family": "RandomBooleanCombinationsofFactors",
+   "valid": false,
+   "size": null,
+   "best_known_size": 17,
+   "check": "no_formula",
+   "cpu_s": 0.003
+  },
+  {
+   "instance": "t30",
+   "family": "Subset",
+   "valid": false,
+   "size": null,
+   "best_known_size": 6,
+   "check": "no_formula",
+   "cpu_s": 0.003
+  },
+  {
+   "instance": "t31",
+   "family": "RandomBooleanCombinationsofFactors",
+   "valid": false,
+   "size": null,
+   "best_known_size": 53,
+   "check": "no_formula",
+   "cpu_s": 0.004
+  },
+  {
+   "instance": "t32",
+   "family": "Hamming",
+   "valid": false,
+   "size": null,
+   "best_known_size": 52,
+   "check": "no_formula",
+   "cpu_s": 0.003
+  },
+  {
+   "instance": "t33",
+   "family": "Subword",
+   "valid": false,
+   "size": null,
+   "best_known_size": 30,
+   "check": "no_formula",
+   "cpu_s": 0.003
+  },
+  {
+   "instance": "t34",
+   "family": "Hamming",
+   "valid": false,
+   "size": null,
+   "best_known_size": 10,
+   "check": "no_formula",
+   "cpu_s": 0.004
+  },
+  {
+   "instance": "t35",
+   "family": "Subset",
+   "valid": false,
+   "size": null,
+   "best_known_size": 11,
+   "check": "no_formula",
+   "cpu_s": 0.003
+  },
+  {
+   "instance": "t36",
+   "family": "Hamming",
+   "valid": false,
+   "size": null,
+   "best_known_size": 16,
+   "check": "no_formula",
+   "cpu_s": 0.003
+  },
+  {
+   "instance": "t37",
+   "family": "RandomBooleanCombinationsofFactors",
+   "valid": false,
+   "size": null,
+   "best_known_size": 29,
+   "check": "no_formula",
+   "cpu_s": 0.003
+  },
+  {
+   "instance": "t38",
+   "family": "OrderedSequence",
+   "valid": false,
+   "size": null,
+   "best_known_size": 5,
+   "check": "no_formula",
+   "cpu_s": 0.003
+  },
+  {
+   "instance": "t39",
+   "family": "RandomBooleanCombinationsofFactors",
+   "valid": false,
+   "size": null,
+   "best_known_size": 32,
+   "check": "no_formula",
+   "cpu_s": 0.003
+  },
+  {
+   "instance": "t40",
+   "family": "SingleCounter",
+   "valid": false,
+   "size": null,
+   "best_known_size": 8,
+   "check": "no_formula",
+   "cpu_s": 0.003
+  },
+  {
+   "instance": "t41",
+   "family": "Fixed_Formulas",
+   "valid": false,
+   "size": null,
+   "best_known_size": 5,
+   "check": "no_formula",
+   "cpu_s": 0.003
+  },
+  {
+   "instance": "t42",
+   "family": "DoubleCounter",
+   "valid": false,
+   "size": null,
+   "best_known_size": 30,
+   "check": "no_formula",
+   "cpu_s": 0.003
+  },
+  {
+   "instance": "t43",
+   "family": "Random_Conjuncts_from_Basis",
+   "valid": false,
+   "size": null,
+   "best_known_size": 3,
+   "check": "no_formula",
+   "cpu_s": 0.003
+  },
+  {
+   "instance": "t44",
+   "family": "Nim",
+   "valid": false,
+   "size": null,
+   "best_known_size": 7,
+   "check": "no_formula",
+   "cpu_s": 0.003
+  },
+  {
+   "instance": "t45",
+   "family": "Random_Conjuncts_from_Basis",
+   "valid": false,
+   "size": null,
+   "best_known_size": 2,
+   "check": "no_formula",
+   "cpu_s": 0.003
+  },
+  {
+   "instance": "t46",
+   "family": "Fixed_Formulas",
+   "valid": false,
+   "size": null,
+   "best_known_size": 2,
+   "check": "no_formula",
+   "cpu_s": 0.003
+  },
+  {
+   "instance": "t47",
+   "family": "Nim",
+   "valid": false,
+   "size": null,
+   "best_known_size": 8,
+   "check": "no_formula",
+   "cpu_s": 0.003
+  },
+  {
+   "instance": "t48",
+   "family": "DoubleCounter",
+   "valid": false,
+   "size": null,
+   "best_known_size": 4,
+   "check": "no_formula",
+   "cpu_s": 0.003
+  },
+  {
+   "instance": "t49",
+   "family": "DoubleCounter",
+   "valid": false,
+   "size": null,
+   "best_known_size": 11,
+   "check": "no_formula",
+   "cpu_s": 0.003
+  },
+  {
+   "instance": "t50",
+   "family": "Nim",
+   "valid": false,
+   "size": null,
+   "best_known_size": 22,
+   "check": "no_formula",
+   "cpu_s": 0.003
+  },
+  {
+   "instance": "t51",
+   "family": "Nim",
+   "valid": false,
+   "size": null,
+   "best_known_size": 14,
+   "check": "no_formula",
+   "cpu_s": 0.003
+  },
+  {
+   "instance": "t52",
+   "family": "Fixed_Formulas",
+   "valid": false,
+   "size": null,
+   "best_known_size": 2,
+   "check": "no_formula",
+   "cpu_s": 0.004
+  },
+  {
+   "instance": "t53",
+   "family": "Nim",
+   "valid": false,
+   "size": null,
+   "best_known_size": 14,
+   "check": "no_formula",
+   "cpu_s": 0.003
+  },
+  {
+   "instance": "t54",
+   "family": "SingleCounter",
+   "valid": false,
+   "size": null,
+   "best_known_size": 10,
+   "check": "no_formula",
+   "cpu_s": 0.003
+  },
+  {
+   "instance": "t55",
+   "family": "Fixed_Formulas",
+   "valid": false,
+   "size": null,
+   "best_known_size": 4,
+   "check": "no_formula",
+   "cpu_s": 0.003
+  },
+  {
+   "instance": "t56",
+   "family": "SingleCounter",
+   "valid": false,
+   "size": null,
+   "best_known_size": 35,
+   "check": "no_formula",
+   "cpu_s": 0.004
+  },
+  {
+   "instance": "t57",
+   "family": "SingleCounter",
+   "valid": false,
+   "size": null,
+   "best_known_size": 1,
+   "check": "no_formula",
+   "cpu_s": 0.003
+  },
+  {
+   "instance": "t58",
+   "family": "SingleCounter",
+   "valid": false,
+   "size": null,
+   "best_known_size": 7,
+   "check": "no_formula",
+   "cpu_s": 0.003
+  },
+  {
+   "instance": "t59",
+   "family": "Fixed_Formulas",
+   "valid": false,
+   "size": null,
+   "best_known_size": 3,
+   "check": "no_formula",
+   "cpu_s": 0.004
+  },
+  {
+   "instance": "t60",
+   "family": "Nim",
+   "valid": false,
+   "size": null,
+   "best_known_size": 12,
+   "check": "no_formula",
+   "cpu_s": 0.003
+  },
+  {
+   "instance": "t61",
+   "family": "Random_Conjuncts_from_Basis",
+   "valid": false,
+   "size": null,
+   "best_known_size": 5,
+   "check": "no_formula",
+   "cpu_s": 0.003
+  },
+  {
+   "instance": "t62",
+   "family": "Nim",
+   "valid": false,
+   "size": null,
+   "best_known_size": 4,
+   "check": "no_formula",
+   "cpu_s": 0.003
+  },
+  {
+   "instance": "t63",
+   "family": "Fixed_Formulas",
+   "valid": false,
+   "size": null,
+   "best_known_size": 3,
+   "check": "no_formula",
+   "cpu_s": 0.005
+  },
+  {
+   "instance": "t64",
+   "family": "SingleCounter",
+   "valid": false,
+   "size": null,
+   "best_known_size": 32,
+   "check": "no_formula",
+   "cpu_s": 0.004
+  },
+  {
+   "instance": "t65",
+   "family": "DoubleCounter",
+   "valid": false,
+   "size": null,
+   "best_known_size": 10,
+   "check": "no_formula",
+   "cpu_s": 0.004
+  },
+  {
+   "instance": "t66",
+   "family": "Random_Conjuncts_from_Basis",
+   "valid": false,
+   "size": null,
+   "best_known_size": 3,
+   "check": "no_formula",
+   "cpu_s": 0.005
+  },
+  {
+   "instance": "t67",
+   "family": "Random_Conjuncts_from_Basis",
+   "valid": false,
+   "size": null,
+   "best_known_size": 2,
+   "check": "no_formula",
+   "cpu_s": 0.005
+  },
+  {
+   "instance": "t68",
+   "family": "Random_Conjuncts_from_Basis",
+   "valid": false,
+   "size": null,
+   "best_known_size": 2,
+   "check": "no_formula",
+   "cpu_s": 0.005
+  },
+  {
+   "instance": "t69",
+   "family": "Random_Conjuncts_from_Basis",
+   "valid": false,
+   "size": null,
+   "best_known_size": 10,
+   "check": "no_formula",
+   "cpu_s": 0.005
+  },
+  {
+   "instance": "t70",
+   "family": "Random_Conjuncts_from_Basis",
+   "valid": false,
+   "size": null,
+   "best_known_size": 3,
+   "check": "no_formula",
+   "cpu_s": 0.004
+  },
+  {
+   "instance": "t71",
+   "family": "Nim",
+   "valid": false,
+   "size": null,
+   "best_known_size": 3,
+   "check": "no_formula",
+   "cpu_s": 0.004
+  },
+  {
+   "instance": "t72",
+   "family": "DoubleCounter",
+   "valid": false,
+   "size": null,
+   "best_known_size": 6,
+   "check": "no_formula",
+   "cpu_s": 0.005
+  },
+  {
+   "instance": "t73",
+   "family": "Fixed_Formulas",
+   "valid": false,
+   "size": null,
+   "best_known_size": 4,
+   "check": "no_formula",
+   "cpu_s": 0.004
+  },
+  {
+   "instance": "t74",
+   "family": "SingleCounter",
+   "valid": false,
+   "size": null,
+   "best_known_size": 20,
+   "check": "no_formula",
+   "cpu_s": 0.004
+  },
+  {
+   "instance": "t75",
+   "family": "SingleCounter",
+   "valid": false,
+   "size": null,
+   "best_known_size": 18,
+   "check": "no_formula",
+   "cpu_s": 0.004
+  },
+  {
+   "instance": "t76",
+   "family": "DoubleCounter",
+   "valid": false,
+   "size": null,
+   "best_known_size": 4,
+   "check": "no_formula",
+   "cpu_s": 0.004
+  },
+  {
+   "instance": "t77",
+   "family": "Fixed_Formulas",
+   "valid": false,
+   "size": null,
+   "best_known_size": 2,
+   "check": "no_formula",
+   "cpu_s": 0.004
+  },
+  {
+   "instance": "t78",
+   "family": "DoubleCounter",
+   "valid": false,
+   "size": null,
+   "best_known_size": 31,
+   "check": "no_formula",
+   "cpu_s": 0.004
+  },
+  {
+   "instance": "t79",
+   "family": "DoubleCounter",
+   "valid": false,
+   "size": null,
+   "best_known_size": 32,
+   "check": "no_formula",
+   "cpu_s": 0.004
+  }
+ ],
+ "raw_vfb": [
+  {
+   "instance": "t00",
+   "family": "OrderedSequence",
+   "valid": true,
+   "size": 4,
+   "best_known_size": 4,
+   "check": "valid",
+   "cpu_s": 0.109
+  },
+  {
+   "instance": "t01",
+   "family": "RandomBooleanCombinationsofFactors",
+   "valid": false,
+   "size": null,
+   "best_known_size": 29,
+   "check": "no_formula",
+   "cpu_s": 3.728
+  },
+  {
+   "instance": "t02",
+   "family": "OrderedSequence",
+   "valid": true,
+   "size": 5,
+   "best_known_size": 5,
+   "check": "valid",
+   "cpu_s": 0.106
+  },
+  {
+   "instance": "t03",
+   "family": "RandomBooleanCombinationsofFactors",
+   "valid": false,
+   "size": null,
+   "best_known_size": 17,
+   "check": "no_formula",
+   "cpu_s": 4.134
+  },
+  {
+   "instance": "t04",
+   "family": "Subword",
+   "valid": false,
+   "size": null,
+   "best_known_size": 21,
+   "check": "no_formula",
+   "cpu_s": 4.351
+  },
+  {
+   "instance": "t05",
+   "family": "OrderedSequence",
+   "valid": true,
+   "size": 5,
+   "best_known_size": 5,
+   "check": "valid",
+   "cpu_s": 0.107
+  },
+  {
+   "instance": "t06",
+   "family": "Subset",
+   "valid": false,
+   "size": null,
+   "best_known_size": 11,
+   "check": "no_formula",
+   "cpu_s": 4.357
+  },
+  {
+   "instance": "t07",
+   "family": "RandomBooleanCombinationsofFactors",
+   "valid": false,
+   "size": null,
+   "best_known_size": 16,
+   "check": "no_formula",
+   "cpu_s": 4.311
+  },
+  {
+   "instance": "t08",
+   "family": "Subset",
+   "valid": true,
+   "size": 6,
+   "best_known_size": 6,
+   "check": "valid",
+   "cpu_s": 0.112
+  },
+  {
+   "instance": "t09",
+   "family": "Subword",
+   "valid": false,
+   "size": null,
+   "best_known_size": 17,
+   "check": "no_formula",
+   "cpu_s": 4.394
+  },
+  {
+   "instance": "t10",
+   "family": "Hamming",
+   "valid": false,
+   "size": null,
+   "best_known_size": 9,
+   "check": "no_formula",
+   "cpu_s": 5.687
+  },
+  {
+   "instance": "t11",
+   "family": "OrderedSequence",
+   "valid": true,
+   "size": 3,
+   "best_known_size": 3,
+   "check": "valid",
+   "cpu_s": 0.089
+  },
+  {
+   "instance": "t12",
+   "family": "Subset",
+   "valid": true,
+   "size": 4,
+   "best_known_size": 4,
+   "check": "valid",
+   "cpu_s": 0.096
+  },
+  {
+   "instance": "t13",
+   "family": "Hamming",
+   "valid": false,
+   "size": null,
+   "best_known_size": 41,
+   "check": "no_formula",
+   "cpu_s": 7.107
+  },
+  {
+   "instance": "t14",
+   "family": "Subword",
+   "valid": false,
+   "size": null,
+   "best_known_size": 15,
+   "check": "no_formula",
+   "cpu_s": 5.02
+  },
+  {
+   "instance": "t15",
+   "family": "RandomBooleanCombinationsofFactors",
+   "valid": true,
+   "size": 6,
+   "best_known_size": 6,
+   "check": "valid",
+   "cpu_s": 0.138
+  },
+  {
+   "instance": "t16",
+   "family": "OrderedSequence",
+   "valid": true,
+   "size": 1,
+   "best_known_size": 1,
+   "check": "valid",
+   "cpu_s": 0.091
+  },
+  {
+   "instance": "t17",
+   "family": "Subword",
+   "valid": false,
+   "size": null,
+   "best_known_size": 26,
+   "check": "no_formula",
+   "cpu_s": 3.79
+  },
+  {
+   "instance": "t18",
+   "family": "Subword",
+   "valid": true,
+   "size": 4,
+   "best_known_size": 4,
+   "check": "valid",
+   "cpu_s": 0.096
+  },
+  {
+   "instance": "t19",
+   "family": "Subset",
+   "valid": true,
+   "size": 3,
+   "best_known_size": 3,
+   "check": "valid",
+   "cpu_s": 0.099
+  },
+  {
+   "instance": "t20",
+   "family": "Hamming",
+   "valid": false,
+   "size": null,
+   "best_known_size": 49,
+   "check": "no_formula",
+   "cpu_s": 7.319
+  },
+  {
+   "instance": "t21",
+   "family": "Hamming",
+   "valid": false,
+   "size": null,
+   "best_known_size": 27,
+   "check": "no_formula",
+   "cpu_s": 7.55
+  },
+  {
+   "instance": "t22",
+   "family": "Subset",
+   "valid": false,
+   "size": null,
+   "best_known_size": 10,
+   "check": "no_formula",
+   "cpu_s": 3.881
+  },
+  {
+   "instance": "t23",
+   "family": "Subset",
+   "valid": false,
+   "size": null,
+   "best_known_size": 14,
+   "check": "no_formula",
+   "cpu_s": 4.233
+  },
+  {
+   "instance": "t24",
+   "family": "Subword",
+   "valid": false,
+   "size": null,
+   "best_known_size": 23,
+   "check": "no_formula",
+   "cpu_s": 5.309
+  },
+  {
+   "instance": "t25",
+   "family": "OrderedSequence",
+   "valid": true,
+   "size": 3,
+   "best_known_size": 3,
+   "check": "valid",
+   "cpu_s": 0.106
+  },
+  {
+   "instance": "t26",
+   "family": "OrderedSequence",
+   "valid": true,
+   "size": 3,
+   "best_known_size": 3,
+   "check": "valid",
+   "cpu_s": 0.116
+  },
+  {
+   "instance": "t27",
+   "family": "Subword",
+   "valid": true,
+   "size": 5,
+   "best_known_size": 5,
+   "check": "valid",
+   "cpu_s": 0.108
+  },
+  {
+   "instance": "t28",
+   "family": "Hamming",
+   "valid": true,
+   "size": 11,
+   "best_known_size": 11,
+   "check": "valid",
+   "cpu_s": 7.253
+  },
+  {
+   "instance": "t29",
+   "family": "RandomBooleanCombinationsofFactors",
+   "valid": false,
+   "size": null,
+   "best_known_size": 17,
+   "check": "no_formula",
+   "cpu_s": 3.869
+  },
+  {
+   "instance": "t30",
+   "family": "Subset",
+   "valid": true,
+   "size": 6,
+   "best_known_size": 6,
+   "check": "valid",
+   "cpu_s": 0.126
+  },
+  {
+   "instance": "t31",
+   "family": "RandomBooleanCombinationsofFactors",
+   "valid": false,
+   "size": null,
+   "best_known_size": 53,
+   "check": "no_formula",
+   "cpu_s": 4.493
+  },
+  {
+   "instance": "t32",
+   "family": "Hamming",
+   "valid": false,
+   "size": null,
+   "best_known_size": 52,
+   "check": "no_formula",
+   "cpu_s": 6.694
+  },
+  {
+   "instance": "t33",
+   "family": "Subword",
+   "valid": false,
+   "size": null,
+   "best_known_size": 30,
+   "check": "no_formula",
+   "cpu_s": 4.31
+  },
+  {
+   "instance": "t34",
+   "family": "Hamming",
+   "valid": false,
+   "size": null,
+   "best_known_size": 10,
+   "check": "no_formula",
+   "cpu_s": 7.737
+  },
+  {
+   "instance": "t35",
+   "family": "Subset",
+   "valid": false,
+   "size": null,
+   "best_known_size": 11,
+   "check": "no_formula",
+   "cpu_s": 4.168
+  },
+  {
+   "instance": "t36",
+   "family": "Hamming",
+   "valid": false,
+   "size": null,
+   "best_known_size": 16,
+   "check": "no_formula",
+   "cpu_s": 18.258
+  },
+  {
+   "instance": "t37",
+   "family": "RandomBooleanCombinationsofFactors",
+   "valid": false,
+   "size": null,
+   "best_known_size": 29,
+   "check": "no_formula",
+   "cpu_s": 3.748
+  },
+  {
+   "instance": "t38",
+   "family": "OrderedSequence",
+   "valid": true,
+   "size": 5,
+   "best_known_size": 5,
+   "check": "valid",
+   "cpu_s": 0.098
+  },
+  {
+   "instance": "t39",
+   "family": "RandomBooleanCombinationsofFactors",
+   "valid": false,
+   "size": null,
+   "best_known_size": 32,
+   "check": "no_formula",
+   "cpu_s": 4.192
+  },
+  {
+   "instance": "t40",
+   "family": "SingleCounter",
+   "valid": true,
+   "size": 8,
+   "best_known_size": 8,
+   "check": "valid",
+   "cpu_s": 0.357
+  },
+  {
+   "instance": "t41",
+   "family": "Fixed_Formulas",
+   "valid": true,
+   "size": 5,
+   "best_known_size": 5,
+   "check": "valid",
+   "cpu_s": 0.105
+  },
+  {
+   "instance": "t42",
+   "family": "DoubleCounter",
+   "valid": false,
+   "size": null,
+   "best_known_size": 30,
+   "check": "no_formula",
+   "cpu_s": 3.944
+  },
+  {
+   "instance": "t43",
+   "family": "Random_Conjuncts_from_Basis",
+   "valid": true,
+   "size": 3,
+   "best_known_size": 3,
+   "check": "valid",
+   "cpu_s": 0.098
+  },
+  {
+   "instance": "t44",
+   "family": "Nim",
+   "valid": false,
+   "size": null,
+   "best_known_size": 7,
+   "check": "no_formula",
+   "cpu_s": 3.748
+  },
+  {
+   "instance": "t45",
+   "family": "Random_Conjuncts_from_Basis",
+   "valid": true,
+   "size": 2,
+   "best_known_size": 2,
+   "check": "valid",
+   "cpu_s": 0.099
+  },
+  {
+   "instance": "t46",
+   "family": "Fixed_Formulas",
+   "valid": true,
+   "size": 2,
+   "best_known_size": 2,
+   "check": "valid",
+   "cpu_s": 0.094
+  },
+  {
+   "instance": "t47",
+   "family": "Nim",
+   "valid": false,
+   "size": null,
+   "best_known_size": 8,
+   "check": "no_formula",
+   "cpu_s": 3.751
+  },
+  {
+   "instance": "t48",
+   "family": "DoubleCounter",
+   "valid": true,
+   "size": 4,
+   "best_known_size": 4,
+   "check": "valid",
+   "cpu_s": 0.094
+  },
+  {
+   "instance": "t49",
+   "family": "DoubleCounter",
+   "valid": false,
+   "size": null,
+   "best_known_size": 11,
+   "check": "no_formula",
+   "cpu_s": 3.893
+  },
+  {
+   "instance": "t50",
+   "family": "Nim",
+   "valid": false,
+   "size": null,
+   "best_known_size": 22,
+   "check": "no_formula",
+   "cpu_s": 3.768
+  },
+  {
+   "instance": "t51",
+   "family": "Nim",
+   "valid": false,
+   "size": null,
+   "best_known_size": 14,
+   "check": "no_formula",
+   "cpu_s": 3.489
+  },
+  {
+   "instance": "t52",
+   "family": "Fixed_Formulas",
+   "valid": true,
+   "size": 2,
+   "best_known_size": 2,
+   "check": "valid",
+   "cpu_s": 0.093
+  },
+  {
+   "instance": "t53",
+   "family": "Nim",
+   "valid": false,
+   "size": null,
+   "best_known_size": 14,
+   "check": "no_formula",
+   "cpu_s": 3.336
+  },
+  {
+   "instance": "t54",
+   "family": "SingleCounter",
+   "valid": false,
+   "size": null,
+   "best_known_size": 10,
+   "check": "no_formula",
+   "cpu_s": 4.168
+  },
+  {
+   "instance": "t55",
+   "family": "Fixed_Formulas",
+   "valid": true,
+   "size": 4,
+   "best_known_size": 4,
+   "check": "valid",
+   "cpu_s": 0.097
+  },
+  {
+   "instance": "t56",
+   "family": "SingleCounter",
+   "valid": false,
+   "size": null,
+   "best_known_size": 35,
+   "check": "no_formula",
+   "cpu_s": 3.469
+  },
+  {
+   "instance": "t57",
+   "family": "SingleCounter",
+   "valid": true,
+   "size": 1,
+   "best_known_size": 1,
+   "check": "valid",
+   "cpu_s": 0.099
+  },
+  {
+   "instance": "t58",
+   "family": "SingleCounter",
+   "valid": true,
+   "size": 7,
+   "best_known_size": 7,
+   "check": "valid",
+   "cpu_s": 0.162
+  },
+  {
+   "instance": "t59",
+   "family": "Fixed_Formulas",
+   "valid": true,
+   "size": 3,
+   "best_known_size": 3,
+   "check": "valid",
+   "cpu_s": 0.102
+  },
+  {
+   "instance": "t60",
+   "family": "Nim",
+   "valid": false,
+   "size": null,
+   "best_known_size": 12,
+   "check": "no_formula",
+   "cpu_s": 3.828
+  },
+  {
+   "instance": "t61",
+   "family": "Random_Conjuncts_from_Basis",
+   "valid": true,
+   "size": 5,
+   "best_known_size": 5,
+   "check": "valid",
+   "cpu_s": 0.115
+  },
+  {
+   "instance": "t62",
+   "family": "Nim",
+   "valid": true,
+   "size": 4,
+   "best_known_size": 4,
+   "check": "valid",
+   "cpu_s": 0.1
+  },
+  {
+   "instance": "t63",
+   "family": "Fixed_Formulas",
+   "valid": true,
+   "size": 3,
+   "best_known_size": 3,
+   "check": "valid",
+   "cpu_s": 0.096
+  },
+  {
+   "instance": "t64",
+   "family": "SingleCounter",
+   "valid": false,
+   "size": null,
+   "best_known_size": 32,
+   "check": "no_formula",
+   "cpu_s": 4.252
+  },
+  {
+   "instance": "t65",
+   "family": "DoubleCounter",
+   "valid": false,
+   "size": null,
+   "best_known_size": 10,
+   "check": "no_formula",
+   "cpu_s": 3.751
+  },
+  {
+   "instance": "t66",
+   "family": "Random_Conjuncts_from_Basis",
+   "valid": true,
+   "size": 3,
+   "best_known_size": 3,
+   "check": "valid",
+   "cpu_s": 0.105
+  },
+  {
+   "instance": "t67",
+   "family": "Random_Conjuncts_from_Basis",
+   "valid": true,
+   "size": 2,
+   "best_known_size": 2,
+   "check": "valid",
+   "cpu_s": 0.096
+  },
+  {
+   "instance": "t68",
+   "family": "Random_Conjuncts_from_Basis",
+   "valid": true,
+   "size": 2,
+   "best_known_size": 2,
+   "check": "valid",
+   "cpu_s": 0.09
+  },
+  {
+   "instance": "t69",
+   "family": "Random_Conjuncts_from_Basis",
+   "valid": false,
+   "size": null,
+   "best_known_size": 10,
+   "check": "no_formula",
+   "cpu_s": 3.899
+  },
+  {
+   "instance": "t70",
+   "family": "Random_Conjuncts_from_Basis",
+   "valid": true,
+   "size": 3,
+   "best_known_size": 3,
+   "check": "valid",
+   "cpu_s": 0.095
+  },
+  {
+   "instance": "t71",
+   "family": "Nim",
+   "valid": true,
+   "size": 3,
+   "best_known_size": 3,
+   "check": "valid",
+   "cpu_s": 0.094
+  },
+  {
+   "instance": "t72",
+   "family": "DoubleCounter",
+   "valid": true,
+   "size": 6,
+   "best_known_size": 6,
+   "check": "valid",
+   "cpu_s": 0.277
+  },
+  {
+   "instance": "t73",
+   "family": "Fixed_Formulas",
+   "valid": true,
+   "size": 4,
+   "best_known_size": 4,
+   "check": "valid",
+   "cpu_s": 0.114
+  },
+  {
+   "instance": "t74",
+   "family": "SingleCounter",
+   "valid": false,
+   "size": null,
+   "best_known_size": 20,
+   "check": "no_formula",
+   "cpu_s": 4.097
+  },
+  {
+   "instance": "t75",
+   "family": "SingleCounter",
+   "valid": false,
+   "size": null,
+   "best_known_size": 18,
+   "check": "no_formula",
+   "cpu_s": 3.93
+  },
+  {
+   "instance": "t76",
+   "family": "DoubleCounter",
+   "valid": true,
+   "size": 4,
+   "best_known_size": 4,
+   "check": "valid",
+   "cpu_s": 0.093
+  },
+  {
+   "instance": "t77",
+   "family": "Fixed_Formulas",
+   "valid": true,
+   "size": 2,
+   "best_known_size": 2,
+   "check": "valid",
+   "cpu_s": 0.095
+  },
+  {
+   "instance": "t78",
+   "family": "DoubleCounter",
+   "valid": false,
+   "size": null,
+   "best_known_size": 31,
+   "check": "no_formula",
+   "cpu_s": 3.731
+  },
+  {
+   "instance": "t79",
+   "family": "DoubleCounter",
+   "valid": false,
+   "size": null,
+   "best_known_size": 32,
+   "check": "no_formula",
+   "cpu_s": 3.229
+  }
+ ]
+}

@@ -1,0 +1,66 @@
+{
+  "experiments": {
+    "budgeted_ltlf_learning": {
+      "_slice": "test",
+      "_instances": 80,
+      "_cpu_budget_s": 20.0,
+      "results": {
+        "bolt": {
+          "size_efficiency": 0.8449295706079754,
+          "solve_rate": 0.95,
+          "size_ratio_geomean": 1.3393416920817443
+        },
+        "bolt_beam1": {
+          "size_efficiency": 0.6862209021404114,
+          "solve_rate": 0.85,
+          "size_ratio_geomean": 1.8459966862181174
+        },
+        "bolt_patterns": {
+          "size_efficiency": 0.893186364055411,
+          "solve_rate": 0.975,
+          "size_ratio_geomean": 1.1929216905324382
+        },
+        "bolt_portfolio": {
+          "size_efficiency": 0.8935351863343046,
+          "solve_rate": 0.9625,
+          "size_ratio_geomean": 1.2380600848125582
+        },
+        "bolt_simplify": {
+          "size_efficiency": 0.8667223429543256,
+          "solve_rate": 0.95,
+          "size_ratio_geomean": 1.2945506860015565
+        },
+        "bolt_switch3": {
+          "size_efficiency": 0.6226742141380417,
+          "solve_rate": 0.7875,
+          "size_ratio_geomean": 2.0634233284248267
+        },
+        "crash": {
+          "size_efficiency": 0.0,
+          "solve_rate": 0.0,
+          "size_ratio_geomean": 9.999999999999984
+        },
+        "forged_fields": {
+          "size_efficiency": 0.0,
+          "solve_rate": 0.0,
+          "size_ratio_geomean": 9.999999999999984
+        },
+        "literal_cover": {
+          "size_efficiency": 0.20614823513329342,
+          "solve_rate": 0.6125,
+          "size_ratio_geomean": 5.2811592926377395
+        },
+        "null_answer": {
+          "size_efficiency": 0.0,
+          "solve_rate": 0.0,
+          "size_ratio_geomean": 9.999999999999984
+        },
+        "raw_vfb": {
+          "size_efficiency": 0.4875,
+          "solve_rate": 0.4875,
+          "size_ratio_geomean": 3.25461783498046
+        }
+      }
+    }
+  }
+}

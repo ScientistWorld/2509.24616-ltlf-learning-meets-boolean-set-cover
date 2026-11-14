@@ -4,23 +4,11 @@
   "exact": false,
   "vfb": {
    "mode": "vfb",
-   "ltl_generated": 4476643,
+   "ltl_generated": 3106403,
    "ltl_stopped_by": "memory",
    "ltl_completed_size": 8,
    "phase": "memory",
-   "cpu_s": 8.592135466
-  }
- },
- "ham5": {
-  "lower_bound": 9,
-  "exact": false,
-  "vfb": {
-   "mode": "vfb",
-   "ltl_generated": 12949526,
-   "ltl_stopped_by": "memory",
-   "ltl_completed_size": 8,
-   "phase": "memory",
-   "cpu_s": 11.600490033
+   "cpu_s": 6.626716774
   }
  }
 }

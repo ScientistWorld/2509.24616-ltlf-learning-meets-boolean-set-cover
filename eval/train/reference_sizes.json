@@ -55,8 +55,8 @@
   "generating_formula_size": 34
  },
  "swd3": {
-  "best_known_size": 22,
-  "best_known_source": "bolt_portfolio",
+  "best_known_size": 15,
+  "best_known_source": "bolt_patterns",
   "generating_formula_size": 26
  },
  "swd4": {
@@ -145,8 +145,8 @@
   "generating_formula_size": null
  },
  "ham5": {
-  "best_known_size": 9,
-  "best_known_source": "exhaustive_lower_bound",
+  "best_known_size": 198,
+  "best_known_source": "bolt_patterns",
   "generating_formula_size": null
  },
  "ham6": {
@@ -171,7 +171,7 @@
  },
  "rbc2": {
   "best_known_size": 8,
-  "best_known_source": "bolt_portfolio",
+  "best_known_source": "bolt_patterns",
   "generating_formula_size": 56
  },
  "rbc3": {
@@ -196,7 +196,207 @@
  },
  "rbc7": {
   "best_known_size": 8,
-  "best_known_source": "bolt_portfolio",
+  "best_known_source": "bolt_patterns",
   "generating_formula_size": 44
+ },
+ "fix0": {
+  "best_known_size": 4,
+  "best_known_source": "bolt",
+  "generating_formula_size": 8
+ },
+ "fix1": {
+  "best_known_size": 4,
+  "best_known_source": "bolt",
+  "generating_formula_size": 8
+ },
+ "fix2": {
+  "best_known_size": 3,
+  "best_known_source": "bolt",
+  "generating_formula_size": 7
+ },
+ "fix3": {
+  "best_known_size": 5,
+  "best_known_source": "bolt",
+  "generating_formula_size": 7
+ },
+ "fix4": {
+  "best_known_size": 3,
+  "best_known_source": "generating_formula",
+  "generating_formula_size": 3
+ },
+ "fix5": {
+  "best_known_size": 2,
+  "best_known_source": "generating_formula",
+  "generating_formula_size": 2
+ },
+ "fix6": {
+  "best_known_size": 4,
+  "best_known_source": "bolt",
+  "generating_formula_size": 9
+ },
+ "fix7": {
+  "best_known_size": 4,
+  "best_known_source": "bolt",
+  "generating_formula_size": 9
+ },
+ "sgc0": {
+  "best_known_size": 44,
+  "best_known_source": "bolt",
+  "generating_formula_size": 274
+ },
+ "sgc1": {
+  "best_known_size": 16,
+  "best_known_source": "bolt",
+  "generating_formula_size": 341
+ },
+ "sgc2": {
+  "best_known_size": 45,
+  "best_known_source": "bolt",
+  "generating_formula_size": 274
+ },
+ "sgc3": {
+  "best_known_size": 6,
+  "best_known_source": "bolt",
+  "generating_formula_size": 274
+ },
+ "sgc4": {
+  "best_known_size": 7,
+  "best_known_source": "bolt",
+  "generating_formula_size": 73
+ },
+ "sgc5": {
+  "best_known_size": 10,
+  "best_known_source": "bolt",
+  "generating_formula_size": 73
+ },
+ "sgc6": {
+  "best_known_size": 6,
+  "best_known_source": "bolt",
+  "generating_formula_size": 274
+ },
+ "sgc7": {
+  "best_known_size": 10,
+  "best_known_source": "bolt",
+  "generating_formula_size": 73
+ },
+ "dbc0": {
+  "best_known_size": 2,
+  "best_known_source": "bolt",
+  "generating_formula_size": 259
+ },
+ "dbc1": {
+  "best_known_size": 25,
+  "best_known_source": "bolt_portfolio",
+  "generating_formula_size": 259
+ },
+ "dbc2": {
+  "best_known_size": 15,
+  "best_known_source": "bolt",
+  "generating_formula_size": 130
+ },
+ "dbc3": {
+  "best_known_size": 10,
+  "best_known_source": "bolt",
+  "generating_formula_size": 259
+ },
+ "dbc4": {
+  "best_known_size": 4,
+  "best_known_source": "bolt",
+  "generating_formula_size": 130
+ },
+ "dbc5": {
+  "best_known_size": 4,
+  "best_known_source": "bolt",
+  "generating_formula_size": 130
+ },
+ "dbc6": {
+  "best_known_size": 4,
+  "best_known_source": "bolt",
+  "generating_formula_size": 130
+ },
+ "dbc7": {
+  "best_known_size": 6,
+  "best_known_source": "bolt",
+  "generating_formula_size": 130
+ },
+ "nim0": {
+  "best_known_size": 3,
+  "best_known_source": "bolt",
+  "generating_formula_size": 181
+ },
+ "nim1": {
+  "best_known_size": 8,
+  "best_known_source": "bolt",
+  "generating_formula_size": 281
+ },
+ "nim2": {
+  "best_known_size": 3,
+  "best_known_source": "bolt",
+  "generating_formula_size": 559
+ },
+ "nim3": {
+  "best_known_size": 17,
+  "best_known_source": "bolt_beam1",
+  "generating_formula_size": 559
+ },
+ "nim4": {
+  "best_known_size": 29,
+  "best_known_source": "bolt_switch3",
+  "generating_formula_size": 559
+ },
+ "nim5": {
+  "best_known_size": 10,
+  "best_known_source": "bolt_switch3",
+  "generating_formula_size": 559
+ },
+ "nim6": {
+  "best_known_size": 10,
+  "best_known_source": "bolt",
+  "generating_formula_size": 359
+ },
+ "nim7": {
+  "best_known_size": 5,
+  "best_known_source": "bolt",
+  "generating_formula_size": 405
+ },
+ "rcj0": {
+  "best_known_size": 4,
+  "best_known_source": "bolt",
+  "generating_formula_size": 81
+ },
+ "rcj1": {
+  "best_known_size": 2,
+  "best_known_source": "bolt",
+  "generating_formula_size": 25
+ },
+ "rcj2": {
+  "best_known_size": 3,
+  "best_known_source": "bolt",
+  "generating_formula_size": 21
+ },
+ "rcj3": {
+  "best_known_size": 2,
+  "best_known_source": "bolt",
+  "generating_formula_size": 74
+ },
+ "rcj4": {
+  "best_known_size": 9,
+  "best_known_source": "bolt_beam1",
+  "generating_formula_size": 29
+ },
+ "rcj5": {
+  "best_known_size": 2,
+  "best_known_source": "bolt",
+  "generating_formula_size": 47
+ },
+ "rcj6": {
+  "best_known_size": 4,
+  "best_known_source": "bolt",
+  "generating_formula_size": 75
+ },
+ "rcj7": {
+  "best_known_size": 2,
+  "best_known_source": "bolt",
+  "generating_formula_size": 15
  }
 }

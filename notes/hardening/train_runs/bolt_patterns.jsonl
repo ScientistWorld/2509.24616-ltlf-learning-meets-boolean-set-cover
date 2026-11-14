@@ -1,0 +1,80 @@
+{"instance": "ord0", "returncode": 0, "cpu_s": 0.124, "wall_s": 0.342, "formula": "(a0) U (a1)", "status": "answered", "stderr_tail": ""}
+{"instance": "ord1", "returncode": 0, "cpu_s": 0.121, "wall_s": 0.359, "formula": "(a3) U (a2)", "status": "answered", "stderr_tail": ""}
+{"instance": "ord2", "returncode": 0, "cpu_s": 0.447, "wall_s": 0.756, "formula": "((a2) | (G(X(a2)))) U (a0)", "status": "answered", "stderr_tail": ""}
+{"instance": "ord3", "returncode": 0, "cpu_s": 0.144, "wall_s": 0.251, "formula": "(a0) U ((a1) U (a2))", "status": "answered", "stderr_tail": ""}
+{"instance": "ord4", "returncode": 0, "cpu_s": 0.139, "wall_s": 0.507, "formula": "(a3) U (a2)", "status": "answered", "stderr_tail": ""}
+{"instance": "ord5", "returncode": 0, "cpu_s": 2.05, "wall_s": 2.835, "formula": "(a0) U ((a2) U ((a1) U (a3)))", "status": "answered", "stderr_tail": ""}
+{"instance": "ord6", "returncode": 0, "cpu_s": 0.121, "wall_s": 0.316, "formula": "(a2) U ((a0) U (a3))", "status": "answered", "stderr_tail": ""}
+{"instance": "ord7", "returncode": 0, "cpu_s": 0.112, "wall_s": 0.179, "formula": "(a1) U ((a0) U (a2))", "status": "answered", "stderr_tail": ""}
+{"instance": "swd0", "returncode": 0, "cpu_s": 0.378, "wall_s": 0.501, "formula": "X(X((a1) R ((a2) U (X(a2)))))", "status": "answered", "stderr_tail": ""}
+{"instance": "swd1", "returncode": 0, "cpu_s": 0.106, "wall_s": 0.156, "formula": "G(F(a3))", "status": "answered", "stderr_tail": ""}
+{"instance": "swd2", "returncode": 0, "cpu_s": 6.688, "wall_s": 7.437, "formula": "(((!(F((!(a4)) & (X[!](!(a1)))))) | ((((a1) U (a3)) & (X((a1) R (X(X(a0)))))) | (((a1) U (a0)) & (((a1) R ((a1) U (X(a1)))) & ((X(X((a2) R (X(a0))))) | (((F(a3)) U (X(false))) & (((a2) U (a1)) & ((a0) R (X((a1) | (a3))))))))))) | ((G((a1) U ((X(a2)) U (a3)))) | ((a4) & (G((a2) | ((a4) | (X(a1)))))))) & (((!(a0)) | (F((a4) & ((!(a3)) R (a2))))) & (((X(!(a0))) | (F((a1) R ((a4) U (!(a1)))))) & (((X(a4)) | (G((a0) | (F(a3))))) & ((X((a3) U (a0))) | ((a2) | (X(X((a2) U (a0)))))))))", "status": "answered", "stderr_tail": ""}
+{"instance": "swd3", "returncode": 0, "cpu_s": 1.415, "wall_s": 1.573, "formula": "F((a1) & (X[!](F((a0) & (X[!]((a0) & (X[!]((a1) & (X[!](a0))))))))))", "status": "answered", "stderr_tail": ""}
+{"instance": "swd4", "returncode": 0, "cpu_s": 1.469, "wall_s": 1.589, "formula": "(F((!(a3)) & (X[!](a4)))) & ((X((a0) R (X((a0) | (a3))))) & ((a1) | ((a4) U ((X(a0)) R (a2)))))", "status": "answered", "stderr_tail": ""}
+{"instance": "swd5", "returncode": 0, "cpu_s": 0.123, "wall_s": 0.159, "formula": "(G(a2)) R (X(F(a1)))", "status": "answered", "stderr_tail": ""}
+{"instance": "swd6", "returncode": 0, "cpu_s": 4.027, "wall_s": 4.179, "formula": "(((a1) & (X(a3))) | ((F((a1) & (X[!]((a1) & (X[!](F((a0) & (X[!]((a3) & (X[!]((a2) & (X[!](F(a2)))))))))))))) | (F((a1) & (X[!](F((a0) & (X[!]((a1) & (X[!](F((a0) & (X[!]((a3) & (X[!](F((a2) & (X[!](a2))))))))))))))))))) & ((F(X[!]((a0) & (X(X(X(a0))))))) & ((X(X(a3))) | (X(X((a1) U ((a0) | (a2)))))))", "status": "answered", "stderr_tail": ""}
+{"instance": "swd7", "returncode": 0, "cpu_s": 1.532, "wall_s": 1.725, "formula": "(X((!(a2)) | (X(a2)))) & ((G((F(a0)) | (!(a2)))) & (F((a2) & (X[!]((!(a2)) & (X[!]((a1) & (X[!](a0)))))))))", "status": "answered", "stderr_tail": ""}
+{"instance": "sst0", "returncode": 0, "cpu_s": 0.12, "wall_s": 0.176, "formula": "X((a4) U (a5))", "status": "answered", "stderr_tail": ""}
+{"instance": "sst1", "returncode": 0, "cpu_s": 0.127, "wall_s": 0.161, "formula": "(a3) U ((a4) R (a0))", "status": "answered", "stderr_tail": ""}
+{"instance": "sst2", "returncode": 0, "cpu_s": 1.152, "wall_s": 1.304, "formula": "F((a7) & (X[!]((a2) & (X[!](F((a0) & (X[!]((a3) & (X[!](a1))))))))))", "status": "answered", "stderr_tail": ""}
+{"instance": "sst3", "returncode": 0, "cpu_s": 0.168, "wall_s": 0.301, "formula": "F((a1) & ((a2) & (a6)))", "status": "answered", "stderr_tail": ""}
+{"instance": "sst4", "returncode": 0, "cpu_s": 1.718, "wall_s": 1.957, "formula": "F((a0) & (X[!](F((a1) & (X[!](F((a3) & (X[!](F((a4) & (X[!](F(a2)))))))))))))", "status": "answered", "stderr_tail": ""}
+{"instance": "sst5", "returncode": 0, "cpu_s": 0.356, "wall_s": 0.43, "formula": "F((a0) & (F((a2) & (a4))))", "status": "answered", "stderr_tail": ""}
+{"instance": "sst6", "returncode": 0, "cpu_s": 0.529, "wall_s": 0.61, "formula": "F((a0) & (F((a2) & (a3))))", "status": "answered", "stderr_tail": ""}
+{"instance": "sst7", "returncode": 0, "cpu_s": 1.796, "wall_s": 2.309, "formula": "F((a5) & (X[!]((a0) & (X[!](F((a6) & (X[!]((a4) & (X[!]((a2) & (X[!]((a8) & (X[!](a3))))))))))))))", "status": "answered", "stderr_tail": ""}
+{"instance": "ham0", "returncode": 0, "cpu_s": 3.407, "wall_s": 3.705, "formula": "(a0) & ((G(F((a2) & (!(a0))))) & ((F((a0) & (X[!]((!(a3)) & (X[!](!(a1))))))) & (((a3) U ((a0) R (X(a3)))) & ((G((a1) U (!((a0) R (a3))))) & ((G(!((a2) & ((a3) R (X[!](a1)))))) & ((G((a0) | ((a3) | (X(a3))))) & ((G(!((X[!](a0)) & ((a0) U (a2))))) & (G((a1) | (X(X[!]((a0) | (a1)))))))))))))", "status": "answered", "stderr_tail": ""}
+{"instance": "ham1", "returncode": 0, "cpu_s": 0.609, "wall_s": 0.741, "formula": "(X((a2) U ((a2) R (X(a0))))) & (((a0) U (X((a0) R (X(a1))))) & ((G((a1) U (!((a2) U (a1))))) & (G((!(a0)) | ((a0) U (X(a2)))))))", "status": "answered", "stderr_tail": ""}
+{"instance": "ham2", "returncode": 0, "cpu_s": 1.53, "wall_s": 2.159, "formula": "(F((a0) & ((a2) & (a3)))) & ((F((G(a1)) & (X[!](a2)))) & (G((a0) | (!((a0) R (X(a2)))))))", "status": "answered", "stderr_tail": ""}
+{"instance": "ham3", "returncode": 0, "cpu_s": 5.788, "wall_s": 6.382, "formula": null, "status": "no_formula", "stderr_tail": ""}
+{"instance": "ham4", "returncode": 0, "cpu_s": 1.732, "wall_s": 1.997, "formula": "(X(a1)) & ((G((!(a1)) | ((a2) R (a3)))) & ((G((X(a4)) | ((a1) U (a0)))) & ((G((!(a1)) | (X(X(a0))))) & (G(!((a4) & ((!(a0)) R (a3))))))))", "status": "answered", "stderr_tail": ""}
+{"instance": "ham5", "returncode": 0, "cpu_s": 1.582, "wall_s": 1.771, "formula": "((((G(!((a3) & (X(X[!](G(a4))))))) & ((!(F((!(a4)) & (X[!]((a1) & (X[!]((a2) & (X[!](a0))))))))) & (!(F((!(a2)) & (X[!]((a4) & (X[!]((a0) & (X[!]((a3) & (X[!]((a0) & (X[!](a0))))))))))))))) & (F((a3) & (X[!]((a0) & (X[!]((!(a0)) & (X[!]((!(a3)) & (X[!]((!(a2)) & (X[!]((!(a3)) & (X[!]((a0) & (X[!]((a2) & (X[!]((a1) & (X[!]((a1) & (X[!]((a2) & (X[!](a0))))))))))))))))))))))))) & ((X(X(X((!(a3)) U (a4))))) & ((F((a3) & (!((a3) U (X(a1)))))) & (!(F((a4) & (X[!]((a0) & (X[!]((a2) & (X[!]((a3) & (X[!]((a4) & (X[!]((a2) & (X[!]((a0) & (X[!]((a0) & (X[!](a0)))))))))))))))))))))) & ((G(F(!(a0)))) & ((X((a1) U ((a3) R (!(a1))))) & ((X((a2) R ((X(X(a2))) U (a0)))) & ((F((a2) & (X[!]((a2) & (X[!]((a1) & (X[!]((a1) & (X[!](a0)))))))))) & ((F((!(a2)) & (X[!]((!(a3)) & (X[!]((a4) & (X[!]((a2) & (X[!](a0)))))))))) & (!(F((!(a3)) & (X[!]((a0) & (X[!]((a2) & (X[!]((a0) & (X[!](a0))))))))))))))))", "status": "answered", "stderr_tail": ""}
+{"instance": "ham6", "returncode": 0, "cpu_s": 0.833, "wall_s": 1.167, "formula": "(X(X((a0) & (X(a3))))) & (F(!((a0) | ((a1) | (a4)))))", "status": "answered", "stderr_tail": ""}
+{"instance": "ham7", "returncode": 0, "cpu_s": 0.94, "wall_s": 1.015, "formula": "(G(F(a0))) & ((F((a3) & (!((a0) | (a2))))) & ((G((X(a2)) | ((a2) U (!(a3))))) & (X(X((a0) U ((a2) & (!(a0))))))))", "status": "answered", "stderr_tail": ""}
+{"instance": "rbc0", "returncode": 0, "cpu_s": 4.317, "wall_s": 5.269, "formula": "((((G((a1) | ((F(a4)) U (a3)))) | (F((a2) & (X[!]((a0) & (X[!](a2))))))) & ((!(F((a2) & (X[!](a2))))) | ((X(X(X(X(X((a3) R (a4))))))) | (F((a2) & (X[!]((a0) & (X[!](a2))))))))) | ((a1) & (G((a1) | (X((a1) U (a3))))))) & ((X(a0)) | ((!(F((a0) & (X[!](a2))))) | ((X(X(X(a0)))) | (F((a2) & (X[!]((a0) & (X[!](a2)))))))))", "status": "answered", "stderr_tail": ""}
+{"instance": "rbc1", "returncode": 0, "cpu_s": 0.119, "wall_s": 0.308, "formula": "F((a1) & (X[!](a2)))", "status": "answered", "stderr_tail": ""}
+{"instance": "rbc2", "returncode": 0, "cpu_s": 1.275, "wall_s": 1.704, "formula": "F((a1) & (X[!]((a0) & (X[!](a2)))))", "status": "answered", "stderr_tail": ""}
+{"instance": "rbc3", "returncode": 0, "cpu_s": 3.813, "wall_s": 4.209, "formula": "(F((a2) & (X[!]((a2) & (X[!](a2)))))) & (F((a0) & (X[!]((a1) & (X[!](a1))))))", "status": "answered", "stderr_tail": ""}
+{"instance": "rbc4", "returncode": 0, "cpu_s": 0.729, "wall_s": 0.81, "formula": "F((a2) & (X[!]((a3) & (X(a2)))))", "status": "answered", "stderr_tail": ""}
+{"instance": "rbc5", "returncode": 0, "cpu_s": 0.486, "wall_s": 0.526, "formula": "F((a2) & (X[!]((a2) & (X[!](a2)))))", "status": "answered", "stderr_tail": ""}
+{"instance": "rbc6", "returncode": 0, "cpu_s": 1.413, "wall_s": 1.609, "formula": "F((a2) & (X[!]((a0) & (X[!](F((a0) & (X[!]((a0) & (X[!](a0))))))))))", "status": "answered", "stderr_tail": ""}
+{"instance": "rbc7", "returncode": 0, "cpu_s": 2.05, "wall_s": 2.591, "formula": "F((a2) & (X[!]((a1) & (X[!](a1)))))", "status": "answered", "stderr_tail": ""}
+{"instance": "fix0", "returncode": 0, "cpu_s": 0.122, "wall_s": 0.446, "formula": "(!(a0)) U (a1)", "status": "answered", "stderr_tail": ""}
+{"instance": "fix1", "returncode": 0, "cpu_s": 0.115, "wall_s": 0.281, "formula": "(!(a0)) U (a1)", "status": "answered", "stderr_tail": ""}
+{"instance": "fix2", "returncode": 0, "cpu_s": 0.123, "wall_s": 0.354, "formula": "(a0) U (a1)", "status": "answered", "stderr_tail": ""}
+{"instance": "fix3", "returncode": 0, "cpu_s": 0.13, "wall_s": 0.442, "formula": "G(!((a0) & (a1)))", "status": "answered", "stderr_tail": ""}
+{"instance": "fix4", "returncode": 0, "cpu_s": 0.126, "wall_s": 0.209, "formula": "G(!(a1))", "status": "answered", "stderr_tail": ""}
+{"instance": "fix5", "returncode": 0, "cpu_s": 0.121, "wall_s": 0.23, "formula": "F(a0)", "status": "answered", "stderr_tail": ""}
+{"instance": "fix6", "returncode": 0, "cpu_s": 0.142, "wall_s": 0.206, "formula": "F((a0) & (a1))", "status": "answered", "stderr_tail": ""}
+{"instance": "fix7", "returncode": 0, "cpu_s": 0.142, "wall_s": 0.199, "formula": "F((a0) & (a1))", "status": "answered", "stderr_tail": ""}
+{"instance": "sgc0", "returncode": 0, "cpu_s": 4.959, "wall_s": 5.897, "formula": "(((!(a6)) | (X(a9))) & ((((a0) & (X(a5))) | (!((a0) | (X(a5))))) & ((((a10) & (X(a8))) | (!((a10) | (X(a8))))) & (((a12) & (X(a2))) | (!((a12) | (X(a2)))))))) & ((a6) | (X(!(a9))))", "status": "answered", "stderr_tail": ""}
+{"instance": "sgc1", "returncode": 0, "cpu_s": 1.677, "wall_s": 2.059, "formula": "(!((a1) U (a4))) | (((X(a9)) R (a8)) | (F((a10) & (G(!(a4))))))", "status": "answered", "stderr_tail": ""}
+{"instance": "sgc2", "returncode": 0, "cpu_s": 6.839, "wall_s": 7.869, "formula": "(((!(a0)) | (X(a4))) & (((!(a7)) | (X(a11))) & (((a0) | (X(!(a4)))) & ((((a3) & (X(a1))) | (!((a3) | (X(a1))))) & (((a6) & (X(a2))) | (!((a6) | (X(a2))))))))) & ((a7) | (X(!(a11))))", "status": "answered", "stderr_tail": ""}
+{"instance": "sgc3", "returncode": 0, "cpu_s": 0.253, "wall_s": 0.343, "formula": "X((a4) U ((a1) R (a10)))", "status": "answered", "stderr_tail": ""}
+{"instance": "sgc4", "returncode": 0, "cpu_s": 0.204, "wall_s": 0.263, "formula": "!((a1) U ((a3) R (X(a2))))", "status": "answered", "stderr_tail": ""}
+{"instance": "sgc5", "returncode": 0, "cpu_s": 1.331, "wall_s": 1.451, "formula": "((a2) & (X(a0))) | (!((a2) | (X(a0))))", "status": "answered", "stderr_tail": ""}
+{"instance": "sgc6", "returncode": 0, "cpu_s": 0.478, "wall_s": 0.684, "formula": "(a0) R (!((a0) & (a12)))", "status": "answered", "stderr_tail": ""}
+{"instance": "sgc7", "returncode": 0, "cpu_s": 4.848, "wall_s": 6.178, "formula": "((a2) & (X(a3))) | (!((a2) | (X(a3))))", "status": "answered", "stderr_tail": ""}
+{"instance": "dbc0", "returncode": 0, "cpu_s": 0.114, "wall_s": 0.238, "formula": "!(a7)", "status": "answered", "stderr_tail": ""}
+{"instance": "dbc1", "returncode": 0, "cpu_s": 6.454, "wall_s": 6.752, "formula": "((F((a3) & (X[!]((!(a9)) & (X[!]((a4) & (X[!](a1)))))))) & ((!((a5) | (a10))) & ((!((a0) U (a1))) | ((!(a1)) & (X(a9)))))) & (((a0) | (X(!(a9)))) & ((!(a4)) | (X(a6))))", "status": "answered", "stderr_tail": ""}
+{"instance": "dbc2", "returncode": 0, "cpu_s": 3.207, "wall_s": 3.389, "formula": "(!((a2) | (a5))) & (((a6) & (X(a0))) | (!((a6) | (X(a0)))))", "status": "answered", "stderr_tail": ""}
+{"instance": "dbc3", "returncode": 0, "cpu_s": 2.182, "wall_s": 2.42, "formula": "((a9) | (a10)) & (!((a0) | ((a7) | (a11))))", "status": "answered", "stderr_tail": ""}
+{"instance": "dbc4", "returncode": 0, "cpu_s": 0.143, "wall_s": 0.212, "formula": "!((a0) | (a1))", "status": "answered", "stderr_tail": ""}
+{"instance": "dbc5", "returncode": 0, "cpu_s": 0.126, "wall_s": 0.189, "formula": "!((a1) | (a4))", "status": "answered", "stderr_tail": ""}
+{"instance": "dbc6", "returncode": 0, "cpu_s": 0.12, "wall_s": 0.158, "formula": "!((a4) | (a5))", "status": "answered", "stderr_tail": ""}
+{"instance": "dbc7", "returncode": 0, "cpu_s": 0.17, "wall_s": 0.209, "formula": "F((G(a1)) R (!(a2)))", "status": "answered", "stderr_tail": ""}
+{"instance": "nim0", "returncode": 0, "cpu_s": 0.116, "wall_s": 0.178, "formula": "G(F(a0))", "status": "answered", "stderr_tail": ""}
+{"instance": "nim1", "returncode": 0, "cpu_s": 1.533, "wall_s": 1.652, "formula": "(a2) & ((!(a1)) & ((a4) | (a8)))", "status": "answered", "stderr_tail": ""}
+{"instance": "nim2", "returncode": 0, "cpu_s": 0.145, "wall_s": 0.207, "formula": "(a8) | (a14)", "status": "answered", "stderr_tail": ""}
+{"instance": "nim3", "returncode": 0, "cpu_s": 3.482, "wall_s": 3.948, "formula": "(((!(a7)) & (((a3) | (a4)) & (((a5) R (a9)) | ((a9) & ((a2) | (a6)))))) | (F((a9) & (X[!]((!(a7)) & (X[!](F((a9) & (X[!](F((!(a1)) & (X[!]((a1) & (X[!](F((a15) & (X[!](F((!(a12)) & (X[!]((!(a10)) & (X[!]((!(a10)) & (X[!](!(a11)))))))))))))))))))))))))) & ((a6) | (a15))", "status": "answered", "stderr_tail": ""}
+{"instance": "nim4", "returncode": 0, "cpu_s": 5.433, "wall_s": 5.811, "formula": "(((a13) & (((a0) | (a10)) & ((!(a12)) & ((a2) | (a9))))) | (!(F((!(a9)) & (X[!]((a14) & (X[!]((a0) & (X[!](a0)))))))))) & ((a1) | (a6))", "status": "answered", "stderr_tail": ""}
+{"instance": "nim5", "returncode": 0, "cpu_s": 1.267, "wall_s": 1.415, "formula": "(a4) & (((a9) | (a12)) & ((!(a10)) & ((a1) | (a14))))", "status": "answered", "stderr_tail": ""}
+{"instance": "nim6", "returncode": 0, "cpu_s": 1.345, "wall_s": 1.776, "formula": "(a4) & ((a9) & ((!(a2)) & ((a6) U (a10))))", "status": "answered", "stderr_tail": ""}
+{"instance": "nim7", "returncode": 0, "cpu_s": 0.158, "wall_s": 0.21, "formula": "G((a9) | (F(a12)))", "status": "answered", "stderr_tail": ""}
+{"instance": "rcj0", "returncode": 0, "cpu_s": 0.114, "wall_s": 0.306, "formula": "F((a2) & (a3))", "status": "answered", "stderr_tail": ""}
+{"instance": "rcj1", "returncode": 0, "cpu_s": 0.131, "wall_s": 0.373, "formula": "F(a9)", "status": "answered", "stderr_tail": ""}
+{"instance": "rcj2", "returncode": 0, "cpu_s": 0.114, "wall_s": 0.338, "formula": "G(!(a4))", "status": "answered", "stderr_tail": ""}
+{"instance": "rcj3", "returncode": 0, "cpu_s": 0.113, "wall_s": 0.361, "formula": "F(a11)", "status": "answered", "stderr_tail": ""}
+{"instance": "rcj4", "returncode": 0, "cpu_s": 2.901, "wall_s": 3.533, "formula": "!(F((a6) & (X[!](F((a4) & (X[!](a10)))))))", "status": "answered", "stderr_tail": ""}
+{"instance": "rcj5", "returncode": 0, "cpu_s": 0.115, "wall_s": 0.422, "formula": "G(a0)", "status": "answered", "stderr_tail": ""}
+{"instance": "rcj6", "returncode": 0, "cpu_s": 0.114, "wall_s": 0.273, "formula": "(a1) R (F(a2))", "status": "answered", "stderr_tail": ""}
+{"instance": "rcj7", "returncode": 0, "cpu_s": 0.124, "wall_s": 0.305, "formula": "F(a4)", "status": "answered", "stderr_tail": ""}

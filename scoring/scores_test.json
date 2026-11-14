@@ -2,18 +2,18 @@
   "experiments": {
     "budgeted_ltlf_learning": {
       "_slice": "test",
-      "_instances": 40,
+      "_instances": 80,
       "_cpu_budget_s": 20.0,
       "results": {
         "bolt": {
-          "size_efficiency": 0.7515454877794915,
-          "solve_rate": 0.9,
-          "size_ratio_geomean": 1.5997989439090436
+          "size_efficiency": 0.8449295706079754,
+          "solve_rate": 0.95,
+          "size_ratio_geomean": 1.3393416920817443
         },
         "raw_vfb": {
-          "size_efficiency": 0.4,
-          "solve_rate": 0.4,
-          "size_ratio_geomean": 3.981071705534971
+          "size_efficiency": 0.4875,
+          "solve_rate": 0.4875,
+          "size_ratio_geomean": 3.25461783498046
         }
       }
     }

@@ -38,3 +38,43 @@
 {"instance": "rbc5", "returncode": 0, "cpu_s": 0.428, "wall_s": 0.435, "formula": "F((a2) & (X[!]((a2) & (X[!](a2)))))", "status": "answered", "stderr_tail": ""}
 {"instance": "rbc6", "returncode": 0, "cpu_s": 5.546, "wall_s": 5.59, "formula": null, "status": "no_formula", "stderr_tail": ""}
 {"instance": "rbc7", "returncode": 0, "cpu_s": 2.246, "wall_s": 2.267, "formula": "F((a2) & (X[!]((a1) & (X[!](a1)))))", "status": "answered", "stderr_tail": ""}
+{"instance": "fix0", "returncode": 0, "cpu_s": 0.093, "wall_s": 0.116, "formula": "(!(a0)) U (a1)", "status": "answered", "stderr_tail": ""}
+{"instance": "fix1", "returncode": 0, "cpu_s": 0.102, "wall_s": 0.162, "formula": "(!(a0)) U (a1)", "status": "answered", "stderr_tail": ""}
+{"instance": "fix2", "returncode": 0, "cpu_s": 0.09, "wall_s": 0.125, "formula": "(a0) U (a1)", "status": "answered", "stderr_tail": ""}
+{"instance": "fix3", "returncode": 0, "cpu_s": 0.092, "wall_s": 0.108, "formula": "G(!((a0) & (a1)))", "status": "answered", "stderr_tail": ""}
+{"instance": "fix4", "returncode": 0, "cpu_s": 0.088, "wall_s": 0.107, "formula": "G(!(a1))", "status": "answered", "stderr_tail": ""}
+{"instance": "fix5", "returncode": 0, "cpu_s": 0.09, "wall_s": 0.106, "formula": "F(a0)", "status": "answered", "stderr_tail": ""}
+{"instance": "fix6", "returncode": 0, "cpu_s": 0.09, "wall_s": 0.106, "formula": "F((a0) & (a1))", "status": "answered", "stderr_tail": ""}
+{"instance": "fix7", "returncode": 0, "cpu_s": 0.087, "wall_s": 0.095, "formula": "F((a0) & (a1))", "status": "answered", "stderr_tail": ""}
+{"instance": "sgc0", "returncode": 0, "cpu_s": 3.343, "wall_s": 3.732, "formula": null, "status": "no_formula", "stderr_tail": ""}
+{"instance": "sgc1", "returncode": 0, "cpu_s": 3.984, "wall_s": 4.657, "formula": null, "status": "no_formula", "stderr_tail": ""}
+{"instance": "sgc2", "returncode": 0, "cpu_s": 3.957, "wall_s": 4.608, "formula": null, "status": "no_formula", "stderr_tail": ""}
+{"instance": "sgc3", "returncode": 0, "cpu_s": 0.226, "wall_s": 0.362, "formula": "X((a4) U ((a1) R (a10)))", "status": "answered", "stderr_tail": ""}
+{"instance": "sgc4", "returncode": 0, "cpu_s": 0.179, "wall_s": 0.437, "formula": "!((a1) U ((a3) R (X(a2))))", "status": "answered", "stderr_tail": ""}
+{"instance": "sgc5", "returncode": 0, "cpu_s": 4.854, "wall_s": 5.776, "formula": null, "status": "no_formula", "stderr_tail": ""}
+{"instance": "sgc6", "returncode": 0, "cpu_s": 0.449, "wall_s": 0.511, "formula": "(a0) R (!((a0) & (a12)))", "status": "answered", "stderr_tail": ""}
+{"instance": "sgc7", "returncode": 0, "cpu_s": 4.043, "wall_s": 4.128, "formula": null, "status": "no_formula", "stderr_tail": ""}
+{"instance": "dbc0", "returncode": 0, "cpu_s": 0.109, "wall_s": 0.148, "formula": "!(a7)", "status": "answered", "stderr_tail": ""}
+{"instance": "dbc1", "returncode": 0, "cpu_s": 3.943, "wall_s": 4.116, "formula": null, "status": "no_formula", "stderr_tail": ""}
+{"instance": "dbc2", "returncode": 0, "cpu_s": 3.793, "wall_s": 4.144, "formula": null, "status": "no_formula", "stderr_tail": ""}
+{"instance": "dbc3", "returncode": 0, "cpu_s": 3.668, "wall_s": 3.97, "formula": null, "status": "no_formula", "stderr_tail": ""}
+{"instance": "dbc4", "returncode": 0, "cpu_s": 0.093, "wall_s": 0.124, "formula": "!((a0) | (a1))", "status": "answered", "stderr_tail": ""}
+{"instance": "dbc5", "returncode": 0, "cpu_s": 0.094, "wall_s": 0.341, "formula": "!((a1) | (a4))", "status": "answered", "stderr_tail": ""}
+{"instance": "dbc6", "returncode": 0, "cpu_s": 0.102, "wall_s": 0.255, "formula": "!((a4) | (a5))", "status": "answered", "stderr_tail": ""}
+{"instance": "dbc7", "returncode": 0, "cpu_s": 0.142, "wall_s": 0.225, "formula": "F((G(a1)) R (!(a2)))", "status": "answered", "stderr_tail": ""}
+{"instance": "nim0", "returncode": 0, "cpu_s": 0.093, "wall_s": 0.213, "formula": "G(F(a0))", "status": "answered", "stderr_tail": ""}
+{"instance": "nim1", "returncode": 0, "cpu_s": 3.826, "wall_s": 4.021, "formula": null, "status": "no_formula", "stderr_tail": ""}
+{"instance": "nim2", "returncode": 0, "cpu_s": 0.097, "wall_s": 0.28, "formula": "(a8) | (a14)", "status": "answered", "stderr_tail": ""}
+{"instance": "nim3", "returncode": 0, "cpu_s": 3.412, "wall_s": 3.898, "formula": null, "status": "no_formula", "stderr_tail": ""}
+{"instance": "nim4", "returncode": 0, "cpu_s": 3.528, "wall_s": 4.116, "formula": null, "status": "no_formula", "stderr_tail": ""}
+{"instance": "nim5", "returncode": 0, "cpu_s": 3.697, "wall_s": 4.624, "formula": null, "status": "no_formula", "stderr_tail": ""}
+{"instance": "nim6", "returncode": 0, "cpu_s": 3.748, "wall_s": 4.112, "formula": null, "status": "no_formula", "stderr_tail": ""}
+{"instance": "nim7", "returncode": 0, "cpu_s": 0.13, "wall_s": 0.36, "formula": "G((a9) | (F(a12)))", "status": "answered", "stderr_tail": ""}
+{"instance": "rcj0", "returncode": 0, "cpu_s": 0.099, "wall_s": 0.191, "formula": "F((a2) & (a3))", "status": "answered", "stderr_tail": ""}
+{"instance": "rcj1", "returncode": 0, "cpu_s": 0.093, "wall_s": 0.117, "formula": "F(a9)", "status": "answered", "stderr_tail": ""}
+{"instance": "rcj2", "returncode": 0, "cpu_s": 0.093, "wall_s": 0.105, "formula": "G(!(a4))", "status": "answered", "stderr_tail": ""}
+{"instance": "rcj3", "returncode": 0, "cpu_s": 0.09, "wall_s": 0.098, "formula": "F(a11)", "status": "answered", "stderr_tail": ""}
+{"instance": "rcj4", "returncode": 0, "cpu_s": 3.626, "wall_s": 4.093, "formula": null, "status": "no_formula", "stderr_tail": ""}
+{"instance": "rcj5", "returncode": 0, "cpu_s": 0.096, "wall_s": 0.153, "formula": "G(a0)", "status": "answered", "stderr_tail": ""}
+{"instance": "rcj6", "returncode": 0, "cpu_s": 0.097, "wall_s": 0.166, "formula": "(a1) R (F(a2))", "status": "answered", "stderr_tail": ""}
+{"instance": "rcj7", "returncode": 0, "cpu_s": 0.099, "wall_s": 0.12, "formula": "F(a4)", "status": "answered", "stderr_tail": ""}

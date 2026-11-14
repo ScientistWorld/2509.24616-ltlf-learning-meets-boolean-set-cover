@@ -4,23 +4,11 @@
   "exact": false,
   "vfb": {
    "mode": "vfb",
-   "ltl_generated": 7818219,
+   "ltl_generated": 4942699,
    "ltl_stopped_by": "memory",
    "ltl_completed_size": 8,
    "phase": "memory",
-   "cpu_s": 9.457084509
-  }
- },
- "t20": {
-  "lower_bound": 10,
-  "exact": false,
-  "vfb": {
-   "mode": "vfb",
-   "ltl_generated": 21686263,
-   "ltl_stopped_by": "memory",
-   "ltl_completed_size": 9,
-   "phase": "memory",
-   "cpu_s": 13.89675549
+   "cpu_s": 7.308242406
   }
  },
  "t34": {
@@ -28,11 +16,11 @@
   "exact": false,
   "vfb": {
    "mode": "vfb",
-   "ltl_generated": 13417140,
+   "ltl_generated": 9047860,
    "ltl_stopped_by": "memory",
    "ltl_completed_size": 9,
    "phase": "memory",
-   "cpu_s": 11.026871891999999
+   "cpu_s": 8.780859599000001
   }
  }
 }
